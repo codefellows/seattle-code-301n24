@@ -1,0 +1,1 @@
+# Lecture Guide: Database Normalization
