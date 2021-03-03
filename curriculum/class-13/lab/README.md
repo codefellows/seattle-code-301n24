@@ -1,4 +1,4 @@
-# Resource Update and Delete
+# Resource Create and Delete
 
 ## Resources
 
@@ -41,6 +41,7 @@ book_app (repository)
 ├──src
 |  ├── addABookButton.js
 │  ├── app.js
+|  ├── booFormModal.js
 │  ├── footer.js
 │  ├── header.js
 │  ├── index.js
@@ -61,7 +62,7 @@ book_app (repository)
 
 ### Overview
 
-Today you will add the functionality for the user to add a book on the front end. That book will be sent to the server where it will be saved into the database and then returned to the front end and displayed in the list of favorite books.
+Today you will add the functionality for the user to add and delete a book on the front end. That book will be sent to the server where it will be saved into the database and then returned to the front end and displayed in the list of favorite books. You will then be able to delete that book and have it instantly removed from the front end.
 
 ### Time Estimate
 
@@ -91,17 +92,28 @@ See the Trello board for your feature tasks for today's lab.
 - this route should accept the body of the request object which will be the new book
 - use this information to create a new book and save it in the database
 - then send that new book back to the front end
+- be sure to include error checking in case something goes wrong
+
+1. Add a `/books` route with a method of `DELETE`
+- this route should accept an id as a query param in the request object
+- use that id to find the id in the database to delete
+- then send a success message to the front end
+- be sure to include error checking in case something goes wrong
 
 #### Front End Tasks
 
 1. Make a new component called `AddABookButton`
-- this component should be a button that when clicked displays a modal
+- this component should be a button that when clicked displays the `BookFormModal`
 
-1. The modal should take in the necissary information to save a new favorite book
+1. The `BookFormModal` should take in the necissary information to save a new favorite book
 - when the user submits the information, you should make a `POST` call to your server with the book information on the `/books` route
 - the response you get should be the new book object
 
 1. Display the new book you just created along with the rest of your favorite books
+
+1. Add a 'DELETE' button to each book you have displayed.
+- when the user clicks that button, you should send the id of that book as a query param to your server on a `/books` route as a `DELETE` method.
+- make sure that your book is automatically removed from your list as soon as you click the button and that it stays removed when you reload the page
 
 ## Documentation
 

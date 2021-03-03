@@ -23,6 +23,7 @@ const PORT = process.env.PORT || 3001;
 
 app.get('/books', getBooks);
 app.post('/books', addBook);
+app.delete('/books', deleteBook);
 
 function getBooks(request, response) {
   // get the books from mongo 
@@ -37,7 +38,13 @@ function addBook(request, response) {
   const { name, description, genre } = request.body;
   const newBook = new Book({name, description, genre:genre.toUpperCase()});
   newBook.save().then(response.send(newBook))
+}
 
+function deleteBook(request, response) {
+  // delete a book from Mongo
+  const id = request.query.id;
+  console.log('delete route', {id})
+  Book.deleteOne({ _id:id }).then(() => response.send('success')).catch(err => console.err(err));
 }
 
 app.listen(PORT, () => console.log(console.log(`listening on ${PORT}`)));
