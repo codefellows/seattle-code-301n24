@@ -1,4 +1,4 @@
-# Readings: EJS
+# Readings: Authentication
 
 Below you will find some reading material, code samples, and some additional resources that support today's topic and the upcoming lecture.
 

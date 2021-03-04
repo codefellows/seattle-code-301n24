@@ -1,4 +1,4 @@
-# Readings: THE CALL STACK
+# Readings: In memory storage
 
 Below you will find some reading material, code samples, and some additional resources that support today's topic and the upcoming lecture.
 
@@ -6,7 +6,7 @@ Review the Submission Instructions for guidance on completing and submitting thi
 
 ## Reading
 
-- [The Call Stack defined on MDN](https://developer.mozilla.org/en-US/docs/Glossary/Call_stack){:target="_blank"}
+- [In Momory Databases](https://aws.amazon.com/nosql/in-memory/)
 - [Understanding the JavaScript Call Stack](https://medium.freecodecamp.org/understanding-the-javascript-call-stack-861e41ae61d4){:target="_blank"}
 - [JavaScript error messages](https://codeburst.io/javascript-error-messages-debugging-d23f84f0ae7c){:target="_blank"}
 

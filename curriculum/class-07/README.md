@@ -1,4 +1,4 @@
-# APIs and Promises
+# Express Servers
 
 ## Overview
 
@@ -11,7 +11,7 @@ Today we will continue to work with third-party APIs to request data. Part of be
 - Introduction of today's code challenge topic
 - Code review of lab assignment
 - Functional programming concepts
-- How to refactor code
+- Express Servers
 - Code Demo
 - Lab Preview
 
@@ -21,14 +21,11 @@ As a result of completing Lecture 7 of Code 301, students will be able to:
 
 - Describe and Define  
   - Async
-  - APIs
+  - Server
   - ReST
   - Express
     - Application Middleware
     - Route Middleware
-- Execute
-  - Node Express Server
-  - Use **superagent** to fetch remote data asynchronously
-  - Use **axios** to reach out to the back-end from the front-end
-  - Ingest 3rd Party data from an API
-  - Integrate data with a separate web application
+  - cors
+  - env variables
+- Connect a front end React application to an express server and exchange information

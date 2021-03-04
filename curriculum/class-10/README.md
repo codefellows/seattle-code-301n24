@@ -1,4 +1,4 @@
-# The Call Stack
+# Persistance
 
 ## Overview
 
@@ -9,13 +9,11 @@ Today we will discuss the call stack and how JavaScript executes code synchronou
 - Warm-up exercise
 - Review code challenges
 - Code review of lab assignment
-- The call stack and tracing the order of code execution
+- In-memory persistance
 - Lab Overview
 
 ## Learning Objectives
 
 As a result of completing lecture 10 of Code 301, students will:
-- Understand the JavaScript call stack
-- Be able to trace the order of code execution
-- Enhance their ability to read and understand error messages
-- Understand the roles of Model, View, and Controller in their application
+- Persist data in memory
+- Understand the advantages and drawbacks to persisting data in memory vs using something like a database

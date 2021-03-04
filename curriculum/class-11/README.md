@@ -1,4 +1,4 @@
-# Server-side templating with EJS
+# Authentication
 
 ## Overview
 

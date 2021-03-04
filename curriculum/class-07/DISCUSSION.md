@@ -20,7 +20,7 @@ PLACEHOLDER -->
 
 ### Bookmark/Skim
 
-- [Documentation for SuperAgent](https://visionmedia.github.io/superagent/){:target="_blank"}
+
 
 ## API Keys
 
@@ -30,4 +30,3 @@ Request a personal API key from the following APIs. You should receive these in 
 - [Weather Bit API Docs](https://www.weatherbit.io/){:target="_blank"}
 - [Yelp API Docs](https://www.yelp.com/developers/documentation/v3/business_search){:target="_blank"}
 - [The Movie DB API Docs](https://developers.themoviedb.org/3/getting-started/introduction){:target="_blank"}
-- [National Park Service API Docs](https://www.nps.gov/subjects/developer/api-documentation.htm){:target="_blank"}
