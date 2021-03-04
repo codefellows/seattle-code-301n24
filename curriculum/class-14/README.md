@@ -1,4 +1,4 @@
-# Database Normalization
+# Updating Resources
 
 ## Overview
 
@@ -14,7 +14,7 @@ The exam is open book, open Google, open Stack Overflow, whatever resources you 
 - Warm-up exercise
 - Review code challenges
 - Code review of lab assignment
-- Data modeling
+- Updating Resources
 - Code demo
 - Lab preview
 - Exam prep
@@ -23,5 +23,5 @@ The exam is open book, open Google, open Stack Overflow, whatever resources you 
 
 As a result of completing lecture 14 of Code 301, students will:
 
-- Be able to perform a database migration in postgreSQL
-- Update their schema to model data
+- Be able to update a resources in a mongo database
+- Be able to update a resource instantly in a React application and have that resource state persist on reload
