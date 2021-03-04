@@ -1,4 +1,4 @@
-# Readings: HEROKU
+# Readings: Putting it all together
 
 Below you will find some reading material, code samples, and some additional resources that support today's topic and the upcoming lecture.
 
@@ -6,8 +6,7 @@ Review the Submission Instructions for guidance on completing and submitting thi
 
 ## Reading
 
-- [Heroku: Getting Started with Node](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction){:target="_blank"}
-  - Complete all of the steps through "View logs"
+- [React Docs - thinking in React](https://reactjs.org/docs/thinking-in-react.html)
 
 <!-- ## Additional Resources
 
@@ -17,6 +16,6 @@ PLACEHOLDER
 
 PLACEHOLDER -->
 
-### Bookmark/Skim
+<!-- ### Bookmark/Skim
 
-- [Deploying a Simple Blog to Heroku](https://howtonode.org/deploy-blog-to-heroku)
+PLACEHOLDER -->

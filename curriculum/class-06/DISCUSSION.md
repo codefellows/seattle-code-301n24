@@ -7,6 +7,7 @@ Review the Submission Instructions for guidance on completing and submitting thi
 ## Reading
 
 - [An Introduction to Node.js on sitepoint.com](https://www.sitepoint.com/an-introduction-to-node-js){:target="_blank"}
+- [6 Reasons for Pair Programming](https://www.codefellows.org/blog/6-reasons-for-pair-programming/){:target="_blank"}
 
 <!-- ## Additional Resources
 

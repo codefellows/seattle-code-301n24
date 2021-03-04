@@ -1,4 +1,4 @@
-# SMACSS and Responsive Web Design
+# Introduction to React and Components
 
 ## Overview
 
@@ -16,7 +16,7 @@ Today we will be learning about the component structure of React using classes.
 ## Learning Objectives
 
 As as result of completing Lecture 1 of Code 301, students will: 
-- Gain an understanding of scope with arrow functions and with the use of `let` and `const` in place of `var`
+- Gain an understanding of scope with arrow functions
 - Gain an understanding of context, scope, and "this"
 - Be able to create an application using `create react app`
 - Gain an understanding of React components and how to use them in a React application

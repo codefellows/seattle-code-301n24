@@ -14,10 +14,12 @@ Review the Submission Instructions for guidance on completing and submitting thi
 - [A Primer on SQL](https://openlibra.com/en/book/a-primer-on-sql-3rd-edition){:target="_blank"} - Click the blue Download button
 - [SQL Cheat Sheet](http://www.cheat-sheets.org/sites/sql.su/){:target="_blank"}
 
-<!-- ### Videos
+### Videos
 
 PLACEHOLDER
 
 ### Bookmark/Skim
 
-PLACEHOLDER -->
+- [RegExr](https://regexr.com/){:target="_blank"} - Pay particular attention to the cheatsheet
+- [Regex Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285){:target="_blank"}
+- [Regex 101](https://regex101.com/){:target="_blank"}
