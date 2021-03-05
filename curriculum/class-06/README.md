@@ -12,7 +12,7 @@ Another component of this portion of the course involves working with a static c
 - Review code challenges
 - Introduction of today's code challenge topic
 - Code review of lab assignment
-- Third Party APIs
+- Third Party APIs/ Async and Await
 - Code Demo
 - Lab Preview
 

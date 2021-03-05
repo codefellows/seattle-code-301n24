@@ -15,8 +15,9 @@ PLACEHOLDER
 
 ### Videos
 
-PLACEHOLDER
+PLACEHOLDER -->
 
 ### Bookmark/Skim
 
-PLACEHOLDER -->
+- [Axios docs](https://www.npmjs.com/package/axios){:target="_blank"}
+- [MDN async and await](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await){:target="_blank"}

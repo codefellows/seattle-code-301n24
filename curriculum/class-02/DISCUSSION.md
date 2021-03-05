@@ -6,10 +6,10 @@ Review the Submission Instructions for guidance on completing and submitting thi
 
 ## Reading
 
-- [React Docs - State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
-- [React Docs - handling events](https://reactjs.org/docs/handling-events.html)
-- [React Docs - conditional rendering](ttps://reactjs.org/docs/conditional-rendering.html)
-- [React Tutorial through 'Developer Tools'](https://reactjs.org/tutorial/tutorial.html)
+- [React Docs - State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html){:target="_blank"}
+- [React Docs - handling events](https://reactjs.org/docs/handling-events.html){:target="_blank"}
+- [React Docs - conditional rendering](ttps://reactjs.org/docs/conditional-rendering.html){:target="_blank"}
+- [React Tutorial through 'Developer Tools'](https://reactjs.org/tutorial/tutorial.html){:target="_blank"}
 
 
 <!-- ## Additional Resources
@@ -22,5 +22,5 @@ PLACEHOLDER -->
 
 ### Bookmark/Skim
 
-- [React Bootstrat Documentation](https://react-bootstrap.github.io/)
-- [Netlify](https://www.netlify.com/)
+- [React Bootstrat Documentation](https://react-bootstrap.github.io/){:target="_blank"}
+- [Netlify](https://www.netlify.com/){:target="_blank"}

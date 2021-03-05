@@ -6,11 +6,11 @@ Review the Submission Instructions for guidance on completing and submitting thi
 
 ## Reading
 
-- [React Tutorial through 'Passing Data Through Props'](https://reactjs.org/tutorial/tutorial.html)
-- [React Docs - hello world](https://reactjs.org/docs/hello-world.html)
-- [React Docs - introducing JSX](https://reactjs.org/docs/introducing-jsx.html)
-- [React Docs - rendering elements](https://reactjs.org/docs/rendering-elements.html)
-- [React Docs - Components and props](https://reactjs.org/docs/components-and-props.html)
+- [React Tutorial through 'Passing Data Through Props'](https://reactjs.org/tutorial/tutorial.html){:target="_blank"}
+- [React Docs - hello world](https://reactjs.org/docs/hello-world.html){:target="_blank"}
+- [React Docs - introducing JSX](https://reactjs.org/docs/introducing-jsx.html){:target="_blank"}
+- [React Docs - rendering elements](https://reactjs.org/docs/rendering-elements.html){:target="_blank"}
+- [React Docs - Components and props](https://reactjs.org/docs/components-and-props.html){:target="_blank"}
 
 <!-- ## Additional Resources
 

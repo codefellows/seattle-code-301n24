@@ -6,7 +6,7 @@ Review the Submission Instructions for guidance on completing and submitting thi
 
 ## Reading
 
-- [React Docs - thinking in React](https://reactjs.org/docs/thinking-in-react.html)
+- [React Docs - thinking in React](https://reactjs.org/docs/thinking-in-react.html){:target="_blank"}
 
 <!-- ## Additional Resources
 
