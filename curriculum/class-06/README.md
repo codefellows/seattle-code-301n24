@@ -1,4 +1,4 @@
-# Node, npm, and Express
+# Async and Await and third party APIs
 
 ## Overview
 
@@ -12,18 +12,16 @@ Another component of this portion of the course involves working with a static c
 - Review code challenges
 - Introduction of today's code challenge topic
 - Code review of lab assignment
-- Node, ExpressJS, and npm
-- Environment variables
+- Third Party APIs
 - Code Demo
 - Lab Preview
 
 ## Learning Objectives
 
 As a result of completing Lecture 6 of Code 301, students will:
-- Begin to understand how the world wide web works
-- Be able to explain the role of the browser and the server as components of the web request-response cycle
-- Understand how to initialize a NodeJS project and use NPM packages
-- Understand the basics of working with ExpressJS 
-- Control their production and deployment environments
-- Understand how to interact with a static client code base
-- Hook up a front end React application with a back end server
+
+- Understand third party APIs
+- Be able to gather information from thrid party APIs
+- Use Postman to test routes
+- Use axios to collect information from a third party API
+- Understand async and await
