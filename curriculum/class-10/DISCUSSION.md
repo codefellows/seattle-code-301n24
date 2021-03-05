@@ -6,7 +6,7 @@ Review the Submission Instructions for guidance on completing and submitting thi
 
 ## Reading
 
-- [In Momory Databases](https://aws.amazon.com/nosql/in-memory/){:target="_blank"}
+- [In Memory Databases](https://aws.amazon.com/nosql/in-memory/){:target="_blank"}
 - [Understanding the JavaScript Call Stack](https://medium.freecodecamp.org/understanding-the-javascript-call-stack-861e41ae61d4){:target="_blank"}
 - [JavaScript error messages](https://codeburst.io/javascript-error-messages-debugging-d23f84f0ae7c){:target="_blank"}
 

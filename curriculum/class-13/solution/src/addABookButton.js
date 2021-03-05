@@ -1,10 +1,7 @@
 import React from 'react';
-import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import axios from 'axios';
-import BookFormModal from '../../../class-14/solution/src/bookFormModal';
+import BookFormModal from './bookFormModal';
 
 class AddABookButton extends React.Component {
   constructor(props){

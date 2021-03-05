@@ -29,7 +29,7 @@ There is no demonstration for today's challenges. Review the demos from previous
 
 ## Submission
 
-When you have completed the entire set of code challenges and all tests pass, create a pull request from your current branch to the master branch and merge it into master.
+When you have completed the entire set of code challenges and all tests pass, create a pull request from your current branch to the main branch and merge it into main.
 
 You will be able to see a test coverage report in **GitHub** on the **Actions** tab of your `data-structures-and-algorithms` repository. It should match what you saw on your terminal in the above steps. Your graders will be looking at this as well.
 

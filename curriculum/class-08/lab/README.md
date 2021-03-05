@@ -102,12 +102,12 @@ You will then work independently for the rest of the day, implementing your plan
 ### Front-End Netlify Deployment
 
 - Your deployed site **should not** contain any broken functionality. You may now begin your feature tasks for lab 8.
-- As you continue to work on features, make sure to check out your main branch and pull the changes after each pull request is merged. Then, create a new branch from your master branch and continue working. Update your `README.md` file to reflect the changes you are making as you work through the feature tasks today.
+- As you continue to work on features, make sure to check out your main branch and pull the changes after each pull request is merged. Then, create a new branch from your main branch and continue working. Update your `README.md` file to reflect the changes you are making as you work through the feature tasks today.
 
 ### Back-End Heroku Deployment
 
 - Your deployed site **should not** contain any broken functionality. You may now begin your feature tasks for lab 8.
-- As you continue to work on features, make sure to check out your main branch and pull the changes after each pull request is merged. Then, create a new branch from your master branch and continue working. Update your `README.md` file to reflect the changes you are making as you work through the feature tasks today.
+- As you continue to work on features, make sure to check out your main branch and pull the changes after each pull request is merged. Then, create a new branch from your main branch and continue working. Update your `README.md` file to reflect the changes you are making as you work through the feature tasks today.
 
 ### Feature Tasks
 
@@ -172,7 +172,7 @@ _Your `README.md` must include:_
 ## Submission Instructions
 
 1. Complete your Feature Tasks for the lab
-1. Create a PR back to the `master` branch of your repository, and merge it cleanly.
+1. Create a PR back to the `main` branch of your repository, and merge it cleanly.
 1. On Canvas, submit a link to your PR. Add a comment in your Canvas assignment which includes the following:
     - A link to the deployed version of your latest code on both Netlify and Heroku.
     - A link to your public Trello board.

@@ -69,5 +69,5 @@ First, create a react application using `create react app` as demonstrated in cl
 ## Submission Instructions
 
 - Complete your Feature Tasks for the day
-- Create a Pull Request (PR) back to the `master` branch of your repository
+- Create a Pull Request (PR) back to the `main` branch of your repository
 - On Canvas, submit a link to your PR

@@ -90,7 +90,7 @@ Below is the expected lecture outline and flow. One possible way to present this
       - (header, footer, specifically)
     - Note that there are many ways to achieve this.
 - **Experimentation and Discovery Ideas**
-  - You can have a master page template that uses a partial for each type of content
+  - You can have a main page template that uses a partial for each type of content
   - You can have separate partials for header and footer
 
 ## Lab Notes

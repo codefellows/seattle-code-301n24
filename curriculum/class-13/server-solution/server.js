@@ -44,7 +44,10 @@ function deleteBook(request, response) {
   // delete a book from Mongo
   const id = request.query.id;
   console.log('delete route', {id})
-  Book.deleteOne({ _id:id }).then(() => response.send('success')).catch(err => console.err(err));
+  Book.deleteOne({ _id:id }).then(() => response.send('success')).catch(err => {
+    console.err(err);
+    response.status(500).send('server error', err);
+  });
 }
 
 app.listen(PORT, () => console.log(console.log(`listening on ${PORT}`)));

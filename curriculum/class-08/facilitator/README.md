@@ -61,7 +61,7 @@ Below is the expected lecture outline and flow. One possible way to present this
   - SQL Query Structure
   - Basic Commands (SELECT, INSERT, UPDATE, DELETE)
 - **Experimentation and Discovery Ideas**
-  - Run student driven queries at the [SQL Playground](https://master.dcesh4541no84.amplifyapp.com/)
+  - Run student driven queries at the [SQL Playground](https://main.dcesh4541no84.amplifyapp.com/)
 
 ### Using SQL in Apps
 

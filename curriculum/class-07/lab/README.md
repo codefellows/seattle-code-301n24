@@ -115,7 +115,7 @@ For this lab assignment, you will convert a location entered by the user into a 
 
 - You should create a new repository on GitHub called `city_explorer_api`.
 - Create another reposition on GitHub called `city_explorer`
-- From this point on, work on semantically-named non-master branches. Once your app is functioning correctly on your branch, make a PR to master and confirm functionality on your deployed site. Your deployed site **should not** contain any broken functionality.
+- From this point on, work on semantically-named non-main branches. Once your app is functioning correctly on your branch, make a PR to main and confirm functionality on your deployed site. Your deployed site **should not** contain any broken functionality.
 
 ### Netlify deployment
 
@@ -196,7 +196,7 @@ _Your `README.md` must include:_
 ## Submission Instructions
 
 1. Complete your Feature Tasks for the lab
-1. Create a PR back to the `master` branch of your repository, and merge it cleanly.
+1. Create a PR back to the `main` branch of your repository, and merge it cleanly.
 1. On Canvas, submit a link to your PR. Add a comment in your Canvas assignment which includes the following:
     - A link to the deployed version of your latest React code.
     - A Pull request from your `city_explorer_api`

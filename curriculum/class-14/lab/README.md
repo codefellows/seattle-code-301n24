@@ -88,7 +88,7 @@ See the Trello board for your feature tasks for today's lab.
 
 #### Server Tasks
 
-1. Add a `/books` route with a method of `PUT`
+1. Add route with a method of `PUT` and a path of `/books`
 - this route should accept the body of the request object which will be the new book
 - use this information to update a book and save it in the database
 - then send that updated book back to the front end
@@ -138,9 +138,9 @@ _Your `README.md` must include:_
 ## Submission Instructions
 
 - Continue working in the same repository from the previous class.
-- Continue to work on semantically-named non-master branches.
+- Continue to work on semantically-named non-main branches.
 - Complete your Feature Tasks for the day (below)
-- Create a Pull Request (PR) back to the `master` branch of your repository
+- Create a Pull Request (PR) back to the `main` branch of your repository
 - On Canvas, submit a link to your PR, a link to your deployed application on Netlify, and a link to your public Trello board. **Make sure to include the following:**
   - A question within the context of today's lab assignment
   - An observation about the lab assignment, or related 'Ah-hah!' moment

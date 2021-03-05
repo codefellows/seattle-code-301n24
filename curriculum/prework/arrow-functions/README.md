@@ -15,7 +15,7 @@ Why does this happen? It happens because arrow functions retain the `this` value
 
 ## Assignment Tasks
 
-1. Work on your fork on a non-master branch. As you work, remember to add, commit, and push regularly.
+1. Work on your fork on a non-main branch. As you work, remember to add, commit, and push regularly.
 1. Create a new branch for this assignment called `class-00-lab-b`
 1. Navigate to the `prework` folder in the root directory of the class repository.  Then navigate into the `arrow-functions` folder.
 1. Make a copy of the folder named `starter-code`. Do your work in this folder.
@@ -30,7 +30,7 @@ Why does this happen? It happens because arrow functions retain the `this` value
 
 ## Submission Instructions
 
-1. When finished, push your branch back to your fork on GitHub, and merge it into master. 
+1. When finished, push your branch back to your fork on GitHub, and merge it into main. 
 1. Submit a link to your PR. You can link to a pull request even if the pull request is already merged or closed.
 1. Add a comment in your Canvas assignment which includes the following:
     - A question within the context of today's lab assignment
