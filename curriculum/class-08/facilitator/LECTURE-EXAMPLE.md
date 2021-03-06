@@ -1,113 +1,100 @@
-# Lecture Guide: SQL Databases
+# Lecture Notes: APIs and Promises
 
-There's a lot of information here (and much interactivity) ... for reference, here's a video from a previous class that follows the outline below.
+Today, we will be moving away from pulling in canned data from a file sitting on our machine and instead be fetching LIVE data from a remote service -- an API.
 
-[Lecture Video From a Previous Class on SQL](https://www.youtube.com/watch?v=qMni-vWzrw0&list=PLVngfM2hsbi-BZ_lT3jN64rWU0TKsa-TS&index=17&t=20m50s)
+To do this, we'll need to do a bit of refactoring of our server code, specifically, we'll need to bring in superagent to connect to these servers asynchronously, meaning we need to get into promises and async in general.
 
-## SQL
+## How does Javascript process code?
 
-- Structured Query Language
-  - It's Structured (it has rules)
-  - It's a Language
-  - It's purpose is to Query databases
-- Now, this is your 4th Language (HTML, CSS, JS, and now SQL)
-- SQL itself is not a database
-  - It's a way to work with a Relational DB
-    - We will use Postgres
-    - There are many others
-- What is a database?
-  - Simply, it's a place to store data.
-  - Think of our arrays of data, stuck in a file
-- Good Visual: Excel Spreadsheet
-  - Rows and Columns
-    - Rows are referred to as  "Records" in an actual database
-  - Model Data (Shaping) -- what properties/entities does a thing have
-  - Have the students assist you in modeling something in Excel
-    - Like a person, or a car, or whatever they choose
-    - Let them give you the column headings
-    - Inform them that you get an "id" column automatically, so start with that.
-  - Then, have the students fill in 4 or 5 rows of sample data
+* The first thing we need to agree on is that not everything happens in sequence.
+* We have already experienced some measure of "Event Driven" programming (event listeners) where code that you write doesn't actually run until something triggers it (or even, never)
+* There are other instances where code doesn't run in the order it appears, or that you think it does.
+* Javascript (both Node and in the browser -- they share the "V8" engine) has the ability to recognize code that might take a while to run.
+  * It runs this code in a separate process, off to the side
+  * When it finishes, the code that was written to handle the result then gets to run.
+  * In the meantime, Javascript allows your other code to go on in sequence.
+* This system is known as the "Event Loop"
+  * The Javascript system runs code that can be run.
+  * When it encounters something asynchronous, it starts it off to the side
+  * Continues with other code
+  * Picks up the async stuff when it gets back.
+  * And so on.
+* (This is a great time to be drawing a simple picture of this)
+  * Don't do a full call stack / callback queue drawing, just the basic loop
 
-    | id | year | make   | model   | trans  | cylinders |
-    |----|------|--------|---------|--------|-----------|
-    | 1  | 2018 | mazda  | 3       | auto   | 4         |
-    | 2  | 1976 | toyota | celica  | manual | 3         |
-    | 3  | 2013 | gmc    | terrain | auto   | 6         |
-    | 4  | 2014 | ford   | focus   | auto   | 4         |
-    | 5  | 2008 | ford   | f-150   | auto   | 8         |
-  - How many ways can you ask that data for information?
-    - Every vehicle made before 2000
-    - Every 4 cylinder vehicle
-    - All fords
-    - etc.
-  - These are "Queries" and are written in a structured ("S" in SQL) manner as a statement.
-  - The SQL "Language" gives you the statements and clauses that are available to you.
-    - What do you want to do?
-      - SELECT, INSERT, UPDATE, DELETE
-    - Which columns are at play
-      - year, make, model ... even all of them (*)
-    - What table are you working with?
-      - `FROM cars`
-    - How should we filter it?
-      - `WHERE x=y`
-    - `SELECT year, make, model FROM cars WHERE make = 'ford'`
-  - Still in the spreadsheet, write out some queries and have the students predict what might come back.
-    - `SELECT year, make, model FROM cars WHERE make = 'ford'`
-    - `SELECT * FROM cars WHERE year < 2010`
-    - `SELECT make, trans FROM cars WHERE cylinders = 8`
-    - Alter selecting *, rows, and various where clauses
-  - Demonstrate some INSERTS and UPDATES as well.
-    - Manually update the data you've typed in.
+## Async using Promises
 
-## Why??
+One way that Javascript handles asynchronous tasks is with "Promises"
 
-- Simply put, scale.
-- Relational databases are remarkably fast at finding similar data and with indexing, you can look up a record amongst billions in milliseconds.
-- In order for this to happen, SQL Databases rely on structure (a solid model)
-  - Data Types
-    - INT
-    - CHAR
-    - VARCHAR
-    - DATE
-    - BLOB
-    - BOOL
-- When you give reliable shape to data, the system can store it in the most efficient way for it to find it quickly.
-- Indexing takes that a step further.
-  - Think of indexing as putting things in alphabetical order, and also noting pointers to where things change.
+* A "promise" is exactly that ... your code promises to do some work and then either say "Ok I did it, here's some data" or "I failed"
+  * OK = "Resolve"
+    * Any data "resolved" is given to you to process
+    * A code block called `.then()` handles a good promise and gets that data
+  * "I Failed" = Reject
+    * `.catch()` handles the rejections and gets any error as it's param
+    * A `.catch()` can "return" a good value and then any subsequent `.then()` blocks can continue to work.
+    * In essence, `.catch()` can patch things up if it wants.
+  * **promise demo**
 
-## Postgres
+## Remote APIs
 
-- The database that we're going to use is called Postgres
-- As part of pre-work, you've installed it locally
-  - It's still a server, it just runs on your laptop
-- You can also run this remotely
-  - AWS
-  - Heroku Postgres
-  - ElephantSQL
-- In all cases, your Postgres server has an "Address" where we can connect.
-- We can connect in a number of ways
-  - Using our Terminal, with the `psql` client
-  - Through a variety of GUI Interfaces
-  - Directly through code.
-- Switch over to the `postgres` demo, noted in [DEMO.md](DEMO.md)
+As we've discussed, not all data is local. To this point, going back into 201, we've had all of our data either in our app.js or we've pulled it in from a `.json` file.  Let's branch out and get something real.
 
-## SQL Server Demo
+* Head to [WeatherBit](https://www.weatherbit.io/)
+* Notice the "API" Link (and click it)
+* Create an account and login
+* Right away, it'll give you some critical information
+  * Secret Key
+  * Sample API Link
+* Click the link and witness the JSON that you get back. Wow. Real, raw data.
+  * Look familiar?
+* Now, back to the API page.
+  * Pick that URL apart.
+  * It has a root part `http://api.weatherbit.io/v2.0/forecast/daily`
+  * Following that, is the query string -- key value pairs. Parse them!
+  * API key ...
+  * lat, lon, lang, etc
+* Hit the docs link and explain what's there, how the link is formatted, etc
+* WeatherBit is only one of 1,000's of APIs out there
+  * Spotify
+  * Yelp
+  * Trails
+  * Star Wars
+  * etc.
+* They'll all have the same sort of process
+  * Login/Create Account
+  * Secret Key
+  * URLs formatted in special ways
+  * Docs to help you out.
 
-- Run the `postgres in node` demo, noted in [DEMO.md](DEMO.md)
+## ReST and APIs
 
-## Back to City Explorer
+* Those APIs are all the same
+  * They follow a very similar set of rules -- REST
+  * Working over HTTP (which is stateless), REST is a way to use that protocol to share and even mutate/alter data between services.
+  * APIs use REST over HTTP to give developers access to data and ways to modify it.
+    * With HTTP, you can GET, POST, PUT, PATCH, DELETE
+    * With Data, you can Create, Read, Update, or Delete
+    * With REST
+      * You Create using POST
+      * You Update using PUT or PATCH
+      * You Delete using DELETE
+      * You Read using GET
+  * For now, know the words and the actions.
+  * We're going to live in the world of Read (GET) for the time being
 
-So ... what does all of this mean to our application?
+## Bring it all together
 
-We're going to want to use SQL to our advantage. Specifically, we want to address the issue with the way we're cache-ing the Locations data.
+* We're going to need some data from a few APIs to make City Explorer work.
+* We'll use ReST to Read data using the HTTP "GET" method
+* In our server, we need to fetch that data as needed.
+* Because it could take a while, Javascript will do that asynchronously
+* We will need a promise to ask for the data and process it when it's done
 
-*Instructor: Re-Draw the application architecture and lay out the plan*
+Luckily, there's a library out there that does all of this for us.
 
-- Currently, it's just in memory, which means we lose the cache every time our server re-starts. That kind of defeats the purpose
-- For today's lab, the primary outcome is going to be using SQL to store the locations.
-  - We need to store them to the database as we retrieve them from the API
-  - We need to find a good time to read them in from the database
-  - We need to keep our memory cache and the database in sync
-- Strategize with the class.
-- Leave the with the simple SQL demo server
-  - Encourage them to use it as inspiration, as well as this revisit of the application, but to solve the problem on their own.
+### Superagent
+
+Build the new server demo, refactoring the .json files into API calls
+
+Lean into the asynchronous nature of these calls and the mechanics of `.then()` in real use

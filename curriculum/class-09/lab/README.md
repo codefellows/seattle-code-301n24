@@ -149,6 +149,13 @@ Deploy your application.
 
 - Send the data as a response to your front-end.
 
+1. Deployment: Live Heroku URL required for full points.
+- Partial credit available for obvious/reasonable effort even if deployment is non-working
+- Features / Code Standards
+  - Server must have 404 and 500 error handlers
+  - Route definitions and handlers should be separated
+  - All non-location data must be retrieved from live API
+
 1. STRETCH GOAL: Add an additional route for `/movies`
 - Add an environment variable to your server named MOVIE_API_KEY, and use it appropriately in your code.
 - Create a route with a method of get and a path of `/movies`. The callback should make a Superagent-proxied request to The Movie Database API using the necessary location information.

@@ -31,4 +31,3 @@ Today we will be diving a little bit deeper into Express and higher level progra
   * Create a "controller" function
   * Create DRY code by finding repetition, patterns
   * Modularize similar code
-  

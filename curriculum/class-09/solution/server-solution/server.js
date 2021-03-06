@@ -1,70 +1,98 @@
 'use strict';
 
-const express = require('express');
-const cors = require('cors');
+// Load Environment Variables from the .env file
 require('dotenv').config();
 
+// Application Dependencies
+const express = require('express');
+const superagent = require('superagent');
+const cors = require('cors');
+
+// Application Setup
+const PORT = process.env.PORT || 3001;
 const app = express();
+
 app.use(cors());
 
-const location = require('./location.json');
+// Route Definitions
+app.get('/location', locationHandler);
+app.get('/weather', weatherHandler);
 
-const restaurants = [
-  {
-    "restaurant": "Pink Door",
-    "cuisines": "Italian",
-    "locality": "Pike Place Market"
-  },
-  {
-    "restaurant": "Serious Pie",
-    "cuisines": "Pizza, Italian",
-    "locality": "Belltown"
-  },
-  {
-    "restaurant": "Salumi",
-    "cuisines": "Sandwich, Deli, Italian",
-    "locality": "Pioneer Square"
-  },
-  {
-    "restaurant": "Lola",
-    "cuisines": "Greek, Mediterranean, Pacific Northwest",
-    "locality": "Hotel Andra"
-  },
-  {
-    "restaurant": "Wild Ginger",
-    "cuisines": "Vietnamese, Chinese, Asian",
-    "locality": "Downtown"
-  },
-  {
-    "restaurant": "Purple Cafe and Wine Bar",
-    "cuisines": "Pacific Northwest, American",
-    "locality": "Downtown"
-  },
-  {
-    "restaurant": "Le Pichet",
-    "cuisines": "Cafe, French",
-    "locality": "Pike Place Market"
-  },
-  {
-    "restaurant": "Cafe Campagne",
-    "cuisines": "French, Cafe",
-    "locality": "Pike Place Market"
-  },
-  {
-    "restaurant": "Dahlia Lounge",
-    "cuisines": "Seafood, Pacific Northwest",
-    "locality": "Belltown"
+app.use('*', notFoundHandler);
+
+// -------------------------------------------
+// LOCATIONS
+// -------------------------------------------
+
+async function locationHandler(request, response) {
+  console.log('in getLocation', request.query.city);
+  const searchQuery = request.query.city;
+
+  try{
+    const url = `https://us1.locationiq.com/v1/search.php`
+    const query = {
+      key:process.env.GEODATA_API,
+      q:searchQuery,
+      format:'json',
+    }
+
+    const superagentResults = await superagent.get(url).query(query);
+    const cityResults = superagentResults.body[0];
+    const locationObj = {
+      searchQuery: searchQuery,
+      formattedQuery: cityResults.display_name,
+      latitude: cityResults.lat,
+      longitude: cityResults.lon,
+      image_url: `https://maps.locationiq.com/v2/staticmap?key=${process.env.GEODATA_API}&center=${cityResults.lat},${cityResults.lon}&size=800x800&zoom=12`
+    }
+
+    console.log('sending location:', locationObj)
+    response.send(locationObj);
+  } catch(err) {console.error(err)}
+}
+
+// -------------------------------------------
+// WEATHER
+// -------------------------------------------
+async function weatherHandler(request, response) {
+  // const locationObj = JSON.parse(request.query)
+  console.log('in weather', request.query)
+  const searchQuery = request.query.searchQuery;
+  // Alternatively: const {latitude, longitude} = request.query;
+
+  try{
+
+    const url = 'http://api.weatherbit.io/v2.0/forecast/daily'
+    const queryParams = {
+      key: process.env.WEATHER_API_KEY,
+      city: searchQuery,
+      days: 5,
+    };
+    const superagentResults = await superagent.get(url).query(queryParams);
+    // console.log('superagent weather', superagentResults.body)
+    const weatherArray = superagentResults.body.data.map(day => new Weather(day));
+    response.send(weatherArray);
+
+  } catch(err) {
+    console.error(err);
   }
-]
+}
 
-const PORT = process.env.PORT;
+function Weather(day) {
+  this.forecast = day.weather.description;
+  this.time = day.datetime;
+}
 
-app.get('/location', (request, response) => {
-  response.send(location);
-});
+// -------------------------------------------
+// EXPRESS RENDERERS
+// -------------------------------------------
 
-app.get('/restaurants', (request, response) => {
-  response.send(restaurants);
-})
+function notFoundHandler(request, response) {
+  response.status(404).send('huh?');
+}
 
-app.listen(PORT, () => console.log('server up on ', PORT));
+function startServer() {
+  app.listen(PORT, () => console.log(`Server up on ${PORT}`));
+}
+
+startServer();
