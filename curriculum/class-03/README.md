@@ -1,4 +1,4 @@
-# Flexbox & Templating
+# Passing Functions as Props
 
 ## Overview
 

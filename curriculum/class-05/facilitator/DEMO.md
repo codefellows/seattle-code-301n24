@@ -32,5 +32,5 @@ Build and deploy a simple express server
 - Deploy it to Heroku
 - Watch it download and install, and then visit the site.
 - Change the static content to the above city-explorer demo
-- Push to master
+- Push to main
 - Watch Heroku re-deploy the site

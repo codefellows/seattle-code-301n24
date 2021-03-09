@@ -48,7 +48,7 @@ Today, we deploy with GitHub Pages. The steps are as follows:
 1. `.github/workflows/react.yml`
    - This .yml file tells GitHub Actions how to build and deploy
    - It requires a developer token in the "Secrets" section of the repo (under settings)
-1. Once you check-in to master, it'll build your app and deploy it automatically on every merge
+1. Once you check-in to main, it'll build your app and deploy it automatically on every merge
 
 
 ## Lab Notes

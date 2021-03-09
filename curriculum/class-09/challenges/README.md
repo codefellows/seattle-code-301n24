@@ -1,53 +1,88 @@
-# array.reduce()
+# Object Iteration
 
 ## Overview
 
-`arr.reduce( (accumulator,value,index) => {...}, initialvalue)` 
-
-### Basics
-
-`.reduce()` iterates over an array and returns the last version of the "accumulator" ... in each iteration, based on the value and/or idx of the current element in the array, you have the opportunity to modify and return the accumulator. After the last iteration of the array, that accumulator value is returned to the caller. `initialvalue` represents the value of the accumulator in the first iteration.
-
-**Add up all the numbers in an array**
-In this example, the accumulator starts out as 0 (the initial value) and for each iteration, we simply add onto it, and then return it.  That return value gets fed into the next iteration so that you can continually operate on it and return the final value.
+Just like with arrays, you'll often want to iterate over objects. But unlike arrays, objects have more than just one moving part ... and very often, they go deeper than just a single property.
 
 ```js
-let numbers = [1,2,3,4];
-let sum = numbers.reduce( function(accumulator,value,idx) {
-  accumulator = accumulator + value;
-  return accumulator;
-}, 0);
-
-// sum would be 10
-```
-
-**Change the shape of you data**
-In this example, we'll take an array of objects and return back an object, keyed by the 'name' property. The initial value is an empty object, and as we iterate, we create a new entry in it, returning it as we build on.
-
-```js
-  let people = [
-    {name:'Fred', role:'Developer'},
-    {name:'Suzy', role:'Developer'},
-    {name:'Gina', role:'Manager'},
-    {name:'Jim', role:'Support'}
-  ];
-  
-  let folks = people.reduce( (accumulator, person, idx) => {
-    accumulator[person.name] = person.role;
-    return accumulator;
-  }, {} );
-  
-  // folks:
+let person =
   {
-    Fred: 'Developer',
-    Suzy: 'Developer',
-    Gina: 'Manager',
-    Jim: 'Support'
-  }
-  
+    "name":"John",
+    "role":"Dad",
+    "interests": ["Coaching","Teaching"]
+  };
 ```
+
+To iterate over the properties of an object, there are various ways to iterate or traverse. These will only give you access to the current layer, however.  If you want to fully traverse the object and any sub-objects or arrays, you'll need to nest...
+
+**for ... in** ... a looping method for objects that acts much like an old fashioned "for" loop.
+
+```js
+for( let property in person ) {
+  console.log(property, person[property]);
+}
+```
+
+**Object.keys** ... this is an Object constructor prototype method, which takes in an object as an argument and returns an array of keys (properties)
+
+```js
+let properties = Object.keys(person);
+properties.forEach( property => {
+  console.log(property, person[property]);
+})
+
+// Or more succinctly
+Object.keys(person).forEach( property => {
+  console.log(property, person[property]);
+})
+```
+
+**Object.values** - Returns an iterable array of just the values from the object.
+
+```js
+console.log(Object.values(person));
+// OUTPUT
+    [
+        'John',
+        'Dad',
+        [ 'Coaching', 'Teaching' ]
+    ]
+
+// To Iterate it ...
+Object.values(person).forEach(value => {
+  console.log(value);
+})
+
+// OUTPUT
+    John
+    Dad
+    ['Coaching', 'Teaching']
+```
+
+**Object.entries** - Returns an array of each "Entry" as an an array with a key and value
+
+```js
+Object.entries(person).forEach(entry => {
+  console.log(entry);
+})
+
+// OUTPUT
+[
+    [ 'name', 'John' ],
+    [ 'role', 'Dad' ],
+    [ 'interests', [ 'Coaching', 'Teaching' ] ],
+]
+```
+
+### Caveats and Notes
+
+- Applies the callback to each element
+- You cannot "Return" a value
+- You cannot "break" or "continue" as you can with a for loop
+- By default, forEach does not mutate the array
+- If you mutate it in process, you will have interesting issues
 
 ## Reference
 
-- [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
-- [Medium](https://medium.com/@JeffLombardJr/understanding-foreach-map-filter-and-find-in-javascript-f91da93b9f2c)
+- [MDN](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function)
+- [What the heck is a callback?](https://codeburst.io/javascript-what-the-heck-is-a-callback-aba4da2deced)

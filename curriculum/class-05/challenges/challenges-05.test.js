@@ -3,233 +3,269 @@
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
-Write a function called sortStarWarsCharacters that sorts the characters in the starWarsPeople array by height from tallest to shortest.
+Write a function that iterates over an array of people objects 
+and creates a new list of each person's full name using the array method 'map'.
+Each object will have the shape {firstName:string, lastName:string}
+E.g. [ { firstName:"Jane", lastName:"Doe" }, { firstName:"James", lastName:"Bond"}]
+should convert to ["Jane Doe", "James Bond"]
+Note the space in between first and last names.
+You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
-
-let starWarsPeople = [
-  {
-    "name": "C-3PO",
-    "height": "167",
-    "eye_color": "yellow"
-  },
-  {
-    "name": "Luke Skywalker",
-    "height": "172",
-    "eye_color": "blue"
-  },
-  {
-    "name": "R2-D2",
-    "height": "96",
-    "eye_color": "red"
-  }
-];
-
-const sortStarWarsCharacters = (starWarsArr) => {
+const toLastNames = people => {
   // Solution code here...
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named removeThree that takes an index and an array. The function should removes three items in the array starting with the value at the index. 
+Write a function named addValues that, given an array of numbers as input, uses reduce to add the values in the array.
+
 ------------------------------------------------------------------------------------------------ */
 
-const removeThree = (idx, arr) => {
+const addValues = (arr) => {
   // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named joinArray that takes an array and joins all of the elements together in one string on a space.
+Write a function named addPurchases that, given an array of objects as input, uses reduce to find the total amount purchased. Each object contains the keys `item` and `purchasePrice` like the example.
+
+{
+  item: 'switch'
+  purchasePrice: 399
+}
+
 ------------------------------------------------------------------------------------------------ */
 
-const joinArray = (arr) => {
+const addPurchases = (arr) => {
   // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function named howMuchPencil that takes in a string, as written on the side of a pencil.
+Write a function named countNumberOfElements that, given an array as input, uses reduce to count the number of elements in the array.
 
-As you sharpen the pencil, the string will become shorter and shorter, starting by removing the first letter.
-
-Your function should use slice within a loop and return an array of each successive string result from losing letters to the sharpener, until nothing is left.
-
-For example, if the input is 'Welcome', the output will be:
-['Welcome', 'elcome', 'lcome', 'come', 'ome', 'me', 'e', ''].
+Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
-const howMuchPencil = (str) => {
-  let result = [];
+const countNumberOfElements = (arr) => {
   // Solution code here...
-  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function name wordsToCharList that, given a string as input, returns a new array where every element is a character of the input string.
-
-For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
+Write a function named returnNames that, given the Star Wars data, below, uses reduce to return an array containing the names of the characters.
 ------------------------------------------------------------------------------------------------ */
 
-const wordsToCharList = (arr) => {
+let starWarsData = [{
+  name: 'Luke Skywalker',
+  height: '172',
+  mass: '77',
+  hair_color: 'blond',
+  skin_color: 'fair',
+  eye_color: 'blue',
+  birth_year: '19BBY',
+  gender: 'male',
+},
+{
+  name: 'C-3PO',
+  height: '167',
+  mass: '75',
+  hair_color: 'n/a',
+  skin_color: 'gold',
+  eye_color: 'yellow',
+  birth_year: '112BBY',
+  gender: 'n/a'},
+{
+  name: 'R2-D2',
+  height: '96',
+  mass: '32',
+  hair_color: 'n/a',
+  skin_color: 'white, blue',
+  eye_color: 'red',
+  birth_year: '33BBY',
+  gender: 'n/a'
+},
+{
+  name: 'Darth Vader',
+  height: '202',
+  mass: '136',
+  hair_color: 'none',
+  skin_color: 'white',
+  eye_color: 'yellow',
+  birth_year: '41.9BBY',
+  gender: 'male'
+},
+{
+  name: 'Leia Organa',
+  height: '150',
+  mass: '49',
+  hair_color: 'brown',
+  skin_color: 'light',
+  eye_color: 'brown',
+  birth_year: '19BBY',
+  gender: 'female'
+}];
+
+const returnNames = (arr) => {
   // Solution code here...
 };
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-You are making a grocery list for ingredients needed in the gruffalo crumble recipe, below. Rather than taking the entire recipe, you only want a list of the item names.
+Write a function named reversedString that takes in a string and returns a string with the letters in reverse order.
 
-Write a function named listFoods that takes in the recipe and returns a new array of the food items without any amount or units. Just the name. For example, '1 cup flour' will return 'flour'.
-
-Use slice for this function, maybe more than once. The Array.indexOf() method may also be helpful.
-
-Do not use split for this function.
+Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
 ------------------------------------------------------------------------------------------------ */
 
-const gruffaloCrumble = {
-  name: 'How to make a Gruffalo Crumble',
-  ingredients: [
-    '1 medium-sized Gruffalo',
-    '8 pounds oats',
-    '2 pounds brown sugar',
-    '4 pounds flour',
-    '2 gallons pure maple syrup',
-    '16 cups chopped nuts',
-    '1 pound baking soda',
-    '1 pound baking powder',
-    '1 pound cinnamon',
-    '6 gallons melted butter',
-    '2 gallons fresh water',
-  ],
-  steps: [
-    'Pre-heat a large oven to 375',
-    'De-prickle the gruffalo',
-    'Sprinkle with cinnamon, sugar, flour, and nuts',
-    'Mix until evenly distributed',
-    'Grease a 3-foot x 3-foot casserole dish',
-    'Combine gruffalo compote with water to maintain moisture in the oven',
-    'Fold together remaining ingredients to make the crisp',
-    'Spread the crisp evenly over the gruffalo mixture',
-    'Bake for 12-15 hours',
-  ]
-};
-
-
-const listFoods = (recipe) => {
-  let result = [];
+const reversedString = (str) => {
   // Solution code here...
-  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
 
-Write a function named splitFoods that uses split to produce the same output as Challenge 3.
-
-You may also use other string or array methods.
+Write a function named countNumberOfChildren that, given the array of characters, below, uses reduce to return the total number of children in the data set.
 ------------------------------------------------------------------------------------------------ */
 
-const splitFoods = (recipe) => {
-  let result = [];
+const characters = [
+  {
+    name: 'Eddard',
+    spouse: 'Catelyn',
+    children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
+    house: 'Stark',
+  },
+  {
+    name: 'Jon',
+    spouse: 'Lysa',
+    children: ['Robin'],
+    house: 'Arryn',
+  },
+  {
+    name: 'Cersei',
+    spouse: 'Robert',
+    children: ['Joffrey', 'Myrcella', 'Tommen'],
+    house: 'Lannister',
+  },
+  {
+    name: 'Daenarys',
+    spouse: 'Khal Drogo',
+    children: ['Drogon', 'Rhaegal', 'Viserion'],
+    house: 'Targaryen',
+  },
+  {
+    name: 'Mace',
+    spouse: 'Alerie',
+    children: ['Margaery', 'Loras'],
+    house: 'Tyrell',
+  },
+  {
+    name: 'Sansa',
+    spouse: 'Tyrion',
+    house: 'Stark',
+  },
+  {
+    name: 'Jon',
+    spouse: null,
+    house: 'Snow',
+  },
+];
+
+const countNumberOfChildren = (arr) => {
   // Solution code here...
-  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
 
-Use the same recipe from Challenge 3, above.
+Write a function that, given an array of numbers as input, uses reduce to calculate the array's average value.
 
-Write a function named stepAction that takes in the recipe and extracts the action verbs from the steps. Fortunate for you, the action verbs are the first word of each action.
-
-Return a new array containing just the verbs. For example, ['Mix until evenly distributed'] returns ['Mix'].
+Hint: The accumulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
 
-const stepActions = (recipe) => {
-  let result = [];
+const calculateAverage = (arr) => {
   // Solution code here...
-  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
 
-Write a function named removeEvenValues that, given an array of integers as input, deletes all even values from the array, leaving no 'gaps' behind.
+Write a function named countPrimeNumbers that, given an array elements as input, uses reduce to count the number of elements that are prime numbers.
 
-The array should be modified in-place.
-
-For example:
-  const integers = [1, 2, 3, 4, 5, 6];
-  removeEvenValues(integers);
-  console.log(integers) will print [1, 3, 5]
+You are welcome to use the provided isPrime function.
 ------------------------------------------------------------------------------------------------ */
 
-const removeEvenValues = (arr) => {
+const isPrime = (value) => {
+  for (let i = 2; i < value; i++) {
+    if (value % i === 0) {
+      return false;
+    }
+  }
+  return value > 1;
+};
+
+const countPrimeNumbers = (arr) => {
   // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 10 - Stretch Goal
 
-Write a function named removeLastCharacters that takes in a string and a number. The numberOfCharacters argument determines how many characters will be removed from the end of the string. Return the resulting string.
+Write a function named extractState that, given the snorlaxData, below, uses reduce to return the object whose 'name' property matches the given string.
 
-If the numberOfCharacters argument is greater than the length of the input string, the function should return an empty string.
-
-If the numberOfCharacters argument input is a negative number, the function should return the input string without any changes.
-
-For example:
-removeLastCharacters('Gregor', 2) returns 'Greg'
-removeLastCharacters('Gregor', -2) returns 'Gregor'
-removeLastCharacters('Gregor', 9) returns ''
+If the input array does not have a stat with that specific name, the function should return null.
 ------------------------------------------------------------------------------------------------ */
 
-const removeLastCharacters = (str, numberOfCharacters) => {
-  // Solution code here...
+const snorlaxData = {
+  stats: [
+    {
+      stat: {
+        url: 'https://pokeapi.co/api/v2/stat/6/',
+        name: 'speed',
+      },
+      effort: 5,
+      baseStat: 30,
+    },
+    {
+      stat: {
+        url: 'https://pokeapi.co/api/v2/stat/5/',
+        name: 'special-defense',
+      },
+      effort: 2,
+      baseStat: 110,
+    },
+    {
+      stat: {
+        url: 'https://pokeapi.co/api/v2/stat/4/',
+        name: 'special-attack',
+      },
+      effort: 9,
+      baseStat: 65,
+    },
+  ],
+  name: 'snorlax',
+  weight: 4600,
 };
 
+const extractStat = (statName, arr) => {
+  // Solution code here...
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 11 - Stretch Goal
 
-Write a function named totalSumCSV that, given a string of comma-separated values (CSV) as input. (e.g. "1,2,3"), returns the total sum of the numeric values (e.g. 6).
+Write a function named extractChildren that, given the array of characters from challenge 4, accomplishes the following:
+
+1) Uses filter to return an array of the characters that contain the letter 'a' in their name
+
+2) Then, uses reduce to return an array of all the children's names in the filtered array
 ------------------------------------------------------------------------------------------------ */
 
-const totalSumCSV = (str) => {
-  let total = 0;
-  // Solution code here...
-  return total;
-};
-
-
-/* ------------------------------------------------------------------------------------------------
-CHALLENGE 12 - Stretch Goal
-
-Write a function named removeVowels that takes in a string and returns a new string where all the vowels of the original string have been removed.
-
-For example, removeVowels('gregor') returns 'grgr'.
------------------------------------------------------------------------------------------------- */
-
-const removeVowels = (str) => {
-  // Solution code here...
-};
-
-/* ------------------------------------------------------------------------------------------------
-CHALLENGE 13 - Stretch Goal
-
-Write a function named extractVowels that takes in a string and returns an array where the first element is the original string with all the vowels removed, and the second element is a string of all the vowels that were removed, in alphabetical order.
-
-For example, extractVowels('gregor') returns ['grgr', 'eo'].
-
-Similarly, extractVowels('The quick brown fox') returns ['Th qck brwn fx', 'eioou']
------------------------------------------------------------------------------------------------- */
-
-const extractVowels = (str) => {
+const extractChildren = (arr) => {
   // Solution code here...
 };
 
@@ -240,117 +276,80 @@ All the code below will verify that your functions are working to solve the chal
 
 DO NOT CHANGE any of the below code.
 
-Run your tests from the console: jest challenges-05.test.js
-
+Run your tests from the console: jest challenges-09.test.js
 ------------------------------------------------------------------------------------------------ */
 
 describe('Testing challenge 1', () => {
-  test('It should sort the star wars characters by height from tallest to shortest', () => {
-    expect(sortStarWarsCharacters(starWarsPeople)[0]['name']).toStrictEqual('Luke Skywalker');
-    expect(sortStarWarsCharacters(starWarsPeople)[2]['height']).toStrictEqual('96');
-  })
+  test('It should convert object to full name string', () => {
+
+    const people = [{ firstName: "Jane", lastName: "Doe" }, { firstName: "James", lastName: "Bond" }];
+
+    expect(toLastNames(people)).toStrictEqual(["Jane Doe", "James Bond"]);
+
+  });
 });
 
 describe('Testing challenge 2', () => {
-  test('It should return an array with three items removed', () => {
-    expect(removeThree(2, [1, 2, 3, 4, 5, 6, 7, 8])).toStrictEqual([1, 2, 6, 7, 8]);
+  test('It should add the values of an array', () => {
+    expect(addValues([1, 2, 3, 4, 5])).toStrictEqual(15);
+    expect(addValues([])).toStrictEqual(0);
+    expect(addValues([1, 2, 3, 4, -5])).toStrictEqual(5);
   });
 });
 
 describe('Testing challenge 3', () => {
-  test('It should join an array', () => {
-    expect(joinArray(['hello', '301', 'students'])).toStrictEqual('hello 301 students');
+  test('It should add the purchase price', () => {
+    expect(addPurchases([{item: 'switch', purchasePrice: 399}, {item: 'toothpaste', purchasePrice: 2}])).toStrictEqual(401);
+    expect(addPurchases([])).toStrictEqual(0);
   });
 });
 
 describe('Testing challenge 4', () => {
-  test('It should return a list of shortening words', () => {
-    expect(howMuchPencil('Welcome')).toStrictEqual(['Welcome', 'elcome', 'lcome', 'come', 'ome', 'me', 'e', '']);
-    expect(howMuchPencil('Welcome').length).toStrictEqual(8);
-    expect(howMuchPencil('')).toStrictEqual(['']);
-    expect(howMuchPencil('abc')).toStrictEqual(['abc', 'bc', 'c', '']);
+  test('It should return the length of the array', () => {
+    expect(countNumberOfElements([1, 2, 3, 4, 5])).toStrictEqual(5);
   });
 });
 
 describe('Testing challenge 5', () => {
-  test('It should return an array of individual letters', () => {
-    expect(wordsToCharList('Gregor')).toStrictEqual(['G', 'r', 'e', 'g', 'o', 'r']);
-    expect(wordsToCharList('Gregor').length).toStrictEqual(6);
-    expect(wordsToCharList('hooray')).toStrictEqual(['h', 'o', 'o', 'r', 'a', 'y']);
-    expect(wordsToCharList('')).toStrictEqual([]);
+  test('It should return an array continaing the names of the characters', () => {
+    expect(returnNames(starWarsData)).toStrictEqual([ 'Luke Skywalker', 'C-3PO', 'R2-D2', 'Darth Vader', 'Leia Organa' ]);
+    expect(returnNames(starWarsData).length).toStrictEqual(5);
   });
 });
 
 describe('Testing challenge 6', () => {
-  test('It should return a list of foods', () => {
-    expect(listFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
-    expect(listFoods(gruffaloCrumble).length).toStrictEqual(11);
+  test('It should return the string with the characters in reverse order', () => {
+    expect(reversedString('Code 301')).toStrictEqual('103 edoC');
   });
 });
 
 xdescribe('Testing challenge 7', () => {
-  test('It should return a list of foods', () => {
-    expect(splitFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
+  test('It should return the total number of children', () => {
+    expect(countNumberOfChildren(characters)).toStrictEqual(14);
   });
 });
 
 xdescribe('Testing challenge 8', () => {
-  test('It should return a list of recipe steps', () => {
-    expect(stepActions(gruffaloCrumble)).toStrictEqual(['Pre-heat', 'De-prickle', 'Sprinkle', 'Mix', 'Grease', 'Combine', 'Fold', 'Spread', 'Bake']);
-    expect(stepActions(gruffaloCrumble).length).toStrictEqual(9);
+  test('It should return the average of the numbers in the array', () => {
+    expect(calculateAverage([18, 290, 37, 4, 55, 16, 7, 85 ])).toStrictEqual(64);
   });
 });
 
 xdescribe('Testing challenge 9', () => {
-  test('It should remove the even numbers from the array', () => {
-    let list = [1, 2, 3, 4, 5, 6];
-    removeEvenValues(list);
-    expect(list).toStrictEqual([1, 3, 5]);
-
-    list = [6, 3, 19, 43, 12, 66, 43];
-    removeEvenValues(list);
-    expect(list).toStrictEqual([3, 19, 43, 43]);
-    expect(list.length).toStrictEqual(4);
+  test('It should return a count of the prime numbers in the array', () => {
+    expect(countPrimeNumbers([1, 2, 13, 64, 45, 56, 17, 8])).toStrictEqual(3);
   });
 });
 
 xdescribe('Testing challenge 10', () => {
-  test('It should shorten the string based on the first argument', () => {
-    expect(removeLastCharacters('Gregor', 2)).toStrictEqual('Greg');
-    expect(removeLastCharacters('Gregor', 2).length).toStrictEqual(4);
-  });
-  test('It should return the complete string when passed a negative number', () => {
-    expect(removeLastCharacters('hello', -1)).toStrictEqual('hello');
-    expect(removeLastCharacters('wowow', -700)).toStrictEqual('wowow');
-  });
-  test('It should return an empty string when called with a number larger than the string length', () => {
-    expect(removeLastCharacters('hello', 12)).toStrictEqual('');
-    expect(removeLastCharacters('', 1)).toStrictEqual('');
-    expect(removeLastCharacters('a', 1)).toStrictEqual('');
+  test('It should return any stats that match the input', () => {
+    expect(extractStat('speed', snorlaxData.stats)).toStrictEqual({ stat: { url: 'https://pokeapi.co/api/v2/stat/6/', name: 'speed' }, effort: 5, baseStat: 30 });
   });
 });
 
 xdescribe('Testing challenge 11', () => {
-  test('It should add up the numbers contained within the string', () => {
-    expect(totalSumCSV('1,4,5,7,2')).toStrictEqual(19);
-    expect(totalSumCSV('147')).toStrictEqual(147);
-  });
-});
-
-xdescribe('Testing challenge 12', () => {
-  test('It should return the string without vowels', () => {
-    expect(removeVowels('gregor')).toStrictEqual('grgr');
-    expect(removeVowels('gregor').length).toStrictEqual(4);
-    expect(removeVowels('asdf')).toStrictEqual('sdf');
-    expect(removeVowels('why')).toStrictEqual('why');
-  });
-});
-
-xdescribe('Testing challenge 13', () => {
-  test('It should return the string without vowels', () => {
-    expect(extractVowels('gregor')).toStrictEqual(['grgr', 'eo']);
-    expect(extractVowels('gregor').length).toStrictEqual(2);
-
-    expect(extractVowels('The quick brown fox')).toStrictEqual(['Th qck brwn fx', 'eioou']);
+  test('It should return an array containing the names of the children', () => {
+    expect(extractChildren(characters)).toStrictEqual([ 'Robb', 'Sansa', 'Arya', 'Bran', 'Rickon', 'Drogon', 'Rhaegal', 'Viserion', 'Margaery', 'Loras' ]);
+    expect(extractChildren(characters).length).toStrictEqual(10);
   });
 });

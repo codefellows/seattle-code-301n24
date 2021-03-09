@@ -251,27 +251,27 @@ Day 5: Presentation Day!
 ## Git
 The entire team should follow the same process for synchronizing the code base on GitHub and on their local computers.
 
-The master branch should not contain any broken code. From the master branch, create a development branch. This will be the branch where several team members can combine their code and it can be tested prior to merging into the master branch. If everything is functioning correctly on the development branch, the changes can be merged into master.
+The main branch should not contain any broken code. From the main branch, create a development branch. This will be the branch where several team members can combine their code and it can be tested prior to merging into the main branch. If everything is functioning correctly on the development branch, the changes can be merged into main.
 
 _Why:_
-> The master branch is the source of your deployment, which should only contain fully functional code.
+> The main branch is the source of your deployment, which should only contain fully functional code.
 
 All work should be on a feature branch with a meaningful name. Feature branches should be created off of the development branch. When the feature is completed, create a pull request from your feature branch to the development branch.
 
 _Why:_
-> Team members can work on features in an isolated branch, then test it by creating a pull request to the development branch. This preserves the purity of the master branch.
+> Team members can work on features in an isolated branch, then test it by creating a pull request to the development branch. This preserves the purity of the main branch.
 
 When you start a new feature and any time a pull request is merged into the development branch, make sure that your local development branch is up to date. Check out the development branch, then pull the development branch. Create your new branch off of the updated development branch.
 
 _Why:_
 > Always make sure you are working off of the most up-to-date code base. This will prevent writing redundant code or overwriting code that you or another team member wrote.
 
-Whenever a pull request is merged from development to master, check out your local master branch and then pull the master branch.
+Whenever a pull request is merged from development to main, check out your local main branch and then pull the main branch.
 
 _Why:_
-> Always keep your local master up to date to ensure you have the most up to date changes locally.
+> Always keep your local main up to date to ensure you have the most up to date changes locally.
 
-If a pull request from a teammate has been merged and you working on a branch but are not ready to push your changes, you can still pull those changes while continuing to work on your feature branch. To do so, add and commit any changes on your local feature branch. Check out your master or development branch and pull the changes. Then, check out your feature branch and run the command `git merge master` if the master branch was pulled and `git merge development` if the development branch was pulled.
+If a pull request from a teammate has been merged and you working on a branch but are not ready to push your changes, you can still pull those changes while continuing to work on your feature branch. To do so, add and commit any changes on your local feature branch. Check out your main or development branch and pull the changes. Then, check out your feature branch and run the command `git merge main` if the main branch was pulled and `git merge development` if the development branch was pulled.
 
 Handle merge conflicts, if there are any. Check all of your project files for the markers that indicate merge conflicts, the `>>>>>>>>>` and `HEAD` lines of code. Edit the code to remove the redundancies causing the merge conflict, and eliminate the markers. Add and commit the files where the merges were resolved.
 
@@ -296,7 +296,7 @@ When the pull request is merged to development, every team member should check o
 _Why:_
 > Do not assume that the code will work correctly when merged into the development branch. Confirm it in several different browsers and on multiple screen sizes.
 
-Periodically, as determined by your team, make a pull request from the development branch to the master branch and follow the same process to test the changes to the master branch on everyone's local computers. Merging pull requests to the master branch should also update the deployed site, so confirm functionality there as well.
+Periodically, as determined by your team, make a pull request from the development branch to the main branch and follow the same process to test the changes to the main branch on everyone's local computers. Merging pull requests to the main branch should also update the deployed site, so confirm functionality there as well.
 
 _Why:_
 > Don't assume that the features have been integrated, confirm it.
@@ -311,7 +311,7 @@ _Why:_
 <a id="deployment"></a>
 ## Deployment
 
-Deploy your project on Heroku and be prepared to present from the deployed version of your site. Associate your Heroku instance with your GitHub repository. Enable automatic deploys from your master branch. Also connect your production deployment to a custom domain name (don't use a `.app` TLD unless you are prepared to pay for SSL on your Heroku instance). 
+Deploy your project on Heroku and be prepared to present from the deployed version of your site. Associate your Heroku instance with your GitHub repository. Enable automatic deploys from your main branch. Also connect your production deployment to a custom domain name (don't use a `.app` TLD unless you are prepared to pay for SSL on your Heroku instance). 
 
 _Why:_
 > Deployed sites provide a unique URL that can be shared with anyone. You will also want to include this URL in your portfolio. Registering a custom domain name is a great way to think through how the internet works! 
@@ -321,7 +321,7 @@ Deploy your site on the first day.
 _Why:_
 > Ensure that you have a deployed site at the beginning of the project so you have a live site where you can view your changes, in addition to testing your code locally. Deploying on the first day also ensures that you will have a live site in the case that GitHub goes down on presentation day. (It happens!)
 
-After the initial repository creation, scaffold out a basic `server.js` and basic `index.ejs` file with a heading element or something similar. Then push this code to GitHub and deploy it as a "proof of life" that the deployment worked correctly. As you continue to work on your project, the deployed site will update any time the team merges a pull request into the master branch. You also have the option to set this to a different branch, although it is most common to deploy from the master branch.
+After the initial repository creation, scaffold out a basic `server.js` and basic `index.ejs` file with a heading element or something similar. Then push this code to GitHub and deploy it as a "proof of life" that the deployment worked correctly. As you continue to work on your project, the deployed site will update any time the team merges a pull request into the main branch. You also have the option to set this to a different branch, although it is most common to deploy from the main branch.
 
 [Back to top](#top)
 

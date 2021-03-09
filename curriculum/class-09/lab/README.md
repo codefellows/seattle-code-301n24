@@ -149,6 +149,13 @@ Deploy your application.
 
 - Send the data as a response to your front-end.
 
+1. Deployment: Live Heroku URL required for full points.
+- Partial credit available for obvious/reasonable effort even if deployment is non-working
+- Features / Code Standards
+  - Server must have 404 and 500 error handlers
+  - Route definitions and handlers should be separated
+  - All non-location data must be retrieved from live API
+
 1. STRETCH GOAL: Add an additional route for `/movies`
 - Add an environment variable to your server named MOVIE_API_KEY, and use it appropriately in your code.
 - Create a route with a method of get and a path of `/movies`. The callback should make a Superagent-proxied request to The Movie Database API using the necessary location information.
@@ -215,7 +222,7 @@ _Your `README.md` must include:_
 ## Submission Instructions
 
 1. Complete your Feature Tasks for the lab
-1. Create a PR back to the `master` branch of your repository, and merge it cleanly.
+1. Create a PR back to the `main` branch of your repository, and merge it cleanly.
 1. On Canvas, submit a link to your PR. Add a comment in your Canvas assignment which includes the following:
     - A link to the deployed version of your latest code for both the front-end and the back-end.
     - A link to your public Trello board.

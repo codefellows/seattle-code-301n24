@@ -1,205 +1,113 @@
 'use strict';
 
 /* ------------------------------------------------------------------------------------------------
-
 CHALLENGE 1 - Review
 
-Use the characters data below for all of the challenges except challenge 2 and 3.
+Write a function named getNames that, given an array of people objects, uses map to return an array of names reversed.
 
-Write a function named sortByChildren that sorts the characters below by the number of children in each house (fewest to most). If a house has the same number of children, sort alphabetically by house name.
+For example: 
+[
+{
+  name: 'lloyd',
+  age: 32,
+  shoeSize: 12
+}, 
+{
+  name: 'jamie',
+  age: 21,
+  shoeSize: 8
+}
+]
 
+Returns: ['dyoll', 'eimaj'];
 ------------------------------------------------------------------------------------------------ */
-let characters = [
-  {
-    name: 'Eddard',
-    spouse: 'Catelyn',
-    children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
-    house: 'Stark'
-  },
-  {
-    name: 'Jon A.',
-    spouse: 'Lysa',
-    children: ['Robin'],
-    house: 'Arryn'
-  },
-  {
-    name: 'Cersei',
-    spouse: 'Robert',
-    children: ['Joffrey', 'Myrcella', 'Tommen'],
-    house: 'Lannister'
-  },
-  {
-    name: 'Daenarys',
-    spouse: 'Khal Drogo',
-    children: ['Drogon', 'Rhaegal', 'Viserion'],
-    house: 'Targaryen'
-  },
-  {
-    name: 'Mace',
-    spouse: 'Alerie',
-    children: ['Margaery', 'Loras'],
-    house: 'Tyrell'
-  },
-  {
-    name: 'Euron',
-    spouse: null,
-    children: [],
-    house: 'Greyjoy'
-  },
-  {
-    name: 'Jon S.',
-    spouse: null,
-    children: [],
-    house: 'Snow'
-  }
-];
 
-const sortByChildren = (charArray) => {
+const getNames = (arr) => {
   // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named getCourseKeys that takes in the courseInfo object and returns an array containing the keys for the courseInfo object.
+Write a function that appends ' The end.' to a string, and returns the modified string. The original source string should not be modified.
 
-For example: (['name', 'duration', 'topics', 'finalExam']).
 ------------------------------------------------------------------------------------------------ */
-const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks'},
-  topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
-  finalExam: true
-};
 
-const getCourseKeys = (obj) => {
+const appendTheEnd = (str) => {
   // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named checkValues that takes in an object and a value and returns true if the value is in the object.
+Write a function that accepts an array and copies the first element to the end of the array. The change should be reflected in the source array that was passed in to the function. That is, the function should modify the array 'in place'.
 
+Do not use a return statement.
 
+For example:
+const a = [1, 2, 3];
+appendFirstToLast(a);
+console.log(a) prints [1, 2, 3, 1]
 ------------------------------------------------------------------------------------------------ */
 
-const checkValues = (obj, value) => {
+const appendFirstToLast = (arr) => {
   // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-You are given an object with names and their coresponding phone numbers that looks like this: 
-{
-  'Grace Hopper': '222-303-5938',
-  'Ada Lovelace': '222-349-9842',
-  'Alan Turing': '222-853-5933'
-}
+Write a function that accepts an object and an integer as arguments and adds a new property to the object called yearBorn. The value of the yearBorn property should be the integer that was passed in.
 
-HR has asked you to change the data to make it easier to print so that it looks like this: 
-[
-  'Grace Hopper: 222-303-5938',
-  'Ada Lovelace: 222-349-9842',
-  'Alan Turing: 222-853-5933'
-]
+The change should be reflected in the source object that was passed in to the function. That is, the function should modify the object 'in place'.
 
------------------------------------------------------------------------------------------------- */
-
-const updateNumbers = (obj) => {
-  // Solution code here...
-};
-
-
-
-/* ------------------------------------------------------------------------------------------------
-CHALLENGE 5
-
-Write a function named getHouses that returns a new array containing the names of all of the houses in the data set.
------------------------------------------------------------------------------------------------- */
-
-const getHouses = (arr) => {
-  let houses = [];
-  // Solution code here...
-  return houses;
-};
-
-/*------------------------------------------------------------------------------------------------
-CHALLENGE 6
-
-Write a function named hasChildrenValues that uses Object.values to determine if any given character in the data set has children.
-
-This function should take in an array of data and a character name and return a Boolean.
+Do not use a return statement.
 
 For example:
-hasChildrenValues(characters, 'Cersei') will return true
-hasChildrenValues(characters, 'Sansa') will return false
+const octavia = { fullName: 'Octavia Estelle Butler' };
+addBirthYearProperty(octavia, 1947);
+console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 ------------------------------------------------------------------------------------------------ */
 
-const hasChildrenValues = (arr, character) => {
-  // Solution code here...
-
-};
-
-/* ------------------------------------------------------------------------------------------------
-CHALLENGE 7 - Stretch Goal
-
-Write a function named hasChildrenEntries that is similar to your hasChildrenValues function from challenge 4, but uses the data's entries instead of its values.
-
-The input and output of this function are the same as the input and output from challenge 3.
------------------------------------------------------------------------------------------------- */
-
-const hasChildrenEntries = (arr, character) => {
+const addBirthYearProperty = (obj, year) => {
   // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 8 - Stretch Goal
+CHALLENGE 5 - Stretch Goal
 
-Write a function named totalCharacters that takes in an array and returns the number of characters in the array.
+Write a function that accepts an array of people objects and adds a new property called isAuthor to each object in the list. Set the value of the new property to true.
+
+The function should modify the object in place. Do not use a return statement.
+
+For example:
+const people = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }];
+setStatusAsAuthor(people);
+console.log(people[1].isAuthor) prints true
 ------------------------------------------------------------------------------------------------ */
 
-const totalCharacters = (arr) => {
+const setStatusAsAuthor = (people) => {
   // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 9 - Stretch Goal
+CHALLENGE 6 - Stretch Goal
 
-Write a function named houseSize that takes in the array of characters and creates an object for each house containing the name of the house and the number of members.
+Write a function that accepts two arrays. Append the values from the second array into the first,
+maintaining the ordering.
 
-All of these objects should be added to an array named "sizes". Return the "sizes" array from the function.
+The function should modify the first array in place. Do not use a return statement.
 
-For example: [{ house: 'Stark', members: 7 }, { house: 'Arryn', members: 3 }, ... ].
+For example:
+const a = [1, 2]; NOTE: If you assign an array to a `const`, you can't re-assign it later, but you can change the values in the array.
+const b = [3, 4];
+append(a, b);
+console.log(a) prints [1, 2, 3, 4]
 ------------------------------------------------------------------------------------------------ */
 
-const houseSize = (arr) => {
-  const sizes = [];
+const append = (arr1, arr2) => {
   // Solution code here...
-  return sizes;
-};
 
-/* ------------------------------------------------------------------------------------------------
-CHALLENGE 10 - Stretch Goal
-
-As fans are well aware, "When you play the game of thrones, you win or you die. There is no middle ground."
-
-We will assume that Alerie Tyrell is deceased. She missed her daughter's wedding. Twice.
-
-Write a function named houseSurvivors. You may modify your houseSize function from challenge 6 to use as the basis of this function.
-
-This function should create an object for each house containing the name of the house and the number of members. If the spouse is deceased, do not include him/her in the total number of family members.
-
-All of these objects should be added to an array named "survivors". Return the "survivors" array from the function.
-
-For example: [ { house: 'Stark', members: 6 }, { house: 'Arryn', members: 2 }, ... ].
------------------------------------------------------------------------------------------------- */
-
-const deceasedSpouses = ['Catelyn', 'Lysa', 'Robert', 'Khal Drogo', 'Alerie'];
-
-const houseSurvivors = (arr) => {
-  const survivors = [];
-  // Solution code here...
-  return survivors;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -209,88 +117,62 @@ All the code below will verify that your functions are working to solve the chal
 
 DO NOT CHANGE any of the below code.
 
-Run your tests from the console: jest challenges-06.test.js
+Run your tests from the console: jest challenges-02.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
 describe('Testing challenge 1', () => {
-  test('It should sort the characters by number of children', () => {
-    expect(sortByChildren(characters)[0].name).toStrictEqual('Euron');
-    expect(sortByChildren(characters)[0].children.length).toStrictEqual(0);
+  test('It returns an array of names reversed', () => {
+    expect(getNames([{name:'lloyd', age: 32, shoeSize: 12}, {name:'jamie', age:21, shoeSize: 8}])).toStrictEqual(['dyoll', 'eimaj']);
+    expect(getNames([])).toStrictEqual([]);
   });
 });
 
 describe('Testing challenge 2', () => {
-  test('It should return the keys from an object', () => {
-    expect(getCourseKeys(courseInfo)).toStrictEqual(['name', 'duration', 'topics', 'finalExam']);
+  test('It should append without modifying the oiginal', () => {
+    const a = 'This is my story.';
+    const b = appendTheEnd(a);
+
+    expect(a).toStrictEqual('This is my story.');
+    expect(b).toStrictEqual('This is my story. The end.');
   });
 });
 
 describe('Testing challenge 3', () => {
-  test('It should return true if the value is in the object', () => {
-    expect(checkValues({ class: '301' }, '301')).toBe(true);
-  });
+  test('It should append by modifying the oiginal', () => {
+    const a = ['Yes', 'it', 'is'];
+    appendFirstToLast(a);
 
-  test('It should return false if the value is not in the object', () => {
-    expect(checkValues({ class: '301' }, '401')).toBe(false);
+    expect(a).toStrictEqual(['Yes', 'it', 'is', 'Yes']);
   });
 });
 
 describe('Testing challenge 4', () => {
-  test('It should return an an array of names and numbers', () => {
-    const startingObj = {
-      'Grace Hopper': '222-303-5938',
-      'Ada Lovelace': '222-349-9842',
-      'Alan Turing': '222-853-5933'
-    }
+  test('It should add a property to an object', () => {
+    const a = { fullName: 'Octavia Butler' };
+    addBirthYearProperty(a, 1947);
 
-    expect(updateNumbers(startingObj).includes('Grace Hopper: 222-303-5938')).toBe(true);
+    expect(a.yearBorn).toStrictEqual(1947);
   });
 });
 
-describe('Testing challenge 5', () => {
-  test('It should return an array of the names of the houses', () => {
-    expect(getHouses(characters)[0]).toStrictEqual('Greyjoy');
-    expect(getHouses(characters).length).toStrictEqual(7);
+xdescribe('Testing challenge 5', () => {
+  test('It should add a property to every object in an array', () => {
+    const a = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }, { fullName: 'Kurt Vonnegut' }];
+    setStatusAsAuthor(a);
+
+    expect(a[0].isAuthor).toStrictEqual(true);
+    expect(a[1].isAuthor).toStrictEqual(true);
+    expect(a[2].isAuthor).toStrictEqual(true);
   });
 });
 
+xdescribe('Testing challenge 6', () => {
+  test('It should append the second array to the first', () => {
+    const a = [1, 2, 3, 4];
+    const b = [5, 6, 7, 8];
+    append(a, b);
 
-describe('Testing challenge 6', () => {
-  test('It should return true for characters that have children', () => {
-    expect(hasChildrenValues(characters, 'Daenarys')).toBeTruthy();
-  });
-
-  test('It should return false to characters who do not have children', () => {
-    expect(hasChildrenValues(characters, 'Sansa')).toBeFalsy();
-  });
-});
-
-xdescribe('Testing challenge 7', () => {
-  test('It should return true for characters that have children', () => {
-    expect(hasChildrenEntries(characters, 'Eddard')).toBeTruthy();
-  });
-
-  test('It should return false to characters who do not have children', () => {
-    expect(hasChildrenEntries(characters, 'Jon S.')).toBeFalsy();
-  });
-});
-
-xdescribe('Testing challenge 8', () => {
-  test('It should return the number of characters in the array', () => {
-    expect(totalCharacters(characters)).toStrictEqual(26);
-  });
-});
-
-xdescribe('Testing challenge 9', () => {
-  test('It should return an object for each house containing the name and size', () => {
-    expect(houseSize(characters)[1]).toStrictEqual({ house: 'Snow', members: 1 });
-    expect(houseSize(characters).length).toStrictEqual(7);
-  });
-});
-
-xdescribe('Testing challenge 10', () => {
-  test('It should not include any deceased spouses', () => {
-    expect(houseSurvivors(characters)).toStrictEqual([{ house: 'Greyjoy', members: 1 }, { house: 'Snow', members: 1 }, { house: 'Arryn', members: 2 }, { house: 'Tyrell', members: 3 }, { house: 'Lannister', members: 4 }, { house: 'Targaryen', members: 4 }, { house: 'Stark', members: 6 }]);
+    expect(a).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8]);
   });
 });

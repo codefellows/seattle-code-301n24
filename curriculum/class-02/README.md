@@ -1,4 +1,4 @@
-# jQuery Selectors and Events
+# State and Props
 
 ## Overview
 
@@ -21,4 +21,5 @@ As a result of completing Lecture 2 of Code 301, students will:
 - Be able to pass both static and dynamic information from a parent component into a child component using `props`
 - Be able to hold information as `state` in different components
 - Be able to utalize Bootstrap to style applications
+- Deploy to Netlify
 

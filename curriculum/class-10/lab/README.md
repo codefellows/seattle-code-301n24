@@ -186,6 +186,16 @@ Create a corresponding constructor function for the result.
 - Send the location object as a query param on the `/movies` route.
 - Send the response into your `Movies` component and render it
 
+1. STRETCH: Create a component for `Restaurants`
+- Include the `Restaurants` component in your `Main` component
+- After your `Main` component collects information on the movies, make a request to the server to collect information for restaurants on a `/restaurants` route.
+- Send the location object as a query param on the `/restaurants` route.
+- Send the response into your `Restaurants` component and render it
+
+1. STRETCH: Add pagination to your `Restaurants` component.
+- Display 10 restaurants. 
+- When a user clicks more, display the next 10 restaurants.
+
 ## Documentation
 **You MUST have a README.md for both your front-end repo and your back-end repo**
 
@@ -219,7 +229,7 @@ _Your `README.md` must include:_
 ## Submission Instructions
 
 1. Complete your Feature Tasks for the lab
-1. Create a PR back to the `master` branch of your repository, and merge it cleanly.
+1. Create a PR back to the `main` branch of your repository, and merge it cleanly.
 1. On Canvas, submit a link to your PR. Add a comment in your Canvas assignment which includes the following:
     - A link to the deployed version of your latest code.
     - A link to your public Trello board.

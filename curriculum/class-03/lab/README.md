@@ -64,7 +64,7 @@ Then only the images matching the current set of characters should be displayed 
 ## Submission Instructions
 
 - Complete your Feature Tasks for the day
-- Create a Pull Request (PR) back to the `master` branch of your repository
+- Create a Pull Request (PR) back to the `main` branch of your repository
 - On Canvas, submit a link to your PR. Add a comment in your Canvas assignment which includes the following:
   - A question within the context of today's lab assignment
   - An observation about the lab assignment, or related 'Ah-hah!' moment

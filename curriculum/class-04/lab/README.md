@@ -25,7 +25,7 @@ Then the images should be filtered accordingly
 ## Submission Instructions
 
 1. Complete your Feature Tasks for the lab
-1. Create a PR back to the `master` branch of your repository, and merge it cleanly.
+1. Create a PR back to the `main` branch of your repository, and merge it cleanly.
 1. Deploy your application to GitHub Pages.
 1. On Canvas, submit a link to your PR. Add a comment in your Canvas assignment which includes the following:
     - A link to the deployed version of your latest code.

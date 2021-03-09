@@ -1,8 +1,8 @@
-# Facilitators Guide: SQL Databases
+# Facilitators Guide: APIs and Promises
 
 ## Overview
 
-Lab 8 adds persistence with a SQL database. This will be the first exposure that students have to any type of database. Discuss database modeling and schemas, as well as data types when creating tables.
+Today, we venture into the world of APIs. Students will be extending their server and reaching out to 3rd party services to fetch data in real time. This will introduce them to the concept of promises and asynchronous processing.
 
 ## Learning Objectives
 
@@ -10,12 +10,10 @@ Review the detailed objectives in today's [student-facing readme](../README.md).
 
 ## Preparation
 
-- Practice and level up with the Postgres shell
-- Prepare a few images and visuals that will help the students to understand databases and the role that they play.
-- Remind students that they will work with the same partner for labs 2 and 3.
-- Practice the [basic sql demo](../demo/sql) which is a simple server that does an insert and a select in express
-- Review the [today's solution code](../solution) which is their target for lab.
-  - We will not be coding this out, but you will be leading them through a "how would you approach this?" discussion based on this target.
+- Practice building and talking through the [the promises demo](../demo/promises.js)
+- Practice refactoring from the [previous lab solution](../../class-06/solution) into [the server demo](./demo/server) for today
+
+- Familiarize yourself with the API's that your students will be using in their labs. You should have your own local server running, with each API configured according the `.env.sample` file, found in the running code: [API setup details](../../city-explorer-app/back-end/.env.sample){:target="_blank"}
 
 ## Lecture Outline
 
@@ -42,76 +40,75 @@ Below is the expected lecture outline and flow. One possible way to present this
 
 ### Code Review
 
-### SQL and Databases
+### Code Review / Rebuild / Review
 
 - **Why** (5 min)
-  - We need a place to store a **lot** of data
-  - Ideally, it shouldn't be OUR machine
-  - We need looking it up (and saving it) to be both easy and fast
-  - Sometimes, we store data for ourselves (customer lists, product lists, etc)
-  - Sometimes, we want to **cache** data for quicker lookups
+  - Lab 06 was big in concept, short on code
+  - Students will need a recap on the City Explorer Front End as a reminder
+  - WRRC drawings are great to cement why we are doing thing and where in that process we are
 - **What** (10 min)
-  - Relational Databases (postgres, mySQL, Oracle, etc)
-  - Tabular, Indexed storage (sorted rows and columns)
-  - SQL - Structured Query Language
-    - Uses english sentences to "talk" to the database
+  - The WRRC should be coming more into focus now that we've built some of it out
+  - The server should be feeding the front end actual data that works
+  - Trello should be leading the way
 - **How** (30 min)
-  - Data Modeling
-    - CREATE TABLE
-  - SQL Query Structure
-  - Basic Commands (SELECT, INSERT, UPDATE, DELETE)
-- **Experimentation and Discovery Ideas**
-  - Run student driven queries at the [SQL Playground](https://master.dcesh4541no84.amplifyapp.com/)
+  - Review the Trello board feature tasks & requirements
+  - Review the City Explorer Front-End (matching it to the requirements)
+  - Rebuild the Server, showing how it feeds the front end
+  - Deploy it again, as a review.
 
-### Using SQL in Apps
+### Promises and Async
 
 - **Why** (5 min)
-  - Using SQL Directly is great, but our app needs data too
+  - Node/Express takes advantage of javascript's asynchronous coding pattern
+  - We don't want to always write "blocking" code
+  - We don't always need to wait for code to complete
+  - Javascript is really good at it -- we can use this idea to multi-task
 - **What** (10 min)
-  - 3rd Party Libraries (exist for every major database)
-  - ORMs exist to make your code the same no matter which DB you choose
+  - The Event Loop and Call Stack
+    - Detect async patterns and push that to the side for a while
+  - Promises and Callbacks
 - **How** (30 min)
-  - `pg` library for Node
-    - `connect()` (when you want to make the connection to the db)
-    - `.query()` when you need to manage/query data
+  - Run a promise demo that showcases how things can be out of order
+  - Focus on the syntax and when/how we process data
+  - `.then()` and `.catch()` and how they interact with the process
 - **Experimentation and Discovery Ideas**
-  - Redraw the WRRC
-  - How has this evolved?
+
+### 3rd Party APIs
+
+- **Why** (5 min)
+  - All of the data in the world is literally all over the world
+  - REST give us a common language and set of methods to access all of it, with WRRC
+  - By using APIs in creative ways, you can make really interesting apps, but leave the data management to the experts
+- **What** (10 min)
+  - Identify the APIs that you need
+  - Inspect the "shape" of the data and see if it conforms to your needs
+  - Talk about communication via WRRC (now: server-side code is now the client!)
+- **How** (30 min)
+  - Demo the signup and access key retrieval process
+    - Location IQ
+    - Zomato
+  - Integrate into your server application
+    - Fetch Data
+    - Massage it into shape (constructors)
+    - Test with your client application
+- **Experimentation and Discovery Ideas**
 
 ## Lab Notes
 
-- Students will be writing a file called `schema.sql` so demonstrate how to write this type of file and execute it from the command line with the following syntax: `psql -d <database-name> -f <filename>`.
-  - For example, `psql -d city_explorer -f schema.sql`
-- Additionally, students will be tasked with creating a **cache** of data retrieved from the location API, stored in SQL. They will need to not only understand databases and SQL, but also a process by which they can use that to optimize the application.
-- Your demo will implement a cache using an in-memory object
-  - Students will need to pivot from that and turn it into a SQL storage and query operation instead
-  - Lead them to the well but do not give them the water.
-
 ## What changed from the previous class?
 
-- We're going to be removing the simple "in-memory" locations cache with a SQL lookup/store
-- The entire coding exercise for the students is in the location handler.
-- Location (lat/long) results are now being stored in a SQL database. Students will need to create the database and tables locally, as well as provision the free version of Postgres on Heroku.
+- We will be refactoring our data fetchers from simply `require()` on a static .json file into pulling data from a live API with superagent, and having to wade through a promise to do so.
+- We will truly be feeding the city explorer front end live data
+  - This is an ongoing requirement for the week
+- Not a lot of code movement (really a single change to the fetching functions), but a lot of cognitive changes for the students today as they wrestle with Promises both syntactically and conceptually
 
 ## What might students struggle with today?
 
-- Applying the cache logic into the route
-- There is a lot of new information here.
-- SQL and Databases will be a new concept to be sure.
-- Using them in the way that we are, to solve the problem that this lab solves will not be immediately evident.  This is a great opportunity to have some "mob programming" with the group to come to the answer. They can do it!
+- Promises and Async thought patterns
+- Getting registered for their APIs
 
 ## Past bugs, issues or surprises...
 
-There is a pre-work assignment for student to install Heroku and Postgres onto their laptops. The corresponding assignment in Canvas ("Setup of Your Laptop Dev Environment") has the following instructions:
+- Remind students HOW to set their API environment options in Heroku
 
-```When you are done installing both the Heroku CLI and postgres, make sure to verify them again one directly after the other so that both of the output message are on your terminal screen at the same time. Once they are both on your screen, take a screen single screen shot and use that as your submission for your Canvas assignment.```
-
-By this class there all students should have Postgres installed, and any students who need to do an installation on this day should be retroactively held accountable for not completing the pre-work.
-
-## General comments
-
-This is a big topical day
-
-- SQL
-- Creating a cache with the data retrieved from the API
-- Engineering a solution to be abstracted, DRY, and singular in concerns.
+## General Comments and Notes

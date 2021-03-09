@@ -1,8 +1,8 @@
-# Code Challenge 10: Chaining Methods
+# Code Challenge 12: Two-dimensional arrays
 
 ## Overview
 
-There is no overview for today's challenges. Review the overviews from previous challenges, if needed.
+Read [this overview.](README.md){:target="_blank"}
 
 ## Video
 
@@ -10,16 +10,16 @@ Watch today's video from the [demo playlist.](https://www.youtube.com/playlist?l
 
 ## Demonstration
 
-There is no demonstration for today's challenges. Review the demos from previous challenges, if needed.
+Look through [these sample problems.](DEMO.md){:target="_blank"}
 
 ## Challenges
 
 1. Navigate to your `data-structures-and-algorithms` repository folder.
-1. Create a new branch for today's challenge called `chaining`
-   - `git checkout -b chaining`
+1. Create a new branch for today's challenge called `arrays-2d`
+   - `git checkout -b arrays-2d`
 1. Retrieve the code challenge from the system
-   - `npm run get-challenge 10`
-1. In your terminal, from your `data-structures-and-algorithms` folder, run `npm test 10` to execute the tests in this file for **today's challenge.**
+   - `npm run get-challenge 12`
+1. In your terminal, from your `data-structures-and-algorithms` folder, run `npm test 12` to execute the tests in this file for **today's challenge.**
    - At this point you will see the failed tests scroll through your terminal window with a brief report of the number of failed tests at the bottom.
    - If you do not see this, verify your installation of Jest by typing `npx jest --version` in your terminal. Filename typos can make things break!
 1. Write code to make the tests pass, one at a time. Let the error messages guide you.

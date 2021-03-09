@@ -1,93 +1,57 @@
-# Regular Expressions 101
+# array.sort()
 
 ## Overview
 
-Regular expressions (or "Regex" ... said "Rej-Ex") are a means of identifying patterns in strings. We commonly use them to validate input, replace character patterns with other characters or refer to character patterns in a string.
+`array.sort( [compareFunction] )` sorts an array in place -- mutating the array. There is no return value.
 
-Mechanically, a regex is composed of a "Pattern To Match" between 2 delimiters (usually a `/`), followed by some optional instructions, known as "quantifiers".  Quantifiers are single letter instructions:
+The `compareFunction` is a function that is used by sort to evaluate sibling values in turn, and sort in the appropriate order.
 
-- g = "Global Match"
-- i = "Case Insensitive"
+- If compareFunction(a, b) is less than 0, sort a to an index lower than b, i.e. a comes first.
+- If compareFunction(a, b) returns 0, leave a and b unchanged with respect to each other, but sorted with respect to all different elements. 
+- If compareFunction(a, b) is greater than 0, sort b to an index lower than a, i.e. b comes first.
 
-### e.g. `/foo/ig`
+### Compare Function Setup
 
-For our examples, lets use the following string:
+```js
+function compare(a, b) {
+  if (a is less than b by some ordering criterion) {
+    return -1;
+  }
+  if (a is greater than b by the ordering criterion) {
+    return 1;
+  }
+  // a must be equal to b
+  return 0;
+}
 
-**`The rain in Spain falls mainly in the plain`**
-
-Does this string contain the letter "T"?
-- `/T/`
-- `/t/i`
-
-#### We can use a "Range", which is a group of letters or numbers in brackets to see if there are things of the same basic type
-
-Does this string contain any capital letters?
-- `/[A-Z]/` 
-
-Lowercase letters?
-- `/[a-z]/` 
-
-Numbers?
-- `/[0-9]`
-
-#### We can use parenthesis `()` to group things together
-Does the string contain any words with "ain" in them?
-- `/(ain)/`
-
-#### There are many "helpers" that you can use to find more interesting parts of the string
-
-- `\s` = White space
-- `\b` = Word Boundary
-- `\w` = All word characters (A-Z,a-z,0-9)
-- `^` = Beginning of the string
-- `$` = End of the string
-- `.` = Any Character
-- `*` = Greedy (keep going!)
-
-#### So, with combinations of helpers, ranges, and groups, you get pretty intricate
-`/s.?([A-Za-z]in)\s+/g`
-
-a lowercase s, followed by any letters, followed by "in" followed by a space ... in other words "spain", but not "rain"
-
-
-### JavaScript Methods and Practical Use
-**Boolean Checks** (Does my string match the regex?)
-```
-  let str = "The rain in Spain falls mainly in the plain";
-  // Are there any words ending with some letter before "in"
-  let regex = /([A-Za-z]in)\b/g;
-  regex.test(str);  // true
 ```
 
-**What is in my string?** (can I get a list of all the matches?)
+### Sample Compare Function
 ```
-  let str = "The rain in Spain falls mainly in the plain";
-  // The first letter in every word
-  let regex = /(\b\w)/g;
-  str.match(regex);  // T,r,i,S,f,m,i,t,p
-```
-
-**Replace something in my string**
-```
-  let str = "The rain in Spain falls mainly in the plain";
-  // The first letter in every word
-  let regex = /(\b\w)/g;
-  str.replace(regex,'-');  // -he -ain -n -pain -alls -ainly -n -he -lain"
+function compareNumbers(a, b) {
+  return a - b;
+}
 ```
 
-**Replace something in my string, but use a function to do it!**
+### In actual code ...
 ```
-  // Camel Case a String ...
-  
-  let str = "The rain in Spain falls mainly in the plain";
-  let regex = /\b(\w)/g;
-  let newString = str.replace(regex, (rawMatch, matchedThing , idx) => {
-      return idx === 0 ? matchedThing.toLowerCase() : matchedThing.toUpperCase();
-    }).replace(/\W/g, '')
-    
-  console.log(newString); // theRainInSpainFallsMainlyInThePlain
+function compareNumbers(a, b) {
+  return a - b;
+}
+
+let array = [1,6,4,2,8,11,4,99,129];
+array.sort(compareNumbers);
+
+// Or all in line:
+array.sort( (a,b) => { 
+  return a-b; 
+});
+
 ```
 
-## Reference and Resources
-* [Regex Information/Tutorial](https://www.regular-expressions.info/)
-* [Regex Runner/Tester](https://regex101.com/)
+### Caveats and Notes
+- The speed and technique of the sort functionality internally is determined by JavaScript, so you can't depend on a consistent "complexity" or "time"
+- compareFunction(a, b) must always return the same value when given a specific pair of elements a and b as its two arguments. If inconsistent results are returned then the sort order is undefined.
+
+## Reference
+* [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)

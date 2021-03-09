@@ -57,7 +57,7 @@ Then the content should be unique and reflect the skills and personality of the 
 ## Submission Instructions
 
 1. Complete your Feature Tasks for the lab on a branch. 
-1. Create a PR back to the `master` branch of your repository, and merge it cleanly.
+1. Create a PR back to the `main` branch of your repository, and merge it cleanly.
 1. Deploy again, so your latest code is published live via Netlify. 
 1. On Canvas, submit a link to your PR. Add a comment in your Canvas assignment which includes the following:
     - A link to the deployed version of your latest code.

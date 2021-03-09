@@ -3,175 +3,256 @@
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
-Write a function called addTwo that takes in an array and adds two to every value using a for loop. Place the new value in a new array. Return the new array. 
+Write a function named addAnimal that takes in array of animals (strings) and some callback function. 
+
+This function should first create a new array. Then iterate over the input array and modify each value based on the callback function provided.
+
+Push each updated animal string into the new array. Return the new array. 
+
+HINT: Look at the tests to see how the callback functions are used.
+
 ------------------------------------------------------------------------------------------------ */
 
-const addTwo = (arr) => {
+function upper(str) {
+  return str.toUpperCase(); 
+}
+
+function lower(str) {
+  return str.toLowerCase();
+}
+
+const updateAnimal = (arr, callback) => {
   //<solution>
   const newArr = [];
 
-  for(let i = 0; i<arr.length; i++){
-    newArr.push(arr[i] + 2);
-  }
+  arr.forEach( animal => newArr.push(callback(animal) ));
 
   return newArr;
   //</solution>
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named containsW that takes in a string. This function should use a regular expression pattern to return true if the string contains the letter 'w' in lower case or false if it does not. 
+Write a function called sortNames that takes an array of names and sorts them alphabetically. Capital letters should come before lowercase letters.
 
+For example: 'Cat' would come before 'apple'
 ------------------------------------------------------------------------------------------------ */
 
-const containsW = (str) => {
+const sortNames = (arr) => {
   //<solution>
-  let regex = /w/;
-  return regex.test(str);
+  return arr.sort();
   //</solution>
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named isNum that takes in a string or number of any length. This function should use a regular expression pattern to return true if the input contains a number, and false if the input does not contain a number.
+Write a function called sortNumbers that takes an array of numbers and sorts them from smallest to largest. 
 
-For example:
-12345 returns true
-'12345' returns true
-'h3llo world' returns true
-'hello world' returns false
+HINT: Beware... JS default is "Lexical" ordering. 
 ------------------------------------------------------------------------------------------------ */
 
-const isNum = (input) => {
+const sortNumbers = (arr) => {
   //<solution>
-  const comparison = /[0-9]/;
-
-  return comparison.test(input);
+  return arr.sort( (a,b) => a - b );
   //</solution>
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function named containsWorld that takes in a string or number of any length. This function should use a regular expression pattern to return true if the input contains the word 'world' all in lower-case letters, and false if the input does not.
+Write a function named sortBackwards that takes in an array of numbers and returns the same array, with the numbers sorted, largest to smallest.
 
+HINT: Do it with a custom sort callback, not with using `.reverse()`. ;) 
 ------------------------------------------------------------------------------------------------ */
 
-const containsWorld = (input) => {
+const sortBackwards = (arr) => {
   //<solution>
-  const comparison = /world/;
-
-  return comparison.test(input);
+  return arr.sort( (a,b) => b - a );
   //</solution>
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function named isCapitalized that takes in a string. This function should use a regular expression pattern to match all words that begin with a capital letter. It should only match words, not punctuation.
+Write a function named alphabetize that takes in an array of strings and returns the same array with the strings sorted alphabetically.
 
-Return an array containing all the matches.
+In this alphabetization, capital letters come before lower case letters.
+
+For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
-const isCapitalized = (str) => {
+const alphabetize = (arr) => {
   //<solution>
-  let capitalizationPattern = /[A-Z][a-zA-Z]*/g;
-  let capitals = str.match(capitalizationPattern);
-
-  return capitals || [];
+  return arr.sort();
   //</solution>
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named citiesAtoJ that takes in an array of city names and uses a regular expression pattern to return a new array containing any cities that begin with the letters A through J, inclusive.
+Write a function named sortByPrice that takes in an array of objects, each of which has a 'price' property, and sorts those objects by price, lowest to highest, returning the same array.
+
+Here is an example of the input:
+[
+  {name: 'Sweatshirt', price: 45},
+  {name: 'Bookmark', price: 2.50},
+  {name: 'Tote bag', price: 15}
+];
 ------------------------------------------------------------------------------------------------ */
 
-const citiesAtoJ = (arr) => {
+const sortByPrice = (arr) => {
   //<solution>
-  const cityPattern = /^[A-J]/;
-  const results = [];
-  arr.forEach(city => {
-    if(cityPattern.test(city)) results.push(city);
-  });
-  return results;
+  return arr.sort( (a,b) => a.price - b.price );
   //</solution>
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
 
-You have created a game application and begin by asking users an easy question: In which month is Halloween?
+Write a function named alphabetizeBetter that takes in an array of strings and returns the same array, with the strings sorted alphabetically. Capitalization should not change the sort order of two strings.
 
-Write a function named matchMonth which uses a regular expression pattern to match any of these inputs: October, Oct, october, oct
-
-If the user enters any of these four inputs, return true. For any other input, return false.
-
-Do not use the vertical bar (pipe) in your pattern.
+For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, and so is ['alphabet', 'Alphabet', 'carrot', 'Zebra'].
 ------------------------------------------------------------------------------------------------ */
 
-const matchMonth = (input) => {
+const alphabetizeBetter = (arr) => {
   //<solution>
-  const monthPattern = /^[Oo]ct(ober)?$/;
-
-  return monthPattern.test(input);
+  return arr.sort( (a,b) => a.toLowerCase() > b.toLowerCase() ? 1 : (a.toLowerCase() < b.toLowerCase() ? -1 : 0) );
   //</solution>
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
 
-Write a function named noPunctuation that contains a regular expression pattern to find all of the words that contain a space immediately at the end of the word. Return an array of all such words, still containing the space at the end.
-
-For example, if given the string "Hello, and have a wonderful day!", the word "Hello, " would not be returned because it is immediately followed by a comma. The word "day!" would not be returned because it is immediately followed by an exclamation point.
-
-The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "a ", "wonderful "].
+Write a function named sortByLength that takes in an array of strings and returns the same array, with the strings sorted by their length, lowest to highest.
 ------------------------------------------------------------------------------------------------ */
 
-const noPunctuation = str => {
+const sortByLength = (arr) => {
   //<solution>
-  let spacePattern = /\w+\s/g;
-  return str.match(spacePattern);
+  return arr.sort( (a,b) => a.length - b.length );
   //</solution>
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
 
-You want to teach a friend how to play hangman and want to show them using a partially complete puzzle.
+Write a function named sortNumbersByLength that takes in an array of numbers and sorts those numbers by their length.
 
-Write a function named hangman which uses the replace method to remove all of the vowels (a, e, i, o, u) from the hangman string, regardless of capitalization, and replace them with an underscore.
-
-The function should return a string containing the consonants in their original positions and underscores where the vowels were previously located.
-
-For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
+For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 ------------------------------------------------------------------------------------------------ */
 
-let hangman = (str) => {
+const sortNumbersByLength = (arr) => {
   //<solution>
-  return str.replace(/[aeiou]/gi, '_');
+  return arr.sort( (a,b) => a.toString().length - b.toString().length );
+  //</solution>
+};
+
+/*-----------------------------------------------------------------------------------------------
+CHALLENGE 10 - Stretch Goal
+
+Write a function named sortPeople that takes in an array of Person objects, each of which has firstName, lastName, and age properties, and sorts those people by their last names. Do not worry about capitalization or first names.
+------------------------------------------------------------------------------------------------ */
+
+function Person(firstName, lastName, age) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.age = age;
+}
+
+const people = [
+  new Person('Wes', 'Washington', 25),
+  new Person('Casey', 'Codefellow', 38),
+  new Person('Stan', 'Seattle', 67),
+];
+
+const sortPeople = (arr) => {
+  //<solution>
+  return arr.sort ( (a,b) => a.lastName > b.lastName ? 1 : (a.lastName < b.lastName ? -1 : 0) );
   //</solution>
 };
 
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 10 - Stretch Goal
+CHALLENGE 11 - Stretch Goal
 
-Write a function named findShells that takes in the string below and uses a regular expression pattern to find all instances of the following words: "sells", "shells", "seashells".
+Write a function named sortPeopleBetter that takes in an array of Person objects, each of which has firstName, lastName, and age properties, and sorts those people by their last names.
 
-Do not use the vertical bar (pipe) character.
+If two people share the same last name, alphabetize on their first name.
 
-Hint: All of these words end with the letters "ells".
+If two people have the same full name, the younger one should come first. Do not worry about capitalization.
 ------------------------------------------------------------------------------------------------ */
 
-const seashells = 'She sells seashells by the seashore. The shells she sells are surely seashells. So if she sells shells on the seashore, I\'m sure she sells seashore shells.';
-
-const findShells = (str) => {
+const sortPeopleBetter = (arr) => {
   //<solution>
-  let shellPattern = /\b([A-Za-z]*ells)\b/g;
-  return str.match(shellPattern);
+  return arr.sort( (a, b) => {
+    if (a.lastName !== b.lastName) {
+      return a.lastName > b.lastName ? 1 : -1;
+    } else if (a.firstName !== b.firstName) {
+      return a.firstName > b.firstName ? 1 : -1;
+    } else {
+      return a.age - b.age;
+    }
+  } );
+  //</solution>
+};
+
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 12 - Stretch Goal
+
+Write a function named sortMeetingsByDay that takes in an array of objects, each of which represents a meeting happening a particular day of the week, with a particular start time and end time.
+
+Sort the meetings by the day on which they happen, Monday-Friday. It does not matter which order meetings come in on a particular day. For example, if there are two meetings on Monday, it does not matter which comes first.
+------------------------------------------------------------------------------------------------ */
+
+function Meeting(dayOfWeek, start, end) {
+  this.dayOfWeek = dayOfWeek;
+  this.start = start;
+  this.end = end;
+}
+const meetings = [
+  new Meeting('Monday', '0900', '1000'),
+  new Meeting('Wednesday', '1300', '1500'),
+  new Meeting('Tuesday', '1145', '1315'),
+  new Meeting('Wednesday', '0930', '1000'),
+  new Meeting('Monday', '0900', '0945'),
+  new Meeting('Friday', '1200', '1345'),
+];
+
+const sortMeetingsByDay = (arr) => {
+  //<solution>
+  // helper object for days of week
+  const daysOfWeek = {
+    Monday: 0,
+    Tuesday: 1,
+    Wednesday: 2,
+    Thursday: 3,
+    Friday: 4
+  };
+  return arr.sort( (a,b) => daysOfWeek[a.dayOfWeek] - daysOfWeek[b.dayOfWeek] );
+  //</solution>
+};
+
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 13 - Stretch Goal
+
+This challenge should use the array of meetings from challenge 9, above.
+
+Sort the meetings in the order that they start. If two meetings start at the same time on the same day, the shorter meeting should come first.
+
+You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
+------------------------------------------------------------------------------------------------ */
+
+const sortSchedule = (arr) => {
+  //<solution>
+  // helper object for days of week
+  const daysOfWeek = {
+    Monday: 0,
+    Tuesday: 1,
+    Wednesday: 2,
+    Thursday: 3,
+    Friday: 4
+  };
+  return arr.sort( (a,b) => (daysOfWeek[a.dayOfWeek] - daysOfWeek[b.dayOfWeek]) || (a.start > b.start ? 1 : (a.start < b.start ? -1 : 0)) || (a.end > b.end ? 1 : (a.end < b.end ? -1 : 0) ));
   //</solution>
 };
 
@@ -182,130 +263,149 @@ All the code below will verify that your functions are working to solve the chal
 
 DO NOT CHANGE any of the below code.
 
-Run your tests from the console: jest challenges-04.solution.test.js
-
+Run your tests from the console: jest challenges-03.test.js
 ------------------------------------------------------------------------------------------------ */
+
 describe('Testing challenge 1', () => {
-  test('It should add two to every value', () => {
-    expect(addTwo([1, 2, 4])).toStrictEqual([3, 4, 6]);
-  })
+  test('It should return an array of uppercase animal names', () => {
+    const arr = ['BeAr', 'lIon'];
+    expect(updateAnimal(arr, upper)[0]).toStrictEqual('BEAR');
+    expect(updateAnimal(arr, upper)[1]).toStrictEqual('LION');
+  });
+  test('It should return an array of lowercase animal names', () => {
+    const arr = ['BeAr', 'lIon'];
+    expect(updateAnimal(arr, lower)[0]).toStrictEqual('bear');
+    expect(updateAnimal(arr, lower)[1]).toStrictEqual('lion');
+  });
 });
 
 describe('Testing challenge 2', () => {
-  test('It should return true if the input contains a lower case w', () => {
-    expect(containsW('hello world')).toBe(true);
+  test('It should return an array of names sorted alphabetically', () => {
+    expect(sortNames(['able', 'Bob'])[0]).toStrictEqual('Bob');
   });
-  test('It should return false if the input contains an upper case W', () => {
-    expect(containsW('Hello World')).toBe(false);
-  });
-  test('It should return false if the input does not contain a w', () => {
-    expect(containsW('hello everyone')).toBe(false);
-  })
-})
+});
 
 describe('Testing challenge 3', () => {
-  test('It should return true if the input is a number', () => {
-    expect(isNum(1234567890)).toBeTruthy();
-    expect(isNum('12345')).toBeTruthy();
-  });
-  test('It should return true if the input contains a number', () => {
-    expect(isNum('h3llo w0rld')).toBeTruthy();
-  });
-  test('It should return false if the input does not contain a number', () => {
-    expect(isNum('hello world')).toBeFalsy();
-    expect(isNum('')).toBeFalsy();
+  test('It should sort low-to-high the numbers in an array', () => {
+    expect(sortNumbers([8, 3, 2, 9, 12, 1, 115])).toStrictEqual([1, 2, 3, 8, 9, 12, 115]);
   });
 });
 
 describe('Testing challenge 4', () => {
-  test('It should return true if the input contains the word school in lower case', () => {
-    expect(containsWorld('hello world')).toBe(true);
+  test('It should sort high-to-low the numbers in an array', () => {
+    const nums = [3,4,5,6,7];
+    expect(sortBackwards(nums)).toStrictEqual([7,6,5,4,3]);
+    expect(sortBackwards([3,2,1])).toStrictEqual([3,2,1]);
+    expect(sortBackwards([12,20,3])).toStrictEqual([20, 12, 3]);
+    expect(sortBackwards([])).toStrictEqual([]);
+    expect(sortBackwards([1])).toStrictEqual([1]);
   });
-  test('It should return false if the input contains the word school with any upper case letters', () => {
-    expect(containsWorld('Hello World')).toBe(false);
-  });
-  test('It should return false if the input does not contain the word school', () => {
-    expect(containsWorld('hello everyone')).toBe(false);
-  });
-})
+});
 
 describe('Testing challenge 5', () => {
-  test('It should only return words that begin with a capital letter', () => {
-    const capitalResult = isCapitalized('We only want to Return the Words that begin With a capital Letter');
-
-    expect(capitalResult).toStrictEqual([ 'We', 'Return', 'Words', 'With', 'Letter' ]);
-    expect(capitalResult.length).toStrictEqual(5);
-
-    expect(isCapitalized('Given by our hand in the meadow that is called Runnymede, between Windsor and Staines, on the fifteenth day of June in the seventeenth year of our reign (i.e. 1215: the new regnal year began on 28 May).')).toStrictEqual(['Given', 'Runnymede', 'Windsor', 'Staines', 'June', 'May']);
-
-    expect(isCapitalized('these words are all failures')).toStrictEqual([]);
+  test('It should sort strings alphabetically', () => {
+    expect(alphabetize(['alphabet', 'Zebra', 'Alphabet', 'carrot'])).toStrictEqual([ 'Alphabet', 'Zebra', 'alphabet', 'carrot']);
+    expect(alphabetize(['alphabet','Alphabet', 'carrot'])).toStrictEqual([ 'Alphabet', 'alphabet', 'carrot']);
+    expect(alphabetize([])).toStrictEqual([]);
   });
 });
 
 describe('Testing challenge 6', () => {
-  let cities = ['Cleveland', 'San Diego', 'Birmingham', 'Seattle', 'Miami', 'New York City', 'Omaha', 'Portland', 'Austin', 'Boston', 'Newport Beach', 'Hoboken'];
-
-  test('It should return the cities whose names begin with the letters A through J', () => {
-    expect(citiesAtoJ(cities)).toContain('Cleveland', 'Birmingham', 'Austin', 'Boston', 'Hoboken');
-    expect(citiesAtoJ(cities).length).toStrictEqual(5);
-
-    expect(citiesAtoJ([])).toStrictEqual([]);
-    expect(citiesAtoJ(['Albuquerque', 'Chicago', 'Philadelphia', 'Newark', 'Sacramento', 'Eugene'])).toEqual(expect.arrayContaining(['Albuquerque', 'Chicago', 'Eugene']));
-  });
-
-  test('It should not return the cities whose names begin with the letters K through Z', () => {
-    expect(citiesAtoJ(cities)).not.toContain('San Diego', 'Seattle', 'Miami', 'New York City', 'Omaha', 'Portland', 'Newport Beach');
+  test('It should sort strings by length', () => {
+    const ans = sortByLength(['alphabet', 'Zebra', 'Alphabet', 'carrot']);
+    expect(ans.slice(0,2)).toStrictEqual(['Zebra', 'carrot']);
+    expect(ans.slice(2,4)).toEqual(expect.arrayContaining(['Alphabet', 'alphabet']));
+    expect(sortByLength(['a', 'bc', ''])).toStrictEqual(['', 'a', 'bc']);
+    expect(sortByLength(['a'])).toStrictEqual(['a']);
+    expect(sortByLength([])).toStrictEqual([]);
   });
 });
 
 xdescribe('Testing challenge 7', () => {
-  test('It should match any of the acceptable inputs', () => {
-    expect(matchMonth('Oct')).toBeTruthy();
-    expect(matchMonth('oct')).toBeTruthy();
-    expect(matchMonth('October')).toBeTruthy();
-    expect(matchMonth('october')).toBeTruthy();
-  });
-
-  test('It should not match anything other than the acceptable inputs', () => {
-    expect(matchMonth('November')).toBeFalsy();
-    expect(matchMonth('nov')).toBeFalsy();
-    expect(matchMonth(123)).toBeFalsy();
-    expect(matchMonth('octob')).toBeFalsy();
-    expect(matchMonth('OCTOBER')).toBeFalsy();
-    expect(matchMonth('notOctober')).toBeFalsy();
+  test('It should alphabetize without regard to capitalization', () => {
+    expect(alphabetizeBetter(['Alice', 'apple', 'alert', 'Average'])).toStrictEqual([ 'alert', 'Alice', 'apple', 'Average' ]);
+    const ans = alphabetizeBetter(['alphabet', 'Zebra', 'Alphabet', 'carrot']);
+    expect(ans.slice(0,2)).toEqual(expect.arrayContaining([ 'Alphabet','alphabet']));
+    expect(ans.slice(2)).toStrictEqual(['carrot', 'Zebra']);
   });
 });
 
 xdescribe('Testing challenge 8', () => {
-  const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lacinia vel massa sed egestas. Nunc faucibus iaculis elit, a scelerisque enim condimentum sed. Aenean ac scelerisque sem, et pharetra diam.';
-
-  test('It should only return words that are immediately followed by a space', () => {
-    expect(noPunctuation(lorem)).toStrictEqual([ 'Lorem ', 'ipsum ', 'dolor ', 'sit ', 'consectetur ', 'adipiscing ', 'Cras ', 'lacinia ', 'vel ', 'massa ', 'sed ', 'Nunc ', 'faucibus ', 'iaculis ', 'a ', 'scelerisque ', 'enim ', 'condimentum ', 'Aenean ', 'ac ', 'scelerisque ', 'et ', 'pharetra ' ]);
-    expect(noPunctuation(lorem).length).toStrictEqual(23);
-    expect(noPunctuation('Given by our hand in the meadow that is called Runnymede, between Windsor and Staines, on the fifteenth day of June in the seventeenth year of our reign (i.e. 1215: the new regnal year began on 28 May).')).toEqual(expect.arrayContaining(['Given ', 'by ', 'our ', 'hand ', 'in ', 'the ', 'meadow ', 'that ', 'is ', 'called ', 'between ', 'Windsor ', 'and ', 'on ', 'the ', 'fifteenth ', 'day ', 'of ', 'June ', 'in ', 'the ', 'seventeenth ', 'year ', 'of ', 'our ', 'reign ', 'the ', 'new ', 'regnal ', 'year ', 'began ', 'on ', '28 ']));
-  });
-
-  test('It should not contain words that are followed by any non-space character', () => {
-    expect(noPunctuation(lorem)).not.toContain(['amet,', 'elit.', 'egestas.', 'elit,', 'sed.', 'sem,', 'diam.', 'nibh.', 'porttitor.', 'euismod,', 'ultrices.', 'massa,', 'vel,', 'purus.', 'purus,', 'odio.', 'aliquet,', 'non,', 'sem.']);
+  test('It should sort items by their price', () => {
+    expect(sortByPrice([
+      {name: 'Sweatshirt', price: 45},
+      {name: 'Bookmark', price: 2.50},
+      {name: 'Tote bag', price: 15}
+    ])).toStrictEqual([
+      {name: 'Bookmark', price: 2.50},
+      {name: 'Tote bag', price: 15},
+      {name: 'Sweatshirt', price: 45},
+    ]);
+    expect(sortByPrice([{price: 12}, {price: 10}])).toStrictEqual([{price: 10}, {price: 12}]);
+    expect(sortByPrice([])).toStrictEqual([]);
   });
 });
 
 xdescribe('Testing challenge 9', () => {
-  let startString = 'This is a regex challenge. We are trying to create a hangman phrase where all of the vowels are missing!';
-
-  test('It should remove the vowels from the hangman string and replace them with underscores', () => {
-    expect(hangman(startString)).toStrictEqual('Th_s _s _ r_g_x ch_ll_ng_. W_ _r_ try_ng t_ cr__t_ _ h_ngm_n phr_s_ wh_r_ _ll _f th_ v_w_ls _r_ m_ss_ng!');
-    expect(hangman('I wAnt them all tO bE removed and replaced with Underscores.')).toStrictEqual('_ w_nt th_m _ll t_ b_ r_m_v_d _nd r_pl_c_d w_th _nd_rsc_r_s.');
-  });
-
-  test('It should not contain the letters "a", "e", "i", "o", or "u"', () => {
-    expect(hangman(startString)).not.toContain('a', 'e', 'i', 'o', 'u');
+  test('It should sort numbers by their length', () => {
+    expect(sortNumbersByLength([10, 2.8, 1, -47.75])).toStrictEqual([1, 10, 2.8, -47.75]);
+    expect(sortNumbersByLength([100, 2.82, 1, -47.75])).toStrictEqual([1, 100, 2.82, -47.75]);
+    expect(sortNumbersByLength([1,2,3])).toEqual(expect.arrayContaining([1,2,3]));
   });
 });
 
 xdescribe('Testing challenge 10', () => {
-  test('It should return an array of instances of "sells", shells", and "seashells"', () => {
-    expect(findShells(seashells)).toStrictEqual(['sells', 'seashells', 'shells', 'sells', 'seashells', 'sells', 'shells', 'sells', 'shells']);
-    expect(findShells(seashells).length).toStrictEqual(9);
+  test('It should sort people by their last names', () => {
+    expect(sortPeople(people)).toStrictEqual([
+      new Person('Casey', 'Codefellow', 38),
+      new Person('Stan', 'Seattle', 67),
+      new Person('Wes', 'Washington', 25),
+    ]);
+    expect(sortPeople([{lastName: 'banana'}, {lastName: 'apple'}]))
+      .toStrictEqual([{lastName: 'apple'}, {lastName: 'banana'}]);
+  });
+});
+
+xdescribe('Testing challenge 11', () => {
+  test('It should sort people with more strict ordering', () => {
+    const family = [
+      new Person('Casey', 'Codefellows', 55),
+      new Person('Casey', 'Codefellows', 37),
+      new Person('Charlie', 'Codefellows', 21),
+      new Person('Charles', 'Codefellows', 29),
+      new Person('Carol', 'Codefellow', 88),
+    ];
+    expect(sortPeopleBetter(family)).toStrictEqual([
+      new Person('Carol', 'Codefellow', 88),
+      new Person('Casey', 'Codefellows', 37),
+      new Person('Casey', 'Codefellows', 55),
+      new Person('Charles', 'Codefellows', 29),
+      new Person('Charlie', 'Codefellows', 21),
+    ]);
+    expect(sortPeopleBetter([{firstName: 'andrew', lastName: 'apple'}, {firstName: 'andre', lastName: 'apple'}]))
+      .toStrictEqual([{firstName: 'andre', lastName: 'apple'}, {firstName: 'andrew', lastName: 'apple'}]);
+  });
+});
+
+xdescribe('Testing challenge 12', () => {
+  test('It should sort meetings by the day on which they happen', () => {
+    const sortedMeetings = sortMeetingsByDay(meetings);
+    expect(sortedMeetings.slice(0,2)).toEqual(expect.arrayContaining([new Meeting('Monday', '0900', '0945'), new Meeting('Monday', '0900', '1000')]));
+    expect(sortedMeetings[2]).toStrictEqual(new Meeting('Tuesday', '1145', '1315'));
+    expect(sortedMeetings.slice(3,5)).toEqual(expect.arrayContaining([new Meeting('Wednesday', '0930', '1000'), new Meeting('Wednesday', '1300', '1500')]));
+    expect(sortedMeetings[5]).toStrictEqual(new Meeting('Friday', '1200', '1345'));
+  });
+});
+
+xdescribe('Testing challenge 13', () => {
+  test('It should sort meetings by when they happen', () => {
+    expect(sortSchedule(meetings)).toStrictEqual([
+      new Meeting('Monday', '0900', '0945'),
+      new Meeting('Monday', '0900', '1000'),
+      new Meeting('Tuesday', '1145', '1315'),
+      new Meeting('Wednesday', '0930', '1000'),
+      new Meeting('Wednesday', '1300', '1500'),
+      new Meeting('Friday', '1200', '1345'),
+    ]);
   });
 });

@@ -1,4 +1,4 @@
-# Readings: MUSTACHE and FLEXBOX
+# Readings: Passing Functions as Props
 
 Below you will find some reading material, code samples, and some additional resources that support today's topic and the upcoming lecture.
 
@@ -6,10 +6,10 @@ Review the Submission Instructions for guidance on completing and submitting thi
 
 ## Reading
 
-- [Templating with Mustache](https://medium.com/@1sherlynn/javascript-templating-language-and-engine-mustache-js-with-node-and-express-f4c2530e73b2){:target="_blank"}
-- [A Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/){:target="_blank"}
-- [Flexbox Froggy](https://flexboxfroggy.com/){:target="_blank"}
-  - Complete all steps of this tutorial
+- [React Docs - Lifting State Up](https://reactjs.org/docs/lifting-state-up.html){:target="_blank"}{:target="_blank"}
+- [React Docs - lists and keys](https://reactjs.org/docs/lists-and-keys.html){:target="_blank"}
+- [React Tutorial through 'Declaring a Winner'](https://reactjs.org/tutorial/tutorial.html){:target="_blank"}
+- [The Spread Operator](https://medium.com/coding-at-dawn/how-to-use-the-spread-operator-in-javascript-b9e4a8b06fab){:target="_blank"}
 
 <!-- ## Additional Resources
 
@@ -19,6 +19,6 @@ PLACEHOLDER
 
 PLACEHOLDER -->
 
-### Bookmark/Skim
+<!-- ### Bookmark/Skim
 
-- Reference: [Mustache.js Official Documentation](https://github.com/janl/mustache.js){:target="_blank"}
+PLACEHOLDER -->

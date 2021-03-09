@@ -1,4 +1,4 @@
-# Class 5: Deployment
+# Class 5: Putting it all together
 
 ## Overview
 

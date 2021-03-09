@@ -1,64 +1,120 @@
-# array.map()
+# Array and String Methods
+
+Fun with `slice()`, `splice()`, `split()`, `join()`!
 
 ## Overview
 
-`array.map( fn(v,i) {} )` Much like`array.forEach()`, the `array.map()` function iterates over an array and runs a call back for each element. The callback receives the value and the index of the array element as a parameter.  
+**split()** -- Turning Strings into arrays
+Using the `split(separator)` method on a string will quickly parse the string finding every instance of the `separator` character(s) that you identify, and where it finds them, "split" the string at that point and create an array element.
+- The string is not modified
+- The `separator` characters is removed as the string is "split" up based on it...
 
-The difference is that `.map()` will always return you a **new array** of the **same length** as the original array comprised of your return values
+```
+let str = 'This is a really cool thing';
+let words = str.split(' ');
+console.log(words);
+  // prints out: [ 'This', 'is', 'a', 'really', 'cool', 'thing' ]
 
-### Squaring a number
+let iii = str.split('i');
+console.log(iii);
+  // prints out: [ 'Th', 's ', 's a really cool th', 'ng' ]
+```
 
-```js
-  let numbers = [2,3,4,5];
+
+**join()** -- Turning arrays into strings
+The `join(char)` array method will iterate an array and create a string by concatenating the value of each element in the array with the `char` that you specify.
+- The original array is not modified
+- Given no `char`, join() will insert commas.
+
+```
+let arr = ['this','was','fun']
+console.log( arr.join() ); // commas will be the default
+  // prints out: this,was,fun
   
-  let squares = numbers.map( function(n,i) {
-    return n * n;
-  });
+console.log( arr.join('') ); // one long word
+  // prints out: thiswasfun
   
-  // or as a snazzy arrow function ...
-  // let squares = numbers.map( n => n * n );
+console.log( arr.join('.') ); // millennial advertising
+  // prints out: this.was.fun.
   
-  console.log(squares); // [ 4, 9, 16, 25 ]
+console.log( arr.join('-') ); // kebab case
+  // prints out: this-was-fun
+  
+console.log( arr.join('_') ); // snake case
+  // prints out: this_was_fun
+```
+
+
+**slice()** -- Find elements within an array
+- The array is not modified
+- Identify the start index and the end index (optional)
+- Positive indexes start at the front of the array, negatives start at the end.
+
+```
+let arr = ['a','b','c','d','e'];
+
+// Find 2 elements starting at position 0
+console.log( arr.slice(0,2) );
+  // output: [ 'a', 'b' ]
+
+// Find 2 elements starting at position 2
+console.log( arr.slice(2,4) );
+  // output: [ 'c', 'd' ]
+
+// Find 1 elements starting at position 4
+console.log( arr.slice(3,4) );
+  // output: [ 'd' ]
+
+// Find 1 elements starting at position 0
+console.log( arr.slice(0,1) );
+  // output: [ 'a' ]
+
+// Find the last element
+console.log( arr.slice(arr.length-1) );
+  // output: [ 'e' ]
+
+// 2 from the front to the end ...
+console.log( arr.slice(2) ); 
+  // output: [ 'c', 'd', 'e' ]
+
+// 2 from the end to the front ...
+console.log( arr.slice(-2) );
+  // output: [ 'd', 'e' ]
 
 ```
 
-### Changing the data shape
 
-```js
-  let people = [
-    { name: "John", role: "Dad" },
-    { name: "Cathy", role: "Mom" },
-    { name: "Zach", role: "Kid" },
-    { name: "Allie", role: "Kid" },
-  ];
-  
-  let folks = people.map( (person,i) => {
-    return person.name;
-  });
-  
-  console.log(folks); // [ "John", "Cathy", "Zach", "Allie" ]
+**splice()** -- replace parts of an array with new values
+- The array IS modified
+- 3 parameters: Start Index, # of Elements to Remove, Replacement Value
 
 ```
+let arr = ['a','b','c','d','e'];
 
-**If you do nothing...**
+// At arr index 1, replace 0 elements with 99
+// This will INSERT a new element into the array
+arr.splice(1,0,99)
+console.log(arr);
+  // output: [ 'a', 99, 'b', 'c', 'd', 'e' ]
 
-```js
-  let numbers = [2,3,4,5];
-  
-  let squares = numbers.map( function(n,i) {
-  });
-  
-  console.log(squares); // [undefined, undefined, undefined, undefined]
-  
+// At arr index 1, replace 1 element with nothing
+// This will DELETE an array element at a particular index
+arr.splice(1,1)
+console.log(arr);
+  // output: [ 'a', 'b', 'c', 'd', 'e' ]
+
+// At arr index 2, replace 3 elements with 99
+// This will shorten the array, but add a new value
+arr.splice(2,3,99)
+console.log(arr);
+  // output: [ 'a', 'b', 99 ]
 ```
 
-### Caveats and Notes
 
-- The original array is never mutated
-- You always get back a new array
-- The array returned is always the same length as the original
+## Reference and Resources
+* [MDN - String Slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice)
+* [MDN - Array Slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+* [MDN - Array Splice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
 
-## Reference
-
-- [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-- [Medium](https://medium.com/@JeffLombardJr/understanding-foreach-map-filter-and-find-in-javascript-f91da93b9f2c)
+* [MDN - String Split](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split)
+* [MDN - Array Join](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join)

@@ -1,4 +1,4 @@
-# Persistence with a SQL database
+# APIs
 
 ## Overview
 
@@ -20,14 +20,11 @@ Today we are going to be adding a persistence layer in the form of a SQL databas
 
 As a result of completing Lecture 8 of Code 301, students will be able to:
 
-* Describe and Define  
-  * Relational Databases
-  * Tables, Columns, Rows, Records
-  * SQL Language
-  * How CRUD relates to SQL
-  * `pg` client library for Node
-    * Parameterized Queries
-* Execute
-  * Connect a node server to a Postgres DB
-  * Save (INSERT) records to the database to create/sync a cache
-  * Read (SELECT) records from the database to populate a cache
+- Describe and Define  
+  - APIs
+- Execute
+  - Node Express Server
+  - Use **superagent** to fetch remote data asynchronously
+  - Use **axios** to reach out to the back-end from the front-end
+  - Ingest 3rd Party data from an API
+  - Integrate data with a separate web application
