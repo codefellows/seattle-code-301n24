@@ -7,7 +7,6 @@ Review the Submission Instructions for guidance on completing and submitting thi
 ## Reading
 
 
-
 <!-- ## Additional Resources
 
 PLACEHOLDER

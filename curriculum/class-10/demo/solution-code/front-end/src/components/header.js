@@ -2,8 +2,8 @@ import React from 'react';
 
 class Header extends React.Component {
   render() {
-    return(
-      <h1>Job Board</h1>
+    return (
+      <h1>What's For Dinner!</h1>
     )
   }
 }

@@ -20,7 +20,10 @@ class Main extends React.Component {
       <>
         {this.state.jobs.length && this.state.jobs.map((job, idx) => (
           <div key={idx}>
-            {job.name}
+            <h2><a href={job.url}>{job.name}</a></h2>
+            <h3><a href={job.company_logo_url ? job.company_logo_url : ''} >{job.company_name}</a></h3>
+            <p>{job.description}</p>
+            <p>{job.salary ? job.salary : 'no salary available'}</p>
           </div>
         ))}
       </>

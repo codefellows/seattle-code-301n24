@@ -1,4 +1,4 @@
-# Creating Resources
+# Creating and Deleting Resources
 
 ## Overview
 

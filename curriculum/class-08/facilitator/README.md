@@ -10,7 +10,6 @@ Review the detailed objectives in today's [student-facing readme](../README.md).
 
 ## Preparation
 
-- Remind students that they will work with the same partner for labs 2 and 3.
 - Practice building and talking through the [the promises demo](../demo/promises.js)
 - Practice refactoring from the [previous lab solution](../../class-06/solution) into [the server demo](./demo/server) for today
 

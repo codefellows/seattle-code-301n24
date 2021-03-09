@@ -2,7 +2,7 @@
 
 ## Overview
 
-The purpose of today's lecture is to discuss the call stack so students think about the order of code execution. Part of code review during class 7 included tracing the path of code execution in the solution code from lab 6.
+Today is a hands-on class to reinfornce the concepts of modularization while introducing the idea of pagination. 
 
 ## Learning Objectives
 
@@ -10,17 +10,13 @@ Review the detailed objectives in today's [student-facing readme](../README.md).
 
 ## Preparation
 
-- Review the final solution code for the City Explorer back end.
-- Review the Feature Tasks for the lab assignment and remind students to print out their code prior to lab time.
+- Review the final solution code for the City Explorer back-end and front-end.
 - Prepare a 10-15 demonstration to introduce the topic of today's code challenges.
-- Practice the [call stack demo](../demo/call-stack.js)
-- Review the [call stack demo UML](../demo/call-stack-uml.png)
+- Review the solution for the demo[demo](../demo/)
 
 ## Lecture Outline
 
 Below is the expected lecture outline and flow. One possible way to present this material is documented in the [example lecture](../facilitator/LECTURE-EXAMPLE.md) notes.
-
-Another portion of today's lecture is reading error messages. Error messages can be intimidating to students, so walking through the errors together and providing tips will be helpful.
 
 ### Warm-Up
 
@@ -43,60 +39,42 @@ Another portion of today's lecture is reading error messages. Error messages can
 
 ### Code Review
 
-> Code Review for today is covered as part of the lecture, where you'll be breaking down the entire City Explorer application to teach the call stack.
+> Code Review for today is covered when you break the students up into groups and them work together.
 
-### The Call Stack
-
-> We previously introduced the "Event Loop" to students when we talked about promises.
+### Modularization and Pagination Workshop
 
 - **Why** (5 min)
-  - It's incredibly important for developers to know when and how their code executes
-  - Identify and deal with asynchronous paradigms
-- **What** (10 min)
-  - JS runs code as it encounters it
-  - Code runs as soon as it can
-  - Async makes this hard
-  - Javascript manages this for us in the "Event Loop" using a **Call Stack** and a **Callback Queue**
-- **How** (30 min)
-  - Take a slightly deeper dive into how JS actually runs the code in a simple app (../demo/call-stack.js)
-  - Review the order of operations
-  - Using your editor, add a break point at various parts of the code and run your app in "Debug Mode"
-    - This gives you the ability to showcase the actual call stack (function calls, anyway, not static lines)
+  - students need hands on practice 
+  - hearing how peers solved a problem they were struggling with is invaluable
+  - being able to explain how they solved a problem to a struggling peer is essisntial to solidfying knowledge
+
+- **What** 
+  - break students up into groups of three
+  - give them the starter demo code and instruct them to modularize both the front-end and the back-end
+  - The final challenge is to figure out a way to paginate the recipes
+    - Give them the hint that this API uses a `from` and `to` query params
+  - give them 45 minutes to an hour to do this while you check in on each group
+
+- **How** (60 min)
+  - After a break, bring the class back together and lead a discussion on the successes and challenges of that exercise
+  - Go through the code and modularize both the front-end and the back-end. Be sure the spend time talking about how to deal with promises
+  - Next, let students lead the discussion on different solutions to the pagination problem
+
 - **Experimentation and Discovery Ideas**
-  - Work through an interactive call stack exercise
-    - Divide students into groups of 2.
-    - As you trace the call stack, students should write the name of the function on a Post-It note and add and remove it from their own version of the call stack in front of them on the table.
-    - When a function is removed from the call stack, students should write its return value inside the function that called it, as appropriate.
-    - Demo this within a virtual whiteboard (with post-its, or just a text field), so students know how to complete the stack-trace component of lab. 
-    Throughout this process, tie the functions to their role in the WRRC and Model View Controller architecture.
 
 ## Lab Notes
 
-- In addition to today's core lab requirements, students will be **independently** completing their city explorer back end.
-- The lab for this class is very fun and designed to be creative
-- Students will use post-its to simulate the actual call stack
-- They will also make a giant, colorful WRRC diagram
-  - Encourage creativity
-  - Colors Help
-  - What data goes to and from each request?
+- Today is the final day of the City Explorer Lab. Students will add an in-memory database into their server code to store location obejcts as well as add a route for movies. 
 
 ## What changed from the previous class?
 
-- Nothing. This is a complete "Recap" of the week
+- Adding an in-memory database - what that means and why we might use that. What are the drawbacks and advatages.
 
 ## What might students struggle with today?
 
-- Understanding the difference between client and server
+- Understanding pagination
 - Identifying which line of code corresponds to each step of the WRRC diagram
 
 ## Past bugs, issues or surprises...
 
 ## General Comments and Notes
-
-This lab requires some adaptation for a virtual environment. You can still trace the call stack with students as a group and encourage them to write down the functions on Post-It notes at home, adding and removing them from the stack as you move through the code together. Show them how to do it on a whiteboard! 
-
-Create two different call stacks - one for the synchronous code and one for the asynchronous code. Demonstrate how JavaScript will set aside asynchronous code and continue on. You can have students keep track of what function goes where by writing down the line numbers next to the function name. Using a different color to designate a promise is also a good way visually reinforce the concept.
-
-The lab asks students to print their code and work with their partner to draw arrows to demonstrate how each function is being called. For those in a virtual environment, the lab guides students to draw directly on top of their code in a shared whiteboard session. 
-
-Examples of a good WRRC is included here. Do NOT share this example with students but use it as a guide when planning your lesson.

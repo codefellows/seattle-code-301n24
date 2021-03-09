@@ -186,6 +186,16 @@ Create a corresponding constructor function for the result.
 - Send the location object as a query param on the `/movies` route.
 - Send the response into your `Movies` component and render it
 
+1. STRETCH: Create a component for `Restaurants`
+- Include the `Restaurants` component in your `Main` component
+- After your `Main` component collects information on the movies, make a request to the server to collect information for restaurants on a `/restaurants` route.
+- Send the location object as a query param on the `/restaurants` route.
+- Send the response into your `Restaurants` component and render it
+
+1. STRETCH: Add pagination to your `Restaurants` component.
+- Display 10 restaurants. 
+- When a user clicks more, display the next 10 restaurants.
+
 ## Documentation
 **You MUST have a README.md for both your front-end repo and your back-end repo**
 

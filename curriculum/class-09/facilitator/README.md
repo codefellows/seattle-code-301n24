@@ -2,11 +2,7 @@
 
 ## Overview
 
-Today will likely be a catch-up day as students continue to persist their Location results in their databases and get their final API connections completed. You can expect most students to have their database functioning locally and storing records, but they may not have completed the logic to conditionally retrieve the database results or request the data from the API, if it has not yet been stored in the database.
 
-**Our primary focus today is going to be in exploring some advanced topics, including Pagination to make the front-end more usable and Refactoring our server, which is now quite large, into something much more readable and maintainable.**
-
-> This can and should largely be a workshop / mob programming style of day, where code review essentially takes 2+ hours, allowing you to move between various ways to make the application more readable.
 
 ## Learning Objectives
 
@@ -14,9 +10,9 @@ Review the detailed objectives in today's [student-facing readme](../README.md).
 
 ## Preparation
 
-- Students will be working solo for this lab
+- When practicing the jobs demo, make sure that the API returns results in your area. If it doesn't, take some time to find a new API so the demo will be relevant to your class.
 - Practice the [standalone refactoring demo](../demo/refactoring)
-- Practice the [city explorer pagination demo](../demo/pagination)
+- Practice the [job board demo](../demo/jobs)
 
 ## Lecture Outline
 
@@ -46,37 +42,17 @@ Below is the expected lecture outline and flow. One possible way to present this
 - **Why** (5 min)
   - Confirm with the students that really understand the 301 fundamentals
 - **What** (10 min)
-  - HTML, CSS, JS
-  - jQuery/Mustache
-  - Express
+  - Express, node.js
+  - Client vs Server
+  - API
+  - WRRC
 - **How** (30 min)
   - Using student prompts ...
     - Build a **simple** dynamic web app with a template
     - Build a **simple** express server with 1 route serving JSON
-    - Connect them with `$.ajax()`
+    - Connect them
   - Students should know 100% of this
   - Stress that this is boilerplate!
-
-### Pagination
-
-- **Why** (5 min)
-  - Most APIs don't provide all the data they have
-  - Rather, you'll get to all of it in chunks of, for example 10 records at a time
-  - How can the user get to the data they don't see on the initial rendering, when they are ready for it?
-- **What** (10 min)
-  - A "get more" button is a great place to start
-  - We already went to the server with `$.ajax()` to get the data to render
-  - We can go back again for more to augment our display
-    - We are allowing WRRC "on demand". User action triggers another request-response. 
-    - This can be as simple as "get more" and append to the list, making it infinitely scrolling
-    - Alternatively, add links for "Next" and "Previous" to let the user fetch a different page of results and toggle between them
-  - What's the difference?
-    - The calls to the server are the same.
-    - It comes down to the rendering. Are you replacing what's in the target element with the data you fetch (`.html()`) or are you adding to it (`.append()`)
-- **How** (30 min)
-  - Demo: Pagination
-- **Experimentation and Discovery Ideas**
-  - Have the students drive the discovery (with gentle leadership)
 
 ### Refactoring
 
@@ -95,6 +71,22 @@ Below is the expected lecture outline and flow. One possible way to present this
   - Demo: Refactor city explorer code
 - **Experimentation and Discovery Ideas**
   - Have the students drive the discovery (with gentle leadership)
+
+### Modularization
+
+- **Why** (5 min)
+  - To Keep it organized
+  - To make it DRY
+  - To make it testable
+  - To make it reuseable
+  - To make it easier to collaborate
+- **What** (10 min)
+  - Break monolithic code bases into smaller parts
+  - Breaking code up into smaller pieces (into modules)
+  - A way of segregating reusable  pieces of code that can be shared with other projects
+- **How** (45 min)
+  - Demo: Jobs Board
+- **Experimentation and Discovery Ideas**
 
 ## Lab Notes
 
@@ -119,4 +111,4 @@ Below is the expected lecture outline and flow. One possible way to present this
 
 ## General Comments and Notes
 
-Students will follow the same pattern from lab 8 to retrieve data from the Movies API and the Yelp API. As a stretch goal, they should be able to quickly implement the National Parks Service API, using the same techniques.
+Students will follow the same pattern from lab 8 to retrieve data from the Movies API. As a stretch goal, they should be able to quickly implement the Yelp API, using the same techniques.
