@@ -1,4 +1,4 @@
-# Code Challenge 08: Filter
+# Code Challenge 04: Regular Expressions, part 1
 
 ## Overview
 
@@ -15,11 +15,11 @@ Look through [these sample problems.](DEMO.md){:target="_blank"}
 ## Challenges
 
 1. Navigate to your `data-structures-and-algorithms` repository folder.
-1. Create a new branch for today's challenge called `filter`
-   - `git checkout -b filter`
+1. Create a new branch for today's challenge called `regex-1`
+   - `git checkout -b regex-1`
 1. Retrieve the code challenge from the system
-   - `npm run get-challenge 08`
-1. In your terminal, from your `data-structures-and-algorithms` folder, run `npm test 08` to execute the tests in this file for **today's challenge.**
+   - `npm run get-challenge 04`
+1. In your terminal, from your `data-structures-and-algorithms` folder, run `npm test 04` to execute the tests in this file for **today's challenge.**
    - At this point you will see the failed tests scroll through your terminal window with a brief report of the number of failed tests at the bottom.
    - If you do not see this, verify your installation of Jest by typing `npx jest --version` in your terminal. Filename typos can make things break!
 1. Write code to make the tests pass, one at a time. Let the error messages guide you.

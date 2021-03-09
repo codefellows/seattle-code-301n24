@@ -1,62 +1,93 @@
-# array.filter()
+# Regular Expressions 101
 
 ## Overview
 
-SSimilar to `array.map()`, the `array.filter()` function iterates over an array and runs a call back for each element. The callback receives the value and the index of the array element as a parameter.  
+Regular expressions (or "Regex" ... said "Rej-Ex") are a means of identifying patterns in strings. We commonly use them to validate input, replace character patterns with other characters or refer to character patterns in a string.
 
-`filter.()` will always return you a **new array**, comprised of elements from the original array that match your criteria -- which elements in the array match the filter condition?
+Mechanically, a regex is composed of a "Pattern To Match" between 2 delimiters (usually a `/`), followed by some optional instructions, known as "quantifiers".  Quantifiers are single letter instructions:
 
-### Even Numbers
+- g = "Global Match"
+- i = "Case Insensitive"
 
-```js
-  let numbers = [2,3,4,5];
-  
-  let evens = numbers.filter( function(n,i) {
-    return !(n % 2);
-  });
-  
-  // or as a snazzy arrow function ...
-  // let evens = numbers.filter( n => !(n % 2) );
-  
-  console.log(evens); // [ 2, 4, 6 ]
+### e.g. `/foo/ig`
 
+For our examples, lets use the following string:
+
+**`The rain in Spain falls mainly in the plain`**
+
+Does this string contain the letter "T"?
+- `/T/`
+- `/t/i`
+
+#### We can use a "Range", which is a group of letters or numbers in brackets to see if there are things of the same basic type
+
+Does this string contain any capital letters?
+- `/[A-Z]/` 
+
+Lowercase letters?
+- `/[a-z]/` 
+
+Numbers?
+- `/[0-9]`
+
+#### We can use parenthesis `()` to group things together
+Does the string contain any words with "ain" in them?
+- `/(ain)/`
+
+#### There are many "helpers" that you can use to find more interesting parts of the string
+
+- `\s` = White space
+- `\b` = Word Boundary
+- `\w` = All word characters (A-Z,a-z,0-9)
+- `^` = Beginning of the string
+- `$` = End of the string
+- `.` = Any Character
+- `*` = Greedy (keep going!)
+
+#### So, with combinations of helpers, ranges, and groups, you get pretty intricate
+`/s.?([A-Za-z]in)\s+/g`
+
+a lowercase s, followed by any letters, followed by "in" followed by a space ... in other words "spain", but not "rain"
+
+
+### JavaScript Methods and Practical Use
+**Boolean Checks** (Does my string match the regex?)
+```
+  let str = "The rain in Spain falls mainly in the plain";
+  // Are there any words ending with some letter before "in"
+  let regex = /([A-Za-z]in)\b/g;
+  regex.test(str);  // true
 ```
 
-### Object Values
-
-```js
-  let people = [
-    { name: 'John', role: 'Dad' },
-    { name: 'Cathy', role: 'Mom' },
-    { name: 'Zach', role: 'Kid' },
-    { name: 'Allie', role: 'Kid' },
-  ];
-
-  let parents = people.filter(person => person.role !== "Kid");
-  console.log(parents);
-   // [ { name:'John' ... }, {name:'Cathy', ...} ]
-
+**What is in my string?** (can I get a list of all the matches?)
+```
+  let str = "The rain in Spain falls mainly in the plain";
+  // The first letter in every word
+  let regex = /(\b\w)/g;
+  str.match(regex);  // T,r,i,S,f,m,i,t,p
 ```
 
-**If you do nothing** ... you'll get back an empty array
-
-```js
-  let numbers = [2,3,4,5];
-  
-  let evens = numbers.filter( function(n,i) {
-  });
-  
-  console.log(evens); // []
-  
+**Replace something in my string**
+```
+  let str = "The rain in Spain falls mainly in the plain";
+  // The first letter in every word
+  let regex = /(\b\w)/g;
+  str.replace(regex,'-');  // -he -ain -n -pain -alls -ainly -n -he -lain"
 ```
 
-### Caveats and Notes
+**Replace something in my string, but use a function to do it!**
+```
+  // Camel Case a String ...
+  
+  let str = "The rain in Spain falls mainly in the plain";
+  let regex = /\b(\w)/g;
+  let newString = str.replace(regex, (rawMatch, matchedThing , idx) => {
+      return idx === 0 ? matchedThing.toLowerCase() : matchedThing.toUpperCase();
+    }).replace(/\W/g, '')
+    
+  console.log(newString); // theRainInSpainFallsMainlyInThePlain
+```
 
-- The original array is never mutated
-- You always get back a new array
-- The array returned is built by pushing values that evaluate & return `true`
-
-## Reference
-
-- [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
-- [Medium](https://medium.com/@JeffLombardJr/understanding-foreach-map-filter-and-find-in-javascript-f91da93b9f2c)
+## Reference and Resources
+* [Regex Information/Tutorial](https://www.regular-expressions.info/)
+* [Regex Runner/Tester](https://regex101.com/)

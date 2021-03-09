@@ -1,19 +1,26 @@
-```javascript
-// array.map demo
+```
+let str = 'the rain in spain falls mainly in the plain';
 
-const people = [
-  { name: 'John', role: 'Dad' },
-  { name: 'Cathy', role: 'Mom' },
-  { name: 'Zach', role: 'Kid' },
-  { name: 'Allie', role: 'Kid' },
-];
+let regex = /[A-Z]/g;
+regex = /s.?([A-Za-z]in)\s+/g;
 
-const parents = people.filter(person => person.role !== 'Kid');
-console.log(parents);
+let wordSeparators = /\W/g;
+let firstLetters = /\b(\w)/g;
 
-const nums = [1,2,3,4,5,6,7];
-const evens = nums.filter( (num) => {
-  return !(num % 2);
-});
-console.log(evens);
+console.log(str.match(/([A-Za-z]in)\b/g));
+
+console.log( regex.test(str) );
+
+console.log( str.replace(wordSeparators,'_') );
+
+console.log(
+  str.replace(firstLetters, (matchedThing, x, idx) => {
+    return idx === 0 ? matchedThing.toLowerCase() : matchedThing.toUpperCase();
+  }).replace(/\W/g, '')
+);
+
+let email = 'john@here.com';
+let validator = /(.*?)@(.*?)\.(com|net|org)/g;
+console.log(validator.test(email));
+console.log(email.match(validator))
 ```

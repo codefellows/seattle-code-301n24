@@ -15,85 +15,176 @@ const raisedToTheThird = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function that appends ' The end.' to a string, and returns the modified string. The original source string should not be modified.
-
+Write a function named addOne that, given an array of numbers, uses map to return a new array with each value simply incremented by 1. 
 ------------------------------------------------------------------------------------------------ */
 
-const appendTheEnd = (str) => {
+const addOne = (arr) => {
   // Solution code here...
-};
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function that accepts an array and copies the first element to the end of the array. The change should be reflected in the source array that was passed in to the function. That is, the function should modify the array 'in place'.
-
-Do not use a return statement.
-
-For example:
-const a = [1, 2, 3];
-appendFirstToLast(a);
-console.log(a) prints [1, 2, 3, 1]
+Write a function named addQuestion that, given an array of strings, uses map to return a new array containing each string followed by a question mark character.
 ------------------------------------------------------------------------------------------------ */
 
-const appendFirstToLast = (arr) => {
+const addQuestion = (arr) => {
   // Solution code here...
-};
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function that accepts an object and an integer as arguments and adds a new property to the object called yearBorn. The value of the yearBorn property should be the integer that was passed in.
+Write a function named forLoopTwoToThe that, given an array of integers as input, iterates over the array and returns a new array. The returned array should contain the result of raising 2 to the power of the original input element.
 
-The change should be reflected in the source object that was passed in to the function. That is, the function should modify the object 'in place'.
+You may choose to complete this challenge using a for loop, for...in syntax, or for...of syntax.
 
-Do not use a return statement.
-
-For example:
-const octavia = { fullName: 'Octavia Estelle Butler' };
-addBirthYearProperty(octavia, 1947);
-console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
+For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and 2 ^ 3 = 8.
 ------------------------------------------------------------------------------------------------ */
 
-const addBirthYearProperty = (obj, year) => {
+const forLoopTwoToThe = (arr) => {
   // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 5 - Stretch Goal
+CHALLENGE 5
 
-Write a function that accepts an array of people objects and adds a new property called isAuthor to each object in the list. Set the value of the new property to true.
-
-The function should modify the object in place. Do not use a return statement.
-
-For example:
-const people = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }];
-setStatusAsAuthor(people);
-console.log(people[1].isAuthor) prints true
+Write a function named forEachTwoToThe that produces the same output as your forLoopTwoToThe function from challenge 1, but uses forEach instead of a for loop.
 ------------------------------------------------------------------------------------------------ */
 
-const setStatusAsAuthor = (people) => {
+const forEachTwoToThe = (arr) => {
   // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 6 - Stretch Goal
+CHALLENGE 6
 
-Write a function that accepts two arrays. Append the values from the second array into the first,
-maintaining the ordering.
-
-The function should modify the first array in place. Do not use a return statement.
-
-For example:
-const a = [1, 2]; NOTE: If you assign an array to a `const`, you can't re-assign it later, but you can change the values in the array.
-const b = [3, 4];
-append(a, b);
-console.log(a) prints [1, 2, 3, 4]
+Write a function named mapTwoToThe that produces the same output as your forLoopTwoToThe function from challenge 1 and your forEachTwoToThe function from challenge 2, but uses map instead of a for loop or forEach.
 ------------------------------------------------------------------------------------------------ */
 
-const append = (arr1, arr2) => {
+const mapTwoToThe = (arr) => {
   // Solution code here...
+};
 
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 7 - Stretch Goal
+
+Write a function named charCode that, given an array of letters as an input, uses map to return a new array where each element is the result of the `charCodeAt` method on the original array element.
+
+Read the MDN documentation on String.charCodeAt() if necessary.
+
+For example: charCode(['h','i']) returns [104, 105].
+------------------------------------------------------------------------------------------------ */
+
+const charCode = (arr) => {
+  // Solution code here...
+};
+
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 8 - Stretch Goal
+
+Write a function that, given an array of numbers as input, uses map to return a new array where each element is either the string "even" or the string "odd", based on each value.
+
+If any element in the array is not a number, the resulting array should have the string "N/A" in its place.
+
+For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
+------------------------------------------------------------------------------------------------ */
+
+const evenOdd = (arr) => {
+  // Solution code here...
+};
+
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 9 - Stretch Goal
+
+Use the snorlaxAbilities data, below, for this challenge.
+
+Write a function named extractAbilities that, given the array of abilities, uses map to create an array containing only the ability name.
+
+Note: Because this function is expecting the array of abilities, it will be invoked as:
+extractAbilities(snorlaxAbilities.abilities)
+------------------------------------------------------------------------------------------------ */
+
+const snorlaxAbilities = {
+  abilities: [
+    {
+      slot: 3,
+      is_hidden: true,
+      ability: {
+        url: 'https://pokeapi.co/api/v2/ability/82/',
+        name: 'gluttony',
+      },
+    },
+    {
+      slot: 2,
+      is_hidden: false,
+      ability: {
+        url: 'https://pokeapi.co/api/v2/ability/56/',
+        name: 'cute charm',
+      },
+    },
+    {
+      slot: 1,
+      is_hidden: false,
+      ability: {
+        url: 'https://pokeapi.co/api/v2/ability/17/',
+        name: 'immunity',
+      },
+    },
+  ],
+  name: 'snorlax',
+  weight: 4600,
+};
+
+const extractAbilities = (arr) => {
+  // Solution code here...
+};
+
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 10 - Stretch Goal
+
+Use the snorlaxStats data, below, for this challenge.
+
+Write a function named extractStats that, given an array of stats, uses map to return an array of objects containing the stat name and the total.
+
+The total should be the sum of the effort and the baseStat.
+
+Here is an example of a single array element: { name: 'speed', total: 35 }
+------------------------------------------------------------------------------------------------ */
+
+const snorlaxStats = {
+  stats: [
+    {
+      stat: {
+        url: 'https://pokeapi.co/api/v2/stat/6/',
+        name: 'speed',
+      },
+      effort: 5,
+      baseStat: 30,
+    },
+    {
+      stat: {
+        url: 'https://pokeapi.co/api/v2/stat/5/',
+        name: 'special-defense',
+      },
+      effort: 2,
+      baseStat: 110,
+    },
+    {
+      stat: {
+        url: 'https://pokeapi.co/api/v2/stat/4/',
+        name: 'special-attack',
+      },
+      effort: 9,
+      baseStat: 65,
+    },
+  ],
+  name: 'snorlax',
+  weight: 4600,
+};
+
+const extractStats = (arr) => {
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -103,7 +194,7 @@ All the code below will verify that your functions are working to solve the chal
 
 DO NOT CHANGE any of the below code.
 
-Run your tests from the console: jest challenges-02.test.js
+Run your tests from the console: jest challenges-07.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
@@ -114,50 +205,93 @@ describe('Testing challenge 1', () => {
 });
 
 describe('Testing challenge 2', () => {
-  test('It should append without modifying the oiginal', () => {
-    const a = 'This is my story.';
-    const b = appendTheEnd(a);
-
-    expect(a).toStrictEqual('This is my story.');
-    expect(b).toStrictEqual('This is my story. The end.');
+  test('It should add one to all the numbers in the array', () => {
+    expect(addOne([2, 3, 5, 11])).toStrictEqual([3, 4, 6, 12]);
   });
 });
 
 describe('Testing challenge 3', () => {
-  test('It should append by modifying the oiginal', () => {
-    const a = ['Yes', 'it', 'is'];
-    appendFirstToLast(a);
-
-    expect(a).toStrictEqual(['Yes', 'it', 'is', 'Yes']);
+  test('It should add a question mark to the end of each string', () => {
+    expect(addQuestion(['hello', '301', 'students'])).toStrictEqual(['hello?', '301?', 'students?']);
   });
 });
 
 describe('Testing challenge 4', () => {
-  test('It should add a property to an object', () => {
-    const a = { fullName: 'Octavia Butler' };
-    addBirthYearProperty(a, 1947);
+  test('It should return two raised to the power of the integer', () => {
+    expect(forLoopTwoToThe([0, 4, 5])).toStrictEqual([1, 16, 32]);
+    expect(forLoopTwoToThe([0, 4, 5]).length).toStrictEqual(3);
+  });
 
-    expect(a.yearBorn).toStrictEqual(1947);
+  test('It should return decimals if the integer is negative', () => {
+    expect(forLoopTwoToThe([-1, -2, -3])).toStrictEqual([0.5, 0.25, 0.125]);
   });
 });
 
-xdescribe('Testing challenge 5', () => {
-  test('It should add a property to every object in an array', () => {
-    const a = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }, { fullName: 'Kurt Vonnegut' }];
-    setStatusAsAuthor(a);
+describe('Testing challenge 5', () => {
+  test('It should return two raised to the power of the integer', () => {
+    expect(forEachTwoToThe([0, 4, 5])).toStrictEqual([1, 16, 32]);
+    expect(forEachTwoToThe([0, 4, 5]).length).toStrictEqual(3);
+  });
 
-    expect(a[0].isAuthor).toStrictEqual(true);
-    expect(a[1].isAuthor).toStrictEqual(true);
-    expect(a[2].isAuthor).toStrictEqual(true);
+  test('It should return decimals if the integer is negative', () => {
+    expect(forEachTwoToThe([-1, -2, -3])).toStrictEqual([0.5, 0.25, 0.125]);
   });
 });
 
-xdescribe('Testing challenge 6', () => {
-  test('It should append the second array to the first', () => {
-    const a = [1, 2, 3, 4];
-    const b = [5, 6, 7, 8];
-    append(a, b);
+describe('Testing challenge 6', () => {
+  test('It should return two raised to the power of the integer', () => {
+    expect(mapTwoToThe([0, 4, 5])).toStrictEqual([1, 16, 32]);
+    expect(mapTwoToThe([0, 4, 5]).length).toStrictEqual(3);
+  });
 
-    expect(a).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8]);
+  test('It should return decimals if the integer is negative', () => {
+    expect(mapTwoToThe([-1, -2, -3])).toStrictEqual([0.5, 0.25, 0.125]);
+  });
+});
+
+xdescribe('Testing challenge 7', () => {
+  test('It should return an array containing the character code for each letter', () => {
+    expect(charCode(['C', 'o', 'd', 'e', '3', '0', '1'])).toStrictEqual([ 67, 111, 100, 101, 51, 48, 49 ]);
+    expect(charCode(['C', 'o', 'd', 'e', '3', '0', '1']).length).toStrictEqual(7);
+  });
+});
+
+xdescribe('Testing challenge 8', () => {
+  test('It should return an array containing the keys from an object', () => {
+    expect(evenOdd([5, 8, 2, 6, 9, 13, 542, 541])).toStrictEqual([ 'odd', 'even', 'even', 'even', 'odd', 'odd', 'even', 'odd' ]);
+    expect(evenOdd([5, 8, 2, 6, 9, 13, 542, 541]).length).toStrictEqual(8);
+  });
+
+  test('It should work with all odd numbers', () => {
+    expect(evenOdd([1, 3, 5, 7, 9])).toStrictEqual([ 'odd', 'odd', 'odd', 'odd', 'odd' ]);
+    expect(evenOdd([1, 3, 5, 7, 9]).length).toStrictEqual(5);
+  });
+
+  test('It should work with all even numbers', () => {
+    expect(evenOdd([2, 4, 6, 8, 10])).toStrictEqual([ 'even', 'even', 'even', 'even', 'even' ]);
+    expect(evenOdd([2, 4, 6, 8, 10]).length).toStrictEqual(5);
+  });
+
+  test('It should return the string "N/A" if a non-number is included in the array', () => {
+    expect(evenOdd([5, 8, 2, 'hi'])).toStrictEqual([ 'odd', 'even', 'even', 'N/A' ]);
+    expect(evenOdd([5, 8, 2, 'hi']).length).toStrictEqual(4);
+  });
+});
+
+xdescribe('Testing challenge 9', () => {
+  test('It should return an array containing only the ability names', () => {
+    expect(extractAbilities(snorlaxAbilities.abilities)).toStrictEqual(['gluttony', 'cute charm', 'immunity']);
+    expect(extractAbilities(snorlaxAbilities.abilities).length).toStrictEqual(3);
+  });
+});
+
+xdescribe('Testing challenge 10', () => {
+  test('It should return an array containing objects with name and total values', () => {
+    expect(extractStats(snorlaxStats.stats)).toStrictEqual([
+      { name: 'speed', total: 35, },
+      { name: 'special-defense', total: 112, },
+      { name: 'special-attack', total: 74, },
+    ]);
+    expect(extractStats(snorlaxStats.stats).length).toStrictEqual(3);
   });
 });

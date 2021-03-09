@@ -51,14 +51,14 @@ Below is the expected lecture outline and flow. One possible way to present this
 - **What** 
   - break students up into groups of three
   - give them the starter demo code and instruct them to modularize both the front-end and the back-end
-  - The final challenge is to figure out a way to paginate the recipes
+  - If students finish early, have them figure out a way to paginate the recipes
     - Give them the hint that this API uses a `from` and `to` query params
   - give them 45 minutes to an hour to do this while you check in on each group
 
 - **How** (60 min)
   - After a break, bring the class back together and lead a discussion on the successes and challenges of that exercise
   - Go through the code and modularize both the front-end and the back-end. Be sure the spend time talking about how to deal with promises
-  - Next, let students lead the discussion on different solutions to the pagination problem
+  - Add an in-memory database to the code
 
 - **Experimentation and Discovery Ideas**
 

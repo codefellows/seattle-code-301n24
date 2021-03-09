@@ -1,4 +1,4 @@
-# Code Challenge 02: Value vs. Reference
+# Code Challenge 07: Map
 
 ## Overview
 
@@ -8,14 +8,18 @@ Read [this overview.](README.md){:target="_blank"}
 
 Watch today's video from the [demo playlist.](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k){:target="_blank"}
 
+## Demonstration
+
+Look through [these sample problems.](DEMO.md){:target="_blank"}
+
 ## Challenges
 
 1. Navigate to your `data-structures-and-algorithms` repository folder.
-1. Create a new branch for today's challenge called `value-vs-reference`
-   - `git checkout -b value-vs-reference`
+1. Create a new branch for today's challenge called `map`
+   - `git checkout -b map`
 1. Retrieve the code challenge from the system
-   - `npm run get-challenge 02`
-1. In your terminal, from your `data-structures-and-algorithms` folder, run `npm test 02` to execute the tests in this file for **today's challenge.**
+   - `npm run get-challenge 07`
+1. In your terminal, from your `data-structures-and-algorithms` folder, run `npm test 07` to execute the tests in this file for **today's challenge.**
    - At this point you will see the failed tests scroll through your terminal window with a brief report of the number of failed tests at the bottom.
    - If you do not see this, verify your installation of Jest by typing `npx jest --version` in your terminal. Filename typos can make things break!
 1. Write code to make the tests pass, one at a time. Let the error messages guide you.
