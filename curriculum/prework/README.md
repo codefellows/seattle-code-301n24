@@ -24,4 +24,4 @@ Note that the tasks below have a corresponding assignment to submit in your Canv
 
 ## Computer Setup
 
-- [Setup Instructions](/setup-guide/code-301/)
+- [Setup Instructions](/set-up/)
