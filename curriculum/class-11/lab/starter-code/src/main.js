@@ -1,9 +1,9 @@
 import React from 'react';
 import Login from './login';
 import MyFavoriteBooks from './myFavoriteBooks';
-import UserProfile from './profile';
-import { withAuth0 } from '@auth0/auth0-react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
+// TODO: conditionally render the components so that the user only sees the `Login` if they are NOT logged in and they don't see the `Login` if they are logged in.
 
 class Main extends React.Component {
   constructor(props){
@@ -17,18 +17,16 @@ class Main extends React.Component {
 
   render() {
     return(
-      !this.props.auth0.isAuthenticated ? 
+      <>
         <Login 
           show={this.state.loginShow}
           handleClose={this.closeLogin}
         />
-        :
-        <>
-          <MyFavoriteBooks />
-          <UserProfile />
-        </>
+
+        <MyFavoriteBooks />
+      </>
     )
   }
 }
 
-export default withAuth0(Main);
+export default Main;
