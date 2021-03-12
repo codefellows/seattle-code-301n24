@@ -19,8 +19,8 @@ Note that the tasks below have a corresponding assignment to submit in your Canv
 
 1. [Chocolate Pizza](chocolate_pizza)
 1. [Portfolio Prep](portfolio_prep)
-1. [arrow-functions](arrow-functions)
-1. [classes](classes)
+1. [Arrow Functions in JavaScript](arrow-functions)
+1. [Classes in JavaScript](classes)
 
 ## Computer Setup
 
