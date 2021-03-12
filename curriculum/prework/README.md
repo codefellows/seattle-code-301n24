@@ -24,4 +24,4 @@ Note that the tasks below have a corresponding assignment to submit in your Canv
 
 ## Computer Setup
 
-- [Setup Instructions](/curriculum/prework/set-up)
+- [Setup Instructions](set-up)
