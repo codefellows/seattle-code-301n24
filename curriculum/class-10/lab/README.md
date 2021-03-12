@@ -67,6 +67,27 @@ It can be costly to hit an API over and over. For today's lab, you will create a
 
 You will also collect data about movies and display the results in a `Movies` component.
 
+Every day you will have a new partner. You and your new partner(s) will spend the first 45 minutes reviewing each other's code from the previous day and planning out the days work on the whiteboard.
+
+1. Draw the web request response cycle for the task at hand (about 15 minutes).
+   1. Document the data flow: identify inputs and outputs for each part of the cycle.
+   1. Outline the functions that support this data flow.
+1. Do a formal code review of each person's code (15 minutes each).
+   1. Open your partner's GitHub Pull Request on your laptop.
+   1. Identify an area in the code that:
+      1. you don't understand
+      1. or seams overly complex
+      1. or you see a way to improve
+      1. or you want more information on
+      1. or you really like or think is interesting
+   1. Add kind comments or questions inline using the GitHub review feature.
+
+You will then work independently for the rest of the day, implementing your plan, coding in your own repository, submitting your own pull request.
+
+For this lab assignment, your front-end will make a request to your back-end which will then make a request to an API for information and send that information back to your front-end.
+
+Be sure to include these drawings in your README.md.
+
 ### Time Estimate
 
 For each of the features listed below, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:

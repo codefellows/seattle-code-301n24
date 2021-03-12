@@ -96,9 +96,9 @@ Every day you will have a new partner. You and your new partner(s) will spend th
 
 You will then work independently for the rest of the day, implementing your plan, coding in your own repository, submitting your own pull request.
 
-You will have access to view the code base for the client, but will not be able to modify it in any way.
+For this lab assignment, you will make a server that accepts a request from your front-end and sends back information.
 
-For this lab assignment, you will convert a location entered by the user into a latitude and longitude, then use those values to request weather information for that location. 
+Be sure to include these drawings in your README.md.
 
 ### Workflow
 
