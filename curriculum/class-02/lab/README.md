@@ -1,20 +1,20 @@
 # React State and Props
 
-### Overview
+## Overview
 
-By the end of this week, you will create an application that displays images and information of horned animals. This application will allow you to filter the images by keyword. 
+By the end of this week, you will create an application that displays images and information of horned animals. This application will allow you to filter the images by keyword.
 
 Today, your goal is to use the JSON file provided to display the title, image and description of each horned beast in your application.
 
 ## Resources
 
-- [page-1.json](./starter-code/page-1.json)
+- [data.json](./assets/data.json)
 
 ### Time Estimate
 
 For each of the features listed below, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
 
-```
+```md
 Number and name of feature: ________________________________
 
 Estimate of time needed to complete: _____
@@ -36,8 +36,8 @@ Add this information to your README.
 
 #### What are we going to implement?
 
-Given that a user opens the application in the browser
-When the user navigates to the home page
+Given that a user opens the application in the browser  
+When the user navigates to the home page  
 Then the photo gallery should display all of the images in the gallery
 
 #### How are we implementing it?
@@ -58,6 +58,7 @@ Then the photo gallery should display all of the images in the gallery
 Given that a user clicks on an image, the number of "favorites" displayed on that image will increase by one.
 
 #### How are we implementing it?
+
 - Create state inside of the `HornedBeast` component that keeps track of the number of times an image was clicked.
 
 - Put a heart in each horned beast with the number of times it was "favorited" next to it.
@@ -70,9 +71,9 @@ Given that a user clicks on an image, the number of "favorites" displayed on tha
 
 #### What are we going to implement?
 
-Given that a user opens the application in the browser
-When the images are displayed on the screen
-Then each image should be rendered in a visually pleasing way
+Given that a user opens the application in the browser  
+When the images are displayed on the screen  
+Then each image should be rendered in a visually pleasing way  
 The images should be displayed in columns, as screen width allows
 
 #### How are we implementing it?
