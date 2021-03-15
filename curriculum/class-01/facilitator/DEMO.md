@@ -1,11 +1,11 @@
-# Demos: SMACSS and Responsive Web Design
+# Demos: React and Component Based Architecture
 
 ## Shred Talk
 
 **Topic: array.forEach()**
 - Since this is the first day of the course, students need a complete demonstration of the Code Challenge Workflow
   - Create a `data-structures-and-algorithms` repo
-  - Clone it down adn run npm install 
+  - Clone it down and run npm install 
   - Create the for-each folder
   - Copy in the challenge code as noted in the instructions
   - This is their first time seeing TDD
