@@ -30,7 +30,7 @@ book_app (repository)
 ### Front-End Configuration
 _Your repository must include the following config files:_
 
-- `README.md` - with documentation regarding your lab and it's current state of development. Check the "documentation" section below for more details on how that should look **AT MINIMUM**
+- `README.md` - with documentation regarding your lab and its current state of development. Check the "documentation" section below for more details on how that should look **AT MINIMUM**
 - `.gitignore` - with standard NodeJS configurations
 - `.eslintrc.json` - with Code 301 course standards for the linter
 - `package.json` - with all dependencies and any associated details related to configuration, including `@auth0/auth0-react`.

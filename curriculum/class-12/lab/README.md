@@ -8,7 +8,7 @@
 _Your repository must include the following config files:_
 
 - `.env` - with your PORT and DATABASE_URL. Make sure this file is included in your `.gitignore`
-- `README.md` - with documentation regarding your lab and it's current state of development. Check the "documentation" section below for more details on how that should look **AT MINIMUM**
+- `README.md` - with documentation regarding your lab and its current state of development. Check the "documentation" section below for more details on how that should look **AT MINIMUM**
 - `.gitignore` - with standard NodeJS configurations
 - `.eslintrc.json` - with Code 301 course standards for the linter
 - `package.json` - with all dependencies and any associated details related to configuration including `mongoose`.
@@ -83,8 +83,6 @@ Note that there are a lot of features in today's lab assignment. If you do not c
 
 ### Feature Tasks
 
-See the Trello board for your feature tasks for today's lab.
-
 #### Server Tasks
 
 1. Make an express server
@@ -112,6 +110,8 @@ See the Trello board for your feature tasks for today's lab.
 - your server should send you back and array of books
 - put those books in state
 - once you have those books, display them (you will need to use conditiional logic for this)
+
+1. Use Bootstrap to render these books in a carousel
 
 ## Documentation
 

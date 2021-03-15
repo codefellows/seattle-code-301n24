@@ -1,12 +1,12 @@
-# Facilitators Guide: SMACSS and Responsive Web Design
+# Facilitators Guide: React and Component Based Architecture
 
 ## Overview
 
-This first lecture of 301 is a continuation of Day 00, where the students received a brief introduction the course, educational team, and some basic lab fundamentals.
+This first lecture of 301 is where the students received a brief introduction the course, educational team, and some basic lab fundamentals.
 
 We will be covering a lot more of School and Class mechanics during the first 2 segments of class, with kickoff, introductions, and expectations taking the lions share of the day.
 
-You will finish by introducing React and the idea of components via Code Sandbox.
+You will finish by introducing React and the idea of components using `create-react-app`.
 
 ## Learning Objectives
 
@@ -102,7 +102,7 @@ Below is the expected lecture outline and flow. One possible way to present this
   - Demonstrate how to use `create react app` to make a React template
     - Be sure to spend some time going through each thing that `create react app` gives you and discuss the components you want to keep and the ones that we are not going to use
   - Explain how the app is rendered by the index and explain the build process.
-  - Show students a final Tic-Tak-Toe board and explain that we will be building that over the course of this week.
+  - Show students a final Tic-Tak-Toe board and explain that we will be building basic structure of the board.
     - Bring over the template CSS and explain that we will be using this CSS so that students can just focus on learning React without worrying about CSS.
     - Point out the class structure of React and the way each component extends React.Component.
     - Ask them to describe what components they see (a header, a board, squares). Which ones can be resued?
@@ -132,6 +132,9 @@ Below is the expected lecture outline and flow. One possible way to present this
 
 ## What might students struggle with today?
 
+There is a lot more work in 301 than in 201. Students will struggle with time management - especially in getting their code challenges completed.
+
+This is also the first time they have used tests and might struggle to get their code to pass the tests.
 
 ## Past bugs, issues or surprises...
 

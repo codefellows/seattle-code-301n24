@@ -1,13 +1,13 @@
 import React from 'react';
-import Board from './board.js';
+import Parent from './parent.js';
 import './app.css';
 
 class App extends React.Component {
   render(){
     return (
       <div className="App">
-        <h1>First React App - Tic Tac Toe</h1>
-        <Board />
+        <h1>State and Props</h1>
+        <Parent />
       </div>
     );
   }

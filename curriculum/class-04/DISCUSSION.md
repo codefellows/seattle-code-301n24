@@ -7,7 +7,6 @@ Review the Submission Instructions for guidance on completing and submitting thi
 ## Reading
 
 - [React Docs - Forms](https://reactjs.org/docs/forms.html){:target="_blank"}
-- [React Bootstrap - Forms](https://react-bootstrap.github.io/components/forms/){:target="_blank"}
 
 <!-- ## Additional Resources
 
@@ -17,7 +16,7 @@ PLACEHOLDER
 
 PLACEHOLDER -->
 
-<!-- ### Bookmark/Skim
+### Bookmark/Skim
 
-PLACEHOLDER -->
+- [React Bootstrap - Forms](https://react-bootstrap.github.io/components/forms/){:target="_blank"}
 

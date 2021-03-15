@@ -6,7 +6,7 @@
 
 _Your repository must include the following config files:_
 
-- `README.md` - with documentation regarding your lab and it's current state of development. Check the "documentation" section below for more details on how that should look **AT MINIMUM**
+- `README.md` - with documentation regarding your lab and its current state of development. Check the "documentation" section below for more details on how that should look **AT MINIMUM**
 - `.gitignore` - with standard NodeJS configurations
 - `.eslintrc.json` - with Code 301 course standards for the linter
 - `package.json` - with all dependencies and any associated details related to configuration, including `@auth0/auth0-react`.
@@ -57,15 +57,6 @@ Actual time needed to complete: _____
 
 Add this information to your README.
 
-### Workflow
-
-- We will be using the Trello project management tool for the duration of this project.
-- Go to the [Open Book Trello Board](https://trello.com/b/2GAur1IN/open-shelf-a-book-wiki){:target="_blank"}, open the "... Show Menu" link, click the "... More" link, and then click "Copy Board". Before you create it, be sure to "Change" from Private to "Public" (and click "Yes, Make Board Public") so your instructional team can see your work. Now, click "Create" to add a copy to your personal account.
-- On the Settings tab, click the "Filter" link to view just the current day
-- With your partner, review the user stories and analyze the feature requests and requirements in the lab.
-- Within each story, note the acceptance criteria ("Given ... When ... Then...") and the checklist of feature tasks. Be careful to execute tasks in order as they are often dependencies of one another.
-- During the day with your partner, check off tasks as you complete them, and move the story cards through the workflow.
-
 ### Repository Set-up
 
 - Create a new repository on GitHub named `book_app_front_end`. Clone this repository into your `301` directory. You will be working in this same repository for labs 11 through 14.
@@ -80,30 +71,19 @@ Add this information to your README.
 See the Trello board for your feature tasks for today's lab.
 
 #### Front-End Tasks
-1. Make a React application with the following structure:
-```sh
-|- index.js
-      |- app.js
-           |- header.js
-           |- main.js
-                |- loginButton.js
-                |- myFavoriteBooks.js
-                |- profile.js
-                |- logoutButton.js
-           |- footer.js
-```
+1. Given the starter code, add the following features:
 
 1. Your `Main` component should incorperate Auth0
-- It should hold conditional logic to only render the `LoginButton` component if the user if NOT logged in. 
-- It should only render the `MyFavoriteBooks`, `User`, and `LogoutButton` component if the user is logged in.
+- It should hold conditional logic to only render the `Login` component if the user if NOT logged in. 
+- It should only render the `MyFavoriteBooks` component if the user is logged in.
+
+1. Add a `Profile` component that is only visible when the user is logged in.
 
 1. When the user clicks on the login button, it should use Auth0 to log the user into the application
 
 1. When the user clicks the logout button, it should log the user out of the application.
 
 1. The `Profile` component should display information about the user such as name, profile picture and email address.
-
-1. The `MyFavoriteBooks` component is just a placeholder for tomorrow's work.
 
 1. Your app should be styled using react-bootstrap
 
