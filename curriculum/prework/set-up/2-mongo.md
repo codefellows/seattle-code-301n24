@@ -1,4 +1,4 @@
-# Code 301 Setup
+# Code 301
 
 ## MongoDB Database
 
@@ -18,23 +18,27 @@ This will take a short time to complete. Once it does, you'll need to "start" th
 
 ```bash
 brew tap mongodb/brew
-brew install mongodb-community@4.4
+brew install mongodb-community
 ```
 
 After installation completes, run the following command to start the MongoDB Server:
 
 ```bash
-brew services start mongodb-community@4.4
+brew services start mongodb-community@4.2
 ```
 
-### Linux and Windows Users
+### Windows/WSL Users
+
+Follow [Microsoft's directions](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-database#install-mongodb) to install MongoDB on WSL. Once you have finished, run `sudo service mongodb status` and you should see the status of `OK`; if not, run `sudo service mongodb start` to start up the database server.
+
+### Pure Linux Users
 
 Run these commands, in order, to install MongoDB. Note that for this installation, we'll be using `apt` instead of `brew`.
 
 ```bash
 wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
 sudo apt-get install gnupg
-echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.list
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list
 sudo apt-get update
 sudo apt-get install -y mongodb-org
 ```
@@ -49,12 +53,6 @@ sudo service mongod start
 
 **On Ubuntu Linux**, mongo will now automatically restart on every reboot.
 
-**On Windows machines running WSL 2**, mongo will not automatically start. You'll need to restart MongoDB anytime you reboot. To do that, run the start service command as above:
-
-```bash
-sudo service mongod start
-```
-
 ## Validate that clients can connect
 
 Now, let's make sure we can connect to the MongoDB server. Run this command:
@@ -66,10 +64,10 @@ mongo
 You should see something similar to the following:
 
 ```bash
-MongoDB shell version v4.4
+MongoDB shell version v4.2.7
 connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
 Implicit session: session { "id" : UUID("854a9ce2-a75d-499c-bb51-5c6c7f57a4fd") }
-MongoDB server version: 4.4
+MongoDB server version: 4.2.7
 Server has startup warnings:
 2020-06-12T15:53:07.715-0700 I  STORAGE  [initandlisten]
 2020-06-12T15:53:07.715-0700 I  STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
@@ -103,4 +101,6 @@ Type `exit` to return to your bash shell. MongoDB is successfully installed.
 
 ---
 
-### [⇐ Previous](./1-heroku.md) | [Next ⇒](./3-code-challenges.md)
+### 401 Setup Complete
+
+### [⇐ Previous](./heroku.md) | [Home ⇒](./code-challenges.md)
