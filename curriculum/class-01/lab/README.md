@@ -1,7 +1,7 @@
 
-## Overview 
+## Overview
 
-By the end of this week, you will create an application that displays images and information of horned animals. This application will allow you to filter the images by keyword and sort by the number of horns. 
+By the end of this week, you will create an application that displays images and information of horned animals. This application will allow you to filter the images by keyword and sort by the number of horns.
 
 Today we will just be focusing on the component structure of the application.  You will create a new react application using `create react app` and fill it with components. Refer to 'Feature Tasks' to see exactly which components to build and where to display them.
 
@@ -19,13 +19,13 @@ _Your repository must include the following config files:_
 
 ## Feature Tasks
 
-First, create a react application using `create react app` as demonstrated in class. Connect this application to a gitHub repo by doing the following steps:
+First, create a React application using `create react app` as demonstrated in class. Connect this application to a GitHub repo by doing the following steps:
 
-1. create a new repo on gitHub
+1. create a new repo on GitHub
 1. in the root of your react application, run the following command: `git remote add origin <url-to-your-gitHub-repo>`
 1. A-C-P
 
-- Your app.js should contain a `Header`, `Footer` and `Main` component. 
+- Your app.js should contain a `Header`, `Footer` and `Main` component.
 
 - Your `Header` component needs to have an `<h1>` with a title.
 
@@ -33,15 +33,15 @@ First, create a react application using `create react app` as demonstrated in cl
 
 - The `Main` component needs to contain a component called `HornedBeasts`.
 
-- The `Main` component needs to pass title, url, and description into each `HornedBeast` component. The `Main` component should render the `HornedBeast` component. For the purpose of today's lab, you can pass whatever title, url and description that you want into each `HornedBeast` commponent. 
+- The `Main` component needs to pass title, url, and description into each `HornedBeast` component. The `Main` component should render the `HornedBeast` component. For the purpose of today's lab, you can pass whatever title, url and description that you want into each `HornedBeast` commponent.
 
 - The `HornedBeast` component needs to contain an `<h2>` where the title of the animal will go, an `<img>` element with `source`, `alt` and `title` attributes, and a `<p>` which will display the description.
-
 
 ## Stretch Goal
 
 - Given the following array, loop over the data and to display three `HornedBeast` components:
 
+```js
 [{
     "image_url": "http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg",
     "title": "UniWhal",
@@ -65,6 +65,7 @@ First, create a react application using `create react app` as demonstrated in cl
     "keyword": "unicorn", 
     "horns": 1
 }]
+```
 
 ## Submission Instructions
 
