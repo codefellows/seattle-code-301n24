@@ -1,7 +1,7 @@
 
 ## Overview
 
-By the end of this week, you will create an application that displays images and information of horned animals. This application will allow you to filter the images by keyword and sort by the number of horns.
+By the end of this week, you will create an application that displays images and information of horned animals. This application will allow you to filter the images by number of horns and chose your favorite image.
 
 Today we will just be focusing on the component structure of the application.  You will create a new react application using `create react app` and fill it with components. Refer to 'Feature Tasks' to see exactly which components to build and where to display them.
 
@@ -24,6 +24,7 @@ First, create a React application using `create react app` as demonstrated in cl
 1. create a new repo on GitHub
 1. in the root of your react application, run the following command: `git remote add origin <url-to-your-gitHub-repo>`
 1. A-C-P
+1. Create a branch and begin your work.
 
 - Your app.js should contain a `Header`, `Footer` and `Main` component.
 
@@ -36,6 +37,8 @@ First, create a React application using `create react app` as demonstrated in cl
 - The `Main` component needs to pass title, url, and description into each `HornedBeast` component. The `Main` component should render the `HornedBeast` component. For the purpose of today's lab, you can pass whatever title, url and description that you want into each `HornedBeast` commponent.
 
 - The `HornedBeast` component needs to contain an `<h2>` where the title of the animal will go, an `<img>` element with `source`, `alt` and `title` attributes, and a `<p>` which will display the description.
+
+**NOTE: Rendering an image in React is tricky. Try to figure out how to do this on your own and we will go over it tomorrow**
 
 ## Stretch Goal
 

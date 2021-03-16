@@ -2,7 +2,7 @@
 
 ## Overview
 
-By the end of this week, you will create an application that displays images and information of horned animals. This application will allow you to filter the images by keyword.
+By the end of this week, you will create an application that displays images and information of horned animals. This application will allow you to filter the images by number of horns and chose your favorite image.
 
 Today, your goal is to use the JSON file provided to display the title, image and description of each horned beast in your application.
 
@@ -45,8 +45,6 @@ Then the photo gallery should display all of the images in the gallery
 - The `Main` component should pass props for the title, image and description to each `HornedBeast` component. You will find this information in the provided JSON file.
 - You will need to import the images in order to provide a variable for the `src`
 
-- Use jQuery to make a copy of the HTML template of the photo component. For each object, fill in the duplicated template with its properties, then append the copy to the DOM.
-
 ### Feature #2: Allow users to vote for their favorite beast
 
 #### Why are we implementing this feature?
@@ -88,7 +86,7 @@ The images should be displayed in columns, as screen width allows
 
 #### What are we going to implement?
 
-Given that a user clicks on an item other than the horned beasts, such as the title of the page or the footer, the information and styles change.
+Given that a user clicks on an item other than the horned beasts, such as the title of the page or the footer, the information and styles should change.
 
 #### How are we implementing it?
 
@@ -99,7 +97,7 @@ Given that a user clicks on an item other than the horned beasts, such as the ti
 
 - Complete your Feature Tasks for the day
 - Create a Pull Request (PR) back to the `main` branch of your repository
-- On Canvas, submit a link to your PR and a link to your deployed application on GitHub pages. Add a comment in your Canvas assignment which includes the following:
+- On Canvas, submit a link to your PR and a link to your deployed application on Netlify. Add a comment in your Canvas assignment which includes the following:
   - A question within the context of today's lab assignment
   - An observation about the lab assignment, or related 'Ah-hah!' moment
   - How long you spent working on this assignment
