@@ -101,5 +101,4 @@ Type `exit` to return to your bash shell. MongoDB is successfully installed.
 
 ---
 
-
-### [⇐ Previous](./heroku.md) | [Home ⇒](./code-challenges.md)
+### [⇐ Previous](./heroku.md) | [Home ⇒](./3-code-challenges.md)
