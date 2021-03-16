@@ -1,4 +1,4 @@
-# Code Challenge 12: Two-dimensional arrays
+# Code Challenge 10: Two-dimensional arrays
 
 ## Overview
 

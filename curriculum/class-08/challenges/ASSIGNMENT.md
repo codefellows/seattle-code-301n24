@@ -1,4 +1,4 @@
-# Code Challenge 04: Regular Expressions, part 1
+# Code Challenge 08: Regular Expressions, part 1
 
 ## Overview
 

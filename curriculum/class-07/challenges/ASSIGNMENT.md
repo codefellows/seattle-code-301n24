@@ -1,4 +1,4 @@
-# Code Challenge 05: Array and String Methods
+# Code Challenge 07: Array and String Methods
 
 Fun with split, join, slice, and splice!
 
