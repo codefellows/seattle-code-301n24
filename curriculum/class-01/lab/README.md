@@ -24,7 +24,6 @@ First, create a React application using `create react app` as demonstrated in cl
 1. create a new repo on GitHub
 1. in the root of your react application, run the following command: `git remote add origin <url-to-your-gitHub-repo>`
 1. A-C-P
-
 1. Create a branch and begin your work.
 
 - Your app.js should contain a `Header`, `Footer` and `Main` component.
