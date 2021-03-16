@@ -62,7 +62,9 @@ Yesterday, you connected your server to the LocationIQ API to collect actual dat
 
 You will need to build out your front-end to make this request and render the resulting information. You will also need to build out your back-end server to take the location information from the front-end, make a request to a weather API and respond to your front-end with that information.
 
-Every day you will have a new partner. You and your new partner(s) will spend the first 45 minutes reviewing each other's code from the previous day and planning out the days work on the whiteboard.
+### Code Review
+
+You and your new partner(s) will spend the first 45 minutes reviewing each other's code from the previous day and planning out the days work on the whiteboard.
 
 1. Draw the web request response cycle for the task at hand (about 15 minutes).
    1. Document the data flow: identify inputs and outputs for each part of the cycle.
@@ -101,24 +103,6 @@ Actual time needed to complete: _____
 
 Add this information to your README.
 
-### Code Review
-
-You and your new partner(s) will spend the first 45 minutes reviewing each other's code from the previous day and planning out the days work on the whiteboard.
-
-1. Draw the web request response cycle for the task at hand (about 15 minutes).
-   1. Document the data flow: identify inputs and outputs for each part of the cycle.
-   1. Outline the functions that support this data flow.
-1. Do a formal code review of each person's code (15 minutes each).
-   1. Open your partner's GitHub Pull Requet on your laptop.
-   1. Identify an area in the code that:
-      1. you don't understand
-      1. or seams overly complex
-      1. or you see a way to improve
-      1. or you want more information on
-      1. or you really like or think is interesting
-   1. Add kind comments or questions inline using the GitHub review feature.
-
-You will then work independently for the rest of the day, implementing your plan, coding in your own repository, submitting your own pull request.
 
 ### Heroku Deployment for your Server and Netlify Deployment for your React Front-End
 

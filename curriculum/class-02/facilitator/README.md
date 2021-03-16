@@ -1,8 +1,7 @@
-# Facilitators Guide: jQuery Selectors and Events
+# Facilitators Guide: State and Props
 
 ## Overview
 
-jQuery and MCV!
 
 ## Learning Objectives
 
@@ -10,11 +9,8 @@ Review the detailed objectives in today's [student-facing readme](../README.md).
 
 ## Preparation
 
-- Practice [the demo](../demo/events-delegation) on jQuery Events.
-- Practice [the demo](../demo/read-json) on `$.ajax()`
-- Review the solution code for lab today and demonstrate how to read a JSON file with AJAX.
-  - Be prepared to discuss AJAX -- why, what, and how
-- Assign students into pairs. They will work with the same partner for labs 2 and 3.
+- Practice [the demo](../demo/)
+- Be familiar with Netlify so you can walk students though the deployment process
 
 ## Lecture Outline
 
@@ -43,66 +39,54 @@ Below is the expected lecture outline and flow. One possible way to present this
 
 - Following the first lab, students will be in need of answers
 - Also important that early in the course we start ingraining them in a daily schedule/format
-- Demonstrate the solution code for CSS layouts.
-  - Point out the proper use of SMACSS principles
-  - Whiteboard out other ways of marking this up with styles
+- Demonstrate the solution code for React components. Be sure to talk about how to render an image in React.
 
-### MVC
-
-- **Why** (5 min)
-  - It is a design pattern used in JavaScript applications
-  - It will help you build better applications
-  - Separation of concerns
-- **What** (10 min)
-  - We can break apart an application into three parts:
-    - Model: this would be like a constructor function or a database
-    - View: this would be the part the user views
-    - Controller: this is the server, which we will cover later
-- **How** (10 min)
-  - Draw this out on a whiteboard for the students.
-  - This is a great time to incorperate the WRRC.
-  - You can mention a broad overview of what a server is but tell the students that we will talk about it later.
-
-### jQuery
-
-- **Why** (5 min)
-  - $ = Money
-    - jQuery saves us time and effort
-    - Simple syntax
-    - Common API
-  - Takes care of all browser idiosyncrasies
-    - Which browser?
-    - What Selector works?
-    - DOM Objects
-- **What** (10 min)
-  - 2 Principle ways to interact
-    - `$("selector").method()`
-    - `$.jQueryMethod()`
-  - Dive into how these types of function calls operate.
-    - Syntax looks similar to Vanilla
-    - Break them down
-- **How** (30 min)
-  - Demo on jQuery Selectors and Events
-  - Demo on jQuery reading a file
-- **Experimentation and Discovery Ideas**
-  - Refactor between Vanilla and jQuery to get students correlating
-  - Prompt them for ideas and build an app with them interactively
-  - Optional: Build out the `jquery-diy` (get) mini library with the class to see if they can figure out how jQuery was created.
-    - This is fun and very informative, but not a learning objective
-    - It's great if you have a class that's above average and wants to dive in deep
 
 ## Lab Notes
 
-- This is the first time students will see User Acceptance Tests in the `LAB.md` files. Spend about ten minutes discussing UAT when discussing the lab assignment towards the end of lecture.
+## State and Props - DEMO
+- **Why** (2 min)
+  - used as a way of configuring components with properties
+  - keeps track of things as other components(or the same component) are changing
+- **What** (5 min)
+  - state: a memory of persistant values
+  - props: a memory of persistant values passed in by a parent
+- **How** (40 min)
+  - go through the state and props demo
+  - be sure to pause periodically to draw how props are being passed from parent to child on the whiteboard
+
+## React-Bootstrap - DEMO
+- **Why** (2 min)
+  - we want our application to look nice but we don't always know how to accomplish that
+- **What** (5 min)
+  - a styling library that allows us to tap into built into styled components
+- **How** (40 min)
+  - read through the documentation for react-bootstrap
+  - add a `navbar` to the demo on state and props
+  - get suggestions on what to add next from the class and add it. 
+  - be sure to read all the documentation for that component. This is a great opportunity to introduce students to reading documentation so take your time with this!
+
+## Deploy - DEMO
+- **Why** (2 min)
+  - we want to share our application with the world
+- **What** (5 min)
+  - Netlify is a platform that allows us to deploy our React application
+- **How** (40 min)
+  - create a Netlify account
+    - students may follow along if they wish, but don't stop the class to trouble shoot
+  - hook up your Netlify account to your GitHub
+    - make sure that you have a React application available to deploy
+  - deploy your React application
+  - Alternatively, you can have a student share his/her screen and walk them through the process since your React app will most likely be in the class repo.
 
 ## What changed from the previous class?
 
-- Nothing. This is the first day of new content (jQuery)
+- In the last class we introduced components and passing static values from one parent compoent to a child component. This class we are introducing state and passing dynamic values from the parent component into the child component.
 
 ## What might students struggle with today?
 
-- Populating the filters without duplicates
-- Copying the HTML template and filling in each property from the images
+- The ansynchronous nature of updating state
+- Deploying their application to Netlify
 
 ## Past bugs, issues or surprises...
 
