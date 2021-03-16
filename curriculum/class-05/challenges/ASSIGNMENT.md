@@ -1,4 +1,4 @@
-# Code Challenge 09: Reduce
+# Code Challenge 05: Reduce
 
 ## Overview
 
