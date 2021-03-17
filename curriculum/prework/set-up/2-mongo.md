@@ -29,7 +29,7 @@ brew services start mongodb-community@4.2
 
 ### Windows/WSL Users
 
-Follow [Microsoft's directions](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-database#install-mongodb) to install MongoDB on WSL. Once you have finished, run `sudo service mongodb status` and you should see the status of `OK`; if not, run `sudo service mongodb start` to start up the database server.
+Follow [Microsoft's directions](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-database#install-mongodb){:target="_blank"} to install MongoDB on WSL. Once you have finished, run `sudo service mongodb status` and you should see the status of `OK`; if not, run `sudo service mongodb start` to start up the database server.
 
 ### Pure Linux Users
 
