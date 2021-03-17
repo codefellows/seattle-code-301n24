@@ -2,7 +2,7 @@
 
 To get your laptop and yourself ready for the start of Code 301, there are a series of pre-work tasks to complete.
 
-Before completing the tasks in this document, ensure that you have completed all of the installation tasks in the [Code 201 Prework](https://github.com/codefellows/code-201-prework).
+Before completing the tasks in this document, ensure that you have completed all of the installation tasks in the [Code 201 Prework](https://github.com/codefellows/code-201-prework){:target="_blank"}.
 
 In particular, if you have tested in to Code 301 and did not take Code 201, be especially attentive to the git and GitHub portion of the Code 201 prework. Note that your future classmates who took 201 will already have a month of practice using git and GitHub; it is a common area of challenge in 301 for students who tested in to the course.
 
