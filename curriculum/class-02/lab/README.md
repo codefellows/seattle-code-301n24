@@ -43,7 +43,6 @@ Then the photo gallery should display all of the images in the gallery
 #### How are we implementing it?
 
 - The `Main` component should pass props for the title, image and description to each `HornedBeast` component. You will find this information in the provided JSON file.
-- You will need to import the images in order to provide a variable for the `src`
 
 ### Feature #2: Allow users to vote for their favorite beast
 
