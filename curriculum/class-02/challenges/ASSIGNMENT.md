@@ -1,4 +1,4 @@
-# Code Challenge 07: Map
+# Code Challenge 02: Map
 
 ## Overview
 

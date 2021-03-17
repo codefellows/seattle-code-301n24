@@ -1,4 +1,4 @@
-# Code Challenge 06: Object.keys, Object.values, and Object.entries
+# Code Challenge 09: Object.keys, Object.values, and Object.entries
 
 ## Overview
 

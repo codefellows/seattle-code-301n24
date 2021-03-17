@@ -1,4 +1,4 @@
-# Code Challenge 08: Filter
+# Code Challenge 03: Filter
 
 ## Overview
 

@@ -1,4 +1,4 @@
-# Code Challenge 10: Chaining Methods
+# Code Challenge 11: Chaining Methods
 
 ## Overview
 

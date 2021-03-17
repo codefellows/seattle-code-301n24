@@ -1,4 +1,4 @@
-# Code Challenge 02: Value vs. Reference
+# Code Challenge 06: Value vs. Reference
 
 ## Overview
 
