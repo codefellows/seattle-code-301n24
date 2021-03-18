@@ -1,26 +1,42 @@
 # Warm-Up Exercise
 Read through this code as if you are the interpreter. Find all of the mistakes in this code and write down the correct syntax for each mistake.
 
-## index.html
-
-```
-<html>
-  <head>
-    <title>Click tracker
-  </head>
-  <body>
-    <div id="click">
-      <p>Click me</p>
-    </div>
-  </body>
-</html>
-```
-
 ## app.js
 
 ```
-$(.click).on('change', 'div', function() => {
-  var counter = '0';
-  $(p).on('click', counter++);
-})
+import Header from './header.js';
+
+class App extends React.Component {
+  constructor {
+    super(props)
+    this.state={
+      counter=0
+    }
+  }
+
+  addCount = () => {
+    this.setState({ counter: counter++ });
+  }
+
+  render() {
+    return(
+      <button click={addCount}>Click Me</button>
+      <Header title="the best counter app in the world!">
+    )
+  }
+}
+
+export App;
+```
+
+## header.js
+
+```
+class Header extends React.Component {
+  render(){
+    <h1>{title}</h1>
+  }
+}
+
+export Header;
 ```
