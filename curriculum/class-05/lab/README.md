@@ -2,7 +2,7 @@
 
 ## Overview
 
-You will be giving portfoilo starter in React. Your job is to customize this code.
+In the . Your job is to customize this code.
 You will be deploying your React portfolio to [Netlify.com](https://www.netlify.com/).
 
 ## Time Estimate
@@ -42,16 +42,26 @@ Then the content should be unique and reflect the skills and personality of the 
 
 #### How are we implementing it?
 
-- Modify the contents of the template to make it your own. The JSX elements may remain the same if you like, but the content should be adapted to reflect your personal details and skills.
-- Apply the following changes, some of which were part of your prework for this course:
-  - Put your images in it somewhere
-  - Add your name and a short, 2-3 word title.
+- Modify the contents of the template to make it your own. You may utilize existing JSX elements, but the content should be adapted to reflect your personal details and skills.
+- Apply the following changes to the provided Profile example page, some of which were part of your prework for this course:
+  - Replace the profile picture with your own.
+  - Update the name, location, title, and education rows with your own info.
   - Add a personal headline. This should be the same as or similar to your headline on your LinkedIn profile.
-  - Make a Portfolio section and state what you are excited about in tech. Add links to projects and include placeholders for future 301 and 401 projects. If you would like, you can add links to sites such as LinkedIn and GitHub here, or social sites.
-  - Make an About Me section, add your personal pitch.
-- Change the content and images to reflect your personal preferences. If you are using online images, make sure they are licensed for free, commercial use. For example, [Unsplash](https://unsplash.com/) has a nice variety of free images.
-- Update the list of social media icons with your links using icons for your favorite social media sites from IcoMoon or Font Awesome.
-- You do not have to do mulitple pages, but you can if you want to.
+  - Replace the numerical values and labels with something meaningful to you. 
+- Update the Header and Nav:
+  - Remove the "Components" dropdown menu.
+  - Change the "Examples" menu to be titled simply "Menu".
+  - Within the menu link to a Profile page, and a Portfolio page. Remove other links.
+  - Change the routes so the Profile page loads at `/`, and the "Landing" page loads at `/portfolio`. Move the initial Index page to load at `/how-to` for your own reference. 
+  - Fix up the social media icons and their links as you like. At least swap out Facebook for LinkedIn, and ensure you are linking to your GitHub account here. These icons are included via FontAwesome.
+  - Remove the "Download" button.
+- Redo the "Landing" page as your new Portfolio page:
+  - Change the text in the top section to state what you are excited about in tech. 
+  - Use the Cards to BRIEFLY descbribe your previous projects, and include placeholders for future 301 and 401 projects. 
+  - Include more detail below on projects you'd like to showcase. 
+  - Make an All About Me section, add your personal pitch.
+  - Delete sections you aren't utilizing. 
+- Throughout the site, change the content and images to reflect your personal preferences. If you are using online images, make sure they are licensed for free, commercial use. For example, [Unsplash](https://unsplash.com/) has a nice variety of free images.
 - Keep in mind that this template is just a starting point. It is yours to modify to reflect your personal online presence as a software developer so have fun and be creative!
 
 ## Submission Instructions
