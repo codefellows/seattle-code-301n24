@@ -2,12 +2,13 @@
 
 ## Overview
 
-In the . Your job is to customize this code.
+Ready to take a look at a full-featured code base. Find in the starter code a React + Bootstrap site with a number of example pages, complete with icons, styles, and themed layouts. Your job is to customize this code, and make the site your own. 
+
 You will be deploying your React portfolio to [Netlify.com](https://www.netlify.com/).
 
 ## Time Estimate
 
-For each of the features listed below, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
+For each of the main features listed below, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
 
 ```md
 Number and name of feature: ________________________________
