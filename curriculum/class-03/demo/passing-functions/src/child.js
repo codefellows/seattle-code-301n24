@@ -6,8 +6,12 @@ import Card from 'react-bootstrap/Card';
 
 class Square extends React.Component {
 
-  askParentForMoney = () => {
-    this.props.askForMoney();
+  askParentFor10Dollars = () => {
+    this.props.askForMoney(10);
+  }
+
+  askParentFor20Dollars = () => {
+    this.props.askForMoney(20);
   }
 
   render() {
@@ -19,7 +23,8 @@ class Square extends React.Component {
           <Card.Text>
             I am the Billy. I have {this.props.billysMoney} dollars. 
           </Card.Text>
-          <Button onClick={this.askParentForMoney} variant="primary">Ask parent for more money</Button>
+          <Button onClick={this.askParentFor10Dollars} variant="primary">Ask parent for 10 dollars</Button>
+          <Button onClick={this.askParentFor20Dollars} variant="primary">Ask parent for 20 dollars</Button>
         </Card.Body>
       </Card>
     );

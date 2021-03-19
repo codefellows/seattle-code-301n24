@@ -15,10 +15,10 @@ class Parent extends React.Component {
     };
   }
 
-  giveMoneyToBilly = () => {
+  giveMoneyToBilly = (dollars) => {
     this.setState({
-      billysMoney: this.state.billysMoney + 10,
-      money: this.state.money - 10
+      billysMoney: this.state.billysMoney + dollars,
+      money: this.state.money - dollars
     })
   }
 
