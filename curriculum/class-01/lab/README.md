@@ -1,13 +1,12 @@
-
 ## Overview
 
 By the end of this week, you will create an application that displays images and information of horned animals. This application will allow you to filter the images by number of horns and chose your favorite image.
 
-Today we will just be focusing on the component structure of the application.  You will create a new react application using `create react app` and fill it with components. Refer to 'Feature Tasks' to see exactly which components to build and where to display them.
+Today we will just be focusing on the component structure of the application. You will create a new React application using `create-react-app` and fill it with components. Refer to 'Feature Tasks' to see exactly which components to build and where to display them.
 
 ## Resources
 
-- [React Official Documentation](https://reactjs.org/docs/getting-started.html)
+- [React Official Documentation](https://reactjs.org/docs/getting-started.html){:target="_blank"}
 
 ## Configuration
 
@@ -19,30 +18,30 @@ _Your repository must include the following config files:_
 
 ## Feature Tasks
 
-First, create a React application using `create react app` as demonstrated in class. Connect this application to a GitHub repo by doing the following steps:
+First, create a React application using `create-react-app` as demonstrated in class. Connect this application to a GitHub repo by doing the following steps:
 
 1. create a new repo on GitHub
-1. in the root of your react application, run the following command: `git remote add origin <url-to-your-gitHub-repo>`
+1. in the root of your React application, run the following command: `git remote add origin <url-to-your-gitHub-repo>`
 1. A-C-P
 1. Create a branch and begin your work.
 
-- Your app.js should contain a `Header`, `Footer` and `Main` component.
+- Your `App` component should render a `Header`, `Footer` and `Main` component, each of which is defined in their own files.
 
 - Your `Header` component needs to have an `<h1>` with a title.
 
 - Your `Footer` component needs to contain your name as the author.
 
-- The `Main` component needs to contain a component called `HornedBeasts`.
+- The `Main` component needs to render at least two copies of a component called `HornedBeasts`.
 
-- The `Main` component needs to pass title, url, and description into each `HornedBeast` component. The `Main` component should render the `HornedBeast` component. For the purpose of today's lab, you can pass whatever title, url and description that you want into each `HornedBeast` commponent.
+- The `Main` component needs to pass `title`, `imageUrl`, and `description` into each `HornedBeast` component. For the purpose of today's lab, you can pass whatever title, url and description that you want into each `HornedBeast` commponent.
 
-- The `HornedBeast` component needs to contain an `<h2>` where the title of the animal will go, an `<img>` element with `source`, `alt` and `title` attributes, and a `<p>` which will display the description.
+- The `HornedBeast` component needs to contain an `<h2>` that displays the title of the animal, an `<img>` element with `src`, `alt` and `title` attributes, and a `<p>` that displays the description.
 
 **NOTE: Rendering an image in React is tricky. Try to figure out how to do this on your own and we will go over it tomorrow**
 
 ## Stretch Goal
 
-- Given the following array, loop over the data and to display three `HornedBeast` components:
+- Given the following array, loop over the data to display three `HornedBeast` components:
 
 ```js
 [{
