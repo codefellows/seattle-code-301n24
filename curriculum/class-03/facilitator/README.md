@@ -62,10 +62,10 @@ Below is the expected lecture outline and flow. One possible way to present this
 ### passing-functions-as-props
 
 - **Why** (5 min)
-  - at times the child component needs to interact with information in the parent compoent
+  - at times the child component needs to interact with information in the parent component
   - at times the child component needs a way to update state in the parent component
 - **What** (10 min)
-  - the parent component sends a function into the child component on the props that will allow the child component to interact with inforamtion in the parent component by invoking that function.
+  - the parent component sends a function into the child component on the props that will allow the child component to interact with information in the parent component by invoking that function.
 - **How** (50 min)
   - Demonstrate this concept via the demo: passing-functions
   - Be aware that this concept is really challenging for students to wrap their heads around so spend lots of time following the flow of information from the parent component to the child component and back up to the parent component. Use a lot of whiteboard drawings.
@@ -74,7 +74,7 @@ Below is the expected lecture outline and flow. One possible way to present this
 - **Experimentation and Discovery Ideas**
   - Once you have completed the demo, play around with passing other functions through props. Get ideas from the students. What are other things that the child component might want from the parent component? 
 
-  - If you have time, introduce ternary statements, and demonstarte how to use conditional rendering in JSX using a ternary statement. If you don't have time for this, make sure you cover this concept during code review tomorrow
+  - If you have time, introduce ternary statements, and demonstrate how to use conditional rendering in JSX using a ternary statement. If you don't have time for this, make sure you cover this concept during code review tomorrow
 
 ## Lab Notes
 
@@ -92,4 +92,4 @@ Below is the expected lecture outline and flow. One possible way to present this
 
 ## General Comments and Notes
 
-- Code reivew might be a great time to tie in the WRRC today. The more you can reinforce this concept and slowly build upon it the better.
+- Code review might be a great time to tie in the WRRC today. The more you can reinforce this concept and slowly build upon it the better.
