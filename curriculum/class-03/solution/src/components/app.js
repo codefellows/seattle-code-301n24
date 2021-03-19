@@ -15,9 +15,9 @@ class App extends React.Component {
     }
   }
 
-  displayAsModal = (index) => {
-    console.log('app', {index})
-    this.setState({ selectedBeast: this.state.allBeasts[index], displayModal: true });
+  displayAsModal = (name) => {
+    const selectedBeast = rawData.find(beast => beast.title === name);
+    this.setState({ selectedBeast, displayModal: true });
   }
 
   handleClose = () => {
