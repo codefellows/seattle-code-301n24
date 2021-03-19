@@ -48,7 +48,7 @@ Then the content should be unique and reflect the skills and personality of the 
   - Update the name, location, title, and education rows with your own info.
   - Add a personal headline. This should be the same as or similar to your headline on your LinkedIn profile.
   - Replace the numerical values and labels with something meaningful to you. 
-- Update the Header and Nav:
+- Update the Nav, Header, and Footer:
   - Remove the "Components" dropdown menu.
   - Change the "Examples" menu to be titled simply "Menu".
   - Within the menu link to a Profile page, and a Portfolio page. Remove other links.
