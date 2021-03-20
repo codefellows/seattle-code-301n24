@@ -13,7 +13,6 @@ class CitySearch extends React.Component {
   }
 
   render() {
-    console.log('citysearch', this.props)
     return(
       <Form onSubmit={this.handleSubmit}>
         <Form.Group controlId="cityName">
