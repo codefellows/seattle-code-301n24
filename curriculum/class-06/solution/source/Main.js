@@ -2,7 +2,7 @@ import React from 'react';
 import CitySearch from './citySearch';
 import axios from 'axios';
 import LatLon from './latlon';
-import Map from './map';
+import Map from './Map';
 
 class Main extends React.Component {
   constructor(props){
