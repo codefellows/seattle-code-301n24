@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   Form,
   Button,
-  Alert
+  Alert,
  } from 'react-bootstrap';
 
 class CitySearch extends React.Component {
@@ -20,7 +20,7 @@ class CitySearch extends React.Component {
           <Form.Label>Where would you like to explore?</Form.Label>
           <Form.Control onChange={this.props.updateCity} type="text" placeholder="Enter a City" />
         </Form.Group>
-        {this.props.error && 
+        {this.props.hasError && 
           <>
             <Alert variant="danger">
               <strong className="mr-auto">Error {' '}</strong>

@@ -3,7 +3,6 @@ import {
   Container,
   Row,
   Col,
-  Alert
 } from 'react-bootstrap';
 import CitySearch from './CitySearch';
 import axios from 'axios';
@@ -55,7 +54,7 @@ class Main extends React.Component {
             <CitySearch 
               updateCity={this.updateCity}
               displayLatLon={this.displayLatLon}
-              error={this.state.displayError}
+              hasError={this.state.displayError}
               errorMessage={this.state.errorMessage}
             />
           </Col>
