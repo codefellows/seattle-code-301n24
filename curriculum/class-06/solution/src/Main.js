@@ -1,7 +1,13 @@
 import React from 'react';
-import CitySearch from './citySearch';
+import {
+  Container,
+  Row,
+  Col,
+  Alert
+} from 'react-bootstrap';
+import CitySearch from './CitySearch';
 import axios from 'axios';
-import LatLon from './latlon';
+import LatLon from './LatLon';
 import Map from './Map';
 
 class Main extends React.Component {
@@ -9,9 +15,12 @@ class Main extends React.Component {
     super(props);
     this.state = {
       searchQuery: '',
+      location: '',
       latitude: '',
       longitude: '',
-      displayMap: false
+      displayMap: false,
+      displayError: false,
+      errorMessage: '',
     }
   }
 
@@ -20,39 +29,59 @@ class Main extends React.Component {
   }
 
   displayLatLon = async () => {
-    console.log('display loat lon', this.state.searchQuery)
     const url = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_MAP_KEY}&q=${this.state.searchQuery}&format=json`;
-    const location = await axios.get(url)
-    this.setState({ 
-      latitude: location.data[0].lat, 
-      longitude: location.data[0].lon, 
-      displayMap: true });
+    let location;
+    try {
+      location = await axios.get(url)
+      this.setState({ 
+        location: location.data[0].display_name,
+        latitude: location.data[0].lat, 
+        longitude: location.data[0].lon, 
+        displayMap: true,
+        displayError: false });
+    } catch(error) {
+      this.setState({ 
+        displayMap: false,
+        displayError: true,
+        errorMessage: error.response.status + ': ' + error.response.data.error });
+    }    
   }
 
   render() {
     return(
-      <div>
-        <CitySearch 
-          updateCity={this.updateCity}
-          displayLatLon={this.displayLatLon}
-          />
-
+      <Container fluid>
+        <Row>
+          <Col>
+            <CitySearch 
+              updateCity={this.updateCity}
+              displayLatLon={this.displayLatLon}
+              error={this.state.displayError}
+              errorMessage={this.state.errorMessage}
+            />
+          </Col>
+        </Row>
         {this.state.displayMap && 
           <>
-            <LatLon
-              city={this.state.searchQuery}
-              lat={this.state.latitude}
-              lon={this.state.longitude}
-            />
-
-            <Map
-              img_url={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_MAP_KEY}&center=${this.state.latitude},${this.state.longitude}&size=200x200&format=jpg&zoom=8`}
-              city={this.state.searchQuery}
-            />
-          </>
-        }
-
-      </div>
+            <Row>
+              <Col>
+                <LatLon
+                  city={this.state.location}
+                  lat={this.state.latitude}
+                  lon={this.state.longitude}
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Map
+                  img_url={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_MAP_KEY}&center=${this.state.latitude},${this.state.longitude}&size=${window.innerWidth}x300&format=jpg&zoom=12`}
+                  city={this.state.location}
+                />
+              </Col>
+            </Row>
+        </>
+      }
+      </Container>
     )
   }
 }

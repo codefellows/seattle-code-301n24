@@ -1,5 +1,8 @@
 import React from 'react';
-import Main from './Main';
+import Header from './Header.js';
+import Footer from './Footer.js';
+import Main from './Main.js';
+import './assets/css/app.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -7,7 +10,6 @@ class App extends React.Component {
     this.state={
     }
   }
-
 
   render() {
     return(
