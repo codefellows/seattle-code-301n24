@@ -30,7 +30,7 @@ You will then work independently for the rest of the day, implementing your plan
 - To maximize your experience with Trello, you should create a free Trello account by clicking on the `Sign Up` button.
 - After creating an account, go to the [City Explorer Trello Board](https://trello.com/b/pd16s6z4){:target="_blank"}, open the "... Show Menu" link, click the "... More" link, and then click "Copy Board". Before you create it, be sure to "Change" from Private to "Public" (and click "Yes, Make Board Public") so your instructional team can see your work. Now, click "Create" to add a copy to your personal account.
 - This Trello board contains all of the features required to complete this lab assignment.
-- In the "...Show Menu" sidebar, click the "Search Cards" link and filter by lab to see the assignment for just the current day
+- In the "...Show Menu" sidebar, click the "Search Cards" link and filter by lab to see the assignment for just the current day.
 - Review the user stories and analyze the feature requests and requirements in the lab.
 - Within each story, note the acceptance criteria ("Given ... When ... Then...") and the checklist of feature tasks. Be careful to execute tasks in order as they are often dependencies of one another.
 - During the day, check off tasks as you complete them, and move the story cards through the workflow.
