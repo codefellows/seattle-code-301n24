@@ -8,12 +8,8 @@ Today you will be building a React application that uses the Axios library to ma
 
 For every lab in this module, you will have a new partner. You and your new partner(s) will spend the first 45 minutes reviewing each other's code from the previous lab and planning out an approach to this lab's work on a whiteboard.
 
-1. Draw the web request-response cycle for the task at hand (about 15 minutes).
-   1. Document the data flow: identify inputs and outputs for each part of the cycle.
-   1. Outline the functions that support this data flow.
-   1. Be sure to include these drawings in your README.md.
 1. Do a formal code review of each person's code (15 minutes each).
-   1. Open your partner's GitHub Pull Request on your laptop.
+   1. Open your partner's GitHub pull request on your laptop.
    1. Identify an area in the code that:
       1. you don't understand
       1. or seams overly complex
@@ -21,6 +17,10 @@ For every lab in this module, you will have a new partner. You and your new part
       1. or you want more information on
       1. or you really like or think is interesting
    1. Add kind comments or questions inline using the GitHub review feature.
+1. Draw the web request-response cycle for the current lab tasks (about 15 minutes).
+   1. Document the data flow: identify inputs and outputs for each part of the cycle.
+   1. Outline the functions that support this data flow.
+   1. Be sure to include these drawings in your README.md.
 
 You will then work independently for the rest of the day, implementing your plan, coding in your own repository, submitting your own pull request.
 
@@ -35,7 +35,7 @@ You will then work independently for the rest of the day, implementing your plan
 - Within each story, note the acceptance criteria ("Given ... When ... Then...") and the checklist of feature tasks. Be careful to execute tasks in order as they are often dependencies of one another.
 - During the day, check off tasks as you complete them, and move the story cards through the workflow.
 
-## Documentation
+### Documentation
 
 _Your `README.md` must include:_
 
