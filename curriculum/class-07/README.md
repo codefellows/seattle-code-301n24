@@ -2,7 +2,7 @@
 
 ## Overview
 
-Today we will continue to work with third-party APIs to request data. Part of being a software developer involves continuous improvement and refactoring of the code base. We will discuss how and when to refactor our code today.
+Today we will build our own custom express server in node.js. We will server our front end static files and dive more deeply into the WRRC.
 
 ## Daily Plan
 
