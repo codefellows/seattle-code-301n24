@@ -1,12 +1,11 @@
-# Axios, Async and Await
 
-## Overview
+# Asynchronous code, and APIs
 
 Today you will be building a React application that uses the Axios library to make user-initiated reqeusts for data from a thrid-party API.
 
 ## Process
 
-For every lab in this module, you will have a new partner. You and your new partner(s) will spend the first 45 minutes reviewing each other's code from the previous lab and planning out an approach to this lab's work on a whiteboard.
+Every day you will have a new partner. You and your new partner(s) will spend the first 30 minutes planning out the days work on the whiteboard.
 
 1. Do a formal code review of each person's code (15 minutes each).
    1. Open your partner's GitHub pull request on your laptop.
@@ -28,14 +27,14 @@ You will then work independently for the rest of the day, implementing your plan
 
 - We will be using the [Trello](https://trello.com/home){:target="_blank"} project management tool for the duration of this project.
 - To maximize your experience with Trello, you should create a free Trello account by clicking on the `Sign Up` button.
-- After creating an account, go to the [City Explorer Trello Board](https://trello.com/b/pd16s6z4){:target="_blank"}, open the "... Show Menu" link, click the "... More" link, and then click "Copy Board". Before you create it, be sure to "Change" from Private to "Public" (and click "Yes, Make Board Public") so your instructional team can see your work. Now, click "Create" to add a copy to your personal account.
+- After creating an account, go to the [City Explorer Trello Board](https://trello.com/b/pd16s6z4/city-explorer){:target="_blank"}, open the "... Show Menu" link, click the "... More" link, and then click "Copy Board". Before you create it, be sure to "Change" from Private to "Public" (and click "Yes, Make Board Public") so your instructional team can see your work. Now, click "Create" to add a copy to your personal account.
 - This Trello board contains all of the features required to complete this lab assignment.
 - In the "...Show Menu" sidebar, click the "Search Cards" link and filter by lab to see the assignment for just the current day
 - Review the user stories and analyze the feature requests and requirements in the lab.
 - Within each story, note the acceptance criteria ("Given ... When ... Then...") and the checklist of feature tasks. Be careful to execute tasks in order as they are often dependencies of one another.
 - During the day, check off tasks as you complete them, and move the story cards through the workflow.
 
-### Documentation
+## Documentation
 
 _Your `README.md` must include:_
 
