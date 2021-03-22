@@ -8,7 +8,7 @@ Today, your goal is to use the JSON file provided to display the title, image an
 
 ## Resources
 
-- [data.json](./assets/data.json)
+- [data.json](./assets/data.json){:target="_blank"}
 
 ### Time Estimate
 
@@ -64,7 +64,7 @@ Given that a user clicks on an image, the number of "favorites" displayed on tha
 
 #### Why are we implementing this feature?
 
-- As a user, I want to see a visually pleasing application that is also reponsive when I view this applicaiton on different screen sizes.
+- As a user, I want to see a visually pleasing application that is also reponsive when I view this application on different screen sizes.
 
 #### What are we going to implement?
 
