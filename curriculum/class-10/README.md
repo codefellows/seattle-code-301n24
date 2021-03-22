@@ -2,7 +2,7 @@
 
 ## Overview
 
-Today we will discuss the call stack and how JavaScript executes code synchronously. As you review your code each day, think about the call stack and the order of code execution. We will also discuss how to trace the call stack when an error occurs.
+Today we will talk about in-memory storage as well as dive deeper into modularization and refactorization.
 
 ## Daily Plan
 
