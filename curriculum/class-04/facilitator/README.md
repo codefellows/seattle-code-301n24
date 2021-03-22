@@ -40,15 +40,7 @@ Below is the expected lecture outline and flow. One possible way to present this
 
 ## Deployment
 
-Today, we deploy with GitHub Pages. The steps are as follows:
 
-1. `package.json` needs a couple of new 'scripts' to be added
-   - `predeploy` does the build
-   - `deploy` runs `gh-pages` to deploy the app to GitHub Pages on the `gh-pages` branch
-1. `.github/workflows/react.yml`
-   - This .yml file tells GitHub Actions how to build and deploy
-   - It requires a developer token in the "Secrets" section of the repo (under settings)
-1. Once you check-in to main, it'll build your app and deploy it automatically on every merge
 
 
 ## Lab Notes

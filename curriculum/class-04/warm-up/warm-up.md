@@ -21,6 +21,7 @@ class App extends React.Component {
   render() {
     return(
       <button click={addCount}>Click Me</button>
+      <p>this.state.counter<p>
       <Header title="the best counter app in the world!">
     )
   }

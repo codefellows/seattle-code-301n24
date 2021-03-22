@@ -12,7 +12,7 @@ class HornedBeast extends React.Component {
 
   addFavorite = () => {
     this.setState({ favorites: this.state.favorites + 1 });
-    this.props.displayAsModal(this.props.index);
+    this.props.displayAsModal(this.props.title);
   }
 
   render() {
