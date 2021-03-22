@@ -5,26 +5,26 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state={
-      jokes:[],
-      randomJoke:''
+      searchQuery:'',
+      location: {}
     }
   }
 
-  getJokes = async () => {
-    const API = 'https://api.chucknorris.io/jokes/search?query=chuck';
-    const jokes = await axios.get(API);
-    this.setState({ jokes });
+  getLocation = async () => {
+    const API = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_CITY_KEY}&q=${this.state.searchQuery}&format=json`;
+    const res = await axios.get(API);
+    console.log(res.data[0])
+    this.setState({ location:res.data[0] });
   }
 
   render() {
     return(
       <>
-      <button onClick={this.getJokes}>Get Jokes</button>
-      {this.state.jokes.length && this.state.jokes.map((joke, idx) => (
-        <div key={idx}>
-          {joke.value}
-        </div>
-      ))}
+        <input onChange={(e) => this.setState({ searchQuery: e.target.value })} placeholder="search for a city"></input>
+        <button onClick={this.getLocation}>Explore!</button>
+        {this.state.location.place_id && 
+          <h2>The city is: {this.state.location.display_name}</h2>
+        }
       </>
     )
   }
