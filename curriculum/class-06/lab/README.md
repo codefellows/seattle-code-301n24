@@ -61,7 +61,6 @@ _Your `README.md` must include:_
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
--->
 ```
 
 ### Time Estimates
@@ -85,7 +84,7 @@ Add this information to your README.
 ## Submission Instructions
 
 1. Complete your Feature Tasks for the lab, according to the Trello cards.
-1. Create a PR back to the `main` branch of your repository, and merge it cleanly.
+1. Create a PR back to the `main` branch of your repository, showing ALL your work, and merge it cleanly.
 1. On Canvas, submit a link to your PR. Add a comment in your Canvas assignment which includes the following:
     - A link to the deployed version of your latest code.
     - A link to your public Trello board.
