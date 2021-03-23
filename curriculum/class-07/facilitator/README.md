@@ -38,7 +38,7 @@ Review the detailed objectives in today's [student-facing readme](../README.md).
 ### Code Review / Rebuild / Review
 
 - **Why** (5 min)
-  - Lab 06 was big in concept, short on code
+  - Lab 06 was big in concept, many interwoven topics
   - WRRC drawings are great to cement why we are doing thing and where in that process we are
 - **What** (10 min)
   - The WRRC should be coming more into focus now that we've built some of it out
@@ -51,9 +51,9 @@ Review the detailed objectives in today's [student-facing readme](../README.md).
 ### Demo - Custom Express Servers and node.js
 
 - **Why** (5 min)
-  - Secure our keys, as HTTP Referrer can be spoofed
+  - Secure our keys, when HTTP Referrer restrictions aren't an option
   - Set us up to scale our application, without hammering the API
-  - Provide our application a single point to fetch all of the data it needs
+  - Provide our application a single source to fetch all of the data it needs
   - Allow a server to do the hard work of formatting data to feed our front end
   - Servers may have better/faster connections to other servers, making it more efficient than the browser doing this job
 - **What** (10 min)
