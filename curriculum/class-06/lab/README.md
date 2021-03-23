@@ -5,17 +5,8 @@ Today you will be building a React application that uses the Axios library to ma
 
 ## Process
 
-Every day you will have a new partner. You and your new partner(s) will spend the first 30 minutes planning out the days work on the whiteboard.
+For every lab in this module, you will have a new partner. For this lab, you and your new partner(s) will spend the first 15 minutes planning out an approach to this lab's work on a whiteboard.
 
-1. Do a formal code review of each person's code (15 minutes each).
-   1. Open your partner's GitHub pull request on your laptop.
-   1. Identify an area in the code that:
-      1. you don't understand
-      1. or seams overly complex
-      1. or you see a way to improve
-      1. or you want more information on
-      1. or you really like or think is interesting
-   1. Add kind comments or questions inline using the GitHub review feature.
 1. Draw the web request-response cycle for the current lab tasks (about 15 minutes).
    1. Document the data flow: identify inputs and outputs for each part of the cycle.
    1. Outline the functions that support this data flow.
