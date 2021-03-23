@@ -1,5 +1,5 @@
 {
-  "name": "website-solution",
+  "name": "solution",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,9 +9,10 @@
     "axios": "0.21.1",
     "bootstrap": "4.6.0",
     "react": "^17.0.1",
-    "react-bootstrap": "1.5.0",
+    "react-bootstrap": "1.5.2",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",
+    "superagent": "6.1.0",
     "web-vitals": "1.1.0"
   },
   "scripts": {
