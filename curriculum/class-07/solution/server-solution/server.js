@@ -3,28 +3,34 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const location = require('./assets/location.json');
+const weather = require('./assets/weather.json');
 
 const app = express();
 app.use(cors());
 
 const PORT = process.env.PORT || 3001;
 
-app.get('/location', handleLocation);
+app.get('/weather', handleWeather);
+app.use('*', (request, response) => response.status(404).send('page not found'));
 
-function handleLocation(request, response) {
-  const city = request.query.city;
-  const finalLocationObj = new Location(location[0], city);
-  console.log('in location with', {finalLocationObj})
-  response.send(finalLocationObj);
+function handleWeather(request, response) {
+  try{
+      const weatherArray = weather.data.map(day => new Weather(day));
+      response.status(200).send(weatherArray);
+    } catch(error) {
+      errorHandler(error, response);
+    }
+
+  }
+
+function Weather(day) {
+  this.date = day.valid_date
+  this.description = day.weather.description
 }
 
-function Location(locationObj, searchQuery) {
-  this.searchQuery = searchQuery;
-  this.formattedQuery = locationObj.display_name;
-  this.latitude = locationObj.lat;
-  this.longitude = locationObj.lon;
-  this.image_url = 'https://www.knkx.org/sites/kplu/files/styles/medium/public/201405/Screen_Shot_2014-05-04_at_8.01.08_PM.png';
+function errorHandler(error, response) {
+  console.log(error);
+  response.status(500).send('something went wrong');
 }
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
