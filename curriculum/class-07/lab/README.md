@@ -47,6 +47,8 @@ You will then work independently for the rest of the day, implementing your plan
 
 ### Documentation
 
+You must have a complete `README.md` for both your server and your website repositories.
+
 _Your `README.md` must include:_
 
 ```md
