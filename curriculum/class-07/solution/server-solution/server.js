@@ -3,28 +3,28 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const location = require('./assets/location.json');
+const weather = require('./assets/weather.json');
 
 const app = express();
 app.use(cors());
 
 const PORT = process.env.PORT || 3001;
 
-app.get('/location', handleLocation);
+app.get('/weather', handleLocation);
 
 function handleLocation(request, response) {
-  const city = request.query.city;
-  const finalLocationObj = new Location(location[0], city);
-  console.log('in location with', {finalLocationObj})
-  response.send(finalLocationObj);
+  const lat = request.query.lat;
+  const lon = request.query.lon;
+  const finalWeatherObj = new Weather(weather[0], lat, lon);
+  console.log('in weather with', {finalWeatherObj})
+  response.send(finalWeatherObj);
 }
 
-function Location(locationObj, searchQuery) {
+function Weather(weather, lat, lon) {
   this.searchQuery = searchQuery;
-  this.formattedQuery = locationObj.display_name;
-  this.latitude = locationObj.lat;
-  this.longitude = locationObj.lon;
-  this.image_url = 'https://www.knkx.org/sites/kplu/files/styles/medium/public/201405/Screen_Shot_2014-05-04_at_8.01.08_PM.png';
+  this.formattedQuery = weather.display_name;
+  this.latitude = weather.lat;
+  this.longitude = weather.lon;
 }
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
