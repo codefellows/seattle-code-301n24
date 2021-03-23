@@ -59,25 +59,19 @@ async function locationHandler(request, response) {
 // WEATHER
 // -------------------------------------------
 async function weatherHandler(request, response) {
-  // const locationObj = JSON.parse(request.query)
-  console.log('in weather', request.query)
-  const searchQuery = request.query.searchQuery;
-  // Alternatively: const {latitude, longitude} = request.query;
-  console.log({searchQuery});
-
+  const {lat, lon} = request.query;
   try{
 
     // const url = 'http://api.weatherbit.io/v2.0/forecast/daily';
     const url = 'http://api.weatherbit.io/v2.0/forecast/daily'
     const queryParams = {
       key: process.env.WEATHER_API_KEY,
-      city: searchQuery,
-      days: 5,
+      lat: lat,
+      lon: lon,
+      days: 14,
     };
     const superagentResults = await superagent.get(url).query(queryParams);
-    // console.log('superagent weather', superagentResults.body)
     const weatherArray = superagentResults.body.data.map(day => new Weather(day));
-    // console.log({weatherArray})
     response.send(weatherArray);
 
   } catch(err) {
@@ -86,7 +80,7 @@ async function weatherHandler(request, response) {
 }
 
 function Weather(day) {
-  this.forecast = day.weather.description;
+  this.forecast = `Low of ${day.low_temp}, high of ${day.high_temp}, ${day.weather.description}`;
   this.time = day.datetime;
 }
 
