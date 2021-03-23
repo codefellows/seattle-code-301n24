@@ -1,17 +1,17 @@
 # Solution: Advanced Topics
 
-Refer to the official/deployed [City Explorer Solution](../../city-explorer-app/back-end) as a reference for grading.
+Refer to the official [City Explorer React App](https://github.com/codefellows/city-explorer-front-end) and [City Explorer Proxy Server](https://github.com/codefellows/city-explorer-back-end) as a reference for grading.
 
 ## Lab Requirements
 
 * Completed City Explorer Back-End with all APIs integrated
-* Locations Cache from SQL
+* Locations Cache from in-memory object
 * Quality refactoring attempt
 
 #### Grading Standards & Notes
 
   * Deployment
-    * Live Heroku URL required for full points.
+    * Live Netlify and Heroku URLs required for full points.
       * Partial credit available for obvious/reasonable effort even if deployment is non-working
     * Use the student supplied deployed URL to validate their code against the official City Explorer Application
   * Features / Code Standards
