@@ -2,7 +2,7 @@
 
 ## Overview
 
-Today we will build our own custom express server in node.js. We will server our front end static files and dive more deeply into the WRRC.
+Today we will build our own custom Express server in Node.js. We will server our front end static files and dive more deeply into the WRRC.
 
 ## Daily Plan
 
@@ -17,9 +17,10 @@ Today we will build our own custom express server in node.js. We will server our
 
 ## Learning Objectives
 
-As a result of completing Lecture 7 of Code 301, students will be able to:
+As a result of completing Class 7 of Code 301, students will be able to:
 
 - Describe and Define  
+  - The role of the browser and the server as components of the web request-response cycle
   - Async
   - Server
   - ReST
@@ -28,11 +29,6 @@ As a result of completing Lecture 7 of Code 301, students will be able to:
     - Route Middleware
   - cors
   - env variables
-As a result of completing Lecture 6 of Code 301, students will:
-- Begin to understand how the world wide web works
-- Be able to explain the role of the browser and the server as components of the web request-response cycle
-- Understand how to initialize a NodeJS project and use NPM packages
-- Understand the basics of working with ExpressJS 
-- Control their production and deployment environments
-- Understand how to interact with a static client code base
-- Hook up a front end React application with a back end server
+- Execute:
+  - Hook up a front end React application with a back end server
+  - Create an Express server from scratch
