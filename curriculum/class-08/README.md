@@ -2,7 +2,7 @@
 
 ## Overview
 
-Today we are going to be adding a persistence layer in the form of a SQL database. Relevant data from the Geocoding API will be stored in a table using postgres.
+Today we will use our express server to request information from third party APIs to send to the front-end. 
 
 ## Daily Plan
 

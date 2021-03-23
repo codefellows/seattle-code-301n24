@@ -19,5 +19,6 @@ PLACEHOLDER -->
 
 ### Bookmark/Skim
 
+- [Geocoding API Docs](https://locationiq.com/){:target="_blank"}
 - [Axios docs](https://www.npmjs.com/package/axios){:target="_blank"}
 - [MDN async and await](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await){:target="_blank"}
