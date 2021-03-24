@@ -18,8 +18,7 @@ Today we will explore third party APIs and how to request data from them.
 
 As a result of completing Lecture 6 of Code 301, students will:
 
-- Understand third party APIs
-- Be able to gather information from thrid party APIs
+- Understand third-party APIs
+- Be able to gather information from APIs
 - Use Postman to test routes
-- Use axios to collect information from a third party API
 - Understand async and await

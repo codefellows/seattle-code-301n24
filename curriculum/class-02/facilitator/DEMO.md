@@ -1,4 +1,4 @@
-## readJSON - bootstrap
+# react-bootstrap
 
 **Code:** `demo/`
 
