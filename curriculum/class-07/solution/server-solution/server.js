@@ -10,21 +10,27 @@ app.use(cors());
 
 const PORT = process.env.PORT || 3001;
 
-app.get('/weather', handleLocation);
+app.get('/weather', handleWeather);
+app.use('*', (request, response) => response.status(404).send('page not found'));
 
-function handleLocation(request, response) {
-  const lat = request.query.lat;
-  const lon = request.query.lon;
-  const finalWeatherObj = new Weather(weather[0], lat, lon);
-  console.log('in weather with', {finalWeatherObj})
-  response.send(finalWeatherObj);
+function handleWeather(request, response) {
+  try{
+      const weatherArray = weather.data.map(day => new Weather(day));
+      response.status(200).send(weatherArray);
+    } catch(error) {
+      errorHandler(error, response);
+    }
+
+  }
+
+function Weather(day) {
+  this.date = day.valid_date
+  this.description = day.weather.description
 }
 
-function Weather(weather, lat, lon) {
-  this.searchQuery = searchQuery;
-  this.formattedQuery = weather.display_name;
-  this.latitude = weather.lat;
-  this.longitude = weather.lon;
+function errorHandler(error, response) {
+  console.log(error);
+  response.status(500).send('something went wrong');
 }
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
