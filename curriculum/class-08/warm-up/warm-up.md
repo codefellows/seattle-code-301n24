@@ -1,19 +1,49 @@
+
 # Warm-Up Exercise
-Read through this code as if you are the interpreter. Find all of the mistakes in this code and write down the correct syntax for each mistake.
+Examine the code below. Add a function to your React code that makes a call to your server using the 'axios' libraray as soon as the component mounts, on the '/bananas' route. Update the state of 'bananas' with the results that you get back.
+
+## app.js
+
+```
+import React from 'react';
+
+const SERVER = 'http://localhost:3001';
+
+class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state={
+      bananas = ''
+    }
+  }
+
+  render() {
+    return(
+      <div className="app">
+        <h1>Bananas!</h1>
+
+        {this.state.bananas && 
+          <p>{this.state.bananas}</p>
+        }
+      </div>
+    )
+  }
+}
+
+export default App;
+```
 
 ## server.js
 
 ```
-const express = require(express);
+'use strict'
 
-app.get('username', req, res => {
-  const userInfo = {};
+const express = require('express');
+const app = express();
+const cors = require('cors');
+app.use(cors());
 
-  userInfo.name: request.username,
-  userInfo.password: request.password
+app.get('/bananas', (request, response) => response.send('bananas are great'));
 
-  response.sendFile('index.html', 'style.css')
-})
-
-app.listen(() => "Listening on Port 3000");
+app.listen(3001);
 ```

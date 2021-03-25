@@ -3,7 +3,7 @@ Break the following code into components?
 
 ## app.js
 
-``js
+```
 import React from 'react';
 
 class App extends React.Component {
@@ -42,3 +42,4 @@ class App extends React.Component {
     )
   }
 }
+```
