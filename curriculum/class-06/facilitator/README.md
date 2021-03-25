@@ -2,28 +2,16 @@
 
 ## Overview
 
-Welcome to [City Explorer](https://codefellows.github.io/code-301-guide/curriculum/city-explorer-app/front-end/)
 
-Today we will take a step into the back end, beginning to write a proper `server.js` file to serve API data to the City Explorer client application. In this lecture, you'll need to walk students through all facets of this: Node, NPM, Deployments, Working with a front end and finally tying it all together as part of their growing understanding of the WRRC
 
 ## Learning Objectives
 
 Review the detailed objectives in today's [student-facing readme](../README.md).
 
-## City Explorer Reference Links
-
-- [Front End](https://codefellows.github.io/code-301-guide/curriculum/city-explorer-app/front-end/)
-- [Back End](http://city-explorer-backend.herokuapp.com)
-
-
 ## Preparation
 
 **Plan for a longer than normal lecture session. This is the start of a new block, so there's no code review, and we have lots of very new ground to cover.**
 
-- Review the code base for the [static client](../../../city-explorer-app) and re-familiarize yourself with how it expects to be fed data. That is the task for the week as you build the server (feeding it data).
-- Be prepared to review the client code with students for approximately 15 minutes during lecture. Be prepared to discuss where this fits within the WRRC
-- Practice [the demo](../demo), which is a basic express server build. Not a lot of complexity for you, but lots of new concepts for the students, so prepare your talking points to get into during the build.
-- Remind students that they will work with the same partner for labs 2 and 3.
 
 ## Lecture Outline
 
@@ -119,3 +107,5 @@ During your lectures, refer to the board to see the data contract/requirements f
   - REACT_APP_MAP_KEY = "0290u02954u0"
 
 ## General Comments and Notes
+
+- Point out that part of their reading for tomorrow is to get API keys. Make sure they know that they must do this before tomorrow's lecture.
