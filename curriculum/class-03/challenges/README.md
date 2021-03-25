@@ -2,9 +2,9 @@
 
 ## Overview
 
-SSimilar to `array.map()`, the `array.filter()` function iterates over an array and runs a call back for each element. The callback receives the value and the index of the array element as a parameter.  
+Similar to `array.map()`, the `array.filter()` function iterates over an array and runs a callback for each element. The callback receives the value and the index of the array element as a parameter.
 
-`filter.()` will always return you a **new array**, comprised of elements from the original array that match your criteria -- which elements in the array match the filter condition?
+`.filter()` will always return you a **new array**, comprised of elements from the original array that match your criteria -- which elements in the array match the filter condition?
 
 ### Even Numbers
 
@@ -58,5 +58,5 @@ SSimilar to `array.map()`, the `array.filter()` function iterates over an array 
 
 ## Reference
 
-- [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
-- [Medium](https://medium.com/@JeffLombardJr/understanding-foreach-map-filter-and-find-in-javascript-f91da93b9f2c)
+- [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter){:target="_blank"}
+- [Medium](https://medium.com/@JeffLombardJr/understanding-foreach-map-filter-and-find-in-javascript-f91da93b9f2c){:target="_blank"}
