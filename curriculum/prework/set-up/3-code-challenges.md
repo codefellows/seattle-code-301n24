@@ -9,9 +9,10 @@ Please follow these steps:
 1. On github.com, create a new, empty repository called `data-structures-and-algorithms` in your account.
 1. Clone your newly-created repository to your machine, in your `codefellows` folder
 1. `cd` into the new repo in your terminal
-1. Execute the following two commands in the new repo directory, which will setup your DS&A folders:
+1. Execute the following commands in the new repo directory, which will setup your DS&A folders:
    - `bash <(curl -s https://raw.githubusercontent.com/codefellows/setup-guide/master/code-301/code-challenges/bin/dsa.sh)`
-   - `sed -i 's|/code-301-guide/|/code-301-guide-react/|' ./code-challenges/bin/get-challenge.sh`
+   - **On WSL and Linux only**: `sed -i 's|/code-301-guide/|/code-301-guide-react/|' ./code-challenges/bin/get-challenge.sh`
+   - **On Mac only**: `sed -i '' 's|/code-301-guide/|/code-301-guide-react/|' ./code-challenges/bin/get-challenge.sh`
 1. When it's done, verify that things are working properly by running a test. Enter this command:
    - `npm test`
    - You should see a message like the following, indicating that things are setup properly and tests are passing
