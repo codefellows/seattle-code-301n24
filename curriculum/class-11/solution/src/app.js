@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header';
-import Main from './Main';
+import MyFavoriteBooks from './MyFavoriteBooks';
 import Footer from './Footer';
 import Login from './Login';
 import Profile from './Profile';
@@ -21,7 +21,7 @@ class App extends React.Component {
           <Header />
             <Switch>
               <Route exact path="/">
-                {this.props.auth0.isAuthenticated ? <Main /> : <Login /> }
+                {this.props.auth0.isAuthenticated ? <MyFavoriteBooks /> : <Login /> }
               </Route>
               <Route path="/profile" component={Profile}/>
             </Switch>
