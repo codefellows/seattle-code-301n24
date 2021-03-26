@@ -16,6 +16,9 @@ class Movies extends React.Component {
             />
           ))
           }
+          {this.props.movies[0] &&
+            <em>As of {(new Date(this.props.movies[0].createdAt)).toLocaleString()}</em>
+          }
         </CardDeck>
       </div>
     )
