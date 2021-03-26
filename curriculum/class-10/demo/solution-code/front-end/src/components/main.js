@@ -1,6 +1,6 @@
 import React from 'react';
-import IngredientForm from './ingredientForm';
-import Recipe from './recipe';
+import IngredientForm from './IngredientForm';
+import Recipe from './Recipe';
 
 class Main extends React.Component {
   constructor(props){
