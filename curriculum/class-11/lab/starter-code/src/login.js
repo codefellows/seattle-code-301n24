@@ -1,18 +1,18 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import './login.css';
 
 class Login extends React.Component {
   render() {
     return(
       <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
         <Card.Body>
-          <Card.Title>Login</Card.Title>
+          <Card.Title>Log In</Card.Title>
           <Card.Text>
             Click Below to Log In
           </Card.Text>
-          {/* TODO: need a button component to log the user in  */}
+          {/* TODO: add a `LoginButton` component here that will log the user in with Auth0 */}
         </Card.Body>
       </Card>
     )

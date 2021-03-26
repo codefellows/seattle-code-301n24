@@ -1,37 +1,28 @@
 import React from 'react';
 import Header from './Header';
-import Main from './Main';
 import Footer from './Footer';
-import Login from './Login';
-import Profile from './Profile';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 class App extends React.Component {
+
   render() {
+    console.log('app', this.props)
     return(
       <>
-        <Header />
         <Router>
-          <div>
+          <Header />
             <Switch>
               <Route exact path="/">
-                <Main />
+                {/* TODO: if the user is logged in, render the `MyFavoriteBooks` component, if they are not, render the `Login` component */}
               </Route>
-              <Route path="/profile">
-                <Profile />
-              </Route>
-              <Route path="/login">
-                <Login />
-              </Route>
+              {/* TODO: add a route with a path of '/profile' that renders a `Profile` component */}
             </Switch>
-          </div>
+          <Footer />
         </Router>
-        <Footer />
       </>
     )
   }
