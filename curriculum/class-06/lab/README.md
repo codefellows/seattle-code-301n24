@@ -3,6 +3,12 @@
 
 Today you will be building a React application that uses the Axios library to make user-initiated reqeusts for data from a thrid-party API.
 
+## Resources
+
+[Axios on NPM](https://www.npmjs.com/package/axios){:target="_blank"}
+
+[Location IQ Geocoding API](https://locationiq.com/docs#search-forward-geocoding){:target="_blank"} - Specifically, the "Search / Forward GeoCoding" and "Static Maps" sections.
+
 ## Process
 
 For every lab in this module, you will have a new partner. For this lab, you and your new partner(s) will spend the first 15 minutes planning out an approach to this lab's work on a whiteboard.

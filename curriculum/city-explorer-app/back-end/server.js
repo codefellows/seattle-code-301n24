@@ -27,7 +27,7 @@ app.use('*', notFoundHandler);
 function weatherHandler(request, response) {
   const { lat, lon } = request.query;
   weather(lat, lon)
-    .then(summaries => sendJson(summaries, response))
+    .then(summaries => response.send(summaries))
     .catch((error) => {
       console.error(error);
       response.status(500).send('Sorry. Something went wrong!')
@@ -37,7 +37,7 @@ function weatherHandler(request, response) {
 function yelpHandler(request, response) {
   const location = request.query.search_query;
   yelp(location, request.query.page)
-    .then(reviews => sendJson(reviews, response))
+    .then(reviews => response.send(reviews))
     .catch((error) => {
       console.error(error);
       response.status(500).send('Sorry. Something went wrong!')
@@ -47,15 +47,11 @@ function yelpHandler(request, response) {
 function moviesHandler(request, response) {
   const location = request.query.city;
   movies(location)
-    .then(moviesList => sendJson(moviesList, response))
+    .then(moviesList => response.send(moviesList))
     .catch((error) => {
       console.error(error);
       response.status(500).send('Sorry. Something went wrong!')
     });
-}
-
-function sendJson(data, response) {
-  response.status(200).json(data);
 }
 
 function notFoundHandler(request, response) {

@@ -7,10 +7,10 @@ class WeatherDay extends React.Component {
     console.log('weather day', this.props)
     return(
       <div id="weather">
-        <Card>
+        <Card style={{ width: '18rem' }}>
+            <Card.Header>{this.props.day.time}</Card.Header>
           <Card.Body>
             <Card.Title>{this.props.day.forecast}</Card.Title>
-            <Card.Text>{this.props.day.time}</Card.Text>
           </Card.Body>
         </Card>
       </div>
