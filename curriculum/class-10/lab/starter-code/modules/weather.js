@@ -43,6 +43,5 @@ class Weather {
   constructor(day) {
     this.forecast = day.weather.description;
     this.time = day.datetime;
-    this.createdAt = Date.now();
   }
 }
