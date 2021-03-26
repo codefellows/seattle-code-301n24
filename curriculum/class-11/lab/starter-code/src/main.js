@@ -1,6 +1,6 @@
 import React from 'react';
-import Login from './login';
-import MyFavoriteBooks from './myFavoriteBooks';
+import Login from './Login';
+import MyFavoriteBooks from './MyFavoriteBooks';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // TODO: conditionally render the components so that the user only sees the `Login` if they are NOT logged in and they don't see the `Login` if they are logged in.

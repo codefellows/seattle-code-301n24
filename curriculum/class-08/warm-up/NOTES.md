@@ -1,14 +1,53 @@
-## Overview of today's warm-up challenge
+# Solution
 
-Problems with this code:
-- 'use strict'; is missing
-- app is not declared, express is not instantiated
-- userInfo is a const, so students might think they cannot modify the properties of the object
-- properties are added to userInfo as an object literal
-- callback is missing parens around (req, res)
-- code refers to request and response, but parameters are req and res
-- improper syntax for app.listen
-- double quotes in app.listen
-- response.sendFile only takes in one file at a time
-- semicolon missing after response.sendFile
-- forward slash is missing in the path
+## app.js
+
+```
+import React from 'react';
+import axios from 'axios';
+
+const SERVER = 'http://localhost:3001';
+
+class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state={
+      bananas = ''
+    }
+  }
+
+  componentDidMount = async () => {
+    const results = await axios.get(`${SERVER}/bananas`);
+    this.setState({ bananas: results.data });
+  }
+
+  render() {
+    return(
+      <div className="app">
+        <h1>Bananas!</h1>
+
+        {this.state.bananas && 
+          <p>{this.state.bananas}</p>
+        }
+      </div>
+    )
+  }
+}
+
+export default App;
+```
+
+## server.js
+
+```
+'use strict'
+
+const express = require('express');
+const app = express();
+const cors = require('cors');
+app.use(cors());
+
+app.get('/bananas', (request, response) => response.send('bananas are great'));
+
+app.listen(3001);
+```
