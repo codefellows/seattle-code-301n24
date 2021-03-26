@@ -10,7 +10,7 @@ Today you will be adding a feature to your `Gallery Of Horns` that allows the us
 
 For each of the features listed below, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
 
-```
+```md
 Number and name of feature: ________________________________
 
 Estimate of time needed to complete: _____
@@ -32,14 +32,14 @@ Add this information to your README.
 
 #### What are we going to implement?
 
-Given that a user wants to view the details of the image
-When the user clicks on an individual image
+Given that a user wants to view the details of the image  
+When the user clicks on an individual image  
 Then the image should render larger on the screen with the description displayed
 
 #### How are we implementing it?
 
-- Import the data.json file into your `App` component and send that data into the `Main` component
-- Map over the JSON file in your `Main` component to render each beast
+- Import the `data.json` file into your `App` component and send that data into the `Main` component
+- Map over the JSON data in your `Main` component to render each beast
 - Send a function into your `Main` component that allows the user to update state in the `App`
 - Create a `SelectedBeast` component and include it in your `App`
 - Use the state in the `App` to render an individual beast in a Modal in the `SelectedBeast` component using React Boothstrap
@@ -52,8 +52,8 @@ Then the image should render larger on the screen with the description displayed
 
 #### What are we going to implement?
 
-Given that a user enters wants to view specific images
-When the user enters a character into the search field
+Given that a user wants to view specific images  
+When the user enters a character into the search field  
 Then only the images matching the current set of characters should be displayed on the screen
 
 #### How are we implementing it?

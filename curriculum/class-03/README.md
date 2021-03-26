@@ -2,7 +2,7 @@
 
 ## Overview
 
-Yesterday, you learned how to pass information from a parent component into a child component through `props`. Today, we are going to pass functions through the `props` as well. We are also going to diaply a nested component using .map rather than hard-coding each one individually.
+Yesterday, you learned how to pass information from a parent component into a child component through `props`. Today, we are going to pass functions through the `props` as well. We are also going to display a nested component using `.map` rather than hard-coding each one individually.
 
 ## Daily Plan
 
@@ -20,4 +20,4 @@ As a result of completing Lecture 3 of Code 301, students will:
 
 - Be able to pass functions from a parent component to a child component
 - Understand the spread opperator
-- Understand .map and how to use it to render data in a React application
+- Understand `.map` and how to use it to render data in a React application

@@ -1,4 +1,4 @@
-# Facilitators Guide: Flexbox and Templating
+# Facilitators Guide: Passing Functions as Props
 
 ## Overview
 
@@ -78,11 +78,11 @@ Below is the expected lecture outline and flow. One possible way to present this
 
 ## Lab Notes
 
-  - This is a big lab. Encourage students to spend time drawing their lab out before they begin. You might even draw it out with them before class is over
+- This is a big lab. Encourage students to spend time drawing their lab out before they begin. You might even draw it out with them before class is over
 
 ## What changed from the previous class?
 
-  - In the last class, students passed information in props. This class, students learned how to pass functions in props.
+- In the last class, students passed information in props. This class, students learned how to pass functions in props.
 
 ## What might students struggle with today?
 
