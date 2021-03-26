@@ -1,26 +1,20 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
 class Login extends React.Component {
   render() {
     return(
-      <Modal show={this.props.show} onHide={this.props.handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Log In</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Click Below to Log In</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={this.props.handleClose}>
-            Close
-          </Button>
-          <Button variant="primary">
-            Login
-            {/* TODO: need a login button that logs the user in */}
-          </Button>
-        </Modal.Footer>
-      </Modal>
+      <Card style={{ width: '18rem' }}>
+        <Card.Img variant="top" src="holder.js/100px180" />
+        <Card.Body>
+          <Card.Title>Login</Card.Title>
+          <Card.Text>
+            Click Below to Log In
+          </Card.Text>
+          {/* TODO: need a button component to log the user in  */}
+        </Card.Body>
+      </Card>
     )
   }
 }

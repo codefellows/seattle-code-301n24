@@ -1,5 +1,5 @@
 import React from 'react';
-import Logout from './logout';
+import Logout from './Logout';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from 'react-bootstrap/Navbar';
 
