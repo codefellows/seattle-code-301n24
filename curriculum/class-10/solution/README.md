@@ -1,11 +1,11 @@
 # Solution: Advanced Topics
 
-Refer to the official [City Explorer React App](https://github.com/codefellows/city-explorer-front-end) and [City Explorer Proxy Server](https://github.com/codefellows/city-explorer-back-end) as a reference for grading.
+Refer to the official [City Explorer React App](../../city-explorer-app/front-end) and [City Explorer Proxy Server](../../city-explorer-app/back-end) as a reference for grading.
 
 ## Lab Requirements
 
-* Completed City Explorer Back-End with all APIs integrated
-* Locations Cache from in-memory object
+* Completed City Explorer Back-End with all APIs integrated, modularized
+* Server API calls cached from in-memory object
 * Quality refactoring attempt
 
 #### Grading Standards & Notes
@@ -13,13 +13,13 @@ Refer to the official [City Explorer React App](https://github.com/codefellows/c
   * Deployment
     * Live Netlify and Heroku URLs required for full points.
       * Partial credit available for obvious/reasonable effort even if deployment is non-working
-    * Use the student supplied deployed URL to validate their code against the official City Explorer Application
+    * Use the student supplied deployed URL to validate their code against the official City Explorer application functionality
   * Features / Code Standards
     * Quality attempt at refactoring and modularizing the server code
-    * Server must have 404 and 500 error handlers
+    * Server must have 404 and 500 error handlers, client displays error messages
     * Route definitions and handlers should be separated
-    * Location data must come from SQL Cache when available
-    * All non-location data must be retrieved from live API
+    * Back-end API data (weather, movies, yelp) must come from in-memory Cache when available
+    * Location data must be retrieved from live API client side
     
 #### Lab Assistance Notes
 
