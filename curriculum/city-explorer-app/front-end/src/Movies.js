@@ -8,7 +8,7 @@ class Movies extends React.Component {
     return(
       <div id="movies">
         <CardDeck style={{ width: '18rem' }}>
-          <h3>Movies</h3>
+          <h3>Movies:</h3>
           {this.props.movies.map((movie, idx) => (
             <Movie
               key={idx}

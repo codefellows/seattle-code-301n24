@@ -1,11 +1,12 @@
 'use strict';
 
 const superagent = require('superagent');
+let cache = require('./cache.js'); //TODO: Use caching 
 
 module.exports = getMovies;
 
 function getMovies(location) {
-
+  console.log('in movies', cache)
   const queryParams = {
     api_key:process.env.MOVIE_API_KEY,
     langeuage:'en-US',
