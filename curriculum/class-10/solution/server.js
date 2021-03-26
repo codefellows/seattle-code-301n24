@@ -1,11 +1,12 @@
 'use strict';
 
-require('dotenv');
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 
 const weather = require('./modules/weather.js');
 const app = express();
+app.use(cors());
 
 app.get('/weather', weatherHandler);
 
@@ -15,7 +16,7 @@ function weatherHandler(request, response) {
   .then(summaries => response.send(summaries))
   .catch((error) => {
     console.error(error);
-    response.status(200).send('Sorry. Something went wrong!')
+    response.status(500).send('Sorry. Something went wrong!')
   });
 }  
 
