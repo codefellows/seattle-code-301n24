@@ -34,20 +34,20 @@ function weatherHandler(request, response) {
     });
 }
 
-function yelpHandler(request, response) {
-  const location = request.query.search_query;
-  yelp(location, request.query.page)
-    .then(reviews => response.send(reviews))
+function moviesHandler(request, response) {
+  const location = request.query.city;
+  movies(location)
+    .then(moviesList => response.send(moviesList))
     .catch((error) => {
       console.error(error);
       response.status(500).send('Sorry. Something went wrong!')
     });
 }
 
-function moviesHandler(request, response) {
-  const location = request.query.city;
-  movies(location)
-    .then(moviesList => response.send(moviesList))
+function yelpHandler(request, response) {
+  const location = request.query.search_query;
+  yelp(location, request.query.page)
+    .then(reviews => response.send(reviews))
     .catch((error) => {
       console.error(error);
       response.status(500).send('Sorry. Something went wrong!')

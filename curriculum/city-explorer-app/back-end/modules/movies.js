@@ -1,12 +1,13 @@
 'use strict';
 
 const superagent = require('superagent');
-let cache = require('./cache.js'); //TODO: Use caching 
+let cache = require('./cache.js');
 
 module.exports = getMovies;
 
 function getMovies(location) {
-  console.log('in movies', cache)
+  const key = 'movies-' + location;
+  const url = 'https://api.themoviedb.org/3/search/movie/';
   const queryParams = {
     api_key:process.env.MOVIE_API_KEY,
     langeuage:'en-US',
@@ -14,10 +15,14 @@ function getMovies(location) {
     query: location,
   };
 
-  const url = 'https://api.themoviedb.org/3/search/movie/';
-  return superagent.get(url)
+  if (!cache[key]) {
+    cache[key] = {};
+    cache[key].timestamp = Date.now();
+    cache[key].data = superagent.get(url)
     .query(queryParams)
     .then(data => parseMoviesData(data.body));
+  }
+  return cache[key].data;
 }
 
 function parseMoviesData(data) {
@@ -35,10 +40,10 @@ function Movie(movie) {
   this.tableName = 'movies';
   this.title = movie.title;
   this.overview = movie.overview;
-  this.average_votes = movie.vote_average;
-  this.total_votes = movie.vote_count;
-  this.image_url = 'https://image.tmdb.org/t/p/w500' + movie.poster_path;
+  this.averageVotes = movie.vote_average;
+  this.totalVotes = movie.vote_count;
+  this.imageUrl = 'https://image.tmdb.org/t/p/w500' + movie.poster_path;
   this.popularity = movie.popularity;
-  this.released_on = movie.release_date;
-  this.created_at = Date.now();
+  this.releasedOn = movie.release_date;
+  this.createdAt = Date.now();
 }

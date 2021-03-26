@@ -80,7 +80,7 @@ class Main extends React.Component {
         this.setState({
           displayMap: false,
           displayError: true,
-          errorMessage: error.response.status + ': ' + error.response.data.error 
+          errorMessage: error.response && error.response.status + ': ' + error.response.data.error 
         })
       }
     } 
@@ -95,7 +95,7 @@ class Main extends React.Component {
         this.setState({
           displayMap: false,
           displayError: true,
-          errorMessage: error.response.status + ': ' + error.response.data.error 
+          errorMessage: error.response && error.response.status + ': ' + error.response.data.error 
         })
       }
     } 
