@@ -2,6 +2,7 @@ import React from 'react';
 import LoginButton from './LoginButton';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
+import './login.css';
 
 class Login extends React.Component {
   render() {
