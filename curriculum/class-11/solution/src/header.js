@@ -2,28 +2,22 @@ import React from 'react';
 import Logout from './LogoutButton';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import {
-  BrowserRouter,
-  Link
-} from "react-router-dom";
+import LoginButton from './LoginButton';
+import { withAuth0 } from '@auth0/auth0-react';
+import { Link } from "react-router-dom";
+import './header.css';
 
 class Header extends React.Component {
   render() {
     return(
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Navbar.Brand>My Favorite Books</Navbar.Brand>
-        <BrowserRouter>
-          <Nav className="mr-auto">
-            <Link to="/">Home</Link>
-            <Link to="/profile">Profile</Link>
-            <Link to="login">Login</Link>
-          </Nav>
-        </BrowserRouter>
-        <Logout />
+          <Link to="/">Home</Link>
+          <Link to="/profile">Profile</Link>
+        {this.props.auth0.isAuthenticated ? <Logout /> : <LoginButton />}
       </Navbar>
     )
   }
 }
 
-export default Header;
+export default withAuth0(Header);

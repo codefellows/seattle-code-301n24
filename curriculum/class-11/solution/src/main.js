@@ -1,7 +1,5 @@
 import React from 'react';
-import Login from './Login';
 import MyFavoriteBooks from './MyFavoriteBooks';
-import UserProfile from './Profile';
 import { withAuth0 } from '@auth0/auth0-react';
 
 
