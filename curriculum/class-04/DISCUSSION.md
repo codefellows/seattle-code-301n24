@@ -19,4 +19,3 @@ PLACEHOLDER -->
 ### Bookmark/Skim
 
 - [React Bootstrap - Forms](https://react-bootstrap.github.io/components/forms/){:target="_blank"}
-

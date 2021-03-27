@@ -3,18 +3,18 @@
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
-Write a function named addAnimal that takes in array of animals (strings) and some callback function. 
+Write a function named addAnimal that takes in array of animals (strings) and some callback function.
 
 This function should first create a new array. Then iterate over the input array and modify each value based on the callback function provided.
 
-Push each updated animal string into the new array. Return the new array. 
+Push each updated animal string into the new array. Return the new array.
 
 HINT: Look at the tests to see how the callback functions are used.
 
 ------------------------------------------------------------------------------------------------ */
 
 function upper(str) {
-  return str.toUpperCase(); 
+  return str.toUpperCase();
 }
 
 function lower(str) {
@@ -40,9 +40,9 @@ const sortNames = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function called sortNumbers that takes an array of numbers and sorts them from smallest to largest. 
+Write a function called sortNumbers that takes an array of numbers and sorts them from smallest to largest.
 
-HINT: Beware... JS default is "Lexical" ordering. 
+HINT: Beware... JS default is "Lexical" ordering.
 ------------------------------------------------------------------------------------------------ */
 
 const sortNumbers = (arr) => {
@@ -54,7 +54,7 @@ CHALLENGE 4
 
 Write a function named sortBackwards that takes in an array of numbers and returns the same array, with the numbers sorted, largest to smallest.
 
-HINT: Do it with a custom sort callback, not with using `.reverse()`. ;) 
+HINT: Do it with a custom sort callback, not with using `.reverse()`. ;)
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
