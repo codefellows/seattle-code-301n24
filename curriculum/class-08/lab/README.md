@@ -42,7 +42,7 @@ You will then work independently for the rest of the day, implementing your plan
 - In the "...Show Menu" sidebar, click the "Search Cards" link and filter by lab to see the assignment for just the current day.
 - Review the user stories and analyze the feature requests and requirements in the lab.
 - Within each story, note the acceptance criteria ("Given ... When ... Then...") and the checklist of feature tasks. Be careful to execute tasks in order as they are often dependencies of one another.
-- During the day, check off tasks as you complete them, and move the story cards through the workflow.
+- Throughout the lab time, check off tasks as you complete them, and move the story cards through the workflow.
 
 ### Documentation
 
@@ -66,7 +66,7 @@ _Your `README.md` must include:_
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
 
 ## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
+<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
