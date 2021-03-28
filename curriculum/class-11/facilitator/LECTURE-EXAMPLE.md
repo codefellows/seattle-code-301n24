@@ -1,3 +1,3 @@
-# Lecture Notes: Server-side templating with EJS
+# Lecture Notes:
 
 
