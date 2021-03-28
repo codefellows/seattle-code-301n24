@@ -21,7 +21,7 @@ const Book = require('./model');
 // step 3. add new entries to your model
 const book1 = new Book({ name: 'The Silent Patient', description: 'a women may or may not have killed her husband and a theapist is determind to make her talk to discover her secrets.', genre: 'MYSTERY' });
 
-const book2 = new Book({ name: 'The Hitchhickers Guide To The Gallaxy.', description: 'earth is destroyed and folks try to determine the ultimate question to the universe', genre: 'FICTION'});
+const book2 = new Book({ name: 'The Hitchhickers Guide To The Gallaxy.', description: 'earth is destroyed and folks try to determine the ultimate question to the universe and everything', genre: 'FICTION'});
 
 // step 4: save the entries into the database
 book1.save()
