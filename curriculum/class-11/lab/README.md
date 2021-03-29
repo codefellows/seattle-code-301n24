@@ -6,37 +6,37 @@ We are going to start this week with authentication! The ability for a user to s
 
 In this lab, we are going to use a service called Auth0 that will handle most of the challenges of working with external identity providers. Your job will be to create a componentized React application where users can sign in via the Auth0 service.
 
-### Process: Professional Pairing Practice
+## Process: Professional Pairing Practice
 
 Much of the work you will be doing in the industry will be in pairs. In order to best prepair you for this, you will be working with the same partner all week on this book app project.
 
 Before you begin to even think about your application, take at least 30 minutes to make a team agreement with your partner. This is an essiential step to ensure a peaceful and productive week. You MUST answer the following questions in your agreement and include it in your README's "Collaboration" section:
 
-#### Logistical
+### Logistical
 
 - What hours will you be available to communicate?
 - What platform will you use to communicate (ie. Slack, phone ...)?
 - How often will you take breaks?
 - What is your plan if you start to fall behind?
 
-#### Cooperative
+### Cooperative
 
 - Make a list of each parson's strengths.
 - How can you best utilize these strengths in the development of your application?
 - In what areas do you each want to develop greater strength? 
 - Knowing that every person in your team needs to understand the code, how do you plan to approach the day-to-day development?
 
-#### Conflict Resolution
+### Conflict Resolution
 
 - What will your team do if one person is pulling all the weight while the other person is not contributing?
 - What will your team do if one person is taking over the project and not letting the other member contribute? 
 - How will you approach each other and the challenge of building an application knowing that it is impossible for two people to be at the exact same place in understanding and skill level?
 
-### Feature Tasks
+## Feature Tasks
 
 See the Trello board for your feature tasks for today's lab.
 
-### Workflow
+## Workflow
 
 - We will be using the [Trello](https://trello.com/home){:target="_blank"} project management tool for the duration of this project.
 - After signing in to your account, go to the [Best Books Task Tracker](https://trello.com/b/qgaCsVVa){:target="_blank"}, open the "... Show Menu" link, click the "... More" link, and then click "Copy Board". Before you create it, be sure to "Change" from Private to "Public" (and click "Yes, Make Board Public") so your instructional team can see your work. Now, click "Create" to add a copy to your personal account.
@@ -46,7 +46,7 @@ See the Trello board for your feature tasks for today's lab.
 - Within each story, note the acceptance criteria ("Given ... When ... Then...") and the checklist of feature tasks. Be careful to execute tasks in order as they are often dependencies of one another.
 - Throughout the lab time, check off tasks as you complete them, and move the story cards through the workflow.
 
-### Documentation
+## Documentation
 
 You must have a complete `README.md` for your repository.
 
@@ -76,7 +76,7 @@ _Your `README.md` must include:_
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 ```
 
-### Time Estimates
+## Time Estimates
 
 For each of the lab features, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
 
