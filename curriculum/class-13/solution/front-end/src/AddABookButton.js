@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import BookFormModal from './bookFormModal';
+import BookFormModal from './BookFormModal';
 
 class AddABookButton extends React.Component {
   constructor(props){
