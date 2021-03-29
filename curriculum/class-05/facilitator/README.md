@@ -1,8 +1,8 @@
-# Facilitators Guide: CONITIONAL RENDERING AND BROWSER ROUTER
+# Facilitators Guide: CONDITIONAL RENDERING AND BROWSER ROUTER
 
 ## Overview
 
-Today's class has a lot of built in flexiblity to do what the class needs. There are two key concepts that need to get covered today: conditional rendering using ternarys in JSX and Browser Router.
+Today's class has a lot of built in flexibility to do what the class needs. There are two key concepts that need to get covered today: conditional rendering using ternarys in JSX and Browser Router.
 
 ## Learning Objectives
 
@@ -71,7 +71,7 @@ Below is the expected lecture outline and flow. One possible way to present this
   - Open up the starter-code for lab-05 and have students break down what is happening in the index. 
   - Talk about Browser Router and what it is doing
   - Ask how they might use that in their applications
-  - Find the <Link> tags to demonstarte how they are used later in the code to navigate between pages.
+  - Find the <Link> tags to demonstrate how they are used later in the code to navigate between pages.
 - **Experimentation and Discovery Ideas**
 
 ## Lab Notes
