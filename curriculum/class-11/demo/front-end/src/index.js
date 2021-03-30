@@ -14,7 +14,7 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
-// once you sign up for an Auth0 account, they will provide you with the domain and clidenId
+// once you sign up for an Auth0 account, they will provide you with the domain and clientId
 
 // import React from 'react';
 // import ReactDOM from 'react-dom';

@@ -8,11 +8,11 @@ class App extends React.Component {
   render(){
     return(
       <>
-      <LoginButton />
-      <LogoutButton />
-      {this.props.auth0.isAuthenticated && 
-        <Profile />
-      }
+        <LoginButton />
+        <LogoutButton />
+        {this.props.auth0.isAuthenticated && 
+          <Profile />
+        }
       </>
     )
   }

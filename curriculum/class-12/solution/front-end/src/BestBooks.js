@@ -3,8 +3,9 @@ import axios from 'axios';
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { withAuth0 } from '@auth0/auth0-react';
+import { CardColumns } from 'react-bootstrap';
 
-class MyFavoriteBooks extends React.Component {
+class BestBooks extends React.Component {
   constructor(props){
     super(props);
     this.state={
@@ -22,23 +23,25 @@ class MyFavoriteBooks extends React.Component {
     console.log(this.props.auth0);
     return(
       <>
-        <h2>My favorite books</h2>
+        <h2>My Essential Lifelong Learning &amp; Formation Shelf</h2>
         {this.state.books.length && this.state.books.map((book, idx) => (
-          <Card key={idx}>
-            <Card.Body>
-              <Card.Title>{book.name}</Card.Title>
-              <Card.Text>
-                {book.description}
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <small className="text-muted">{book.status}</small>
-            </Card.Footer>
-          </Card>
+          <CardColumns>
+            <Card key={idx}>
+              <Card.Body>
+                <Card.Title>{book.name}</Card.Title>
+                <Card.Text>
+                  {book.description}
+                </Card.Text>
+              </Card.Body>
+              <Card.Footer>
+                <small className="text-muted">{book.status}</small>
+              </Card.Footer>
+            </Card>
+          </CardColumns>
         ))}
       </>
     )
   }
 }
 
-export default withAuth0(MyFavoriteBooks);
+export default withAuth0(BestBooks);
