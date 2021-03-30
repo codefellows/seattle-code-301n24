@@ -12,62 +12,32 @@ const mongoose = require('mongoose');
 // making a database called cats
 mongoose.connect('mongodb://localhost:27017/cats', {useNewUrlParser: true, useUnifiedTopology: true});
 
-
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
   console.log('Mongoose is connected')
 });
 
-// step 1. set up the schema
-const kittySchema = new mongoose.Schema({
-  name: String
-});
+const CatParent = require('./models/User');
 
-// step 2. create the model
-// 'Kitten' is the name of our collection that mongo will refrence
-// Cat is the name I am giving my collection
-const Cat = mongoose.model('Kitten', kittySchema);
+const bob = new CatParent({ name: 'bobmister', cats: [{name:'fluffy'}, {name:'joe'}]});
+console.log({bob})
+bob.save();
 
-// step 3. add to the collection
-// create a new cat
-const goose = new Cat({ name: 'Goose' });
-console.log(goose.name); // 'Goose'
-
-// step 4. save 
-// save the cat to our collection
-goose.save((err, banana) => {
-  if (err) return console.error(err);
-  console.log(`${banana.name} was added to our kitten collection!`);
-});
-
-// get all the cats from our collection
-// look in the model of Kitten for all the documents
-Cat.find((err, kittens) => {
-  if (err) return console.error(err);
-  console.log(kittens);
-});
-
-// populate the database
-const malaki = new Cat({ name: 'Makaki' });
-const tangerine = new Cat({ name: 'Tangerine' });
-
-malaki.save();
-tangerine.save();
+const sue = new CatParent({ name: 'sue', cats: [{name:'goose'}, {name:'malaki'}, {name:'sam'}]});
+sue.save();
 
 app.get('/cats', getAllCats)
 
-// a database is full of collections
-// each collection has documents
-
 function getAllCats(request, response) {
-  Kitten.find((err, cats) => {
+  const name = request.query.name;
+  console.log({name});
+  CatParent.find({name}, (err, person) => {
     if(err) return console.error(err);
-    response.send(cats);
+    console.log({person})
+    response.send(person[0].cats);
   })
 }
-
-
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
 
