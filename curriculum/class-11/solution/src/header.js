@@ -11,7 +11,7 @@ class Header extends React.Component {
   render() {
     return(
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Navbar.Brand>My Favorite Books</Navbar.Brand>
+        <Navbar.Brand>Best Books</Navbar.Brand>
         <NavItem><Link to="/" className="nav-link">Home</Link></NavItem>
         <NavItem><Link to="/profile" className="nav-link">Profile</Link></NavItem>
         {this.props.auth0.isAuthenticated ? <Logout /> : <LoginButton />}
