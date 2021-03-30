@@ -1,4 +1,4 @@
-# Uaer Authentication with Auth0
+# User Authentication with Auth0
 
 ## Overview
 

@@ -16,7 +16,7 @@ db.once('open', function() {
 });
 
 // step 1 and 2: create a schema and a model
-const User = require('./model/user.js');
+const User = require('./model/User.js');
 
 // step 3. add new entries to your model
 const lena = new User({email: 'applena@gmail.com', books: [
