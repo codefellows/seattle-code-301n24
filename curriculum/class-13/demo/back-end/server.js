@@ -5,6 +5,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 app.use(cors());
+app.use(express.json()); 
 
 const PORT = 3001;
 
@@ -20,14 +21,16 @@ db.once('open', function() {
 
 const CatParent = require('./models/Users');
 
-const bob = new CatParent({ name: 'bobmister', cats: [{name:'fluffy'}, {name:'joe'}]});
-console.log({bob})
+const bob = new CatParent({ name: 'bob', cats: [{name:'fluffy'}, {name:'joe'}]});
+// console.log({bob})
 bob.save();
 
 const sue = new CatParent({ name: 'sue', cats: [{name:'goose'}, {name:'malaki'}, {name:'sam'}]});
 sue.save();
 
-app.get('/cats', getAllCats)
+app.get('/cats', getAllCats);
+app.post('/cats', createACat);
+app.delete('/cats/:index', deleteACat);
 
 function getAllCats(request, response) {
   const name = request.query.name;
@@ -35,7 +38,32 @@ function getAllCats(request, response) {
   CatParent.find({name}, (err, person) => {
     if(err) return console.error(err);
     console.log({person})
+    
     response.send(person[0].cats);
+  })
+}
+
+function createACat(request, response) {
+  const { name, newCat } = request.body;
+  console.log(name, newCat);
+  const cat = { name: newCat };
+  
+  CatParent.findOne({name}, (err, user) => {
+    user.cats.push(cat);
+    user.save();
+    response.send(user.cats);
+  })
+}
+
+function deleteACat(request, response) {
+  const index = request.params.index;
+  const name = request.query.name;
+  console.log({index, name})
+  CatParent.findOne({ name }, (err, user) => {
+    const newCats = user.cats.filter((cat, idx) => idx !== index );
+    user.cats = newCats;
+    user.save();
+    
   })
 }
 
