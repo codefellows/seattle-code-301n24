@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
+import { withAuth0 } from '@auth0/auth0-react';
 
 const API = 'http://localhost:3001';
 
@@ -13,7 +14,7 @@ class BookFormModal extends React.Component {
     this.state={
       name: '',
       description: '',
-      genre: 'FICTION'
+      status: 'LIFE-CHANGING'
     }
   }
 
@@ -22,15 +23,14 @@ class BookFormModal extends React.Component {
   }
 
   createBook = async() => {
-    const newBook = {
+    const bookResults = await axios.post(`${API}/books`, {
+      email: this.props.auth0.user.email,
       name: this.state.name,
       description: this.state.description,
-      genre: this.state.genre
-    }
-
-    await axios.post(`${API}/books`, newBook);
+      status: this.state.status
+    });
     this.props.close();
-    this.props.updateBookArray(newBook);
+    this.props.updateBookArray(bookResults.data);
   }
 
   render() {
@@ -49,15 +49,12 @@ class BookFormModal extends React.Component {
             <Form.Control onChange={(e)=> this.setState({description:e.target.value})}type="text" placeholder="book description" />
           </Form.Group>
           <Form.Group controlId="genre">
-            <Form.Label>Genre</Form.Label>
+            <Form.Label>Status</Form.Label>
             <Form.Control defaultValue='' onChange={(e)=> this.setState({genre:e.target.value})} as="select">
               <option></option>
-              <option value="MYSTERY">Mystery</option>
-              <option value="THRILLER">Thriller</option>
-              <option value="FICTION">Fiction</option>
-              <option value="NON-FICTION">Non-Fiction</option>
-              <option value="HORROR">Horror</option>
-              <option value="SCI-FI">Sci-Fi</option>
+              <option value="LIFE-CHANGING">Life Changing</option>
+              <option value="FAVORITE FIVE">Favorite Five</option>
+              <option value="RECCOMENDED TO ME">Reccomended To Me</option>
             </Form.Control>
           </Form.Group>
         </Form>
@@ -74,4 +71,4 @@ class BookFormModal extends React.Component {
   }
 }
 
-export default BookFormModal;
+export default withAuth0(BookFormModal);

@@ -4,10 +4,11 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AddABookButton from './AddABookButton';
+import { withAuth0 } from '@auth0/auth0-react';
 
 const API = 'http://localhost:3001';
 
-class MyFavoriteBooks extends React.Component {
+class BestBooks extends React.Component {
   constructor(props){
     super(props);
     this.state={
@@ -17,19 +18,21 @@ class MyFavoriteBooks extends React.Component {
 
   componentDidMount = async () => {
     // make a call to the backend to get the the books and display them
-    const books = await axios.get(`${API}/books`);
+    const books = await axios.get(`${API}/books`, {params: {email: this.props.auth0.user.email}});
+    console.log('get books', books.data)
     this.setState({ books: books.data });
   }
 
-  updateBookArray = (book) => this.setState({books:[...this.state.books, book]});
+  updateBookArray = (books) => this.setState({books});
 
   removeBook = (idx) => {
     const id = this.state.books[idx]._id;
-    axios.delete(`${API}/books`, {params: { id }}).then(() => {
-      let newBooks = this.state.books;
-      newBooks = newBooks.filter((book, i) => i !== idx);
-      this.setState({ books: newBooks });
-    })
+    let newBooks = this.state.books;
+    newBooks = newBooks.filter((book, i) => i !== idx);
+    this.setState({ books: newBooks });
+    
+    axios.delete(`${API}/books/${id}`, {params: {email: this.props.auth0.user.email}}).then(() => {
+    }).catch(err => console.error(err));
   }
 
   render() {
@@ -40,7 +43,7 @@ class MyFavoriteBooks extends React.Component {
         {this.state.books.length && this.state.books.map((book, idx) => (
           <Card key={idx}>
             <Card.Body>
-              <Card.Title>{book.title}</Card.Title>
+              <Card.Title>{book.name}</Card.Title>
               <Card.Text>
                 {book.description}
                 <Button onClick={() => this.removeBook(idx)}>Delete</Button>
@@ -56,4 +59,4 @@ class MyFavoriteBooks extends React.Component {
   }
 }
 
-export default MyFavoriteBooks;
+export default withAuth0(BestBooks);

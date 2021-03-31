@@ -8,6 +8,11 @@ const app = express();
 app.use(cors());
 app.use(express.json()); 
 
+const handleNotFound = require('./modules/404-NotFound');
+const deleteBook = require('./modules/deleteBook.js');
+const getBooks = require('./modules/getBooks');
+const addBook = require('./modules/addBook');
+
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/books', {useNewUrlParser: true, useUnifiedTopology: true});
 const db = mongoose.connection;
@@ -16,38 +21,11 @@ db.once('open', function() {
   console.log('we\'re connected!');
 });
 
-// step 1 and 2: create a schema and a model
-const Book = require('./model');
-
 const PORT = process.env.PORT || 3001;
 
 app.get('/books', getBooks);
 app.post('/books', addBook);
-app.delete('/books', deleteBook);
-
-function getBooks(request, response) {
-  // get the books from mongo 
-  Book.find(function (err, book) {
-    if (err) return console.error(err);
-    response.send(book);
-  })
-}
-
-function addBook(request, response) {
-  // add a book to mongo
-  const { name, description, genre } = request.body;
-  const newBook = new Book({name, description, genre:genre.toUpperCase()});
-  newBook.save().then(response.send(newBook))
-}
-
-function deleteBook(request, response) {
-  // delete a book from Mongo
-  const id = request.query.id;
-  console.log('delete route', {id})
-  Book.deleteOne({ _id:id }).then(() => response.send('success')).catch(err => {
-    console.err(err);
-    response.status(500).send('server error', err);
-  });
-}
+app.delete('/books/:id', deleteBook);
+app.use('*', handleNotFound);
 
 app.listen(PORT, () => console.log(console.log(`listening on ${PORT}`)));
