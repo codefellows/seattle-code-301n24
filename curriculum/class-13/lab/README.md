@@ -1,75 +1,49 @@
 # Resource Create and Delete
 
-## Resources
+## Overview
 
-## Configuration
+Today you will add the functionality for the user to add a book or delete a book. A book will be created with a form in React, and sent to the server where it will be saved into the database, and then returned to the front end to be displayed in the list of favorite books. You will then be able to delete that book with a click of a button, to have it instantly removed from the front end, and a request sent to back end for removal.
 
-### Server Configuration
-_Your repository must include the following config files:_
+## Feature Tasks
 
-- `.env` - with your PORT and DATABASE_URL. Make sure this file is included in your `.gitignore`
-- `README.md` - with documentation regarding your lab and its current state of development. Check the "documentation" section below for more details on how that should look **AT MINIMUM**
-- `.gitignore` - with standard NodeJS configurations
-- `.eslintrc.json` - with Code 301 course standards for the linter
-- `package.json` - with all dependencies and any associated details related to configuration including `mongoose`.
-- Note that the `package-lock.json` file is automatically created when dependencies are installed and ensures that future installations of the project use the same versions of the dependencies.
-Use the following as a guide for your directory structure.
+See the [Trello board](https://trello.com/b/qgaCsVVa) for your feature tasks for today's lab.
 
-```sh
-book_app (repository)
-├── model.js
-├── .env
-├── .eslintrc.json
-├── .gitignore
-├── package-lock.json
-├── package.json
-├── README.md
-└── server.js
+## Documentation
+
+You must have a complete `README.md` for your repository.
+
+_Your `README.md` must include:_
+
+```md
+# Project Name
+
+**Author**: Team Member Names Goes Here
+**Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
+
+## Overview
+<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
+
+## Getting Started
+<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+
+## Architecture
+<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+
+## Change Log
+<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
+
+01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
+
+## Credit and Collaborations
+<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 ```
 
-### Front-End Configuration
-_Your repository must include the following config files:_
+## Time Estimates
 
-- `README.md` - with documentation regarding your lab and it's current state of development. Check the "documentation" section below for more details on how that should look **AT MINIMUM**
-- `.gitignore` - with standard NodeJS configurations
-- `.eslintrc.json` - with Code 301 course standards for the linter
-- `package.json` - with all dependencies and any associated details related to configuration, including `@auth0/auth0-react`.
+For each of the lab features, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
 
-```sh
-book_app (repository)
-├──public
-├──src
-|  ├── addABookButton.js
-│  ├── app.js
-|  ├── booFormModal.js
-│  ├── footer.js
-│  ├── header.js
-│  ├── index.js
-|  ├── loginButton.js
-|  ├── logoutButton.js
-|  ├── main.js
-|  ├── myFavoriteBooks.js
-|  ├── profile.js
-├── .eslintrc.json
-├── .gitignore
-├── package-lock.json
-├── package.json
-├── README.md
-```
-
-
-## User Stories and Feature Tasks
-
-### Overview
-
-Today you will add the functionality for the user to add and delete a book on the front end. That book will be sent to the server where it will be saved into the database and then returned to the front end and displayed in the list of favorite books. You will then be able to delete that book and have it instantly removed from the front end.
-
-### Time Estimate
-
-For each of the features listed below, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
-
-```
-Number and name of feature: ________________________________
+```markdown
+Name of feature: ________________________________
 
 Estimate of time needed to complete: _____
 
@@ -82,77 +56,13 @@ Actual time needed to complete: _____
 
 Add this information to your README.
 
-### Feature Tasks
-
-See the Trello board for your feature tasks for today's lab.
-
-#### Server Tasks
-
-1. Add route with a method of `POST` and a path of `/books`
-- this route should accept the body of the request object which will be the new book
-- use this information to create a new book and save it in the database
-- then send that new book back to the front end
-- be sure to include error checking in case something goes wrong
-
-1. Add a route with a method of `DELETE` at a path of `/books`
-- this route should accept an id as a query param in the request object
-- use that id to find the id in the database to delete
-- then send a success message to the front end
-- be sure to include error checking in case something goes wrong
-
-#### Front End Tasks
-
-1. Make a new component called `AddABookButton`
-- this component should be a button that when clicked displays the `BookFormModal`
-
-1. The `BookFormModal` should take in the necessary information to save a new favorite book
-- when the user submits the information, you should make a `POST` call to your server with the book information on the `/books` route
-- the response you get should be the new book object
-
-1. Display the new book you just created along with the rest of your favorite books
-
-1. Add a 'DELETE' button to each book you have displayed.
-- when the user clicks that button, send a `DELETE` request to `/books` with the id of that book as a query param.
-- make sure that your book is automatically removed from your list as soon as you click the button and that it stays removed when you reload the page
-
-## Documentation
-
-**You will need a README.md for both your front end and your server**
-
-_Your `README.md` must include:_
-
-```md
-# Project Name
-
-**Author**: Your Name Goes Here
-**Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
-
-## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for a Code 301 class. (i.e. What's your problem domain?) -->
-
-## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
-
-## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
-
-## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
-
-01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
-
-## Credits and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
--->
-```
-
 ## Submission Instructions
 
-- Continue working in the same repository from the previous class.
-- Continue to work on semantically-named non-main branches.
-- Complete your Feature Tasks for the day (below)
-- Create a Pull Request (PR) back to the `main` branch of your repository
-- On Canvas, submit a link to your PR, a link to your deployed application on Netlify, and a link to your public Trello board. **Make sure to include the following:**
-  - A question within the context of today's lab assignment
-  - An observation about the lab assignment, or related 'Ah-hah!' moment
-  - How long you spent working on this assignment
+1. Complete your Feature Tasks for the lab, according to the Trello cards.
+1. Create a PR back to the `main` branch of your repository, showing ALL your work, and merge it cleanly.
+1. On Canvas, submit a link to your PR. Add a comment in your Canvas assignment which includes the following:
+    - A link to the deployed version of your latest code.
+    - A link to your public Trello board.
+    - A question within the context of today's lab assignment.
+    - An observation about the lab assignment, or related 'Ah-hah!' moment.
+    - How long you spent working on this assignment.

@@ -8,11 +8,6 @@ const app = express();
 app.use(cors());
 app.use(express.json()); 
 
-const handleNotFound = require('./modules/404-NotFound');
-const deleteBook = require('./modules/deleteBook.js');
-const getBooks = require('./modules/getBooks');
-const addBook = require('./modules/addBook');
-
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/books', {useNewUrlParser: true, useUnifiedTopology: true});
 const db = mongoose.connection;
@@ -21,11 +16,14 @@ db.once('open', function() {
   console.log('we\'re connected!');
 });
 
+const handleNotFound = require('./modules/404-NotFound');
+const Book = require('./modules/Book.js');
+
 const PORT = process.env.PORT || 3001;
 
-app.get('/books', getBooks);
-app.post('/books', addBook);
-app.delete('/books/:id', deleteBook);
+app.get('/books', Book.list);
+app.post('/books', Book.add);
+app.delete('/books/:id', Book.delete);
 app.use('*', handleNotFound);
 
 app.listen(PORT, () => console.log(console.log(`listening on ${PORT}`)));

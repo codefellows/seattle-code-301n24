@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import Card from 'react-bootstrap/Card';
+import {Card, CardColumns } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AddABookButton from './AddABookButton';
@@ -40,20 +40,22 @@ class BestBooks extends React.Component {
       <>
         <h2>My favorite books</h2>
         <AddABookButton updateBookArray={this.updateBookArray} />
-        {this.state.books.length && this.state.books.map((book, idx) => (
-          <Card key={idx}>
-            <Card.Body>
-              <Card.Title>{book.name}</Card.Title>
-              <Card.Text>
-                {book.description}
-                <Button onClick={() => this.removeBook(idx)}>Delete</Button>
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <small className="text-muted">{book.genre}</small>
-            </Card.Footer>
-          </Card>
-        ))}
+        <CardColumns>
+          {this.state.books.length && this.state.books.map((book, idx) => (
+            <Card key={idx}>
+              <Card.Body>
+                <Card.Title>{book.name}</Card.Title>
+                <Card.Text>
+                  {book.description}
+                  <Button onClick={() => this.removeBook(idx)}>Delete</Button>
+                </Card.Text>
+              </Card.Body>
+              <Card.Footer>
+                <small className="text-muted">{book.status}</small>
+              </Card.Footer>
+            </Card>
+          ))}
+        </CardColumns>
       </>
     )
   }
