@@ -18,7 +18,7 @@ db.once('open', function() {
   console.log('Mongoose is connected')
 });
 
-const CatParent = require('./models/User');
+const CatParent = require('./models/Users');
 
 const bob = new CatParent({ name: 'bobmister', cats: [{name:'fluffy'}, {name:'joe'}]});
 console.log({bob})
