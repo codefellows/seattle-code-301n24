@@ -2,9 +2,9 @@
 
 ## Overview
 
-Ready to take a look at a full-featured code base. Find in the starter code a React + Bootstrap site with a number of example pages, complete with icons, styles, and themed layouts. Your job is to customize this code, and make the site your own. 
+Get ready to take a look at a full-featured code base! The starter code contains a React + Bootstrap site with a number of example pages, complete with icons, styles, and themed layouts. Your job is to customize this code and make the site your own.
 
-You will be deploying your React portfolio to [Netlify.com](https://www.netlify.com/).
+You will be deploying your React portfolio to [Netlify](https://www.netlify.com/){:target="_blank"}.
 
 ## Time Estimate
 
@@ -24,9 +24,9 @@ Actual time needed to complete: _____
 
 ## Feature #1: Deployment
 
-Deploy the starter code to Netlify. 
+Deploy the starter code to Netlify.
 
-- You will need to initiate a new repository to complete this task.
+- You will need to create a new repository to complete this task.
 - Add the URL to your live, deployed server to your README.
 
 ### Feature #2: Modify the contents
@@ -39,7 +39,7 @@ Deploy the starter code to Netlify.
 
 Given that a user opens the application in the browser  
 When the user navigates to the home page  
-Then the content should be unique and reflect the skills and personality of the developer  
+Then the content should be unique and reflect the skills and personality of the developer.
 
 #### How are we implementing it?
 
@@ -48,28 +48,28 @@ Then the content should be unique and reflect the skills and personality of the 
   - Replace the profile picture with your own.
   - Update the name, location, title, and education rows with your own info.
   - Add a personal headline. This should be the same as or similar to your headline on your LinkedIn profile.
-  - Replace the numerical values and labels with something meaningful to you. 
+  - Replace the numerical values and labels with something meaningful to you.
 - Update the Nav, Header, and Footer:
   - Remove the "Components" dropdown menu.
   - Change the "Examples" menu to be titled simply "Menu".
   - Within the menu link to a Profile page, and a Portfolio page. Remove other links.
-  - Change the routes so the Profile page loads at `/`, and the "Landing" page loads at `/portfolio`. Move the initial Index page to load at `/how-to` for your own reference. 
+  - Change the routes so the Profile page loads at `/`, and the "Landing" page loads at `/portfolio`. Move the initial Index page to load at `/how-to` for your own reference.
   - Fix up the social media icons and their links as you like. At least swap out Facebook for LinkedIn, and ensure you are linking to your GitHub account here. These icons are included via FontAwesome.
   - Remove the "Download" button.
 - Redo the "Landing" page as your new Portfolio page:
-  - Change the text in the top section to state what you are excited about in tech. 
-  - Use the Cards to BRIEFLY descbribe your previous projects, and include placeholders for future 301 and 401 projects. 
-  - Include more detail below on projects you'd like to showcase. 
+  - Change the text in the top section to state what you are excited about in tech.
+  - Use the Cards to BRIEFLY descbribe your previous projects, and include placeholders for future 301 and 401 projects.
+  - Include more detail below on projects you'd like to showcase.
   - Make an All About Me section, add your personal pitch.
-  - Delete sections you aren't utilizing. 
-- Throughout the site, change the content and images to reflect your personal preferences. If you are using online images, make sure they are licensed for free, commercial use. For example, [Unsplash](https://unsplash.com/) has a nice variety of free images.
+  - Delete sections you aren't utilizing.
+- Throughout the site, change the content and images to reflect your personal preferences. If you are using online images, make sure they are licensed for free, commercial use. For example, [Unsplash](https://unsplash.com/){:target="_blank"} has a nice variety of free images.
 - Keep in mind that this template is just a starting point. It is yours to modify to reflect your personal online presence as a software developer so have fun and be creative!
 
 ## Submission Instructions
 
-1. Complete your Feature Tasks for the lab on a branch. 
+1. Complete your Feature Tasks for the lab on a branch.
 1. Create a PR back to the `main` branch of your repository, and merge it cleanly.
-1. Deploy again, so your latest code is published live via Netlify. 
+1. Ensure your most recent code deployment was successful, so your latest code is published live via Netlify.
 1. On Canvas, submit a link to your PR. Add a comment in your Canvas assignment which includes the following:
     - A link to the deployed version of your latest code.
     - A question within the context of today's lab assignment
