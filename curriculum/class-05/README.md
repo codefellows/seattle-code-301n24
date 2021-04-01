@@ -2,7 +2,7 @@
 
 ## Overview
 
-Today we will use the skills we learned over the week to build a new appliaction: city explorer! Your lab will be to take React starter code and turn it into a beautiful portfolio.
+Today we will use the skills we learned over the week to build a new application: city explorer! Your lab will be to take React starter code and turn it into a beautiful portfolio.
 
 ## Daily Plan
 
