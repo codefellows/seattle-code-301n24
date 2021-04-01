@@ -38,7 +38,7 @@
 ### src/components/update-item.js
 
 - Incorrect: `<Form>` uses `this.handleChange` instead of `this.handleSubmit` for the `onSubmit` handler
-- Incorrect: `handleChange` does `this.setState(item)` instead of `this.setState({item})`
+- Incorrect: `handleChange` does `this.setState({item)` instead of `this.setState({item})`
   - The braces matter!
 - Incorrect: Button's onClick handler invokes the function instead of referencing it
   - This: `onClick={ this.props.handleDelete(item._id) }`
