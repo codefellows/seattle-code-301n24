@@ -7,13 +7,13 @@
 - Missing: `app.use(express.json())`
 - Missing: `const cors = require('cors')`
 - Missing: `app.use(cors())`
+- Missing: There is no handler defined for updating
+  - Needs: `app.put('/items/:id', Data.updateOneItem)` in that upper section
 
-### src/routes.js
+### src/data.js
 
 - Missing Implementation: `deleteOneItem()` has not been implemented at all
-- Incorrect Status: `addAnItem()` is returning a 200 response instead of a 201
-- Missing: There is no handler defined for getting 1
-  - Needs: `routes.get('/items/:id', getOneItem)` in that upper section
+- Incorrect Status: `addAnItem()` is returning a 404 response instead of a 200
 - Misspelling: `getOneItem()` and  `updateItem()` both are using `req.param` instead of `req.params`
 - Missing: `addAnItem()` is missing `await item.save()`
   - it'll make an instance but will not save it to the database
