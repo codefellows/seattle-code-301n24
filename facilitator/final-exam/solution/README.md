@@ -14,7 +14,7 @@
 
 - Missing Implementation: `deleteOneItem()` has not been implemented at all
 - Incorrect Status: `addAnItem()` is returning a 404 response instead of a 200
-- Misspelling: `getOneItem()` and  `updateItem()` both are using `req.param` instead of `req.params`
+- Misspelling: `updateItem()` is using `req.param` instead of `req.params`
 - Missing: `addAnItem()` is missing `await item.save()`
   - it'll make an instance but will not save it to the database
 
@@ -22,7 +22,6 @@
 
 ### src/app.js
 
-- Missing: `updateItem()` and `deleteItem()` don't call `this.getItems();` to refresh the screen from the database
 - Missing `<Items ...>` doesn't have the prop with the update method in it.
   - Needs: `handleUpdate={this.updateItem}`
 

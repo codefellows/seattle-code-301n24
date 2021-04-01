@@ -23,10 +23,12 @@ class App extends React.Component {
 
   deleteItem = async (id) => {
     await axios.delete(`${API_SERVER}/items/${id}`);
+    this.getItems();
   }
 
   updateItem = async (item) => {
     await axios.put(`${API_SERVER}/items/${item._id}`, item);
+    this.getItems();
   }
 
   getItems = async () => {
