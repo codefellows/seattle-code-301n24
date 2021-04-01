@@ -68,7 +68,7 @@ How will you know that you've found them all? The tests will all pass!
 
 ### React App: Add Styling - 25 POINTS
 
-- Using React Bootstrap, style the application using Bootstrap Components
+- Using React Bootstrap, style the application in a pleasing and professional way using Bootstrap Components
 
 ### React App Notes
 
