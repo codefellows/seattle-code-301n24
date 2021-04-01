@@ -74,7 +74,7 @@ How will you know that you've found them all? The tests will all pass!
 
 - Throughout the application code, you will see that some components/markup have a prop called **data-testid** that look like the below -- **Do not remove or change these, they are required for the tests and grading**
   - ```data-testid="---"```
-- When you are running and testing the application in the browser, it'll use your server and will not operate unless it is running
+- When you are running the application and manually testing in the browser, it'll use your server and will not operate unless it is running
 - When you are running the tests with `npm test` the application will simulate having a server, so it's not necessary to have it running while doing your pure testing/bug-fixing work
 
 ## Rubric
