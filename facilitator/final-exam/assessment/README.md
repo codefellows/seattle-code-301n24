@@ -14,12 +14,25 @@ Located in the `/server` folder, this is an express server designed to perform C
 
 How will you know that you've found them all? The tests will all pass!
 
+### Server: Running the tests
+
+- Make sure the server is NOT running
+- From the root directory of the server in the terminal, run the command `npm test`
+- You should recieve a list of the tests that are passing and failing just like you have seen in your code challenges
+
 ### Server: Getting Started
+
+- create a repo on GitHub 
+- Connect it to your server:
+  - run `npm init`
+  - run `git remote add origin <repo url>`
 
 - Install your dependencies
 - Run the tests
-- Fix the bugs
+  - with the server turned off run the command: `npm test`
+- Fix the bugs - 25 POINTS
 - Repeat until all tests are passing
+- Deploy to Heroku - 12.5 POINTS
 
 ### Server: Notes
 
@@ -42,12 +55,18 @@ How will you know that you've found them all? The tests will all pass!
 
 ### React App: Getting Started
 
+- create a repo on GitHub
+- connect it to your React app:
+  - run `git remote add origin <repo url>`
+
 - Install your dependencies
 - Run the tests
-- Fix the bugs
+  - with the React App turned off run `npm test`
+- Fix the bugs - 25 POINTS
 - Repeat until all tests are passing
+- Deploy to Netlify - 12.5 POINTS
 
-### React App: Add Styling
+### React App: Add Styling - 25 POINTS
 
 - Using React Bootstrap, style the application using Bootstrap Components
 

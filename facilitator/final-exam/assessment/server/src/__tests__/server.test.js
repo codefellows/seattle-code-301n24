@@ -16,7 +16,7 @@ describe('The Server', () => {
 
     const response = await client.post('/items').send(data);
 
-    expect(response.status).toEqual(201);
+    expect(response.status).toEqual(200);
 
     return response.body;
   }
@@ -65,7 +65,7 @@ describe('The Server', () => {
     const id = record._id;
 
     const response = await client.delete(`/items/${id}`);
-    expect(response.status).toEqual(204);
+    expect(response.status).toEqual(200);
 
     const getResponse = await client.get(`/items/${id}`);
     expect(getResponse.body._id).toBeUndefined();

@@ -1,20 +1,22 @@
 'use strict';
 
 const express = require('express');
-const cors = require('cors');
-
-const crudRoutes = require('./routes.js');
-
 const app = express();
 
-app.use(cors());
+const Data = require('./data.js');
+
 app.use(express.urlencoded({extended:true}));
+
+app.get('/items', Data.getAllItems);
+app.get('/items/:id', getOneItem);
+app.delete('/items/:id', Data.deleteOneItem);
+app.post('/items', Data.addAnItem);
 
 app.use('*', (req,res) => {
   res.status(404).send('These are not the droids you are looking for.');
 });
 
-app.use( (req,res,next) => {
+app.use( (error,req,res,next) => {
   res.status(500).send(`My Bad ... ${error.message}`);
 });
 

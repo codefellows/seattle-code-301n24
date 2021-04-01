@@ -5,9 +5,8 @@
 ### src/server.js
 
 - Missing: `app.use(express.json())`
-- Incorrect: `app.use( () => crudRoutes)` should be `app.use(crudRoutes)`
-- Error Handler should be: `app.use( (error,req,res,next) => {`
-  - It's missing the error param, so it'll never work
+- Missing: `const cors = require('cors')`
+- Missing: `app.use(cors())`
 
 ### src/routes.js
 
