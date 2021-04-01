@@ -84,5 +84,5 @@ How will you know that you've found them all? The tests will all pass!
 - 25 Points: Style the application (well) with Bootstrap
 - 25 Points: Deployed and Tested in the cloud
   - Server running at Heroku
-  - React App running at Netlify
+  - React App running at Netlify, configured to talk to the deployed server 
   - Tests for both running in the green at GitHub
