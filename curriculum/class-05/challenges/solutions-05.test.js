@@ -3,7 +3,7 @@
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
-Write a function that iterates over an array of people objects 
+Write a function that iterates over an array of people objects
 and creates a new list of each person's full name using the array method 'map'.
 Each object will have the shape {firstName:string, lastName:string}
 E.g. [ { firstName:"Jane", lastName:"Doe" }, { firstName:"James", lastName:"Bond"}]
@@ -327,9 +327,9 @@ Run your tests from the console: jest challenges-09.test.js
 describe('Testing challenge 1', () => {
   test('It should convert object to full name string', () => {
 
-    const people = [{ firstName: "Jane", lastName: "Doe" }, { firstName: "James", lastName: "Bond" }];
+    const people = [{ firstName: 'Jane', lastName: 'Doe' }, { firstName: 'James', lastName: 'Bond' }];
 
-    expect(toLastNames(people)).toStrictEqual(["Jane Doe", "James Bond"]);
+    expect(toLastNames(people)).toStrictEqual(['Jane Doe', 'James Bond']);
 
   });
 });

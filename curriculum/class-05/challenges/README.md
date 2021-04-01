@@ -2,7 +2,7 @@
 
 ## Overview
 
-`arr.reduce( (accumulator,value,index) => {...}, initialvalue)` 
+`arr.reduce( (accumulator,value,index) => {...}, initialvalue)`
 
 ### Basics
 
