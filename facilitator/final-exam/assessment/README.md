@@ -30,9 +30,9 @@ How will you know that you've found them all? The tests will all pass!
 - Install your dependencies
 - Run the tests
   - with the server turned off run the command: `npm test`
-- Fix the bugs - 25 POINTS
+- Fix the bugs - 30 POINTS
 - Repeat until all tests are passing
-- Deploy to Heroku - 12.5 POINTS
+- Deploy to Heroku - 5 POINTS
 
 ### Server: Notes
 
@@ -62,11 +62,11 @@ How will you know that you've found them all? The tests will all pass!
 - Install your dependencies
 - Run the tests
   - with the React App turned off run `npm test`
-- Fix the bugs - 25 POINTS
+- Fix the bugs - 30 POINTS
 - Repeat until all tests are passing
-- Deploy to Netlify - 12.5 POINTS
+- Deploy to Netlify - 5 POINTS
 
-### React App: Add Styling - 25 POINTS
+### React App: Add Styling - 30 POINTS
 
 - Using React Bootstrap, style the application in a pleasing and professional way using Bootstrap Components
 
@@ -79,10 +79,10 @@ How will you know that you've found them all? The tests will all pass!
 
 ## Rubric
 
-- 25 Points: Fix the Express API Server (all tests passing)
-- 25 Points: Fix the React App (all tests passing)
-- 25 Points: Style the application (well) with Bootstrap
-- 25 Points: Deployed and Tested in the cloud
+- 30 Points: Fix the Express API Server (all tests passing)
+- 30 Points: Fix the React App (all tests passing)
+- 30 Points: Style the application (well) with Bootstrap
+- 10 Points: Deployed and Tested in the cloud
   - Server running at Heroku
   - React App running at Netlify, configured to talk to the deployed server 
   - Tests for both running in the green at GitHub

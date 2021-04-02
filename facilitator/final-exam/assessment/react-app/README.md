@@ -16,3 +16,6 @@ You will also see any lint errors in the console.
 
 This will run a suite of tests (just like on your code challenges).
 
+## Notes
+
+- When you see `data-<anything>="anything"`, you can ignore it. These attributes are there to make the tests work. Don't change them in any way or your tests will fail, but don't worry about them.

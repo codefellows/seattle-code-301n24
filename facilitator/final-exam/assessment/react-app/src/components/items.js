@@ -18,7 +18,7 @@ class Items extends React.Component {
               <UpdateForm item={item} handleUpdate={this.props.handleUpdate} />
               <button
                 data-testid={`delete-button-${item.name}`}
-                onClick={ this.props.handleDelete(item._id) }
+                onClick={ () => this.props.handleDelete(item._id) }
               >Delete Item</button>
             </div>
           )
