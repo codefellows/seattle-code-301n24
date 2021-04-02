@@ -2,14 +2,11 @@
 
 ## Overview
 
-
 ## Learning Objectives
 
 Review the detailed objectives in today's [student-facing readme](../README.md).
 
 ## Preparation
-
-
 
 ## Lecture Outline
 
@@ -40,19 +37,12 @@ Below is the expected lecture outline and flow. One possible way to present this
 
 ## Deployment
 
-
-
-
 ## Lab Notes
 
 ## What changed from the previous class?
 
-
 ## What might students struggle with today?
-
 
 ## Past bugs, issues or surprises...
 
 ## General Comments and Notes
-
-- Tie in the WRRC during code review. By now, students should be fairly familar with this basic WRRC and ready for our discussion of what a server is next week.
