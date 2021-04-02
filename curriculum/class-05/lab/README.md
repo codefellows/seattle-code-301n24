@@ -2,7 +2,7 @@
 
 ## Overview
 
-Get ready to take a look at a full-featured code base! The starter code contains a React + Bootstrap site with a number of example pages, complete with icons, styles, and themed layouts. Your job is to customize this code and make the site your own.
+Get ready to take a look at a full-featured code base! [The starter code](https://github.com/codefellows/code-301-react-portfolio-template){:target="_blank"} contains a React + Bootstrap site with a number of example pages, complete with icons, styles, and themed layouts. Your job is to customize this code and make the site your own.
 
 You will be deploying your React portfolio to [Netlify](https://www.netlify.com/){:target="_blank"}.
 
@@ -27,7 +27,9 @@ Actual time needed to complete: _____
 Deploy the starter code to Netlify.
 
 - You will need to create a new repository to complete this task.
-- Add the URL to your live, deployed server to your README.
+  - Create your repository using [the template repository](https://github.com/codefellows/code-301-react-portfolio-template){:target="_blank"}.
+  - You can immediately clone your new repository to your computer, and publish it to Netlify.
+- Add the URL to your live, deployed site to your README.
 
 ### Feature #2: Modify the contents
 
