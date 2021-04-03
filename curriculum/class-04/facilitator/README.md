@@ -35,13 +35,19 @@ Below is the expected lecture outline and flow. One possible way to present this
 
 ### Forms and Modals
 
-## Deployment
+- See the associated [warmup](../demo/forms-warmup) and [demo](../demo/forms-demo).
+  - To run these, start with the warmup markdown file. Have students work in small groups to read the HTML and write the JS code.
+  - After the students have mostly finished, review the solution together inside of the HTML and JS files.
+  - Next, build up a demo of integrating the same exact event handlers into a React application. Show the differences in how we update state to render information.
+  - Lastly, incorporate `react-bootstrap` and show how we can use a `Form` and `Form.Control` in the same way we would use a plain HTML `form` and `input`. (If possible, show how using the exact same event listener works for a React Bootstrap form or a plain HTML form.)
 
 ## Lab Notes
 
 ## What changed from the previous class?
 
 ## What might students struggle with today?
+
+- Students may not remember how event handlers work. Expect a lot of time for review of event handlers, in addition to adding them into our React app.
 
 ## Past bugs, issues or surprises...
 
