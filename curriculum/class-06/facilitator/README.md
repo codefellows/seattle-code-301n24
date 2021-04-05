@@ -19,7 +19,7 @@ Review the detailed objectives in today's [student-facing readme](../README.md).
 
 Below is the expected lecture outline and flow. One possible way to present this material is documented in the [example lecture](../facilitator/LECTURE-EXAMPLE.md) notes.
 
-### Monday Career Review 
+### Career Review 
 
 - Get a show of hands to see how many students reached out to PPH speaker
 - Lead a discussion on networking and meet-ups
