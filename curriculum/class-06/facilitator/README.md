@@ -2,7 +2,7 @@
 
 ## Overview
 
-
+Today is a big day! It's the first day of City Explorer and the introduction to APIs. You will demonstrating the way a React application can get information from a third part API and display that information. 
 
 ## Learning Objectives
 
@@ -11,6 +11,8 @@ Review the detailed objectives in today's [student-facing readme](../README.md).
 ## Preparation
 
 **Plan for a longer than normal lecture session. This is the start of a new block, so there's no code review, and we have lots of very new ground to cover.**
+
+  - Make sure you get a Location IQ key or be prepared to demonstrate how to get this key in front of the class with the students.
 
 
 ## Lecture Outline
@@ -41,15 +43,46 @@ Below is the expected lecture outline and flow. One possible way to present this
 - **Note**
   - If you are short on time, this can be omitted from class lecture. There are official videos that students can watch in lieu of you leading this portion of class.
 
-### Code Review
 
-Students deployed to Heroku, so review the PROCESS of that deployment with them. Don't dig in to the server code, since that will be a topic today anyway. 
+### The WRRC
 
-Make sure everyone can distinguish the roles of client and server, and how the dialog works across the internet. 
+- **Why** (5 min)
 
-Conclude Code Review time with an preview of what work will be done on the server side this week. 
+  - This is the probably the first time that most students will write code that collects information from someone else's code. This concept can be overwhelming when first introduced. Prepare to spend a lot of time answering questions to help students make these connections.
 
-This is the first day that the labs will be executed through Trello and not standard Lab requirements. The lab docs are an execution guide, not a feature set. Use a bit of Code Review time to talk through this in class.
+- **What** (10 min)
+
+  - The WRRC is how the internet works. Everyday we will build on our model and expand it as we introduce new concepts, but understanding this first request and response is crucial to understanding the whole. 
+
+- **How** (30 min)
+
+  - Use a whiteboard of your choice and draw a WRRC. Label the client and third-party API that we will visit today during our demo/lab. Connect the two with a request and a response. 
+
+- **Experimentation and Discovery Ideas**
+
+  - What are some good analogies we can use to describe the WRRC? 
+    - a server in a diner: client is the customer - chef is the API - server is the request and response (this is a good one because we can use it when it gets more complex later)
+
+
+### APIs and Asynchronous Code
+
+- **Why** (5 min)
+  - Some applications need more information than they have immediate access to
+
+- **What** (10 min)
+  - The internet is full of third-party APIs who will happily give us their information as long as we ask for it in the correct way and follow their rules (ie - some require special keys, some require that we provide a link back to them... etc...). How do we know what their rules are? We have to read their documentation and every one of them is different!
+  - Collecting information from these APIs is not instantaneous. We have to wait to get to get the data back. This is why we `async` and `await`: to tell JavaScript to wait for the data to comeback. 
+
+- **How** (30-40 min)
+  - Go through the [DEMO](../demo)
+
+- **Experimentation and Discovery Ideas**
+  - Start off simple - APIs like pokemon are easy for students to wrap their heads around and they don't require keys then move onto Location IQ.
+
+
+## Lab Notes
+
+This is the first day that the labs will be executed through Trello and not standard Lab requirements. The lab docs are an execution guide, not a feature set. Make sure you talk through the Trello Board process before the end of lecture.
 
 - [City Explorer Trello Board](https://trello.com/b/ZmD87LCC)
   - Each lab is a different color
@@ -61,34 +94,10 @@ This is the first day that the labs will be executed through Trello and not stan
 
 During your lectures, refer to the board to see the data contract/requirements for each API!
 
-### The WRRC
-
-- **Why** (5 min)
-
-- **What** (10 min)
-
-- **How** (30 min)
-
-- **Experimentation and Discovery Ideas**
-
-
-### Node.js, NPM, Servers
-
-- **Why** (5 min)
-
-- **What** (10 min)
-
-- **How** (30-40 min)
-
-- **Experimentation and Discovery Ideas**
-
-
-## Lab Notes
-
 
 ## What changed from the previous class?
 
-
+EVERYTHING! New concepts - new lab - new everything.
 
 ## What might students struggle with today?
 
@@ -100,7 +109,7 @@ During your lectures, refer to the board to see the data contract/requirements f
 
 ## Past bugs, issues or surprises...
 
-- Students really struglle with their .env file. Common errors:
+- Students really struggle with their .env file. Common errors:
   - MAP_KEY=907823
   - REACT_APP_map_key=0-09230
   - REACT_APP_MAP_KEY = 029u0i2402
