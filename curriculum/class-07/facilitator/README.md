@@ -72,6 +72,17 @@ Review the detailed objectives in today's [student-facing readme](../README.md).
     - They standardize the process
 - **Experimentation and Discovery Ideas**
 
+### Deploy Server to Heroku
+
+- **Why** (5 min)
+  - We want our server to be accessible anytime/anywhere. Not just on our local machine.
+
+- **What** (5 min)
+  - Heroku is a cloud platform service where we can deploy our server applications.
+
+- **How** (10 min)
+  - Using the demo code, show students how to deploy an application using Heroku. Point out the [cheatsheet](../cheatsheets/heroku.md) as a resource available to them in case they need something to refer back to later.
+
 ## Lab Notes
 
 ## What changed from the previous class?
