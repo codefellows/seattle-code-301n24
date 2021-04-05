@@ -28,7 +28,7 @@
 ### src/components/add-item.js
 
 - Missing: There's not a default export in this class
-- Wrong Var: `handleChange()` does a `this.setState({})` with `field` instead of `formData`
+<!-- - Wrong Var: `handleChange()` does a `this.setState({})` with `field` instead of `formData` -->
 
 ### src/components/items.js
 

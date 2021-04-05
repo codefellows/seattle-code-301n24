@@ -24,8 +24,8 @@ How will you know that you've found them all? The tests will all pass!
 
 - create a repo on GitHub 
 - Connect it to your server:
-  - run `npm init`
-  - run `git remote add origin <repo url>`
+  - run `git init`
+  - run `git remote add origin <url-of-the-repo-you-just-created>`
 
 - Install your dependencies
 - Run the tests
@@ -57,7 +57,8 @@ How will you know that you've found them all? The tests will all pass!
 
 - create a repo on GitHub
 - connect it to your React app:
-  - run `git remote add origin <repo url>`
+  - run `git init`
+  - run `git remote add origin <url-of-the-repo-you-just-created>`
 
 - Install your dependencies
 - Run the tests
