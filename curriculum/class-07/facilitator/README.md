@@ -33,8 +33,6 @@ Review the detailed objectives in today's [student-facing readme](../README.md).
 - **Note**
   - If you are short on time, this can be omitted from class lecture. There are official videos that students can watch in lieu of you leading this portion of class.
 
-### Code Review
-
 ### Code Review / Rebuild / Review
 
 - **Why** (5 min)
@@ -42,10 +40,10 @@ Review the detailed objectives in today's [student-facing readme](../README.md).
   - WRRC drawings are great to cement why we are doing thing and where in that process we are
 - **What** (10 min)
   - The WRRC should be coming more into focus now that we've built some of it out
-  - The third party API should feed our Front-End data
+  - The third party API should feed our front-end data
 - **How** (30 min)
   - Review the feature tasks & requirements
-  - Rebuild the Front-End (matching it to the requirements)
+  - Rebuild the front-end (matching it to the requirements)
   - Deploy it again, as a review.
 
 ### Demo - Custom Express Servers and node.js
