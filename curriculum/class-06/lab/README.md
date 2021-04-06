@@ -23,7 +23,7 @@ You will then work independently for the rest of the day, implementing your plan
 
 - We will be using the [Trello](https://trello.com/home){:target="_blank"} project management tool for the duration of this project.
 - To maximize your experience with Trello, you should create a free Trello account by clicking on the `Sign Up` button.
-- After creating an account, go to the [City Explorer Trello Board](https://trello.com/b/pd16s6z4/city-explorer){:target="_blank"}, open the "... Show Menu" link, click the "... More" link, and then click "Copy Board". Before you create it, be sure to "Change" from Private to "Public" (and click "Yes, Make Board Public") so your instructional team can see your work. Now, click "Create" to add a copy to your personal account.
+- After creating an account, go to the [City Explorer Trello Board](https://trello.com/b/Ajj9Cbac/module-2-city-explorer){:target="_blank"}, open the "... Show Menu" link, click the "... More" link, and then click "Copy Board". Before you create it, be sure to "Change" from Private to "Public" (and click "Yes, Make Board Public") so your instructional team can see your work. Now, click "Create" to add a copy to your personal account.
 - This Trello board contains all of the features required to complete this lab assignment.
 - In the "...Show Menu" sidebar, click the "Search Cards" link and filter by lab to see the assignment for just the current day.
 - Review the user stories and analyze the feature requests and requirements in the lab.
