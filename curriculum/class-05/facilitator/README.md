@@ -77,6 +77,7 @@ Below is the expected lecture outline and flow. One possible way to present this
 ## Lab Notes
 
 - Encourage students to 'press the buttons' and follow their curiosity. There is a lot in this lab that we have not covered, but that is likely what they will experience on the job. Talk about strategies for how they can tackle this code base.
+- This lab uses a template repo for its starter code. Introduce students to how to use a template repo as part of your discussion of the starter code.
 
 ## What changed from the previous class?
 

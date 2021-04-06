@@ -2,7 +2,7 @@
 
 ## Overview
 
-Today is a big day! It's the first day of City Explorer and the introduction to APIs. You will demonstrating the way a React application can get information from a third part API and display that information. 
+Today is a big day! It's the first day of City Explorer and the introduction to APIs. You will demonstrate the way a React application can get information from a third part API and display that information.
 
 ## Learning Objectives
 
@@ -12,14 +12,13 @@ Review the detailed objectives in today's [student-facing readme](../README.md).
 
 **Plan for a longer than normal lecture session. This is the start of a new block, so there's no code review, and we have lots of very new ground to cover.**
 
-  - Make sure you get a Location IQ key or be prepared to demonstrate how to get this key in front of the class with the students.
-
+- Make sure you get a Location IQ key or be prepared to demonstrate how to get this key in front of the class with the students.
 
 ## Lecture Outline
 
 Below is the expected lecture outline and flow. One possible way to present this material is documented in the [example lecture](../facilitator/LECTURE-EXAMPLE.md) notes.
 
-### Career Review 
+### Career Review
 
 - Get a show of hands to see how many students reached out to PPH speaker
 - Lead a discussion on networking and meet-ups
@@ -43,7 +42,6 @@ Below is the expected lecture outline and flow. One possible way to present this
 - **Note**
   - If you are short on time, this can be omitted from class lecture. There are official videos that students can watch in lieu of you leading this portion of class.
 
-
 ### The WRRC
 
 - **Why** (5 min)
@@ -52,17 +50,16 @@ Below is the expected lecture outline and flow. One possible way to present this
 
 - **What** (10 min)
 
-  - The WRRC is how the internet works. Everyday we will build on our model and expand it as we introduce new concepts, but understanding this first request and response is crucial to understanding the whole. 
+  - The WRRC is how the internet works. Everyday we will build on our model and expand it as we introduce new concepts, but understanding this first request and response is crucial to understanding the whole.
 
 - **How** (30 min)
 
-  - Use a whiteboard of your choice and draw a WRRC. Label the client and third-party API that we will visit today during our demo/lab. Connect the two with a request and a response. 
+  - Use a whiteboard of your choice and draw a WRRC. Label the client and third-party API that we will visit today during our demo/lab. Connect the two with a request and a response.
 
 - **Experimentation and Discovery Ideas**
 
-  - What are some good analogies we can use to describe the WRRC? 
+  - What are some good analogies we can use to describe the WRRC?
     - a server in a diner: client is the customer - chef is the API - server is the request and response (this is a good one because we can use it when it gets more complex later)
-
 
 ### APIs and Asynchronous Code
 
@@ -71,14 +68,13 @@ Below is the expected lecture outline and flow. One possible way to present this
 
 - **What** (10 min)
   - The internet is full of third-party APIs who will happily give us their information as long as we ask for it in the correct way and follow their rules (ie - some require special keys, some require that we provide a link back to them... etc...). How do we know what their rules are? We have to read their documentation and every one of them is different!
-  - Collecting information from these APIs is not instantaneous. We have to wait to get to get the data back. This is why we `async` and `await`: to tell JavaScript to wait for the data to comeback. 
+  - Collecting information from these APIs is not instantaneous. We have to wait to get to get the data back. This is why we `async` and `await`: to tell JavaScript to wait for the data to come back.
 
 - **How** (30-40 min)
   - Go through the [DEMO](../demo)
 
 - **Experimentation and Discovery Ideas**
   - Start off simple - APIs like pokemon are easy for students to wrap their heads around and they don't require keys then move onto Location IQ.
-
 
 ## Lab Notes
 
@@ -93,7 +89,6 @@ This is the first day that the labs will be executed through Trello and not stan
 - Students will submit a proper submission to canvas
 
 During your lectures, refer to the board to see the data contract/requirements for each API!
-
 
 ## What changed from the previous class?
 

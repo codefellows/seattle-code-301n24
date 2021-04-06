@@ -1,4 +1,3 @@
-
 # Asynchronous code, and APIs
 
 Today you will be building a React application that uses the Axios library to make user-initiated reqeusts for data from a thrid-party API.
