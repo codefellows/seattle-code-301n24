@@ -1,9 +1,10 @@
 # Warm-Up Exercise
-Break the following code into components?
+
+Your teammate is new to React and has asked for your advice on this code. How would you advise them to break this code into components?
 
 ## app.js
 
-```
+```jsx
 import React from 'react';
 
 class App extends React.Component {
