@@ -4,6 +4,7 @@ const express = require('express');
 require('dotenv').config();
 const cors = require('cors');
 const superagent = require('superagent');
+const { search } = require('superagent');
 
 const app = express();
 
@@ -11,27 +12,33 @@ app.use(cors());
 
 const PORT = process.env.PORT;
 
-app.get('/representatives', (request, response) => {
-  const address = request.query.address;
+app.get('/photo', (request, response) => {
+  const searchQuery = request.query.query;
 
-  const url = 'https://www.googleapis.com/civicinfo/v2/representatives';
+  const url = 'https://api.unsplash.com/photos/';
   const query = {
-    address,
-    key: process.env.GOOGLE_CIVIC_KEY
+    client_id: process.env.UNSPLASH_PRIVATE_KEY,
+    query: searchQuery
   }
 
   superagent
     .get(url)
     .query(query)
     .then(results => {
-      const officials = results.body.officials;
-      response.status(200).send(officials)
+      const photoArray = results.body.map(photo => new Photo(photo));
+      response.status(200).send(photoArray)
     })
     .catch(error => {
       console.error('error from superagent', error);
       response.status(500).send('server error');
     });
 });
+
+function Photo(obj) {
+  this.img_url = obj.urls.regular;
+  this.original_image = obj.links.self;
+  this.photographer = obj.user.name;
+}
 
 app.get('*', notFound);
 
