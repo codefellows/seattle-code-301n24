@@ -2,7 +2,7 @@
 
 ## Overview
 
-Today, we venture into the world of APIs. Students will be extending their server and reaching out to 3rd party services to fetch data in real time. This will introduce them to the concept of promises and asynchronous processing.
+Today, we venture into the world of APIs. Students will be extending their server and reaching out to 3rd party services to fetch data in real time. This will introduce them to the concept of promises and asynchronous processing on the back-end.
 
 ## Learning Objectives
 
@@ -11,7 +11,9 @@ Review the detailed objectives in today's [student-facing readme](../README.md).
 ## Preparation
 
 - Practice building and talking through the [the promises demo](../demo/promises.js)
-- Practice refactoring from the [previous lab solution](../../class-06/solution) into [the server demo](./demo/server) for today
+- Make sure you have all the API keys you need for the demos including:
+  - Location IQ
+  - [Unsplash](https://unsplash.com/developers)
 
 - Familiarize yourself with the API's that your students will be using in their labs. You should have your own local server running, with each API configured according the `.env.sample` file, found in the running code: [API setup details](../../city-explorer-app/back-end/.env.sample){:target="_blank"}
 
@@ -37,8 +39,6 @@ Below is the expected lecture outline and flow. One possible way to present this
   - Follow the [Demo Code](../challenges/DEMO.md)
 - **Note**
   - If you are short on time, this can be omitted from class lecture. There are official videos that students can watch in lieu of you leading this portion of class.
-
-### Code Review
 
 ### Code Review / Rebuild / Review
 
@@ -86,7 +86,8 @@ Below is the expected lecture outline and flow. One possible way to present this
 - **How** (30 min)
   - Demo the signup and access key retrieval process
     - Location IQ
-    - Zomato
+    - Unsplash
+      - This API does a great job of telling you exactly what it requires for you to use their information. Go through this slowly with the students and talk about how to incorperate it into the application.
   - Integrate into your server application
     - Fetch Data
     - Massage it into shape (constructors)

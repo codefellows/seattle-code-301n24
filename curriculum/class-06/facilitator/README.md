@@ -102,6 +102,10 @@ EVERYTHING! New concepts - new lab - new everything.
     - where the .env lives
     - what it is and what happens to the variables when the code goes into production
 
+- Location IQ referrer:
+  - Make sure you add `http://localhost:3000/` as a referrer. The slash at the end is super important or it won't work.
+  - Once students deploy their applictions, they will need to add their deployed appliction link to the list of approved referrer links.   
+
 ## Past bugs, issues or surprises...
 
 - Students really struggle with their .env file. Common errors:

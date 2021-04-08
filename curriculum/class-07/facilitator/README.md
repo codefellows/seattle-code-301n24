@@ -96,3 +96,5 @@ Today is a mind blowing day for students. Understanding how the Front-End and th
 ## Past bugs, issues or surprises...
 
 ## General Comments and Notes
+
+Remind students to get API keys for tomorrow's lab. This is part of their reading assignment.
