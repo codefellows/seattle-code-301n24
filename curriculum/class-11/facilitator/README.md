@@ -1,4 +1,4 @@
-# Facilitators Guide: Server-side templating with EJS
+# Facilitators Guide: 
 
 ## Overview
 
@@ -14,12 +14,13 @@ Review the detailed objectives in today's [student-facing readme](../README.md).
 ## Preparation
 
 - Sign up for an account with Auth0
+- Be familiar with the Auth0 docs - especially this [page](https://auth0.com/docs/libraries/auth0-react)
 
 ## Lecture Outline
 
 Below is the expected lecture outline and flow. One possible way to present this material is documented in the [example lecture](../facilitator/LECTURE-EXAMPLE.md) notes.
 
-### Monday Career Review 
+### Career Review 
 
 - Get a show of hands to see how many students reached out to PPH speaker
 - Lead a discussion on networking and meet-ups
@@ -51,9 +52,17 @@ Below is the expected lecture outline and flow. One possible way to present this
 ### Authentication
 
 - **Why** (5 min)
+  - We authenticate so that we know the user is who they say they are
+  - So that we can persist preferences and access based on credentials
 - **What** (10 min)
+  - Auth0 is a third party library that uses 0Auth to authenticate a user. It does all the work for us behind the scenes, so the big win here is being able to read through the documentation and put it into place in our code base.
 - **How** (30 min)
+  - Auth0 uses functional components in their documentation rather than class components. This is a great opportunity to discuss the history of React and why we are starting with class components (it will be used in a lot of legacy code while most new code will be written in functional components). This is also a great opportunity to point out that even though students haven't learned functional components, they can still understand what is happening and thus, use the library. 
+  - Using the documentation on this [page](https://auth0.com/docs/libraries/auth0-react), walk students through setting up Auth0.
+  - Their lab will be to incorporate Auth0 into an existing code base that includes Browser Router (remember that from lab 05). 
 - **Experimentation and Discovery Ideas**
+  - The documentation demonstrates how to write the `Profile` component as a class component. You can play around with writing the other components as class components as well. 
+
 
 ## Lab Notes
 
@@ -62,6 +71,8 @@ Below is the expected lecture outline and flow. One possible way to present this
 - New topic, starting to build a new app.
 
 ## What might students struggle with today?
+
+ - Working with a new partner for an entire week can be challenging. Encourage them to spend time working on the conflict agreement ahead of time and review pair programing practices in order to head off some of these difficulties. Also be sure to talk about WHY it is important to pair program and what they can expect in the industry. 
 
 ## Past bugs, issues or surprises...
 
