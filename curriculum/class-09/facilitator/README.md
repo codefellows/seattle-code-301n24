@@ -68,7 +68,7 @@ Below is the expected lecture outline and flow. One possible way to present this
   - Seek opportunities to extend or abstract functionality
 - **How** (30 min)
   - Demo: Refactor simple code
-  - Demo: Refactor city explorer code
+  - Demo: Refactor city explorer code from code review
 - **Experimentation and Discovery Ideas**
   - Have the students drive the discovery (with gentle leadership)
 
@@ -85,12 +85,14 @@ Below is the expected lecture outline and flow. One possible way to present this
   - Breaking code up into smaller pieces (into modules)
   - A way of segregating reusable  pieces of code that can be shared with other projects
 - **How** (45 min)
+  - Depending on time, you could show the Jobs Board already built out and then use it as a starting point to modularize. However, if you have time, building it from scratch, would be best for stacked learning.
   - Demo: Jobs Board
 - **Experimentation and Discovery Ideas**
+  - Once you have demonstrated how to modularize code on the back-end, put students into break out rooms and give them a chance to practice the modularization on their own. When you meet back together, you can go over different ideas and clear up any confusions.
 
 ## Lab Notes
 
-- No new functionality today, this lab is all about refactoring
+- No new functionality today, this lab is all about refactoring and modularization.
 - Students should be encouraged to start from a stable state
 
 ## What changed from the previous class?
@@ -102,7 +104,7 @@ Below is the expected lecture outline and flow. One possible way to present this
 
 ## What might students struggle with today?
 
-- The concept of modules will be tough at first. KISS is the rule of the day.
+- The concept of modules will be tough at first. KISS is the rule of the day (Keep It Super Simple).
   - No need to dive deep into the mechanics, just get the syntax right.
 - Understanding the module pattern
 - Making sense of what belongs where

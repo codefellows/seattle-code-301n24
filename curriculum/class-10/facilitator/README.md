@@ -1,8 +1,8 @@
-# Facilitators Guide: The Call Stack
+# Facilitators Guide: Persisting Data In Memory
 
 ## Overview
 
-Today is a hands-on class to reinfornce the concepts of modularization while introducing the idea of pagination. 
+Today is a hands-on class to reinfornce the concepts of modularization while introducing the idea in memory persistance.
 
 ## Learning Objectives
 
@@ -41,30 +41,27 @@ Below is the expected lecture outline and flow. One possible way to present this
 
 > Code Review for today is covered when you break the students up into groups and them work together.
 
-### Modularization and Pagination Workshop
+### In Memory Persistance
 
 - **Why** (5 min)
-  - students need hands on practice 
-  - hearing how peers solved a problem they were struggling with is invaluable
-  - being able to explain how they solved a problem to a struggling peer is essisntial to solidfying knowledge
+  - To reduce the number of hits on an API
+  - Global Cashing
+  - Increases the performance of everything (expect for memory)
 
 - **What** 
-  - break students up into groups of three
-  - give them the starter demo code and instruct them to modularize both the front-end and the back-end
-  - If students finish early, have them figure out a way to paginate the recipes
-    - Give them the hint that this API uses a `from` and `to` query params
-  - give them 45 minutes to an hour to do this while you check in on each group
+  - In memory persistance is simply an object that is going to hold the results from our API call so that we don't have to hit the API every time a uers asks for the same city. The second time a user asks for a city (or the thrid etc...), we will simply return the results that we have in our cache rather than make another API call. 
 
 - **How** (60 min)
-  - After a break, bring the class back together and lead a discussion on the successes and challenges of that exercise
-  - Go through the code and modularize both the front-end and the back-end. Be sure the spend time talking about how to deal with promises
-  - Add an in-memory database to the code
+  - Build out the demo with the students, but start with a detailed drawing of the WRRC. Be sure to include the in memory database in your drawing. Wait until students have a firm grasp of the higher level process before proceeding to the code. 
 
 - **Experimentation and Discovery Ideas**
+  - How long might you want to keep data cached? 
+  - How could you keep track of how long data is cached?
+  - Would could you do if data is too old?
 
 ## Lab Notes
 
-- Today is the final day of the City Explorer Lab. Students will add an in-memory database into their server code to store location obejcts as well as add a route for movies. 
+- Today is the final day of the City Explorer Lab. Students will add an in-memory database into their server code to store location obejcts. 
 
 ## What changed from the previous class?
 
@@ -72,8 +69,7 @@ Below is the expected lecture outline and flow. One possible way to present this
 
 ## What might students struggle with today?
 
-- Understanding pagination
-- Identifying which line of code corresponds to each step of the WRRC diagram
+- There is not a lot of code to write, but understanding WHERE to put the code will be challenging
 
 ## Past bugs, issues or surprises...
 
