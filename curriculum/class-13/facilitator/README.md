@@ -1,8 +1,9 @@
+
 # Facilitators Guide: Updating and Deleting Resources
 
 ## Overview
 
-Today, we introduce the ability to update or delete a book from the collection. The to-do app demo contains the code to update a single task, but not the code to delete a book. Discuss the limitation of HTML5 forms only being capable of getting and posting resources. There are several work-arounds, and the one we have chosen to teach involves the `method-override` npm package.
+
 
 ## Learning Objectives
 
@@ -10,9 +11,8 @@ Review the detailed objectives in today's [student-facing readme](../README.md).
 
 ## Preparation
 
-- Remind students that they will work with the same partner for labs 2 and 3.
-- Familiarize yourself with the mechanics behind [Method Override](./DEMO.md)
-- Practice [the demo](../demo/todo-app)
+- Remind students that they will work with the same partner.
+- Practice [the demo](../demo/)
 
 ## Lecture Outline
 
@@ -39,49 +39,35 @@ Below is the expected lecture outline and flow. One possible way to present this
 
 ### Code Review
 
-- Conduct another exercise where the class traces the path of code execution. This exercise will differ from the exercise in class 7 because of server-side rendering and EJS loading partials.
-- If it helps, use a group's broken code for code review in a mob-debugging session. Facilitate this session to prevent students from talking over each other, but allow students to suggest the next steps and lead the debugging process. This may also be an option in lecture 14, depending on the progress of the cohort.
-
-### Delete and Update
+### Create and Delete
 
 - **Why** (5 min)
-  - Delete and Update complete the CRUD cycle
-  - Results in a truly "Full Stack" application
+  - Just like users want to be able to READ data, they also want to be able to CREATE new data (ie. leaving a review on a site, making a blog post, adding contacts online).
+  - With CREATING and READING data, users want to be able to DELETE data
+  - This gets us to the CR_D of a CRUD application
 - **What** (10 min)
   - With REST, the WRRC is, in it's essence, an ACTION and a THING: a VERB is happening to a NOUN... Today: new verbs!
   - Identify the resource you want to work with
   - Usually by ID
   - Communicate your intent to the server
     - ID, Action to take, and possibly any changed data
-- **How** (30 min)
-  - The server wants to use REST verbs (GET/POST/PUT/DELETE)
-  - The browser can only use GET and POST
-  - We need some help to send those Actions down
-    - Express has custom middleware called "Method Override" that allows us to fudge this.
-    - Do a walk through of just the middleware to explain it's operation.
+- **How** (60 min)
+  - The server wants to use REST verbs (GET/POST/DELETE and tomorrow we will cover PUT)
+  - Draw the WRRC using the RESTful verbs
+  - DEMO build: Gift Registry
+    - This is a huge demo. You might want to begin with some of the demo pre-built to save time so you can focus on just the new concepts of CREATING a resource and DELETING a resource on both the front-end and the back-end. 
 - **Experimentation and Discovery Ideas**
-
-### Demo Build
-
-- Implement Update and Delete in the To Do app, using Method Override
-- Note clearly: When we redirect after doing one of these actions, we are chaining together 2 WRRCs. Draw it! 
 
 ## Lab Notes
 
-- Today will likely serve as a catch-up day if students have fallen behind.
-- Be prepared for off-topic questions as a result
+- This is the last big lab that students will have. They will likely be feeling stressed as they prepare for the upcoming test.
 
 ## What changed from the previous class
 
-- The user can now update or delete a single book.
+- The user can now add or delete a single book.
 
 ## What might students struggle with today
-
-- Forgetting to include the hidden input in their form
-- Students will be nervous about the test tomorrow. Point out that quiz #6 is available for them to use as a study guide. It is worth 0 points so they will not be penalized if they miss questions.
 
 ## Past bugs, issues or surprises
 
 ## General Comments and Notes
-
-![Method override](whiteboard-diagrams/method-override.png)
