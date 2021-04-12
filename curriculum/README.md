@@ -25,11 +25,11 @@ As a result of completing Code 301, students will:
 - Work with string, array, and object data structures and algorithms to solve code challenges with pure JavaScript programming.
 - Design dynamic front end and back end applications which can function together or independently and are deployed to cloud platforms.
 - Explain the fundamentals of how the World Wide Web works, over the internet.
-- Utilize dependency management techniques to build with third-party libraries such as ExpressJS, React, EJS, and Bootstrap.
+- Utilize dependency management techniques to build with third-party libraries such as ExpressJS, React, and Bootstrap.
 - Persist data Mongo databases, sourced from third-party API or user-generated content.
 - Follow agile software development practices during week-long sprints, including pair-programming, stand-ups, daily retrospectives, project management with Kanban boards, regular refactoring, and working in a shared code base.
 - Enroll in a Code 401 course or attain an entry-level website development job or internship by completing the course requirements.
 
 ### Index of cheatsheets and resources
 
-- [Heroku Cheatsheet](/class-08/cheatsheets/heroku.md)
+- [Heroku Cheatsheet](/class-07/cheatsheets/heroku.md)
