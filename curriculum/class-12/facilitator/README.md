@@ -2,7 +2,7 @@
 
 ## Overview
 
-Today we introduce data modeling and persistance with MongoDB and Mongoose. We will be hard-coding data into the database that our front-end will be able to request and display. This adds a new layer to our WRRC and some big concepts as we dive into CRUD and persistance. 
+Today we introduce data modeling and persistence with MongoDB and Mongoose. We will be hard-coding data into the database that our front-end will be able to request and display. This adds a new layer to our WRRC and some big concepts as we dive into CRUD and persistence. 
 
 ## Learning Objectives
 
