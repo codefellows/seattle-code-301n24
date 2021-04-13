@@ -6,6 +6,7 @@ Review the Submission Instructions for guidance on completing and submitting thi
 
 ## Reading
 
+- [API Design Best Practices](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design)
 
 <!-- ## Additional Resources
 
