@@ -20,6 +20,7 @@ You should be shown a working version number, like this or higher:
 heroku/7.42.1 linux-x64 node-v12.16.2
 ```
 
+Take a screen shot of the working version number to submit.
 ---
 
 ### [⇐ Previous](./README.md) | [Next ⇒](./2-mongo.md)

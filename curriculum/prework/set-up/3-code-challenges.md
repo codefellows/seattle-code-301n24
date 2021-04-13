@@ -44,6 +44,8 @@ Once this process completes, you will have a freshly setup "DS&A" folder structu
 
 > What are those tests? We will cover that in lecture as well as how to use this repository on a daily basis. At this point, our goal is prove that it's properly setup.
 
+Your GitHub link to your Data Structures Repo will be your submission for this part of the setup assignment.
+
 ---
 
 ### Mission Accomplished!

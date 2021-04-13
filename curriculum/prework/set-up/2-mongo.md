@@ -97,6 +97,8 @@ To permanently disable this reminder, run the following command: db.disableFreeM
 
 The `>` at the bottom is what you're really looking for. It's a prompt that lets you know you are connected with the **mongo client** to your running **mongo server**
 
+Take a screen shot of your terminal when you type in `mongo`. You will submit this screen shot along with your other computer set-up screen shots for this assignment.
+
 Type `exit` to return to your bash shell. MongoDB is successfully installed.
 
 ---
