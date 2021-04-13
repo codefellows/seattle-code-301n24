@@ -2,7 +2,8 @@
 const mongoose = require('mongoose');
 
 const giftSchema = new mongoose.Schema({
-  name: {type: String}
+  name: {type: String},
+  description: {type: String}
 });
 
 const birthdayPerson = new mongoose.Schema({
