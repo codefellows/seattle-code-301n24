@@ -1,4 +1,4 @@
-# Facilitators Guide:
+# Facilitators Guide: Updating a Resource
 
 ## Overview
 

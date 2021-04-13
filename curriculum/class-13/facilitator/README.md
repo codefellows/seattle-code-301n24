@@ -3,7 +3,11 @@
 
 ## Overview
 
+Today, we dive into the C and D of CRUD: CREATE and DELETE. 
 
+Last class, we covered READ, so it makes sense that the next step would be to CREATE a resource. That will allow us to remove the hard-coded data in the server and let the users dynamically add a resources whenever they want. You will need to cover the request.body as well as `app.use(express.json())`. 
+
+DELETING a resource is next. We will send an index in the params and use that index to locate the resource and delete it. 
 
 ## Learning Objectives
 

@@ -13,10 +13,12 @@ class Gifts extends React.Component {
   render() {
     return(
       <>
-      <h2>My Cats</h2>
+      <h2>Welcome to the Gift Registry!</h2>
+      <p>To find your registry, enter your email below.</p>
       {this.props.gifts.length && this.props.gifts.map((gift, idx) => (
         <div key={idx}>
-          {gift.name}
+          <p>name:{gift.name}</p>
+          <p>description:{gift.description}</p>
           <button onClick={() => this.deleteGift(idx)}>delete</button>
         </div>
       ))}
