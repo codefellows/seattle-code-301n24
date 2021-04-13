@@ -12,7 +12,6 @@ Today we will use our express server to request information from third party API
 - Code review of lab assignment
 - Relational vs. non-relational databases
 - Data modeling and schemas
-- Primary keys and foreign keys
 - Code Demo
 - Lab Preview
 

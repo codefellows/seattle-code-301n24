@@ -1,11 +1,13 @@
 # Overview of today's warm-up challenge
 
-This sample is written in JavaScript and JSX. It is a stateful React component that renders a some basic information and a list from state. It will increase the persons age (and re-render the output) when clicked.
+Here is a list of errors:
 
-## Items of Interest
-
-- `import`
-- `class`
-- event handling
-- state, managed by `setState`
-- `map()` used to render an array of items
+* missing: `super(props)`
+* `age` should have a starting value of the data type of what it is (ie 0)
+* `pets` should be an array not an object
+* `this.setState({ age: this.state.age + 1})`
+* `{this.name}` should be `{this.state.name}`
+* the <ul> should `map` over the array not `forEach`
+* the `.map` is missing the unique key
+* missing the `return`
+* needs a parent element to wrap everything
