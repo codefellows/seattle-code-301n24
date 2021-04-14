@@ -26,7 +26,6 @@ As a result of completing lecture 14 of Code 301, students will:
 - Be able to update a resources in a mongo database
 - Be able to update a resource instantly in a React application and have that resource state persist on reload
 
-
 ### Hosted Mongo Databases: Atlas
 
 While you can run Mongo on your own machines, it's quite common to run an instance of Mongo in the cloud so that you can take advantage of better hardware, more memory and higher speed networks. Mongo offers a hosted cloud database service called "Atlas" ... once you've got this setup, it's easy to connect your API servers from anywhere in the world to use it.

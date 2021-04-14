@@ -113,6 +113,7 @@ EVERYTHING! New concepts - new lab - new everything.
   - REACT_APP_map_key=0-09230
   - REACT_APP_MAP_KEY = 029u0i2402
   - REACT_APP_MAP_KEY = "0290u02954u0"
+- If students do not put the trailing `/` in their referrer url in Location IQ, their key will not work
 
 ## General Comments and Notes
 
