@@ -24,7 +24,7 @@ brew install mongodb-community
 After installation completes, run the following command to start the MongoDB Server:
 
 ```bash
-brew services start mongodb-community@4.4
+brew services start mongodb-community
 ```
 
 ### Windows/WSL Users
