@@ -2,7 +2,7 @@
 
 ## Overview
 
-It's time to clean up your code base. 
+It's time to clean up your code base.
 
 ## Resources
 

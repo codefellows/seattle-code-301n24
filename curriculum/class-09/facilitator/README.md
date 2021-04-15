@@ -2,8 +2,6 @@
 
 ## Overview
 
-
-
 ## Learning Objectives
 
 Review the detailed objectives in today's [student-facing readme](../README.md).
@@ -75,7 +73,7 @@ Below is the expected lecture outline and flow. One possible way to present this
 ### Modularization
 
 - **Why** (5 min)
-  - To Keep it organized
+  - To keep it organized
   - To make it DRY
   - To make it testable
   - To make it reuseable
