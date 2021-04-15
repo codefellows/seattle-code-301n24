@@ -18,7 +18,7 @@ CHALLENGE 2
 
 Write a function named findMax that takes in a matrix of positive numbers and returns the number with the highest value.
 
-For example: 
+For example:
 [
   [1, 3, 4, 5],
   [4, 5, 6],
@@ -29,10 +29,12 @@ return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
   //<solution>
-  let maxValue = 0
+  let maxValue = 0;
   matrix.forEach((arr) => {
     arr.forEach(value => {
-      if(value > maxValue){ maxValue = value }
+      if(value > maxValue){
+        maxValue = value;
+      }
     });
   });
 
@@ -45,7 +47,7 @@ CHALLENGE 3
 
 Write a function named totalSum that takes in a matrix of numbers and returns the totalSum of all the numbers.
 
-For example: 
+For example:
 [
   [1, 3, 4, 5],
   [4, 5, 1],
@@ -56,7 +58,7 @@ return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
   //<solution>
-  let totalSum = 0
+  let totalSum = 0;
   matrix.forEach((arr) => {
     arr.forEach(value => {
       totalSum += value;

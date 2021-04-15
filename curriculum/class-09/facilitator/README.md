@@ -2,8 +2,6 @@
 
 ## Overview
 
-
-
 ## Learning Objectives
 
 Review the detailed objectives in today's [student-facing readme](../README.md).
@@ -75,7 +73,7 @@ One possible way to present this material is documented in the [example lecture]
 ### Modularization
 
 - **Why** (5 min)
-  - To Keep it organized
+  - To keep it organized
   - To make it DRY
   - To make it testable
   - To make it reuseable

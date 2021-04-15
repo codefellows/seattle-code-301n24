@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this lab assignment, you will show live weather and movie data in response to City Explorer searches. This data comes from third-party APIs, that allow you to make queries with an access token (or key). To keep your key secure, you can't expose it in your front-end code, but you can use it from within your own custom back-end API server code you started in the last lab. Your web client will make a request to your custom API server, which will in turn use the key to make a request to the data API. When your server gets the data back, you can munge the data as you like, and send it on back to the web client. 
+In this lab assignment, you will show live weather and movie data in response to City Explorer searches. This data comes from third-party APIs, that allow you to make queries with an access token (or key). To keep your key secure, you can't expose it in your front-end code, but you can use it from within your own custom back-end API server code you started in the last lab. Your web client will make a request to your custom API server, which will in turn use the key to make a request to the data API. When your server gets the data back, you can wrangle the data as you like, and send it on back to the web client.
 
 ## Resources
 
@@ -10,8 +10,7 @@ In this lab assignment, you will show live weather and movie data in response to
 
 [WeatherBit API](https://www.weatherbit.io/api){:target="_blank"}
 
-[The Movie DB API Docs](https://developers.themoviedb.org/3/getting-started/introduction)
-
+[The Movie DB API Docs](https://developers.themoviedb.org/3/getting-started/introduction){:target="_blank"}
 
 ## Process
 

@@ -3,7 +3,7 @@
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
-Write a function that finds maximum value in an array
+Write a function that finds the maximum value in an array
 using the 'reduce' method.
 
 E.g. [4,2,7,5,9,2] -> 9
@@ -43,14 +43,14 @@ const checkValues = (obj, value) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-You are given an object with names and their coresponding phone numbers that looks like this: 
+You are given an object with names and their coresponding phone numbers that looks like this:
 {
   'Grace Hopper': '222-303-5938',
   'Ada Lovelace': '222-349-9842',
   'Alan Turing': '222-853-5933'
 }
 
-HR has asked you to change the data to make it easier to print so that it looks like this: 
+HR has asked you to change the data to make it easier to print so that it looks like this:
 [
   'Grace Hopper: 222-303-5938',
   'Ada Lovelace: 222-349-9842',
@@ -241,7 +241,7 @@ describe('Testing challenge 4', () => {
       'Grace Hopper': '222-303-5938',
       'Ada Lovelace': '222-349-9842',
       'Alan Turing': '222-853-5933'
-    }
+    };
 
     expect(updateNumbers(startingObj).includes('Grace Hopper: 222-303-5938')).toBe(true);
   });

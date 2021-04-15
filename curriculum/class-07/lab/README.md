@@ -6,13 +6,13 @@ In this lab assignment, you will begin building your own custom API server, whic
 
 ## Resources
 
-[Node JS Docs](https://nodejs.org/en/)
+[Node JS Docs](https://nodejs.org/en/){:target="_blank"}
 
-[NPM JS Docs](https://docs.npmjs.com/)
+[NPM JS Docs](https://docs.npmjs.com/){:target="_blank"}
 
-[Express JS Docs](http://expressjs.com/en/4x/api.html)
+[Express JS Docs](http://expressjs.com/en/4x/api.html){:target="_blank"}
 
-[dotenv Docs](https://www.npmjs.com/package/dotenv)
+[dotenv Docs](https://www.npmjs.com/package/dotenv){:target="_blank"}
 
 ## Process
 

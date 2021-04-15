@@ -1,4 +1,4 @@
-# Persistance
+# Persistence
 
 ## Overview
 
@@ -15,5 +15,6 @@ Today we will talk about in-memory storage as well as dive deeper into modulariz
 ## Learning Objectives
 
 As a result of completing lecture 10 of Code 301, students will:
+
 - Persist data in memory
 - Understand the advantages and drawbacks to persisting data in memory vs using something like a database

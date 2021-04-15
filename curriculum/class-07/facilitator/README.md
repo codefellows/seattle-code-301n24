@@ -2,7 +2,7 @@
 
 ## Overview
 
-Today we are going to introduce custom express servers. This is a mind blowing day for students and will require a lot of whiteboard drawings to demonstrate the client server relationship. 
+Today we are going to introduce custom express servers. This is a mind blowing day for students and will require a lot of whiteboard drawings to demonstrate the client server relationship.
 
 ## Learning Objectives
 
@@ -89,7 +89,7 @@ One possible way to present this material is documented in the [example lecture]
 
 ## What changed from the previous class?
 
-In the last class, students were able to get data from a third party API and display it on the front end. Be sure to talk about the drawbacks of relying on a third party API and why we might want to build our own custom server. 
+In the last class, students were able to get data from a third party API and display it on the front end. Be sure to talk about the drawbacks of relying on a third party API and why we might want to build our own custom server.
 
 ## What might students struggle with today?
 

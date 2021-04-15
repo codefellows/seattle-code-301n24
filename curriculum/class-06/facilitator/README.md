@@ -74,7 +74,7 @@ One possible way to present this material is documented in the [example lecture]
   - Go through the [DEMO](../demo)
 
 - **Experimentation and Discovery Ideas**
-  - Start off simple - APIs like pokemon are easy for students to wrap their heads around and they don't require keys then move onto Location IQ.
+  - Start off simple - APIs like pokemon or Star Wars are easy for students to wrap their heads around and they don't require keys. Then move onto Location IQ.
 
 ## Lab Notes
 
@@ -104,7 +104,7 @@ EVERYTHING! New concepts - new lab - new everything.
 
 - Location IQ referrer:
   - Make sure you add `http://localhost:3000/` as a referrer. The slash at the end is super important or it won't work.
-  - Once students deploy their applictions, they will need to add their deployed appliction link to the list of approved referrer links.   
+  - Once students deploy their applications, they will need to add their deployed appliction link to the list of approved referrer links.
 
 ## Past bugs, issues or surprises...
 
