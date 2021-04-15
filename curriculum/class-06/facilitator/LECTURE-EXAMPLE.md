@@ -1,95 +1,63 @@
-# Lecture Notes: Node, npm, Express
+# Lecture Example: APIs and Asynchronous Code
 
-## Clients and Servers
+## Warm-Up
 
-- A Client is ...
-  - (wait for input from the students)
-  - Any entity that has asked for something and is waiting for it
-    - "a customer at a fast food restaurant"
-    - "the cashier waiting for the cook give them  your hamburger"
-    - "code that calls a function and gets an answer back"
-    - "a browser that is waiting for html from a web server"
-    - "a server that has issued a query to a database"
-- A Server is  ...
-  - (wait for input from the students)
-  - Any entity that is providing something to a client
-    - "the cashier at McDonalds" (from your point of view)
-    - "the cook at McDonalds" (from the cashier's point of view)
-    - "that function that is doing work for you"
-    - "the server that's giving .html, .css, .js to the browser"
-    - "the database that's giving data to the server"
-- These things are not just machines! In every conversation, interaction, and event that happens in the world, there are Clients and Servers.
-- Just as in real life interactions, between computers, there's an understood way of communicating.  A Protocol for exchanging data.
-  - There's a whiteboard image called 'client-server.png' in the `whiteboard-diagrams` folder for you to reference/draw.
+- **Student Analysis** (5 min)
+  - Show or print the [warm-up code](../warm-up/warm-up.md)
+- **Debrief** (5-10 min)
+  - Refer to the [Warmup Notes](../warm-up/NOTES.md)
+  - Optionally demo the running code at Repl.it
 
-## How does The Internet work?
+## Shred Talk
 
-- **Web Request Response Cycle (WRRC)**
-  - Essentially, a series of these client-server conversations to fulfill and end goal.
-    - Class: "What do you think happens when you type in a search term at google.com"
-      - Let them try and posit all of the things at play. Ultimately the exact details don't matter, so long as you highlight that there are hundreds of things that have to happen, all clients and servers.
-      - Draw an amazing picture ...
-      - Browser to wifi hardware in computer
-      - Computer to the wifi router
-      - Wifi router to switch
-      - Switch to cable
-      - Cable to ... (all the things at comcast)
-      - DNS server to Google Load Balancer
-      - Load Balancer to Google Server
-      - Google server to Google DB
-      - and hundreds of other steps in between and all the way back.
+- **Why**
+  - Daily "Shred Talks" introduce the student to a new javascript coding concept, setting them up to complete the daily "Code Challenge" series
+- **What**
+  - Refer to the [challenge documentation](../challenges/README.md)
+- **How** (10 min)
+  - Follow the [Demo Code](../challenges/DEMO.md)
+- **Note**
+  - If you are short on time, this can be omitted from class lecture. There are official videos that students can watch in lieu of you leading this portion of class.
 
-## Web Clients and Servers
+## The WRRC
 
-- We will be zooming into 2 parts of this enormity (circle them in the picture)
-  - A web application
-    - City Explorer Front End
-    - Show it running
-    - What part of the WRRC Diagram is this again?
-  - A web server
-    - We will write this starting tomorrow, but for today, we will use an existing web API as our server.
-    - Show your running solution code.
-    - Demonstrate how the API works
-      - Visit the API URLs directly in the browser
-      - Open the network tab in the Chrome console from the city explorer app and look at the requests. **this is cool stuff**
-      - This should open up some questions, and help to show them how things are actually connecting.
-    - What part of the WRRC Diagram is this again?
-  - Our focus today will be on how the client connects to the server, with the client driving the requirements
-    - Starting next class, we will focus on how to build our own server
+- **Why** (5 min)
 
-## Whiteboard Diagramming
+  - This is the probably the first time that most students will write code that collects information from someone else's code. This concept can be overwhelming when first introduced. Prepare to spend a lot of time answering questions to help students make these connections.
 
-- How are these 2 entities actually connected?
-  - The network tab shows you that a request was made to the server that seems to have sent in whatever the user typed
-  - There seems to be a subsequent set of requests that looks like it might be using what came back from that first one.
-  - This is our API
-  - Draw this out with client to server
-    - Lines in show the request data
-    - Lines back show the response data
-  - Once we know this, we can effectively ignore the client.
-    - So long as we're obeying that simple set of rules on the server side, we can be assured the app will work.
-    - Talk to the students about APIs and Data Contracts
+- **What** (10 min)
 
-## BREAK
+  - The WRRC is how the internet works. Everyday we will build on our model and expand it as we introduce new concepts, but understanding this first request and response is crucial to understanding the whole.
 
-## Fetching Data with Axios
+- **How** (30 min)
 
-## Shred Talk - Object Iteration
+  - Use a whiteboard of your choice and draw a WRRC. Label the client and third-party API that we will visit today during our demo/lab. Connect the two with a request and a response.
 
-Rather than do a targeted shred talk on this topic, you can optionally roll it into the demo, iterating objects that you read in from the JSON file...
+- **Experimentation and Discovery Ideas**
 
-## Whiteboard diagrams
+  - What are some good analogies we can use to describe the WRRC?
+    - a server in a diner: client is the customer - chef is the API - server is the request and response (this is a good one because we can use it when it gets more complex later)
 
-### Client/Server
+## APIs and Asynchronous Code
 
-![Client/Server](whiteboard-diagrams/client-server.png)
+- **Why** (5 min)
+  - Some applications need more information than they have immediate access to
 
-This image shows the routing from the client side making an ajax call to the server. Within the ajax call, we are looking for a specific route, which should match exactly to what the API requires.
+- **What** (10 min)
+  - The internet is full of third-party APIs who will happily give us their information as long as we ask for it in the correct way and follow their rules (ie - some require special keys, some require that we provide a link back to them... etc...). How do we know what their rules are? We have to read their documentation and every one of them is different!
+  - Collecting information from these APIs is not instantaneous. We have to wait to get to get the data back. This is why we `async` and `await`: to tell JavaScript to wait for the data to come back.
 
----
+- **How** (30-40 min)
+  - Begin by going to an API of your choice. [Pokemon](https://pokeapi.co/) is a good one that is easy for students to understand. Show them how we can hit the API and get data back.
+  - Take them [Postman](https://www.postman.com/) and encourage them to download the app. Demonstrate how we can hit that same API using Postman to get the same data. 
+  - Once you have answered all of their questions, open up Location IQ and read through the docs with the students. Notice that you will need a key. Talk about what a referrer key is and put `http://localhost:3000/` as an approved URL so that your referrer key will work with your localhost. 
+    - why do we need to do this?
+    - what would happen if Location IQ made their data public to anyone without a key?
+    - where should we store this key?
+      - the .env file! Students make a lot of mistakes when it comes to the .env file so spend some time here. The syntax is different than JavaScript and this will cause some strange errors in their code. 
+  - Be sure to talk about what a query is. Where it is located and how we can construct a url using the key and queries to hit the Location IQ API
+    - Practice hitting the API in Postman with different cities
+  - Go through the [DEMO](../demo)
 
-### City Explorer environments
-
-![City Explorer environments](whiteboard-diagrams/city-explorer-environments.png)
-
----
+- **Experimentation and Discovery Ideas**
+  - Start off simple - APIs like pokemon are easy for students to wrap their heads around and they don't require keys then move onto Location IQ.

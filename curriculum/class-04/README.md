@@ -16,5 +16,11 @@ Today we will cover how React handles `forms` and the asynchronous nature of set
 
 As a result of completing lecture 4 of Code 301, students will:
 
+- Describe and Define:
+  - Event
+  - Forms
+  - Event Listeners
+  - Event Handlers
+  - event.target
 - Understand how to use a `form` in a React application
 - Be able to send information collected from a form into a child component

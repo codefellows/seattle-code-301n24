@@ -11,13 +11,16 @@ Yesterday, you learned how to pass information from a parent component into a ch
 - Introduction of today's code challenge topic
 - Code review of lab assignment
 - Code Demo
-- Bootstrap
 - Lab Preview
 
 ## Learning Objectives
 
 As a result of completing Lecture 3 of Code 301, students will:
 
+- Describe and Define:
+  - Parent Component
+  - Child Component
+  - Spread Operator
 - Be able to pass functions from a parent component to a child component
 - Understand the spread opperator
 - Understand `.map` and how to use it to render data in a React application

@@ -16,7 +16,7 @@ Review the detailed objectives in today's [student-facing readme](../README.md).
 
 ## Lecture Outline
 
-Below is the expected lecture outline and flow. One possible way to present this material is documented in the [example lecture](../facilitator/LECTURE-EXAMPLE.md) notes.
+One possible way to present this material is documented in the [example lecture](./LECTURE-EXAMPLE.md) notes.
 
 ### Warm-Up
 

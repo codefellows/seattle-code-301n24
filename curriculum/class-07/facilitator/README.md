@@ -14,6 +14,8 @@ Review the detailed objectives in today's [student-facing readme](../README.md).
 
 ## Lecture Outline
 
+One possible way to present this material is documented in the [example lecture](./LECTURE-EXAMPLE.md) notes.
+
 ### Warm-Up
 
 - **Student Analysis** (5 min)
