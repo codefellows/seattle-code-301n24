@@ -2,11 +2,11 @@
 
 ## Overview
 
-It can be costly to hit an API over and over. For today's lab, you will create an object in your server code to hold the API response data for your proxied queries. That way your back end can first check to see if you already have information about a given city and, if you do, send you the data directly from storage object, without concerns of being rate-limited by the API providers. 
+It can be costly to hit an API over and over. For today's lab, you will create an object in your server code to hold the API response data for your proxied queries. That way your back end can first check to see if you already have information about a given city and, if you do, send you the data directly from storage object, without concerns of being rate-limited by the API providers.
 
 ## Resources
 
-[Yelp API Docs](https://www.yelp.com/developers/documentation/v3/business_search)
+[Yelp API Docs](https://www.yelp.com/developers/documentation/v3/business_search){:target="_blank"}
 
 ## Process
 
