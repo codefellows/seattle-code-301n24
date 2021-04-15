@@ -16,7 +16,7 @@ Review the detailed objectives in today's [student-facing readme](../README.md).
 
 ## Lecture Outline
 
-Below is the expected lecture outline and flow. One possible way to present this material is documented in the [example lecture](../facilitator/LECTURE-EXAMPLE.md) notes.
+One possible way to present this material is documented in the [example lecture](./LECTURE-EXAMPLE.md) notes.
 
 ### Career Review
 
@@ -114,6 +114,7 @@ EVERYTHING! New concepts - new lab - new everything.
   - REACT_APP_MAP_KEY = 029u0i2402
   - REACT_APP_MAP_KEY = "0290u02954u0"
 - If students do not put the trailing `/` in their referrer url in Location IQ, their key will not work
+- Restart after making changes to the .env
 
 ## General Comments and Notes
 

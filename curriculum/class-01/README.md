@@ -19,6 +19,13 @@ We will spend some time reviewing the concepts from the prework. We will also di
 ## Learning Objectives
 
 As as result of completing Lecture 1 of Code 301, students will: 
+
+- Describe and Define:
+  - Component Based Architeture
+  - React
+  - create-react-app
+  - classes
+  - arrow functions
 - Gain an understanding of scope with arrow functions
 - Gain an understanding of context, scope, "this", and the "new" keyword
 - Gain an understanding of the core concepts of React and how to create a basic React application

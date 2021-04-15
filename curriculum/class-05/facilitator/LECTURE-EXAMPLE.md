@@ -21,6 +21,8 @@
 
 ## Code Review
 
+  - Be sure you are giving students lots of opportunity to talk about code during code reivew. One of the best ways to do this is to go line by line around the room asking students what is happening. This helps students get more comfortable speaking about code.
+
 ## City Explorer Build
 
 - **Why** (5 min)
@@ -56,4 +58,7 @@
   - Talk about Browser Router and what it is doing
   - Ask how they might use that in their applications
   - Find the `<Link>` tags to demonstrate how they are used later in the code to navigate between pages.
+  - Demonstrate how to make a change to the page and use your developer tools to find a specific component.
 - **Experimentation and Discovery Ideas**
+  - What is happening in the url when we change pages? 
+  - What does Memory Router do that is different than Browser Router?

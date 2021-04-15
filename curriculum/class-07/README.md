@@ -19,8 +19,7 @@ Today we will build our own custom Express server in Node.js. We will server our
 
 As a result of completing Class 7 of Code 301, students will be able to:
 
-- Describe and Define  
-  - The role of the browser and the server as components of the web request-response cycle
+- Describe and Define:
   - Async
   - Server
   - ReST
@@ -29,6 +28,6 @@ As a result of completing Class 7 of Code 301, students will be able to:
     - Route Middleware
   - cors
   - env variables
-- Execute:
-  - Hook up a front end React application with a back end server
-  - Create an Express server from scratch
+  - WRRC
+- Hook up a front end React application with a back end server
+- Create an Express server from scratch

@@ -1,10 +1,48 @@
 # Lecture Notes: APIs and Promises
 
+### Warm-Up
+
+- **Student Analysis** (5 min)
+  - Show or print the [warm-up code](../warm-up/warm-up.md)
+- **Debrief** (5-10 min)
+  - Refer to the [Warmup Notes](../warm-up/NOTES.md)
+  - Optionally demo the running code at Repl.it
+
+### Shred Talk
+
+- **Why**
+  - Daily "Shred Talks" introduce the student to a new javascript coding concept, setting them up to complete the daily "Code Challenge" series
+- **What**
+  - Refer to the [challenge documentation](../challenges/README.md)
+- **How** (10 min)
+  - Follow the [Demo Code](../challenges/DEMO.md)
+- **Note**
+  - If you are short on time, this can be omitted from class lecture. There are official videos that students can watch in lieu of you leading this portion of class.
+
+### Code Review 
+
+- Since you are about half way through 301, consider choosing a student to lead code review. The goal is to get students comfortable speaking about code so the less you talk during code review and the more they talk, the better.
+
 Today, we will be moving away from pulling in canned data from a file sitting on our machine and instead be fetching LIVE data from a remote service -- an API.
 
 To do this, we'll need to do a bit of refactoring of our server code, specifically, we'll need to bring in superagent to connect to these servers asynchronously, meaning we need to get into promises and async in general.
 
-## How does Javascript process code?
+### Promises and Async
+
+- **Why** (5 min)
+  - Node/Express takes advantage of javascript's asynchronous coding pattern
+  - We don't want to always write "blocking" code
+  - We don't always need to wait for code to complete
+  - Javascript is really good at it -- we can use this idea to multi-task
+- **What** (10 min)
+  - The Event Loop and Call Stack
+    - Detect async patterns and push that to the side for a while
+  - Promises and Callbacks
+- **How** (30 min)
+  - Run a promise demo that showcases how things can be out of order
+  - Focus on the syntax and when/how we process data
+  - `.then()` and `.catch()` and how they interact with the process
+  - How does Javascript process code?
 
 * The first thing we need to agree on is that not everything happens in sequence.
 * We have already experienced some measure of "Event Driven" programming (event listeners) where code that you write doesn't actually run until something triggers it (or even, never)
@@ -22,9 +60,7 @@ To do this, we'll need to do a bit of refactoring of our server code, specifical
 * (This is a great time to be drawing a simple picture of this)
   * Don't do a full call stack / callback queue drawing, just the basic loop
 
-## Async using Promises
-
-One way that Javascript handles asynchronous tasks is with "Promises"
+- One way that Javascript handles asynchronous tasks is with "Promises"
 
 * A "promise" is exactly that ... your code promises to do some work and then either say "Ok I did it, here's some data" or "I failed"
   * OK = "Resolve"
@@ -36,38 +72,30 @@ One way that Javascript handles asynchronous tasks is with "Promises"
     * In essence, `.catch()` can patch things up if it wants.
   * **promise demo**
 
-## Remote APIs
+### 3rd Party APIs
 
-As we've discussed, not all data is local. To this point, going back into 201, we've had all of our data either in our app.js or we've pulled it in from a `.json` file.  Let's branch out and get something real.
+- **Why** (5 min)
+  - All of the data in the world is literally all over the world
+  - REST give us a common language and set of methods to access all of it, with WRRC
+  - By using APIs in creative ways, you can make really interesting apps, but leave the data management to the experts
+- **What** (10 min)
+  - Identify the APIs that you need
+  - Inspect the "shape" of the data and see if it conforms to your needs
+  - Talk about communication via WRRC (now: server-side code is now the client!)
+- **How** (30 min)
+  - As we've discussed, not all data is local. To this point, going back into 201, we've had all of our data either in our app.js or we've pulled it in from a `.json` file.  Let's branch out and get something real.
+    - Head over to unsplash API
+      - This API does a great job of telling you exactly what it requires for you to use their information. Go through this slowly with the students and talk about how to incorperate it into the application.
+      - You will need a key and some queries
+      - Test these in Postman to take a look at the shape of the data that you get back.
+  - Integrate into your server application
+  - SUPERAGENT:
+    - In order to get the data, we are going to need to bring in a library to help us out. We could use Axios like we did on the front-end, but to avoid confusion, we are going to introduce `superagent`. 
+      - examine the differences between `superagent` and `axios` and add them to your WRRC drawings
+      - add `superagent` to your demo application to collect data from unsplash
+  - Once everything is all hooked up on the back-end, connect your back-end to your front-end and display the data!
 
-* Head to [WeatherBit](https://www.weatherbit.io/)
-* Notice the "API" Link (and click it)
-* Create an account and login
-* Right away, it'll give you some critical information
-  * Secret Key
-  * Sample API Link
-* Click the link and witness the JSON that you get back. Wow. Real, raw data.
-  * Look familiar?
-* Now, back to the API page.
-  * Pick that URL apart.
-  * It has a root part `http://api.weatherbit.io/v2.0/forecast/daily`
-  * Following that, is the query string -- key value pairs. Parse them!
-  * API key ...
-  * lat, lon, lang, etc
-* Hit the docs link and explain what's there, how the link is formatted, etc
-* WeatherBit is only one of 1,000's of APIs out there
-  * Spotify
-  * Yelp
-  * Trails
-  * Star Wars
-  * etc.
-* They'll all have the same sort of process
-  * Login/Create Account
-  * Secret Key
-  * URLs formatted in special ways
-  * Docs to help you out.
-
-## ReST and APIs
+- ReST and APIs
 
 * Those APIs are all the same
   * They follow a very similar set of rules -- REST
@@ -83,18 +111,13 @@ As we've discussed, not all data is local. To this point, going back into 201, w
   * For now, know the words and the actions.
   * We're going to live in the world of Read (GET) for the time being
 
-## Bring it all together
+- **Experimentation and Discovery Ideas**
+  - What other things can we do with this API?
 
-* We're going to need some data from a few APIs to make City Explorer work.
-* We'll use ReST to Read data using the HTTP "GET" method
-* In our server, we need to fetch that data as needed.
-* Because it could take a while, Javascript will do that asynchronously
-* We will need a promise to ask for the data and process it when it's done
-
-Luckily, there's a library out there that does all of this for us.
-
-### Superagent
-
-Build the new server demo, refactoring the .json files into API calls
-
-Lean into the asynchronous nature of these calls and the mechanics of `.then()` in real use
+- Bring it all together
+  * We're going to need some data from an API to make our application work.
+  * We'll use ReST to Read data using the HTTP "GET" method
+  * In our server, we need to fetch that data as needed.
+  * Because it could take a while, Javascript will do that asynchronously
+  * We will need a promise to ask for the data and process it when it's done
+  

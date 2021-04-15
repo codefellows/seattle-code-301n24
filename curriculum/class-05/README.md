@@ -15,6 +15,10 @@ Today we will use the skills we learned over the week to build a new application
 
 As a result of completing lecture 5 of Code 301, students will:
 
+- Describe and Define: 
+  - Conditional Rendering
+  - Ternary Statements
+  - Browser Router
 - Be able to build a React app that passes props from parent component to child component
 - Hold state in the application
 - Use forms in React

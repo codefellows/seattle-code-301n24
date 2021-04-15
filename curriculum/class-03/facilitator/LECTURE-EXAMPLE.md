@@ -1,6 +1,6 @@
 # Lecture Notes: Axios and Bootstrap
 
-## Warm-Up (10 min)
+## Warm-Up 
 
 - **Student Analysis** (5 min)
   - Show or print the [warm-up code](../warm-up/warm-up.md)
@@ -8,7 +8,7 @@
   - Refer to the [Warmup Notes](../warm-up/NOTES.md)
   - Optionally demo the running code at Repl.it
 
-## Shred Talk (15 min)
+## Shred Talk 
 
 - **Why**
   - Daily "Shred Talks" introduce the student to a new javascript coding concept, setting them up to complete the daily "Code Challenge" series
@@ -19,7 +19,7 @@
 - **Note**
   - If you are short on time, this can be omitted from class lecture. There are official videos that students can watch in lieu of you leading this portion of class.
 
-## Code Review (30 min)
+## Code Review 
 
 - Students will have attempted their first code challenge following Class 02. Use your code review time to not only review a few of the challenges, but to re-implant the TDD workflow with the class.
   - Every day a new branch
@@ -28,7 +28,7 @@
   - Submit a PR for grading
   - Do not merge your code!
 
-## Mapping over data (45 min)
+## Mapping over data 
 
 - **Why** (5 min)
   - React is an excellent templating framework that allows us to take large datasets and map over them to display them
@@ -36,12 +36,14 @@
   - a built in array method that returns a new array
   - allows you to change the shape of the data
 - **How** (30 min)
-  - Start with the code from code review and point out how repetitive and tiring entering in all of the information about each horned beast was.
+  - Start with the code from code review and point out how repetitive and tiring entering in all of the information about each horned beast was. 
+    - If the code you used during code review had already figured out how to use .map(), you can use that code and work backwards. Demonstrate how the instructions would actually lead you to create repetitive code (like the solution code), and show how the student used .map() to simplify that code.
   - Refactor the code, importing the data.json file and use .map() to render each component to the page. 
   - This will be their first introduction to accessing properties from an object in an array so spend lots of time going over where each value is coming from in addition to the syntax of using .map() in the JSX.
+  - You might want to spend some time giving students a chance to practice accessing nested properties in an object since this can be an especially challenging concept.
 - **Experimentation and Discovery Ideas**
-
-## Passing Functions as Props (60 min)
+  
+## Passing Functions as Props 
 
 - **Why** (5 min)
   - at times the child component needs to interact with information in the parent component

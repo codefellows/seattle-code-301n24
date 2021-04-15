@@ -19,7 +19,7 @@ Review the detailed objectives in today's [student-facing readme](../README.md).
 
 ## Lecture Outline
 
-Below is the expected lecture outline and flow. One possible way to present this material is documented in the [example lecture](../facilitator/LECTURE-EXAMPLE.md) notes.
+One possible way to present this material is documented in the [example lecture](./LECTURE-EXAMPLE.md) notes.
 
 ### Warm-Up
 
@@ -40,21 +40,9 @@ Below is the expected lecture outline and flow. One possible way to present this
 - **Note**
   - If you are short on time, this can be omitted from class lecture. There are official videos that students can watch in lieu of you leading this portion of class.
 
-### Code Review / Rebuild / Review
+### Code Review 
 
-- **Why** (5 min)
-  - Lab 06 was big in concept, short on code
-  - Students will need a recap on the City Explorer Front End as a reminder
-  - WRRC drawings are great to cement why we are doing thing and where in that process we are
-- **What** (10 min)
-  - The WRRC should be coming more into focus now that we've built some of it out
-  - The server should be feeding the front end actual data that works
-  - Trello should be leading the way
-- **How** (30 min)
-  - Review the Trello board feature tasks & requirements
-  - Review the City Explorer Front-End (matching it to the requirements)
-  - Rebuild the Server, showing how it feeds the front end
-  - Deploy it again, as a review.
+- Since you are about half way through 301, consider choosing a student to lead code review. The goal is to get students comfortable speaking about code so the less you talk during code review and the more they talk, the better.
 
 ### Promises and Async
 
