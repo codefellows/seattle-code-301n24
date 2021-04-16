@@ -16,6 +16,11 @@ Today is the first day of our new project, a mobile-only book collection. You wi
 ## Learning Objectives
 
 As a result of completing lecture 11 of Code 301, students will:
+
+- Describe and Define 
+  - Authentication
+  - Authorization
+  - Auth0
 - Understand Authentication - its uses and applications
 - Understand the concept of OAuth
 - Be able to implement authentication using Auth0 in their React application

@@ -60,7 +60,6 @@ One possible way to present this material is documented in the [example lecture]
   - Draw the WRRC using the RESTful verbs
   - DEMO build: Gift Registry
     - This is a huge demo. You might want to begin with some of the demo pre-built to save time so you can focus on just the new concepts of CREATING a resource and DELETING a resource on both the front-end and the back-end. 
-- **Experimentation and Discovery Ideas**
 
 ## Lab Notes
 

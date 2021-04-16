@@ -18,6 +18,12 @@ Today is all about persistence. We will introduce Mongodb and Mongoose. We will 
 
 As a result of completing lecture 13 of Code 301, students will:
 
+- Describe and Define 
+  - CRUD
+  - MONGO
+  - Mongoose
+  - ORM
+  - GET
 - Be able to create a data model or schema
 - Be able to set up a Mongo database using Mongoose
 - Be able to retrieve all of the entries from a Mongo database using Mongoose
