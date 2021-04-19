@@ -1,6 +1,6 @@
 # Lecture Notes: State, Props and Bootstrap
 
-### Warm-Up (15 min)
+## Warm-Up
 
 - **Student Analysis** (5 min)
   - Show or print the [warm-up code](../warm-up/warm-up.md)
@@ -8,7 +8,7 @@
   - Refer to the [Warmup Notes](../warm-up/NOTES.md)
   - Optionally demo the running code at Repl.it
 
-### Shred Talk (15 min)
+## Shred Talk 
 
 - **Why**
   - Daily "Shred Talks" introduce the student to a new javascript coding concept, setting them up to complete the daily "Code Challenge" series
@@ -19,13 +19,13 @@
 - **Note**
   - If you are short on time, this can be omitted from class lecture. There are official videos that students can watch in lieu of you leading this portion of class.
 
-### Code Review (30 min)
+## Code Review (30 min)
 
 - Following the first lab, students will be in need of answers
 - Also important that early in the course we start ingraining them in a daily schedule/format
 - Demonstrate the solution code for React components. Be sure to talk about how to render an image in React.
 
-## State and Props (45 min)
+## State and Props
 
 - **Why** (2 min)
   - used as a way of configuring components with properties
@@ -34,10 +34,13 @@
   - state: a memory of persistant values
   - props: a memory of persistant values passed in by a parent
 - **How** (40 min)
-  - go through the state and props demo
-  - be sure to pause periodically to draw how props are being passed from parent to child on the whiteboard
+  - Begin with a review of the WRRC from yesterday
+  - Draw the components on the whiteboard. Demonstrate the way each component can hold its own state and parent components can pass props down to children components. Be sure to emphasize that children components cannot pass state back up to parents. State flows down.
+    - There are a lot of great analogies for this. I like using a waterfall, but find one that works for you.
+  - Go through the [state and props demo](../demo/state-and-props)
+  - Be sure to pause periodically to draw how props are being passed from parent to child on the whiteboard
 
-## React-Bootstrap (30 min)
+## React-Bootstrap
 
 - **Why** (2 min)
   - we want our application to look nice but we don't always know how to accomplish that
@@ -49,7 +52,7 @@
   - get suggestions on what to add next from the class and add it.
   - be sure to read all the documentation for that component. This is a great opportunity to introduce students to reading documentation so take your time with this!
 
-## Deploy - (10 min)
+## Deploy 
 
 - **Why** (2 min)
   - we want to share our application with the world

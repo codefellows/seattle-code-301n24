@@ -14,6 +14,7 @@
 ## Code Review
 
 - Yesterday's lab was tough. Use today's code review to go over a particular pain point that most of the class struggled with.
+- Talk about and draw the WRRC.
 
 ## Forms and Modals
 

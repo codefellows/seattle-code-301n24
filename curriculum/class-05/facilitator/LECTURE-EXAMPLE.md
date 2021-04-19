@@ -32,6 +32,8 @@
   - City Explorer accepts a city name, draws a map, and then lists out some interesting data about the city, pulled from a remote data source (client + server!)
   - Draw/Demonstrate the actual running City Explorer App
 - **How** (30 min)
+  - Begin with a drawing and discussion of the WRRC
+  - Then, map out on the whiteboard what you wnat the app to do
   - Using a live-coded demo ...
     - Build the React scaffolding of City Explorer, pulling in some sample data and rendering to the page
   - Use conditional logic to wait to display to the results until after the user has entered a city
