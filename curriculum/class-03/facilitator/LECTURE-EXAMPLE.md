@@ -51,7 +51,13 @@
 - **What** (10 min)
   - the parent component sends a function into the child component on the props that will allow the child component to interact with information in the parent component by invoking that function.
 - **How** (50 min)
+  - Begin with a review of the WRRC (this top is fundamental to this class and needs to be covered every day)
+    - Questions to cover:
+      - Who is making the request? Who is making the response? What is the request? What is the response?
   - Demonstrate this concept via the demo: passing-functions
+  - Start with the drawing on the whiteboard that you did yesterday. Pose the question: since we know that a child component can't send state upward, what would we do if a child component needs to update the state in a parent comonent? 
+    - Give them time to think about this. The answer, of course, is to send a function to the child component that will allow it to update the state of the parent component. 
+    - Be prepared with some real life examples of when this would be used.
   - Be aware that this concept is really challenging for students to wrap their heads around so spend lots of time following the flow of information from the parent component to the child component and back up to the parent component. Use a lot of whiteboard drawings.
   - This is also a good time to remind them how stacked learning works, and that it is alright if they don't understand this concept completely right now. They will very soon.
 

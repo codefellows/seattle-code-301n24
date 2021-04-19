@@ -88,6 +88,12 @@
       - Wherever you want them
       - (It's Annoyance Driven Development)
 - **How** (30 min)
+  - Begin with a discussion of the WRRC and it how it relates to React
+    - The web is just a series of requests and responses. 
+    - In order to go from React code that we see on our computer to a site that we see in the browser, there is a series of requests and responses happening.
+      - who is the client? who is the server?
+      - The client makes a request
+      - The files are served
   - Demonstrate how to use `create react app` to make a React template
     - Be sure to spend some time going through each thing that `create react app` gives you and discuss the components you want to keep and the ones that we are not going to use
   - Talk about what it means when we say a class `extends React.Component`
