@@ -19,6 +19,51 @@
 - **Note**
   - If you are short on time, this can be omitted from class lecture. There are official videos that students can watch in lieu of you leading this portion of class.
 
+### Promises and Async
+
+- **Why** (5 min)
+  - Node/Express takes advantage of javascript's asynchronous coding pattern
+  - We don't want to always write "blocking" code
+  - We don't always need to wait for code to complete
+  - Javascript is really good at it -- we can use this idea to multi-task
+- **What** (10 min)
+  - The Event Loop and Call Stack
+    - Detect async patterns and push that to the side for a while
+  - Promises and Callbacks
+- **How** (30 min)
+  - Run a promise demo that showcases how things can be out of order
+  - Focus on the syntax and when/how we process data
+  - `.then()` and `.catch()` and how they interact with the process
+  - How does Javascript process code?
+
+* The first thing we need to agree on is that not everything happens in sequence.
+* We have already experienced some measure of "Event Driven" programming (event listeners) where code that you write doesn't actually run until something triggers it (or even, never)
+* There are other instances where code doesn't run in the order it appears, or that you think it does.
+* Javascript (both Node and in the browser -- they share the "V8" engine) has the ability to recognize code that might take a while to run.
+  * It runs this code in a separate process, off to the side
+  * When it finishes, the code that was written to handle the result then gets to run.
+  * In the meantime, Javascript allows your other code to go on in sequence.
+* This system is known as the "Event Loop"
+  * The Javascript system runs code that can be run.
+  * When it encounters something asynchronous, it starts it off to the side
+  * Continues with other code
+  * Picks up the async stuff when it gets back.
+  * And so on.
+* (This is a great time to be drawing a simple picture of this)
+  * Don't do a full call stack / callback queue drawing, just the basic loop
+
+- One way that Javascript handles asynchronous tasks is with "Promises"
+
+* A "promise" is exactly that ... your code promises to do some work and then either say "Ok I did it, here's some data" or "I failed"
+  * OK = "Resolve"
+    * Any data "resolved" is given to you to process
+    * A code block called `.then()` handles a good promise and gets that data
+  * "I Failed" = Reject
+    * `.catch()` handles the rejections and gets any error as it's param
+    * A `.catch()` can "return" a good value and then any subsequent `.then()` blocks can continue to work.
+    * In essence, `.catch()` can patch things up if it wants.
+  * **promise demo**
+
 ## Refactoring
 
 **Code refactoring** is the process of restructuring existing computer code—changing the inner workings without changing its external behavior. Refactoring is intended to improve nonfunctional attributes of the software.
@@ -30,7 +75,7 @@ In Other Words ...
 * It's really, really unreadable
 * Every API we add ... adds to these problems
 
-### Demo 1: Refactoring
+### Refactoring
 
 - Conduct the refactoring demo and discuss some of the strategies
 - Once students get a feel for refactoring, break them into small groups and put them into breakout rooms. Give them a chunck of code to refactor and 10 mintues to do it. When you meet back, go over the different solutions.
@@ -139,7 +184,7 @@ function print(words) {
 ```
 
 
-### Demo 2: Modules
+### Modules
 
 - You can either build out the jobs board demo from scratch or have it already written. Either way, the goal is to modularize the back-end.
   - Start by pulling a big chunk of code out of the server (ie. everything that has to do with the callback). Then go though the code line by line to make sure you have all the dependancies that you need in your new file to run the function.
