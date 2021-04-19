@@ -16,7 +16,7 @@ Today we will talk about in-memory storage as well as dive deeper into modulariz
 
 As a result of completing lecture 10 of Code 301, students will:
 
-- Describe and Define 
+- Describe and Define
   - In Memory Database
   - Cache
   - Cache Hit
