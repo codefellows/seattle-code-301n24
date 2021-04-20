@@ -14,12 +14,12 @@ app.get('/weather', handleWeather);
 app.use('*', (request, response) => response.status(404).send('page not found'));
 
 function handleWeather(request, response) {
-  let {latitude, longitude, searchQuery} = request.query;
+  let {searchQuery} = request.query;
 
   const city = weather.find(city => city.city_name.toLowerCase() === searchQuery.toLowerCase());
   
   try{
-      const weatherArray = city.data.map(day => new Weather(day));
+      const weatherArray = city.data.map(day => new Forecast(day));
       response.status(200).send(weatherArray);
     } catch(error) {
       errorHandler(error, response);
@@ -27,7 +27,7 @@ function handleWeather(request, response) {
 
   }
 
-function Weather(day) {
+function Forecast(day) {
   this.date = day.valid_date
   this.description = day.weather.description
 }
