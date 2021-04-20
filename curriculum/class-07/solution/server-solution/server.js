@@ -14,9 +14,9 @@ app.get('/weather', handleWeather);
 app.use('*', (request, response) => response.status(404).send('page not found'));
 
 function handleWeather(request, response) {
-  const {latitude, longitude} = request.query;
+  let {latitude, longitude, searchQuery} = request.query;
 
-  const city = weatherArray.find(city => city.lat === latitude && city.lon === longitude);
+  const city = weather.find(city => city.city_name.toLowerCase() === searchQuery.toLowerCase());
   
   try{
       const weatherArray = city.data.map(day => new Weather(day));

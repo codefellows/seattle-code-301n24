@@ -52,7 +52,7 @@ class Main extends React.Component {
 
   displayWeather = async (lat, lon) => {
     try{
-      const weather = await axios.get(`${process.env.REACT_APP_SERVER}/weather`, { params: {latitude: lat, longitude: lon}});
+      const weather = await axios.get(`${process.env.REACT_APP_SERVER}/weather`, { params: {latitude: lat, longitude: lon, searchQuery: this.state.searchQuery}});
       this.setState({
         weather: weather.data
       })
