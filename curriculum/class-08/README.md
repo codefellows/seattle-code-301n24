@@ -53,6 +53,7 @@ As a result of completing Lecture 8 of Code 301, students will be able to:
     city: 'seattle'
   }
 
+  // notice the 'await'. This is asynchronous code. The function will need to be 'async'
   const superagentResults = await superagent
     .get(url)
     .query(query)
