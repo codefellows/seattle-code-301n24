@@ -9,7 +9,7 @@ Today we will talk about in-memory storage as well as dive deeper into modulariz
 - Warm-up exercise
 - Review code challenges
 - Code review of lab assignment
-- In-memory persistance
+- In-memory persistence
 - Lab Overview
 
 ## Learning Objectives
