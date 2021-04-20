@@ -30,7 +30,7 @@ As a result of completing lecture 13 of Code 301, students will:
 
 ## Notes
 
-1. What does each letter of CRUD stand for? 
+1. What does the R stand for in CRUD? 
 
 
 
