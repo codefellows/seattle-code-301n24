@@ -27,3 +27,35 @@ As a result of completing Lecture 8 of Code 301, students will be able to:
   - Use **axios** to reach out to the back-end from the front-end
   - Ingest 3rd Party data from an API
   - Integrate data with a separate web application
+
+## Notes
+
+1. What is an API?
+
+
+1. Why do we need a server?
+
+
+1. What do we keep in our .env file?
+
+
+1. Nodemon will automatically detect changes that we make to all the files in our server, however, if we make a change to THIS file, we must restart nodemon for it to take affect.
+
+
+1. True or False: all API's require a key
+
+
+1. To make an API call in the server using superagent:
+  ```javaScript
+  const url = 'http://urlToAPI';
+  const query = {
+    key: process.env.MY_API_KEY,
+    city: 'seattle'
+  }
+
+  const superagentResults = await superagent
+    .get(url)
+    .query(query)
+  ```
+  - superagent returns a giant object. The data we care about is usually in the body of that object.
+  - superagent puts the things in the query object into the URL for us behind the scenes
