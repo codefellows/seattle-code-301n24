@@ -14,8 +14,12 @@ app.get('/weather', handleWeather);
 app.use('*', (request, response) => response.status(404).send('page not found'));
 
 function handleWeather(request, response) {
+  const {latitude, longitude} = request.query;
+
+  const city = weatherArray.find(city => city.lat === latitude && city.lon === longitude);
+  
   try{
-      const weatherArray = weather.data.map(day => new Weather(day));
+      const weatherArray = city.data.map(day => new Weather(day));
       response.status(200).send(weatherArray);
     } catch(error) {
       errorHandler(error, response);
