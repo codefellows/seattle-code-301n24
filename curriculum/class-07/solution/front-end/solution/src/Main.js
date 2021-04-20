@@ -47,12 +47,12 @@ class Main extends React.Component {
         errorMessage: error.response.status + ': ' + error.response.data.error });
     }  
     
-    this.displayWeather()
+    this.displayWeather(location.data[0].lat, location.data[0].lon)
   }
 
-  displayWeather = async () => {
+  displayWeather = async (lat, lon) => {
     try{
-      const weather = await axios.get(`${process.env.REACT_APP_SERVER}/weather`);
+      const weather = await axios.get(`${process.env.REACT_APP_SERVER}/weather`, { params: {latitude: lat, longitude: lon}});
       this.setState({
         weather: weather.data
       })
