@@ -56,6 +56,8 @@ One possible way to present this material is documented in the [example lecture]
 
 The lab instructions are intentionally left vague and short to encourage students to find their own solution to the problem domain. It might be worth talking different ways of solving problems during code review and lecture time to encourage this thinking.
 
+We are purposely not teaching the students how to deploy Mongo to Heroku. This is a challenge for them to figure out during project week. We are, however, pointing them in the right direction. In the README.md for today, there is a step-by-step guide for setting up a Mongo-Atlas account that you can use to deploy to Heroku. Point this out to them. Make sure they understand that most of what they do when they graduate will be to learn on their own and figure things out so this is a nudge in that direction.
+
 ## What changed from the previous class
 
 We are adding a PUT route to the application.
