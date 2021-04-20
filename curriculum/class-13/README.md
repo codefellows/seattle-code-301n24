@@ -141,3 +141,6 @@ axios.post(`${SERVER}`, { data: newRecord });
     })
   }
   ```
+
+  1. Where can I find more information?
+  [mongoose queries](https://mongoosejs.com/docs/api.html#model_Model.findOneAndDelete)
