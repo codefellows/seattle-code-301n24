@@ -37,13 +37,20 @@ Students will be able to:
 1. What is DRY code?
 
 
+
 1. Why do we modularize our code?
+
 
 
 1. What is a Promise?
 
 
-1. `async` and `await` - vs - `.then()` and `.catch()`
+
+1. What is the difference between a Promise and using `.then()/.catch()`?
+
+
+
+1. `async and await` - vs - `.then() and .catch()`
   ```javaScript
   async function doSomething() {
     try{
