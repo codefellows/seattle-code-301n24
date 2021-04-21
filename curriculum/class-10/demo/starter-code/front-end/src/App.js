@@ -15,7 +15,6 @@ class App extends React.Component {
     e.preventDefault();
     const server='http://localhost:3001';
     const recipes = await axios.get(`${server}/recipes`, {params: {ingredient: this.state.ingredient}});
-    this.setState({ recipes: recipes.data });
   }
 
   render() {

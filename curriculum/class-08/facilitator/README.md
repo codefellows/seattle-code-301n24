@@ -15,8 +15,6 @@ Review the detailed objectives in today's [student-facing readme](../README.md).
   - Location IQ
   - [Unsplash](https://unsplash.com/developers)
 
-- Familiarize yourself with the API's that your students will be using in their labs. You should have your own local server running, with each API configured according the `.env.sample` file, found in the running code: [API setup details](../../city-explorer-app/back-end/.env.sample){:target="_blank"}
-
 ## Lecture Outline
 
 One possible way to present this material is documented in the [example lecture](./LECTURE-EXAMPLE.md) notes.
@@ -44,23 +42,6 @@ One possible way to present this material is documented in the [example lecture]
 
 - Since you are about half way through 301, consider choosing a student to lead code review. The goal is to get students comfortable speaking about code so the less you talk during code review and the more they talk, the better.
 
-### Promises and Async
-
-- **Why** (5 min)
-  - Node/Express takes advantage of javascript's asynchronous coding pattern
-  - We don't want to always write "blocking" code
-  - We don't always need to wait for code to complete
-  - Javascript is really good at it -- we can use this idea to multi-task
-- **What** (10 min)
-  - The Event Loop and Call Stack
-    - Detect async patterns and push that to the side for a while
-  - Promises and Callbacks
-- **How** (30 min)
-  - Run a promise demo that showcases how things can be out of order
-  - Focus on the syntax and when/how we process data
-  - `.then()` and `.catch()` and how they interact with the process
-- **Experimentation and Discovery Ideas**
-
 ### 3rd Party APIs
 
 - **Why** (5 min)
@@ -80,9 +61,10 @@ One possible way to present this material is documented in the [example lecture]
     - Fetch Data
     - Massage it into shape (constructors)
     - Test with your client application
-- **Experimentation and Discovery Ideas**
 
 ## Lab Notes
+
+Refer to the final [City Explorer Solution Code](../../city-explorer-app) as the solution code for lab 8 and 9.
 
 ## What changed from the previous class?
 

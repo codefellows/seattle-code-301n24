@@ -8,8 +8,6 @@ const superagent = require('superagent');
 const app = express();
 app.use(cors());
 
-const PORT = process.env.PORT || 3001;
-
 app.get('/recipes', getRecipes);
 
 function getRecipes(request, response) {
@@ -23,7 +21,6 @@ function getRecipes(request, response) {
 
   superagent
     .get(url)
-    .query(query)
     .then(res => {
       const recipeArr = res.body.hits.map(recipe => new Recipe(recipe.recipe));
       response.status(200).send(recipeArr);
@@ -36,7 +33,7 @@ function getRecipes(request, response) {
 
 function Recipe(recipe) {
   this.uri = recipe.uri;
-  this.name = recipe.label;
+  this.label = recipe.label;
   this.image_url = recipe.image;
   this.ingredients = recipe.ingredientLines;
   this.totalTime = recipe.totalTime;
