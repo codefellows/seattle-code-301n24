@@ -24,6 +24,7 @@ Note that the tasks below have a corresponding assignment to submit in your Canv
 1. [Portfolio Prep](portfolio_prep)
 1. [Arrow Functions in JavaScript](arrow-functions)
 1. [Classes in JavaScript](classes)
+1. [Dive into React](react)
 
 ## Computer Setup
 
