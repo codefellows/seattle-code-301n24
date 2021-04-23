@@ -1,6 +1,6 @@
 'use strict';
 
-const superagent = require('superagent');
+const axios = require('axios');
 
 module.exports = getYelp;
 
@@ -18,11 +18,10 @@ function getYelp(location,page=1) {
 
   console.log(queryParams);
 
-  const url = 'https://api.yelp.com/v3/businesses/search';
-  return superagent.get(url)
-    .query(queryParams)
+  const url = `https://api.yelp.com/v3/businesses/search/?location=${location}&limit=${numPerPage}&offset=${start}`;
+  return axios.get(url)
     .set('Authorization', `Bearer ${process.env.YELP_API_KEY}`)
-    .then( data => parseYelpData(data.body) );
+    .then( data => parseYelpData(data.data) );
 }
 
 function parseYelpData(data) {
@@ -36,12 +35,14 @@ function parseYelpData(data) {
   }
 }
 
-function Yelp(business) {
-  this.tableName = 'yelps';
-  this.name = business.name;
-  this.image_url = business.image_url;
-  this.price = business.price;
-  this.rating = business.rating;
-  this.url = business.url;
-  this.created_at = Date.now();
+class Yelp {
+  constructor(business) {
+    this.tableName = 'yelps';
+    this.name = business.name;
+    this.image_url = business.image_url;
+    this.price = business.price;
+    this.rating = business.rating;
+    this.url = business.url;
+    this.timestamp = Date.now();
+  }
 }

@@ -1,6 +1,6 @@
 'use strict';
-const superagent = require('superagent');
-const Recipe = require('./recipe-constructor');
+const axios = require('axios');
+const Recipe = require('./recipe-class');
 
 const inMemoryDB = {};
 
@@ -13,18 +13,12 @@ module.exports = function (request, response) {
     return inMemoryDB[ingredient];
   } else {
     console.log('getting info from super', ingredient)
-    const url = `https://api.edamam.com/search`;
-    const query = {
-      q:ingredient,
-      app_id:process.env.FOOD_APP_ID,
-      app_key:process.env.FOOD_APP_KEY
-    }
+    const url = `https://api.edamam.com/search/?q=${ingredient}&app_id=${process.env.FOOD_APP_ID}&app_key=${process.env.FOOD_APP_KEY}`;
   
-    superagent
+    axios
       .get(url)
-      .query(query)
       .then(res => {
-        const recipeArr = res.body.hits.map(recipe => new Recipe(recipe.recipe));
+        const recipeArr = res.data.hits.map(recipe => new Recipe(recipe.recipe));
         inMemoryDB[ingredient] = recipeArr;
         console.log('putting info in db', inMemoryDB)
         response.status(200).send(recipeArr);
@@ -34,5 +28,4 @@ module.exports = function (request, response) {
         response.status(500).send('error', err);
       })
   }
-
 }
