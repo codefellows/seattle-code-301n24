@@ -1,23 +1,19 @@
 # Dive into React
 
-Below you will find a short video about React. Watch the video and answer the questions below. 
+Below you will find a short video about React. Watch the video then answer the questions below.
 
-[What Is React And Why You Need To Know It](https://www.youtube.com/watch?v=1wZoGFF_oi4)
+[A High Level Overview Of React](https://www.youtube.com/watch?v=FRjlF74_EZk)
 
 1. What is React?
 
-1. How does it shift your mindset?
-
 1. What is a component?
 
-1. What does it mean for React to be component based?
+1. What is the dataflow of React?
 
-1. What is component based design?
+1. How do we make a React element a DOM element?
 
-1. Why are components so powerful?
+1. React is a User Interface ______________.
 
-1. Can components have other components inside of them?
+1. Which direction does data flow in React?
 
-1. Why would we want to build something in React when we could just build something in regular javaScript?
-
-1. When does React re-render?
+1. Every component manages its own ____________.
