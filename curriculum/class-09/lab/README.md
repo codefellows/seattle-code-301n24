@@ -6,8 +6,6 @@ It's time to clean up your code base.
 
 ## Resources
 
-[Superagent Docs](https://visionmedia.github.io/superagent/){:target="_blank"}
-
 ## Process
 
 For every lab in this module, you will have a new partner. You and your new partner(s) will spend the first 30 minutes reviewing each other's code from the previous lab and planning out an approach to this lab's work on a whiteboard.

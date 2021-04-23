@@ -26,6 +26,7 @@ app.use('*', notFoundHandler);
 
 function weatherHandler(request, response) {
   const { lat, lon } = request.query;
+  console.log('in wether', lat, lon)
   weather(lat, lon)
     .then(summaries => response.send(summaries))
     .catch((error) => {
@@ -45,7 +46,7 @@ function moviesHandler(request, response) {
 }
 
 function yelpHandler(request, response) {
-  const location = request.query.search_query;
+  const location = request.query.searchQuery;
   yelp(location, request.query.page)
     .then(reviews => response.send(reviews))
     .catch((error) => {

@@ -6,8 +6,6 @@ In this lab assignment, you will show live weather and movie data in response to
 
 ## Resources
 
-[Superagent Docs](https://visionmedia.github.io/superagent/){:target="_blank"}
-
 [WeatherBit API](https://www.weatherbit.io/api){:target="_blank"}
 
 [The Movie DB API Docs](https://developers.themoviedb.org/3/getting-started/introduction){:target="_blank"}

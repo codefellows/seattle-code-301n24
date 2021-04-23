@@ -16,9 +16,6 @@ class Weather extends React.Component {
             />
           ))
           }
-          {this.props.weather[0] &&
-            <em>As of {(new Date(this.props.weather[0].createdAt)).toLocaleString()}</em>
-          }
         </CardDeck>
       </div>
     )
