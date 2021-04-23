@@ -23,7 +23,7 @@ As a result of completing Lecture 8 of Code 301, students will be able to:
   - APIs
 - Execute
   - Node Express Server
-  - Use **superagent** to fetch remote data asynchronously
+  - Use **axios** to fetch remote data asynchronously
   - Use **axios** to reach out to the back-end from the front-end
   - Ingest 3rd Party data from an API
   - Integrate data with a separate web application
@@ -47,16 +47,10 @@ As a result of completing Lecture 8 of Code 301, students will be able to:
 
 1. To make an API call in the server using superagent:
   ```javaScript
-  const url = 'http://urlToAPI';
-  const query = {
-    key: process.env.MY_API_KEY,
-    city: 'seattle'
-  }
+  const url = `http://urlToAPI/?key=${process.env.MY_API_KEY}&city=seattle`;
 
   // notice the 'await'. This is asynchronous code. The function will need to be 'async'
-  const superagentResults = await superagent
+  const axiosResults = await axios
     .get(url)
-    .query(query)
   ```
-  - superagent returns a giant object. The data we care about is usually in the body of that object.
-  - superagent puts the things in the query object into the URL for us behind the scenes
+  - axios returns a giant object. The data we care about is usually in the .data of that object.

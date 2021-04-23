@@ -10,6 +10,7 @@ import LatLon from './LatLon';
 import Map from './Map';
 import Movies from './Movies';
 import Weather from './Weather';
+import Yelp from './Yelp';
 
 const storage = {};
 console.log({storage})
@@ -26,7 +27,8 @@ class Main extends React.Component {
       longitude: '',
       movies: [],
       searchQuery: '',
-      weather: []
+      weather: [],
+      yelp: []
     }
   }
 
@@ -41,7 +43,7 @@ class Main extends React.Component {
       let location;
       try {
         location = await axios.get(url);
-        console.log('successfully got location')
+        console.log('successfully got location', {location})
         this.setState({ 
           location: location.data[0].display_name,
           latitude: location.data[0].lat, 
@@ -67,6 +69,7 @@ class Main extends React.Component {
       }
       this.getWeather();
       this.getMovies(); 
+      this.getYelp();
     }
     
     getWeather = async () => {
@@ -87,7 +90,7 @@ class Main extends React.Component {
     
     getMovies = async () => {
       try{
-        const movies = await axios.get(`${process.env.REACT_APP_SERVER_URL}/movies`, {params: {city:this.state.searchQuery} } );
+        const movies = await axios.get(`${process.env.REACT_APP_SERVER_URL}/movies`, {params: {city:this.state.searchQuery}});
         this.setState({
           movies: movies.data
         });
@@ -96,9 +99,24 @@ class Main extends React.Component {
           displayMap: false,
           displayError: true,
           errorMessage: error.response && error.response.status + ': ' + error.response.data.error 
-        })
+        });
       }
     } 
+
+    getYelp = async () => {
+      try{
+        const yelp = await axios.get(`${process.env.REACT_APP_SERVER_URL}/yelp`, {params: {searchQuery: this.state.searchQuery}});
+        this.setState({
+          yelp: yelp.data
+        });
+      } catch(error) {
+        this.setState({
+          displayMap: false,
+          displayError: true,
+          errorMessage: error.response && error.response.status + ': ' + error.response.data.error 
+        });
+      }
+    }
 
   render() {    
     return(
@@ -142,6 +160,13 @@ class Main extends React.Component {
                 <Col>
                 <Movies
                   movies={this.state.movies}
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Yelp
+                  yelp={this.state.yelp}
                 />
               </Col>
             </Row>

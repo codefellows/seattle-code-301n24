@@ -30,7 +30,7 @@ function parseMoviesData(data) {
 }
 
 class Movie {
-  constructo(movie) {
+  constructor(movie) {
     this.tableName = 'movies';
     this.title = movie.title;
     this.overview = movie.overview;

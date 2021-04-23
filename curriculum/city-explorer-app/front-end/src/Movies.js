@@ -9,15 +9,12 @@ class Movies extends React.Component {
       <div id="movies">
         <CardDeck style={{ width: '18rem' }}>
           <h3>Movies:</h3>
-          {this.props.movies.map((movie, idx) => (
+          {this.props.movies.length && this.props.movies.map((movie, idx) => (
             <Movie
               key={idx}
               movie={movie}
             />
           ))
-          }
-          {this.props.movies[0] &&
-            <em>As of {(new Date(this.props.movies[0].createdAt)).toLocaleString()}</em>
           }
         </CardDeck>
       </div>
