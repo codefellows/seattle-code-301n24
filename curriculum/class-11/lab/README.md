@@ -2,9 +2,9 @@
 
 ## Overview
 
-We are going to start this week with authentication! The ability for a user to securly login to an application to store their data is crucial. Think about all the times you have signed up for an app using your facebook or google account. That is done through a process called OAuth. Essientially, the app allows "someone else" (an external identity "provider") to take care of making sure that you are who you say you are. 
+We are going to start this week with authentication! The ability for a user to securly login to an application to store their data is crucial. Think about all the times you have signed up for an app using your facebook or google account. That is done through a process called OAuth. Essientially, the app allows "someone else" (an external identity "provider") to take care of making sure that you are who you say you are.
 
-In this lab, we are going to use a service called Auth0 that will handle most of the challenges of working with external identity providers. Your job will be to create a componentized React application where users can sign in via the Auth0 service.
+In this lab, we are going to begin with [starter code](https://github.com/codefellows/book-app-react-template){:target="_blank"} and use a service called Auth0 that will handle most of the challenges of working with external identity providers. Your job will be to create a componentized React application where users can sign in via the Auth0 service.
 
 ## Process: Professional Pairing Practice
 
@@ -23,13 +23,13 @@ Before you begin to even think about your application, take at least 30 minutes 
 
 - Make a list of each parson's strengths.
 - How can you best utilize these strengths in the development of your application?
-- In what areas do you each want to develop greater strength? 
+- In what areas do you each want to develop greater strength?
 - Knowing that every person in your team needs to understand the code, how do you plan to approach the day-to-day development?
 
 ### Conflict Resolution
 
 - What will your team do if one person is pulling all the weight while the other person is not contributing?
-- What will your team do if one person is taking over the project and not letting the other member contribute? 
+- What will your team do if one person is taking over the project and not letting the other member contribute?
 - How will you approach each other and the challenge of building an application knowing that it is impossible for two people to be at the exact same place in understanding and skill level?
 
 ## Feature Tasks
@@ -38,6 +38,7 @@ See the Trello board for your feature tasks for today's lab.
 
 ## Workflow
 
+- You will be working from starter code for this lab. Use the [template repo](https://github.com/codefellows/book-app-react-template){:target="_blank"} to make your own repo that contains the starter code.
 - We will be using the [Trello](https://trello.com/home){:target="_blank"} project management tool for the duration of this project.
 - After signing in to your account, go to the [Best Books Task Tracker](https://trello.com/b/qgaCsVVa){:target="_blank"}, open the "... Show Menu" link, click the "... More" link, and then click "Copy Board". Before you create it, be sure to "Change" from Private to "Public" (and click "Yes, Make Board Public") so your instructional team can see your work. Now, click "Create" to add a copy to your personal account.
 - This Trello board contains all of the features required to complete each lab assignment.
