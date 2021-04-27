@@ -7,7 +7,23 @@ Review the Submission Instructions for guidance on completing and submitting thi
 ## Reading
 
 - [nosql vs sql](https://www.thegeekstuff.com/2014/01/sql-vs-nosql-db/?utm_source=tuicool){:target="_blank"}
-- [nosql modeling techniques](https://highlyscalable.wordpress.com/2012/03/01/nosql-data-modeling-techniques/){:target="_blank"}
+
+1. Fill in the chart below with five differences between SQL and NoSQL databases:
+
+
+| SQL    | NoSQL |
+| ----------- | ----------- |
+|             |             |
+|             |             |
+|             |             |
+|             |             |
+
+1. What kind of data is a good fit for an SQL database?
+1. Give a real world example.
+1. What kind of data is a good fit a NoSQL database?
+1. Give a real world example.
+1. Which type of database is best for hierarchical data storage?
+1. Which type of database is best for scalability?
 
 ## Bookmark
 
@@ -20,4 +36,14 @@ PLACEHOLDER -->
 ### Videos
 
 - [sql vs nosql](https://www.youtube.com/watch?v=ZS_kXvOeQ5Y){:target="_blank"} (Video)
+
+1. What does SQL stand for?
+1. What is a realational database?
+1. What type of structure does a relational database work with?
+1. What is a 'schema'?
+1. What is a NoSQL database?
+1. Howo does it work?
+1. What is inside of a Mongo database?
+1. Which is more flexible - SQL or MongoDB? and why.
+1. What is the disadvantage of a NoSQL database?
 
