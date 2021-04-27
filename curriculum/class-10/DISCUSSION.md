@@ -7,7 +7,21 @@ Review the Submission Instructions for guidance on completing and submitting thi
 ## Reading
 
 - [Understanding the JavaScript Call Stack](https://medium.freecodecamp.org/understanding-the-javascript-call-stack-861e41ae61d4){:target="_blank"}
+
+1. What is a 'call'? 
+1. How many 'calls' can happen at once?
+1. What does LIFO mean?
+1. Draw an example of a call stack and the functions that would need to be invoked to generate that call stack.
+1. What causes a Stack Overflow?
+
 - [JavaScript error messages](https://codeburst.io/javascript-error-messages-debugging-d23f84f0ae7c){:target="_blank"}
+
+1. What is a 'refrence error'?
+1. What is a 'syntax error'?
+1. What is a 'range error'?
+1. What is a 'tyep error'?
+1. What is a breakpoint?
+1. What does the word 'debugger' do in your code?
 
 ## Additional Resources
 
