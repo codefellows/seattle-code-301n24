@@ -1,9 +1,10 @@
 import React from 'react';
 import axios from 'axios';
-import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { withAuth0 } from '@auth0/auth0-react';
-import { CardColumns } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
+import './bestBooks.css';
+
 
 class BestBooks extends React.Component {
   constructor(props){
@@ -16,29 +17,31 @@ class BestBooks extends React.Component {
   componentDidMount = async () => {
     // make a call to the backend to get the the books and display them
     const books = await axios.get('http://localhost:3001/books', {params: {email: this.props.auth0.user.email }});
+    console.log('books', books.data)
     this.setState({ books: books.data });
   }
 
   render() {
-    console.log(this.props.auth0);
     return(
       <>
         <h2>My Essential Lifelong Learning &amp; Formation Shelf</h2>
-        {this.state.books.length && this.state.books.map((book, idx) => (
-          <CardColumns>
-            <Card key={idx}>
-              <Card.Body>
-                <Card.Title>{book.name}</Card.Title>
-                <Card.Text>
-                  {book.description}
-                </Card.Text>
-              </Card.Body>
-              <Card.Footer>
-                <small className="text-muted">{book.status}</small>
-              </Card.Footer>
-            </Card>
-          </CardColumns>
-        ))}
+
+        <Carousel>
+          {this.state.books.length && this.state.books.map((book, idx) => (
+            <Carousel.Item key={idx}>
+              <img
+                className="d-block w-100"
+                src={book.img}
+                alt={book.name}
+                />
+              <Carousel.Caption>
+                <h3>{book.name}</h3>
+                <p>{book.description}</p>
+                <p>{book.status}</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+          ))}
+        </Carousel>
       </>
     )
   }

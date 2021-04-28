@@ -17,21 +17,22 @@ db.once('open', _ => {
 
 // step 1 and 2: create a schema and a model
 const User = require('./models/User.js');
+// User.remove();
 
 // step 3. add new entries to your model
 const lena = new User({email: 'applena@gmail.com', books: [
-  { name: 'The Silent Patient', description: 'a women may or may not have killed her husband and a theapist is determind to make her talk to discover her secrets.', status: 'LIFE-CHANGING' },
-  { name: 'The Hitchhickers Guide To The Gallaxy.', description: 'earth is destroyed and folks try to determine the ultimate question to the universe and everything', status: 'RECOMMENDED TO ME'}
+  { name: 'The Silent Patient', description: 'a women may or may not have killed her husband and a theapist is determind to make her talk to discover her secrets.', status: 'LIFE-CHANGING', img: 'https://m.media-amazon.com/images/I/91lslnZ-btL._AC_UY436_FMwebp_QL65_.jpg' },
+  { name: 'The Hitchhickers Guide To The Gallaxy.', description: 'earth is destroyed and folks try to determine the ultimate question to the universe and everything', status: 'RECOMMENDED TO ME', img: 'https://m.media-amazon.com/images/I/61uKflIpsdL._AC_UY436_QL65_.jpg'}
 ]});
 
 const codefellows = new User({email: 'lena@codefellows.com', books: [
-  { name: 'The Growth Mindset', description: 'Dweck coined the terms fixed mindset and growth mindset to describe the underlying beliefs people have about learning and intelligence. When students believe they can get smarter, they understand that effort makes them stronger. Therefore they put in extra time and effort, and that leads to higher achievement.', status: 'FAVORITE FIVE' },
-  { name: 'What Great Trainers Do', description: 'What Great Trainers Do: The Ultimate Guide to Delivering Engaging and Effective Learning', status: 'RECOMMENDED TO ME'}
+  { name: 'The Growth Mindset', description: 'Dweck coined the terms fixed mindset and growth mindset to describe the underlying beliefs people have about learning and intelligence. When students believe they can get smarter, they understand that effort makes them stronger. Therefore they put in extra time and effort, and that leads to higher achievement.', status: 'FAVORITE FIVE', img: 'https://m.media-amazon.com/images/I/61bDwfLudLL._AC_UL640_QL65_.jpg' },
+  { name: 'What Great Trainers Do', description: 'What Great Trainers Do: The Ultimate Guide to Delivering Engaging and Effective Learning', status: 'RECOMMENDED TO ME', img: 'https://m.media-amazon.com/images/I/81MjWfhYAEL._AC_UY436_FMwebp_QL65_.jpg'}
 ]})
 
 const brook = new User({email: 'brook@codefellows.com', books: [
-  { name: 'The Growth Mindset', description: 'Dweck coined the terms fixed mindset and growth mindset to describe the underlying beliefs people have about learning and intelligence. When students believe they can get smarter, they understand that effort makes them stronger. Therefore they put in extra time and effort, and that leads to higher achievement.', status: 'FAVORITE FIVE' },
-  { name: 'The Momnt of Lift', description: 'Melinda Gates shares her how her exposure to the poor around the world has established the objectives of her foundation.', status: 'RECOMMENDED TO ME'}
+  { name: 'The Growth Mindset', description: 'Dweck coined the terms fixed mindset and growth mindset to describe the underlying beliefs people have about learning and intelligence. When students believe they can get smarter, they understand that effort makes them stronger. Therefore they put in extra time and effort, and that leads to higher achievement.', status: 'FAVORITE FIVE', img: 'https://m.media-amazon.com/images/I/61bDwfLudLL._AC_UL640_QL65_.jpg' },
+  { name: 'The Momnt of Lift', description: 'Melinda Gates shares her how her exposure to the poor around the world has established the objectives of her foundation.', status: 'RECOMMENDED TO ME', img: 'https://m.media-amazon.com/images/I/71LESEKiazL._AC_UY436_QL65_.jpg'}
 ]})
 
 
