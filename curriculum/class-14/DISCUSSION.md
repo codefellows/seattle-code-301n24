@@ -20,7 +20,6 @@ Review the Submission Instructions for guidance on completing and submitting thi
 1. When are diversity efforts most successful?
 1. Why do diverse companies perform better?
 1. Give an example of how a diverse company can serve a diverse user base or vise-versa.
-1. 
 
 <!-- ## Additional Resources
 
