@@ -1,15 +1,17 @@
 'use strict';
 
 const express = require('express');
+const cors = require('cors');
+const Data = require('./data');
+
 const app = express();
 
-const Data = require('./data.js');
-
+app.use(cors());
+app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
-app.get('/items', Data.getAllItems);
-app.get('/items/:id', getOneItem);
-app.delete('/items/:id', Data.deleteOneItem);
+app.get('/allitems', Data.getAllItems);
+app.get('/items/:id', Data.getOneItem);
 app.post('/items', Data.addAnItem);
 
 app.use('*', (req,res) => {
@@ -20,6 +22,9 @@ app.use( (error,req,res,next) => {
   res.status(500).send(`My Bad ... ${error.message}`);
 });
 
+// I know this looks different than what you have seen in class but this is how we need to write the code for testing. 
+// the index.js is calling start function to turn on the server
+// There are no errors in the code below. Do not make any changes to these lines.
 module.exports = {
   server: app,
   start: (port) => {

@@ -1,12 +1,20 @@
 # Code 301 Final Assessment
 
-This assessment comes in 2 parts (applications), a **client** and a **server**
+This assessment comes in 2 parts (applications), a **client** and a **server** that together, will allow a user to create a list of things.
 
 Each application is intended to be operated and tested independently, while also working together.
 
 - The server, written in express, when started, will be the API that the react application uses for data retrieval and storage
 
-## The API Server
+## Feature Tasks
+
+- Fix the bug in the server
+- Fix the bug in the client
+- Add **DELETE** functionality on both the server and client
+  - The client app has a "Delete Button" that is there but is not wired up. Wire it up.
+- Change the styling of the items list.
+
+### The API Server
 
 Located in the `/server` folder, this is an express server designed to perform CRUD (Create, Read, Update, Delete) operations on a mongo/mongoose data model: `items`. Note that this server does not require you to install or configure MongoDB, it will take care of that for you.
 
@@ -14,15 +22,15 @@ Located in the `/server` folder, this is an express server designed to perform C
 
 How will you know that you've found them all? The tests will all pass!
 
-### Server: Running the tests
+#### Server: Running the tests
 
 - Make sure the server is NOT running
 - From the root directory of the server in the terminal, run the command `npm test`
-- You should recieve a list of the tests that are passing and failing just like you have seen in your code challenges
+- You should receive a list of the tests that are passing and failing just like you have seen in your code challenges
 
-### Server: Getting Started
+#### Server: Getting Started
 
-- create a repo on GitHub 
+- create a repo on GitHub
 - Connect it to your server:
   - run `git init`
   - run `git remote add origin <url-of-the-repo-you-just-created>`
@@ -30,21 +38,20 @@ How will you know that you've found them all? The tests will all pass!
 - Install your dependencies
 - Run the tests
   - with the server turned off run the command: `npm test`
-- Fix the bugs - 30 POINTS
-- Repeat until all tests are passing
+- There is one bug. Find the bug and fix it - 20 POINTS
+- You will know you have found the bug when the tests pass
 - Deploy to Heroku - 5 POINTS
 
-### Server: Notes
+#### Server: Notes
 
 - You may inspect the tests, but do not change them.
 - Once you have this working, keep it running. The React app will be using it to save and retrieve data
 
-## The React App
+### The React App
 
 The React application will allow a user to:
 
 - Add a new item
-- Add notes to an existing item
 - Delete an item from the list
 
 By default, it'll try and connect to your running API server from the previous step to do so.
@@ -53,7 +60,7 @@ By default, it'll try and connect to your running API server from the previous s
 
 How will you know that you've found them all? The tests will all pass!
 
-### React App: Getting Started
+#### React App: Getting Started
 
 - create a repo on GitHub
 - connect it to your React app:
@@ -63,15 +70,15 @@ How will you know that you've found them all? The tests will all pass!
 - Install your dependencies
 - Run the tests
   - with the React App turned off run `npm test`
-- Fix the bugs - 30 POINTS
-- Repeat until all tests are passing
+- There is one bug. Find the bug and fix it - 20 POINTS
+- You will know you have found the bug when the tests all pass
 - Deploy to Netlify - 5 POINTS
 
-### React App: Add Styling - 30 POINTS
+#### React App: Change Styling - 25 POINTS
 
-- Using React Bootstrap, style the application in a pleasing and professional way using Bootstrap Components
+- Using React Bootstrap, change the list from a `Table` to an `Accordion` for showing the items in the list
 
-### React App Notes
+#### React App Notes
 
 - Throughout the application code, you will see that some components/markup have a prop called **data-testid** that look like the below -- **Do not remove or change these, they are required for the tests and grading**
   - ```data-testid="---"```
@@ -80,10 +87,11 @@ How will you know that you've found them all? The tests will all pass!
 
 ## Rubric
 
-- 30 Points: Fix the Express API Server (all tests passing)
-- 30 Points: Fix the React App (all tests passing)
-- 30 Points: Style the application (well) with Bootstrap
+- 20 Points: Fix the Express API Server (all tests passing)
+- 20 Points: Fix the React App (all tests passing)
+- 25 Points: Add DELETE functionality to both server and client
+- 25 Points: Style the application with Bootstrap
 - 10 Points: Deployed and Tested in the cloud
   - Server running at Heroku
-  - React App running at Netlify, configured to talk to the deployed server 
+  - React App running at Netlify, configured to talk to the deployed server
   - Tests for both running in the green at GitHub

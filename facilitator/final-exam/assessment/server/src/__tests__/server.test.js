@@ -1,5 +1,9 @@
 'use strict';
 
+// this is the testing file
+// look at what is being tested
+// don't make any changes to this file
+
 const supergoose = require('@code-fellows/supergoose');
 const app = require('../server.js');
 
@@ -40,22 +44,6 @@ describe('The Server', () => {
     expect(response.status).toEqual(200);
     expect(response.body._id).toEqual(id);
     expect(response.body.name).toEqual(record.name);
-    expect(response.body.description).toEqual(record.description);
-  });
-
-  it('can update a record', async () => {
-
-    const record = await createRecord();
-    const id = record._id;
-
-    const newValues = {
-      name: 'newName',
-    };
-
-    const response = await client.put(`/items/${id}`).send(newValues);
-    expect(response.status).toEqual(200);
-    expect(response.body._id).toEqual(id);
-    expect(response.body.name).toEqual(newValues.name);
     expect(response.body.description).toEqual(record.description);
   });
 
