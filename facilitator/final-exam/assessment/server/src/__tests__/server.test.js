@@ -43,22 +43,6 @@ describe('The Server', () => {
     expect(response.body.description).toEqual(record.description);
   });
 
-  it('can update a record', async () => {
-
-    const record = await createRecord();
-    const id = record._id;
-
-    const newValues = {
-      name: 'newName',
-    };
-
-    const response = await client.put(`/items/${id}`).send(newValues);
-    expect(response.status).toEqual(200);
-    expect(response.body._id).toEqual(id);
-    expect(response.body.name).toEqual(newValues.name);
-    expect(response.body.description).toEqual(record.description);
-  });
-
   it('can delete a record', async () => {
 
     const record = await createRecord();

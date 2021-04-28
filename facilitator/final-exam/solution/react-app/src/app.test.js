@@ -23,8 +23,6 @@ config('../.env');
 
 // ----- MOCK SERVER ------- //
 
-const API_SERVER = process.env.REACT_APP_API;
-
 let items = [];
 
 const server = setupServer(
@@ -111,7 +109,8 @@ test('deletes an item', async () => {
 
 });
 
-test('updates an item', async () => {
+// For now, commenting this one out ...
+xtest('updates an item', async () => {
   render(<App />);
 
   const form = screen.getByTestId("add-form");

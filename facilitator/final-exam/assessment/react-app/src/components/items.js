@@ -1,6 +1,6 @@
 import React from 'react';
 
-import UpdateForm from './update-item';
+import { Table, Button } from 'react-bootstrap';
 
 class Items extends React.Component {
 
@@ -9,20 +9,31 @@ class Items extends React.Component {
     return (
       <section>
         <h2>Items...</h2>
-        {
-          this.props.itemsList.forEach( (item,idx) =>
-            <div key={idx}>
-              <h3>{item.name}</h3>
-              <p>{item.description}</p>
-              <blockquote>{item.notes}</blockquote>
-              <UpdateForm item={item} handleUpdate={this.props.handleUpdate} />
-              <button
-                data-testid={`delete-button-${item.name}`}
-                onClick={ () => this.props.handleDelete(item._id) }
-              >Delete Item</button>
-            </div>
-          )
-        }
+
+        <Table striped bordered hover>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              this.props.itemsList.map((item, idx) =>
+                <tr key={idx}>
+                  <td>{item.name}</td>
+                  <td>{item.description}</td>
+                  <td>
+                    <Button data-testid={`delete-button-${item.name}`}>Delete Item</Button>
+                  </td>
+                </tr>
+              )
+            }
+          </tbody>
+        </Table>
+
+
       </section>
     );
   }

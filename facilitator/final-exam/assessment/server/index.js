@@ -4,7 +4,6 @@
 // MongoMemoryServer is just like Mongo but it is in memory so you don't have to install anything and it therefore won't cause any issues when you deploy
 // You use it the exact same way you would use MongoDB
 
-
 const { default: MongoMemoryServer } = require('mongodb-memory-server');
 const mongoose = require('mongoose');
 

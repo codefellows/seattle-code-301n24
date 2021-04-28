@@ -1,15 +1,17 @@
 'use strict';
 
 const express = require('express');
+const cors = require('cors');
+const Data = require('./data');
+
 const app = express();
 
-const Data = require('./data.js');
-
+app.use(cors());
+app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
-app.get('/items', Data.getAllItems);
-app.get('/items/:id', getOneItem);
-app.delete('/items/:id', Data.deleteOneItem);
+app.get('/allitems', Data.getAllItems);
+app.get('/items/:id', Data.getOneItem);
 app.post('/items', Data.addAnItem);
 
 app.use('*', (req,res) => {
