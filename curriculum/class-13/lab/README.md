@@ -6,7 +6,7 @@ Today you will add the functionality for the user to add a book or delete a book
 
 ## Feature Tasks
 
-See the [Trello board](https://trello.com/b/qgaCsVVa/module-3-best-books) for your feature tasks for today's lab.
+See the [Trello board](https://trello.com/b/qgaCsVVa/module-3-best-books){:target="_blank"} for your feature tasks for today's lab.
 
 ## Documentation
 
