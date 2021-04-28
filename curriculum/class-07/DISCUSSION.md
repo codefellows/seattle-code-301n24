@@ -49,3 +49,24 @@ Request a personal API key from the following APIs. You should receive these in 
 - [The Movie DB API Docs](https://developers.themoviedb.org/3/getting-started/introduction){:target="_blank"}
 
 1. Did you get your API key? 
+
+
+# Assignment Instructions
+
+Read for understanding the assigned resources for this class and watch any assigned videos. Also skim and bookmark the additional resources provided. Prepare an entry for your *Readings Notes Repository* that answers **each and every** question presented above. 
+
+Make a section in your notes titled `## Things I want to know more about`, and anytime a question arises in your mind, or something catches your curiosity, write it down under this heading. 
+
+### To submit this assignment
+
+- Create a new markdown file in your **reading notes repository**, and add your notes.
+- If you utilize any content directly from the reading sources, **be sure** to identify what you are quoting, and cite the source.
+- Add a link to this new file under the table of contents for this course.
+- Then ACP your main branch to create a rendered web page on GitHub pages.
+- Copy the rendered content and paste it into the discussion.
+
+### Grading Rubric
+
+- 0 points: Minimal effort
+- 1 point: Insufficient quality
+- 2 points: Sufficient quality
