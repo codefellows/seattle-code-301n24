@@ -8,8 +8,8 @@ Each application is intended to be operated and tested independently, while also
 
 ## Feature Tasks
 
-- Fix the bugs in the server
-- Fix the bugs in the client
+- Fix the bug in the server
+- Fix the bug in the client
 - Add **DELETE** functionality on both the server and client
   - The client app has a "Delete Button" that is there but is not wired up. Wire it up.
 - Change the styling of the items list.
@@ -38,8 +38,8 @@ How will you know that you've found them all? The tests will all pass!
 - Install your dependencies
 - Run the tests
   - with the server turned off run the command: `npm test`
-- Fix the bugs - 30 POINTS
-- Repeat until all tests are passing
+- There is one bug. Find the bug and fix it - 20 POINTS
+- You will know you have found the bug when the tests pass
 - Deploy to Heroku - 5 POINTS
 
 #### Server: Notes
@@ -70,13 +70,13 @@ How will you know that you've found them all? The tests will all pass!
 - Install your dependencies
 - Run the tests
   - with the React App turned off run `npm test`
-- Fix the bugs - 30 POINTS
-- Repeat until all tests are passing
+- There is one bug. Find the bug and fix it - 20 POINTS
+- You will know you have found the bug when the tests all pass
 - Deploy to Netlify - 5 POINTS
 
-#### React App: Change Styling - 30 POINTS
+#### React App: Change Styling - 25 POINTS
 
-- Using React Bootstrap, change the list from a Table to an Accordion for showing the items in the list
+- Using React Bootstrap, change the list from a `Table` to an `Accordion` for showing the items in the list
 
 #### React App Notes
 

@@ -1,5 +1,9 @@
 'use strict';
 
+// this is the testing file
+// look at what is being tested
+// don't make any changes to this file
+
 const supergoose = require('@code-fellows/supergoose');
 const app = require('../server.js');
 

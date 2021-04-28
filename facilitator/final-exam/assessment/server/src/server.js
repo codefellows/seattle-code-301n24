@@ -22,6 +22,9 @@ app.use( (error,req,res,next) => {
   res.status(500).send(`My Bad ... ${error.message}`);
 });
 
+// I know this looks different than what you have seen in class but this is how we need to write the code for testing. 
+// the index.js is calling start function to turn on the server
+// There are no errors in the code below. Do not make any changes to these lines.
 module.exports = {
   server: app,
   start: (port) => {
