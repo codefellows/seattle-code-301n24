@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import {Card, CardColumns } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
+import { Carousel, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AddABookButton from './AddABookButton';
 import { withAuth0 } from '@auth0/auth0-react';
@@ -64,23 +63,24 @@ class BestBooks extends React.Component {
           />
         }
 
-        <CardColumns>
+        <Carousel>
           {this.state.books.length && this.state.books.map((book, idx) => (
-            <Card key={idx}>
-              <Card.Body>
-                <Card.Title>{book.name}</Card.Title>
-                <Card.Text>
-                  {book.description}
-                  <Button onClick={() => this.removeBook(idx)}>Delete</Button>
-                  <Button onClick={() => this.setState({displayBookForm:true, newBook: false, updateIdx: idx})}>Update</Button>
-                </Card.Text>
-              </Card.Body>
-              <Card.Footer>
-                <small className="text-muted">{book.status}</small>
-              </Card.Footer>
-            </Card>
+            <Carousel.Item key={idx}>
+              <img
+                className="d-block w-100"
+                src={book.img}
+                alt={book.name}
+                />
+              <Carousel.Caption>
+                <h3>{book.name}</h3>
+                <p>{book.description}</p>
+                <p>{book.status}</p>
+              </Carousel.Caption>
+              <Button onClick={() => this.removeBook(idx)}>Delete</Button>
+              <Button onClick={() => this.setState({displayBookForm:true, newBook: false, updateIdx: idx})}>Update</Button>
+            </Carousel.Item>
           ))}
-        </CardColumns>
+        </Carousel>
       </>
     )
   }

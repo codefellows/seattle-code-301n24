@@ -14,7 +14,8 @@ class BookFormModal extends React.Component {
     this.state={
       name: !this.props.newBook ? this.props.book.name : '',
       description: !this.props.newBook ? this.props.book.description :  '',
-      status: !this.props.newBook ? this.props.book.status : 'LIFE-CHANGING'
+      status: !this.props.newBook ? this.props.book.status : 'LIFE-CHANGING',
+      img: !this.props.newBook ? this.props.book.img : ''
     }
   }
 
@@ -27,7 +28,8 @@ class BookFormModal extends React.Component {
       email: this.props.auth0.user.email,
       name: this.state.name,
       description: this.state.description,
-      status: this.state.status
+      status: this.state.status,
+      img: this.state.img
     });
     this.props.close();
     this.props.updateBookArray(bookResults.data);
@@ -38,7 +40,8 @@ class BookFormModal extends React.Component {
       email: this.props.auth0.user.email, 
       name: this.state.name, 
       description: this.state.description, 
-      status: this.state.status 
+      status: this.state.status,
+      img: this.state.img
     });
 
     this.props.updateBookArray(updatedBookObj.data);
@@ -46,6 +49,7 @@ class BookFormModal extends React.Component {
   }
 
   render() {
+    console.log('form props', this.props)
     return(
       <Modal show={this.props.show} onHide={this.handleClose}>
         <Modal.Header closeButton>
@@ -59,6 +63,10 @@ class BookFormModal extends React.Component {
           <Form.Group controlId="description">
             <Form.Label>Book description</Form.Label>
             <Form.Control onChange={(e)=> this.setState({description:e.target.value})} type="text" placeholder={this.props.newBook ? "book description" : this.props.book.description} />
+          </Form.Group>
+          <Form.Group controlId="image">
+            <Form.Label>Book Image URL</Form.Label>
+            <Form.Control onChange={(e)=> this.setState({img:e.target.value})} type="text" placeholder={this.props.newBook ? "book image url" : this.props.book.img} />
           </Form.Group>
           <Form.Group controlId="status">
             <Form.Label>Status</Form.Label>

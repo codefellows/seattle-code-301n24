@@ -24,6 +24,7 @@ Note that the tasks below have a corresponding assignment to submit in your Canv
 - [ES6 Classes in JavaScript](classes)
 - [Dive into React](react)
 - [Setup Your Accounts](/common_curriculum/prep_work/Setup_Your_Accounts)
+- [Setup Your Reading Notes Repo](/common_curriculum/prep_work/Setup_Readings)
 - [Setup Your Laptop Instructions](set-up)
 - [Read 01 - Introduction to React and Components](https://codefellows.github.io/code-301-guide/curriculum/class-01/DISCUSSION)
 
