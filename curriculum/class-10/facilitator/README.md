@@ -64,8 +64,8 @@ One possible way to present this material is documented in the [example lecture]
 
 ## Lab Notes
 
-- Today is the final day of the City Explorer Lab. Students will be given starter code containing a basic server and weather module with bugs in it. This is designed to allow students practice debugging - a skill they will need as a developer and to complete their final exam. 
-- Students will be incorporating this starter code with their server code and add an in-memory cache.
+- Today is the final day of the City Explorer Lab. Students will be given starter code located in the class repo. The starter code contains a basic server and weather module with bugs in it. This is designed to allow students practice debugging - a skill they will need as a developer and to complete their final exam. 
+- Once they have fixed all the bugs in the starter code, students will be incorporating this starter code with their existing code and using it as a template to create an in-memory cache.
 
 ## What changed from the previous class?
 
