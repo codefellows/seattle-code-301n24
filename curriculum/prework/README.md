@@ -8,24 +8,24 @@ In particular, if you have tested in to Code 301 and did not take Code 201, be e
 
 Note that the tasks below have a corresponding assignment to submit in your Canvas course, but be aware that at the time you receive the link to this pre-work that the Canvas course will not yet be published. Because of Admissions processes and when classes begin and end, Canvas courses are typically published 3-5 days before class begins.
 
-## Career Coaching Assignments
+## Assignments
 
-1. Familiarize yourself with the [Career Coaching program](/common_curriculum/career_coaching), and review the [Code 301 Career Coaching Syllabus](/common_curriculum/career_coaching/Code_301/301_Career_Coaching_Syllabus).
-1. Reflect on how to boost your [Professional Etiquette](/common_curriculum/career_coaching/301/professional-etiquette)
-1. Build up your bank of [Behavioral Questions](/common_curriculum/career_coaching/301/behavioral-questions)
-1. [Status Report](/common_curriculum/career_coaching/301/status-report)
-1. Practice your [Professional Pitch](/common_curriculum/career_coaching/301/professional-pitch-draft)
-1. [Update Your Resume](/common_curriculum/career_coaching/301/update-your-resume)
+### Please Complete
 
-## Code Assignments
+- [Professional Etiquette](/common_curriculum/career_coaching/301/professional-etiquette)
+- [Behavioral Interview Questions](/common_curriculum/career_coaching/301/behavioral-questions)
+- [Status Report](/common_curriculum/career_coaching/301/status-report)
+- [Professional Pitch](/common_curriculum/career_coaching/301/professional-pitch-draft)
+- [Update Your Resume](/common_curriculum/career_coaching/301/update-your-resume)
+- [Chocolate Pizza](chocolate_pizza)
+- [CSS Diner](css_diner.md)
+- [Portfolio Prep](portfolio_prep)
+- [ES6 Arrow Functions in JavaScript](arrow-functions)
+- [ES6 Classes in JavaScript](classes)
+- [Dive into React](react)
+- [Setup Your Accounts](/common_curriculum/prep_work/Setup_Your_Accounts)
+- [Setup Your Laptop Instructions](set-up)
+- [Read 01 - Introduction to React and Components](https://codefellows.github.io/code-301-guide/curriculum/class-01/DISCUSSION)
 
-1. [Chocolate Pizza](chocolate_pizza)
-1. [CSS Diner](css_diner.md)
-1. [Portfolio Prep](portfolio_prep)
-1. [Arrow Functions in JavaScript](arrow-functions)
-1. [Classes in JavaScript](classes)
-1. [Dive into React](react)
-
-## Computer Setup
-
-- [Setup Instructions](set-up)
+### Please Read
+- [Familiarize yourself with the Career Coaching program](/common_curriculum/career_coaching), and review the [Code 301 Career Coaching Syllabus](/common_curriculum/career_coaching/Code_301/301_Career_Coaching_Syllabus).
