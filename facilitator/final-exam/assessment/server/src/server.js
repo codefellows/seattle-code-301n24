@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
-app.get('/allitems', Data.getAllItems);
+app.get('/iteems', Data.getAllItems);
 app.get('/items/:id', Data.getOneItem);
 app.post('/items', Data.addAnItem);
 
