@@ -30,7 +30,8 @@ How will you know that you've found them all? The tests will all pass!
 
 #### Server: Getting Started
 
-- create a repo on GitHub
+- create a private repo on GitHub
+- Invite your instructor to the repo
 - Connect it to your server:
   - run `git init`
   - run `git remote add origin <url-of-the-repo-you-just-created>`
@@ -62,7 +63,8 @@ How will you know that you've found them all? The tests will all pass!
 
 #### React App: Getting Started
 
-- create a repo on GitHub
+- create a private repo on GitHub
+- Invite your instructor to the repo
 - connect it to your React app:
   - run `git init`
   - run `git remote add origin <url-of-the-repo-you-just-created>`
@@ -95,3 +97,5 @@ How will you know that you've found them all? The tests will all pass!
   - Server running at Heroku
   - React App running at Netlify, configured to talk to the deployed server
   - Tests for both running in the green at GitHub
+
+## STRETCH GOAL: Add Auth0
