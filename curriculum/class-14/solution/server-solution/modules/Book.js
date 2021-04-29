@@ -26,8 +26,8 @@ Book.list =
 
 Book.add = 
   async (request, response) => {
-    const { email, name, description, status } = request.body;
-    const newBook = {name, description, status};
+    const { email, name, description, status, img } = request.body;
+    const newBook = {name, description, status, img};
 
     await User.findOne({ email }, (err, user) => {
       if (err) console.error(err);
@@ -52,14 +52,14 @@ Book.delete =
 Book.update = 
   async(request, response) => {
     // updates a book in Mongo
-    const { email, name, description, status } = request.body;
+    const { email, name, description, status, img } = request.body;
     const index = Number(request.params.id);
-    console.log({index, email, name, description, status})
+    console.log({index, email, name, description, status, img})
 
     await User.findOne({ email }, (err, user) => {
       if (err) console.error(err);
       const newBookArray = user.books.map((book, i) =>  {
-        return i === index ? book = { name, description, status } : book;
+        return i === index ? book = { name, description, status, img } : book;
       });
       user.books = newBookArray;
       console.log({newBookArray})

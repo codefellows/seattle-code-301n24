@@ -14,7 +14,8 @@ class BookFormModal extends React.Component {
     this.state={
       name: '',
       description: '',
-      status: 'LIFE-CHANGING'
+      status: 'LIFE-CHANGING',
+      img: ''
     }
   }
 
@@ -27,7 +28,8 @@ class BookFormModal extends React.Component {
       email: this.props.auth0.user.email,
       name: this.state.name,
       description: this.state.description,
-      status: this.state.status
+      status: this.state.status,
+      img: this.state.img
     });
     this.props.close();
     this.props.updateBookArray(bookResults.data);
@@ -47,6 +49,10 @@ class BookFormModal extends React.Component {
           <Form.Group controlId="description">
             <Form.Label>Book description</Form.Label>
             <Form.Control onChange={(e)=> this.setState({description:e.target.value})}type="text" placeholder="book description" />
+          </Form.Group>
+          <Form.Group controlId="img">
+            <Form.Label>Book Image URL</Form.Label>
+            <Form.Control onChange={(e)=> this.setState({img:e.target.value})}type="text" placeholder="book image url" />
           </Form.Group>
           <Form.Group controlId="genre">
             <Form.Label>Status</Form.Label>

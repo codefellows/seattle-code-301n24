@@ -24,8 +24,8 @@ Book.list =
 
 Book.add = 
   async (request, response) => {
-    const { email, name, description, status } = request.body;
-    const newBook = {name, description, status};
+    const { email, name, description, status, img } = request.body;
+    const newBook = {name, description, status, img};
 
     await User.findOne({ email }, (err, user) => {
       if (err) console.error(err);
