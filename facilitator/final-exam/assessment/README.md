@@ -54,12 +54,7 @@ The React application will allow a user to:
 
 - Add a new item
 - Delete an item from the list
-
-By default, it'll try and connect to your running API server from the previous step to do so.
-
-> However, it's slightly broken and will need you to find and fix it's bugs before you can take on the real challenge.
-
-How will you know that you've found them all? The tests will all pass!
+- Display current items
 
 #### React App: Getting Started
 
@@ -72,13 +67,19 @@ How will you know that you've found them all? The tests will all pass!
 - Install your dependencies
 - Run the tests
   - with the React App turned off run `npm test`
-- There is one bug. Find the bug and fix it - 20 POINTS
-- You will know you have found the bug when the tests all pass
+- A "bug" is defect or missing feature. Find the bugs and fix them - 20 POINTS
+  - You will know you have found the bugs when the tests all pass
 - Deploy to Netlify - 5 POINTS
 
 #### React App: Change Styling - 25 POINTS
 
 - Using React Bootstrap, change the list from a `Table` to an `Accordion` for showing the items in the list
+
+**NOTE** When you run `npm start` the app will try to connect to your running API server from the previous step to do so.
+
+However, it's not sufficiently set up at moment to reach the API.
+
+You'll need to properly configure you're set up in order to reach the server.
 
 #### React App Notes
 
