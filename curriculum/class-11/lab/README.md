@@ -4,7 +4,9 @@
 
 We are going to start this week with authentication! The ability for a user to securly login to an application to store their data is crucial. Think about all the times you have signed up for an app using your facebook or google account. That is done through a process called OAuth. Essientially, the app allows "someone else" (an external identity "provider") to take care of making sure that you are who you say you are.
 
-In this lab, we are going to begin with [starter code](https://github.com/codefellows/book-app-react-template){:target="_blank"} and use a service called Auth0 that will handle most of the challenges of working with external identity providers. Your job will be to create a componentized React application where users can sign in via the Auth0 service.
+In this lab, we are going to begin with [front-end React starter code](https://github.com/codefellows/book-app-react-template){:target="_blank"} and use a service called Auth0 that will handle most of the challenges of working with external identity providers. Your job will be to create a componentized React application where users can sign in via the Auth0 service. This service will give you a jsonwebtoken or JWT.
+
+Once you have that hooked up, you will send that JWT (that essientially says that you are who you say you are) to a back-end. You will have [server-side starter code](https://github.com/codefellows/can-of-books-template-server){:target="_blank"} to use as well. You will use a library call `jsonwebtoken` to open the JWT and it will verify whether it is valid. 
 
 ## Process: Professional Pairing Practice
 
