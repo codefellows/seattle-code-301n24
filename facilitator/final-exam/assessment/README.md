@@ -30,7 +30,7 @@ How will you know that you've found them all? The tests will all pass!
 
 #### Server: Getting Started
 
-- create a private repo on GitHub
+- create an empty private repo on GitHub
 - Invite your instructor to the repo
 - Connect it to your server:
   - run `git init`
@@ -63,7 +63,7 @@ How will you know that you've found them all? The tests will all pass!
 
 #### React App: Getting Started
 
-- create a private repo on GitHub
+- create an empty private repo on GitHub
 - Invite your instructor to the repo
 - connect it to your React app:
   - run `git init`
