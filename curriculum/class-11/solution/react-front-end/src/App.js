@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header';
-import MyFavoriteBooks from './MyFavoriteBooks';
+import BestBooks from './BestBooks';
 import Footer from './Footer';
 import IsLoadingAndError from './IsLoadingAndError';
 import Login from './Login';
@@ -23,7 +23,7 @@ class App extends React.Component {
             <Header />
               <Switch>
                 <Route exact path="/">
-                  {this.props.auth0.isAuthenticated ? <MyFavoriteBooks /> : <Login /> }
+                  {this.props.auth0.isAuthenticated ? <BestBooks /> : <Login /> }
                 </Route>
                 <Route path="/profile" component={Profile}/>
               </Switch>

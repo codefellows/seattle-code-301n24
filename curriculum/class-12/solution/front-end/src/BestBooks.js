@@ -3,7 +3,6 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { withAuth0 } from '@auth0/auth0-react';
 import { Carousel } from 'react-bootstrap';
-import './bestBooks.css';
 
 
 class BestBooks extends React.Component {
@@ -14,11 +13,24 @@ class BestBooks extends React.Component {
     }
   }
 
-  componentDidMount = async () => {
-    // make a call to the backend to get the the books and display them
-    const books = await axios.get('http://localhost:3001/books', {params: {email: this.props.auth0.user.email }});
-    console.log('books', books.data)
-    this.setState({ books: books.data });
+  componentDidMount = () => {
+    // get the jwt and send in the headers
+    this.props.auth0.getIdTokenClaims()
+      .then(async res => {
+        const jwt = res.__raw;
+        // make a call to the backend to get the the books and display them
+        const config = {
+          params: {email: this.props.auth0.user.email},
+          headers: {"Authorization" : `Bearer ${jwt}`},
+          method: 'get',
+          baseURL: process.env.REACT_APP_SERVER,
+          url: '/books'
+        }
+        const books = await axios(config);
+
+        this.setState({ books: books.data });
+      })
+      .catch(err => console.error(err));
   }
 
   render() {

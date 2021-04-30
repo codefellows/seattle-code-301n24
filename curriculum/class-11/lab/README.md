@@ -4,7 +4,9 @@
 
 We are going to start this week with authentication! The ability for a user to securly login to an application to store their data is crucial. Think about all the times you have signed up for an app using your facebook or google account. That is done through a process called OAuth. Essientially, the app allows "someone else" (an external identity "provider") to take care of making sure that you are who you say you are.
 
-In this lab, we are going to begin with [starter code](https://github.com/codefellows/book-app-react-template){:target="_blank"} and use a service called Auth0 that will handle most of the challenges of working with external identity providers. Your job will be to create a componentized React application where users can sign in via the Auth0 service.
+In this lab, we are going to begin with [front-end React starter code](https://github.com/codefellows/can-of-books-frontend-template){:target="_blank"} and use a service called Auth0 that will handle most of the challenges of working with external identity providers. Your job will be to create a componentized React application where users can sign in via the Auth0 service. This service will give you a jsonwebtoken or JWT.
+
+Once you have that hooked up, you will send that JWT (that essentially says that you are who you say you are) to a back-end. You will have [server-side starter code](https://github.com/codefellows/can-of-books-template-server){:target="_blank"} to use as well. You will use a library call `jsonwebtoken` to open the JWT and it will verify whether it is valid. 
 
 ## Process: Professional Pairing Practice
 
@@ -38,7 +40,7 @@ See the Trello board for your feature tasks for today's lab.
 
 ## Workflow
 
-- You will be working from starter code for this lab. Use the [template repo](https://github.com/codefellows/book-app-react-template){:target="_blank"} to make your own repo that contains the starter code.
+- You will be working from two starter code repos for this lab. Use the [front-end template repo](https://github.com/codefellows/can-of-books-frontend-template){:target="_blank"} to make your own repo that contains the starter code for your React app. Use the [server side template repo](https://github.com/codefellows/can-of-books-template-server) to make your another repo that contains the starter code for your express server.
 - We will be using the [Trello](https://trello.com/home){:target="_blank"} project management tool for the duration of this project.
 - After signing in to your account, go to the [Best Books Task Tracker](https://trello.com/b/qgaCsVVa){:target="_blank"}, open the "... Show Menu" link, click the "... More" link, and then click "Copy Board". Before you create it, be sure to "Change" from Private to "Public" (and click "Yes, Make Board Public") so your instructional team can see your work. Now, click "Create" to add a copy to your personal account.
 - This Trello board contains all of the features required to complete each lab assignment.

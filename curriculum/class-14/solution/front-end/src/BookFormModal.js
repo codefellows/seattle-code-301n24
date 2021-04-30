@@ -23,33 +23,59 @@ class BookFormModal extends React.Component {
     this.props.close();
   }
 
-  createBook = async() => {
-    const bookResults = await axios.post(`${API}/books`, {
-      email: this.props.auth0.user.email,
-      name: this.state.name,
-      description: this.state.description,
-      status: this.state.status,
-      img: this.state.img
-    });
-    this.props.close();
-    this.props.updateBookArray(bookResults.data);
+  createBook = () => {
+    this.props.auth0.getIdTokenClaims()
+    .then(async res => {
+      const jwt = res.__raw;
+
+      const config = {
+        headers: {"Authorization" : `Bearer ${jwt}`},
+        data: {
+          email: this.props.auth0.user.email,
+          name: this.state.name,
+          description: this.state.description,
+          status: this.state.status,
+          img: this.state.img,
+        },
+        baseURL: process.env.REACT_APP_SERVER,
+        url: '/books',
+        method: 'post'
+      }
+      
+      const bookResults = await axios(config);
+      this.props.close();
+      this.props.updateBookArray(bookResults.data);
+    })
+    .catch(err => console.error(err));
   }
-
+  
   updateBook = async() => {
-    const updatedBookObj = await axios.put(`${API}/books/${this.props.index}`, { 
-      email: this.props.auth0.user.email, 
-      name: this.state.name, 
-      description: this.state.description, 
-      status: this.state.status,
-      img: this.state.img
-    });
+    this.props.auth0.getIdTokenClaims()
+    .then(async res => {
+      const jwt = res.__raw;
+      
+      const config = {
+        headers: {"Authorization" : `Bearer ${jwt}`},
+        data: { 
+          email: this.props.auth0.user.email, 
+          name: this.state.name, 
+          description: this.state.description, 
+          status: this.state.status,
+          img: this.state.img
+        },
+        method: 'put',
+        baseURL: process.env.REACT_APP_SERVER,
+        url: `/books/${this.props.index}`
+      }
 
-    this.props.updateBookArray(updatedBookObj.data);
-    this.props.close();
+      const updatedBookObj = await axios(config);
+  
+      this.props.updateBookArray(updatedBookObj.data);
+      this.props.close();
+    });
   }
 
   render() {
-    console.log('form props', this.props)
     return(
       <Modal show={this.props.show} onHide={this.handleClose}>
         <Modal.Header closeButton>

@@ -3,6 +3,21 @@
 const express = require('express');
 require('dotenv').config();
 const cors = require('cors');
+const jwt = require('jsonwebtoken');
+const jwksClient = require('jwks-rsa');
+
+// this function comes directly from the jasonwebtoken docs
+const client = jwksClient({
+  // this url comes from your app on the auth0 dashboard 
+  jwksUri: 'https://dev-4rwdhvtd.us.auth0.com/.well-known/jwks.json'
+});
+
+function getKey(header, callback){
+  client.getSigningKey(header.kid, function(err, key) {
+    const signingKey = key.publicKey || key.rsaPublicKey;
+    callback(null, signingKey);
+  });
+}
 
 const app = express();
 app.use(cors());
@@ -46,13 +61,20 @@ const PORT = process.env.PORT || 3001;
 app.get('/books', getBooks);
 
 function getBooks(request, response) {
-  const email = request.query.email;
-  console.log({email});
-  // get the books from mongo 
-  User.find({ email }, (err, user) => {
-    if (err) return console.error(err);
-    response.send(user[0].books);
-  })
+  const token = request.headers.authorization.split(' ')[1];
+  // verify that the jwt is valid
+  jwt.verify(token, getKey, {}, function(err, user) {
+    if (err){
+      response.send('invalid token');
+    } else {
+      const email = request.query.email;
+      // get the books from mongo 
+      User.find({ email }, (err, user) => {
+        if (err) return console.error(err);
+        response.send(user[0].books);
+      })
+    }
+  });
 }
 
-app.listen(PORT, () => console.log(console.log(`listening on ${PORT}`)));
+app.listen(PORT, () => console.log(`listening on ${PORT}`));

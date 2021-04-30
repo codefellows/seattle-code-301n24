@@ -106,6 +106,7 @@ One possible way to present this material is documented in the [example lecture]
 ## What might students struggle with today?
 
 - Understanding where Mongodb lives and how it is used
+- Sending both headers AND queries in axios. We are not going over this lecture so make sure you prep the TAs with how to do this and/or show a few groups of students and instruct them to teach others.
 
 ## Past bugs, issues or surprises...
 
