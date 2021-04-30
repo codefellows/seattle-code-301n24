@@ -40,7 +40,7 @@ See the Trello board for your feature tasks for today's lab.
 
 ## Workflow
 
-- You will be working from starter code for this lab. Use the [template repo](https://github.com/codefellows/book-app-react-template){:target="_blank"} to make your own repo that contains the starter code.
+- You will be working from two starter code repos for this lab. Use the [front-end template repo](https://github.com/codefellows/can-of-books-frontend-template){:target="_blank"} to make your own repo that contains the starter code for your React app. Use the [server side template repo](https://github.com/codefellows/can-of-books-template-server) to make your another repo that contains the starter code for your express server.
 - We will be using the [Trello](https://trello.com/home){:target="_blank"} project management tool for the duration of this project.
 - After signing in to your account, go to the [Best Books Task Tracker](https://trello.com/b/qgaCsVVa){:target="_blank"}, open the "... Show Menu" link, click the "... More" link, and then click "Copy Board". Before you create it, be sure to "Change" from Private to "Public" (and click "Yes, Make Board Public") so your instructional team can see your work. Now, click "Create" to add a copy to your personal account.
 - This Trello board contains all of the features required to complete each lab assignment.

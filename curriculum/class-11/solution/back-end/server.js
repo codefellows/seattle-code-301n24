@@ -31,8 +31,9 @@ app.get('/test', (request, response) => {
   jwt.verify(token, getKey, {}, function(err, user) {
     if (err){
       response.send('invalid token');
+    } else {
+      response.send(user);
     }
-    response.send(user);
   });
 })
 

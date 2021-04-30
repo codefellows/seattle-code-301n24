@@ -8,9 +8,16 @@ class Content extends React.Component {
       this.props.auth0.getIdTokenClaims()
       .then(res => {
         const jwt = res.__raw;
-        axios.get(`${process.env.REACT_APP_SERVER}/test`, { headers: {"Authorization" : `Bearer ${jwt}`} })
-        .then(axiosResults => console.log(axiosResults.data))
-        .catch(err => console.error(err));
+
+        const config = {
+          headers: {"Authorization" : `Bearer ${jwt}`},
+          method: 'get',
+          baseURL: process.env.REACT_APP_SERVER,
+          url: '/test'
+        }
+        axios(config)
+          .then(axiosResults => console.log(axiosResults.data))
+          .catch(err => console.error(err));
       })
       .catch(err => console.error(err));
     }
