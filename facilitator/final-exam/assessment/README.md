@@ -75,17 +75,13 @@ The React application will allow a user to:
 
 - Using React Bootstrap, change the list from a `Table` to an `Accordion` for showing the items in the list
 
-**NOTE** When you run `npm start` the app will try to connect to your running API server from the previous step to do so.
-
-However, it's not sufficiently set up at moment to reach the API.
-
-You'll need to properly configure you're set up in order to reach the server.
-
 #### React App Notes
 
 - Throughout the application code, you will see that some components/markup have a prop called **data-testid** that look like the below -- **Do not remove or change these, they are required for the tests and grading**
   - ```data-testid="---"```
 - When you are running the application and manually testing in the browser, it'll use your server and will not operate unless it is running
+- However, it's not sufficiently set up at first to reach the API.
+  - You'll need to properly configure the app in order to reach the server.
 - When you are running the tests with `npm test` the application will simulate having a server, so it's not necessary to have it running while doing your pure testing/bug-fixing work
 
 ## Rubric
