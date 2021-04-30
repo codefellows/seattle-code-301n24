@@ -3,6 +3,7 @@ import { withAuth0 } from '@auth0/auth0-react';
 import LoginButton from './LoginButton';
 import LogoutButton from './LogoutButton';
 import Profile from './Profile';
+import Content from './Content';
 
 class App extends React.Component {
   render(){
@@ -11,7 +12,10 @@ class App extends React.Component {
         <LoginButton />
         <LogoutButton />
         {this.props.auth0.isAuthenticated && 
-          <Profile />
+          <>
+            <Profile />
+            <Content />
+          </>
         }
       </>
     )
