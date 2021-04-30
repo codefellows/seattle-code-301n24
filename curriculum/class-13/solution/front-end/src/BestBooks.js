@@ -1,12 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 import { Carousel, Button } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AddABookButton from './AddABookButton';
 import { withAuth0 } from '@auth0/auth0-react';
-
-const API = 'http://localhost:3001';
 
 class BestBooks extends React.Component {
   constructor(props){
@@ -16,23 +13,48 @@ class BestBooks extends React.Component {
     }
   }
 
-  componentDidMount = async () => {
-    // make a call to the backend to get the the books and display them
-    const books = await axios.get(`${API}/books`, {params: {email: this.props.auth0.user.email}});
-    console.log('get books', books.data)
-    this.setState({ books: books.data });
+  componentDidMount = () => {
+    // get the jwt and send in the headers
+    this.props.auth0.getIdTokenClaims()
+      .then(async res => {
+        const jwt = res.__raw;
+        // make a call to the backend to get the the books and display them
+
+        const config = {
+          params: {email: this.props.auth0.user.email},
+          headers: {"Authorization" : `Bearer ${jwt}`},
+          method: 'get',
+          baseURL: process.env.REACT_APP_SERVER,
+          url: '/books'
+        }
+        const books = await axios(config);
+
+        this.setState({ books: books.data });
+      })
+      .catch(err => console.error(err));
   }
 
   updateBookArray = (books) => this.setState({books});
 
   removeBook = (idx) => {
-    const id = this.state.books[idx]._id;
-    let newBooks = this.state.books;
-    newBooks = newBooks.filter((book, i) => i !== idx);
-    this.setState({ books: newBooks });
-    
-    axios.delete(`${API}/books/${id}`, {params: {email: this.props.auth0.user.email}}).then(() => {
-    }).catch(err => console.error(err));
+    this.props.auth0.getIdTokenClaims()
+      .then(async res => {
+        const jwt = res.__raw;
+        const id = this.state.books[idx]._id;
+        let newBooks = this.state.books;
+        newBooks = newBooks.filter((book, i) => i !== idx);
+        this.setState({ books: newBooks });
+
+        const config = {
+          params: {email: this.props.auth0.user.email},
+          headers: {"Authorization" : `Bearer ${jwt}`},
+          method: 'delete',
+          baseURL: process.env.REACT_APP_SERVER,
+          url: `/books/${id}`
+        }
+        axios(config);
+      })
+      .catch(err => console.error(err));
   }
 
   render() {

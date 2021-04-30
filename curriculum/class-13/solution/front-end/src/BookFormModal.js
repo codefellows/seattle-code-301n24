@@ -22,17 +22,31 @@ class BookFormModal extends React.Component {
   handleClose = () => {
     this.props.close();
   }
+    
+  createBook = () => {
+    this.props.auth0.getIdTokenClaims()
+    .then(async res => {
+      const jwt = res.__raw;
 
-  createBook = async() => {
-    const bookResults = await axios.post(`${API}/books`, {
-      email: this.props.auth0.user.email,
-      name: this.state.name,
-      description: this.state.description,
-      status: this.state.status,
-      img: this.state.img
-    });
-    this.props.close();
-    this.props.updateBookArray(bookResults.data);
+      const config = {
+        headers: {"Authorization" : `Bearer ${jwt}`},
+        method: 'post',
+        baseURL: process.env.REACT_APP_SERVER,
+        url: '/books/',
+        data: {
+          email: this.props.auth0.user.email,
+          name: this.state.name,
+          description: this.state.description,
+          status: this.state.status,
+          img: this.state.img,
+        }
+      }
+
+      const bookResults = await axios(config);
+      this.props.close();
+      this.props.updateBookArray(bookResults.data);
+    })
+    .catch(err => console.error(err));
   }
 
   render() {

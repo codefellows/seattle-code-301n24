@@ -26,4 +26,4 @@ app.post('/books', Book.add);
 app.delete('/books/:id', Book.delete);
 app.use('*', handleNotFound);
 
-app.listen(PORT, () => console.log(console.log(`listening on ${PORT}`)));
+app.listen(PORT, () => console.log(`listening on ${PORT}`));
