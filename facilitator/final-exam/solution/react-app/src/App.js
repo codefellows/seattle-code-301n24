@@ -22,15 +22,15 @@ class App extends React.Component {
     this.getItems();
   }
 
-  deleteItem = async (id) => {
-    await axios.delete(`${API_SERVER}/items/${id}`);
-    this.getItems();
-  }
-
   getItems = async () => {
     const response = await axios.get(`${API_SERVER}/items`);
     const items = response.data;
     this.setState({ items });
+  }
+
+  deleteItem = async (id) => {
+    await axios.delete(`${API_SERVER}/items/${id}`);
+    this.getItems();
   }
 
   async componentDidMount() {
@@ -52,7 +52,7 @@ class App extends React.Component {
               <Form handleAddItem={this.addItem} />
             </Col>
             <Col>
-              <Items handleDelete={this.deleteItem} itemsList={this.state.items} />
+              <Items itemsList={this.state.items} deleteItem={this.deleteItem} />
             </Col>
           </Row>
         </Container>

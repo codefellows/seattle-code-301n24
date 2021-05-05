@@ -21,5 +21,5 @@ const mongooseOptions = {
 const mongoServer = new MongoMemoryServer();
 
 mongoServer.getUri()
-  .then((connString) => mongoose.connect(connString, mongooseOptions) )
-  .then( () => server.start(process.env.PORT) );
+  .then((connString) => mongoose.connect(connString, mongooseOptions))
+  .then(() => server.start(process.env.PORT || 3001));
