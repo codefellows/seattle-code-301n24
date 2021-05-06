@@ -1,3 +1,4 @@
+<a id="top"></a>
 # Code 301: Intermediate Software Development
 
 Feel free to open issues as a way to report bugs, recommend updates, and propose minor fixes.
@@ -8,12 +9,10 @@ When making branches, follow the convention of `name/feature`.
 
 - [Course Overview & Objectives](#courseoverview)
 - [Daily Lecture Structure](#lectures)
-- [Weekly Overviews](#weeklyoverviews)
 - [Course Materials in this Repository](#materials)
 - [Course Operations](#operations)
 - [Course GitHub Course Repo](#organization)
 - [Course Grading & Prework; Other Academic Information](#grading)
-- [Student Setup & Lab Workflow](#studentsetup)
 
 <a id="courseoverview"></a>
 
@@ -27,7 +26,7 @@ The lab assignments for the course are in five main parts:
 
 1. Building a back end to consume several third-party APIs and communicate with a [static front end](https://codefellows.github.io/code-301-guide/curriculum/city-explorer-app/front-end/).
 
-1. A stand-alone mobile-only application during week 3. Students will work with the same partner throughout the week on a Heroku-deployed application. This one-week sprint will help prepare students for project week and serve as an additional personal portfolio piece.
+1. A stand-alone mobile-only application during week 3. Students will work with the same partner throughout the week on a full-stack application. This one-week sprint will help prepare students for project week and serve as an additional personal portfolio piece.
 
 1. Fulfillment of lab requirements via pair programming. These assignments are also a foundation for tackling technical challenges, developing code-reading skills, and gaining knowledge of application architecture.
 
@@ -37,11 +36,11 @@ The lab assignments for the course are in five main parts:
 
 At the end of this course, students will be able to:
 
-1. Collaboratively design and create dynamic web applications from scratch using Model-View-Controller architecture built with professional-grade HTML, CSS, and JavaScript.
+1. Collaboratively design and create dynamic MERN web applications from scratch using component-based architecture built with professional-grade JavaScript.
 1. Design dynamic front end and back end applications which can function together or independently and are deployed to cloud platforms.
-1. Explain the fundamentals of how the world-wide web works, over the internet.
-1. Utilize dependency management techniques to build with third-party libraries such as ExpressJS, jQuery, and Handlebars.
-1. Persist one-to-many relational data across two tables in a SQL database, sourced from third-party APIs, user-generated content, or loaded from the filesystem.
+1. Explain the fundamentals of how the world wide web works, over the internet.
+1. Utilize dependency management techniques to build with third-party libraries such as ExpressJS, React, and Bootstrap.
+1. Persist data in a document store, sourced from third-party APIs, or user-generated content.
 1. Follow agile software development practices during week-long sprints, including pair-programming, stand-ups, daily retrospectives, project management with Kanban boards, regular refactoring, and working in a shared code base.
 1. Enroll in a Code 401 course or attain an entry-level website development job or internship by completing the course requirements.
 
@@ -49,21 +48,21 @@ At the end of this course, students will be able to:
 
 Links directly to class folders, by topic:
 
-1. [SMACSS & Media Queries](../curriculum/class-01)
-1. [jQuery: Selectors & Events](../curriculum/class-02)
-1. [Flexbox Layouts & Templating](../curriculum/class-03)
-1. [RWD & Regex](../curriculum/class-04)
-1. [Deployment](../curriculum/class-05)
-1. [Node, Express, and Intro to APIs](../curriculum/class-06)
-1. [APIs in Depth](../curriculum/class-07)
-1. [SQL with PostgreSQL](../curriculum/class-08)
-1. [Cache Invalidation](../curriculum/class-09)
-1. [The JS Call Stack](../curriculum/class-10)
-1. [Server-side Rendering with EJS](../curriculum/class-11)
-1. [Components & Forms](../curriculum/class-12)
-1. [Advanced Forms](../curriculum/class-13)
-1. [Resource Update & Delete](../curriculum/class-14)
-1. [Database Normalization](../curriculum/class-15)
+1. [Class 01](../curriculum/class-01)
+1. [Class 02](../curriculum/class-02)
+1. [Class 03](../curriculum/class-03)
+1. [Class 04](../curriculum/class-04)
+1. [Class 05](../curriculum/class-05)
+1. [Class 06](../curriculum/class-06)
+1. [Class 07](../curriculum/class-07)
+1. [Class 08](../curriculum/class-08)
+1. [Class 09](../curriculum/class-09)
+1. [Class 10](../curriculum/class-10)
+1. [Class 11](../curriculum/class-11)
+1. [Class 12](../curriculum/class-12)
+1. [Class 13](../curriculum/class-13)
+1. [Class 14](../curriculum/class-14)
+1. [Class 15](../curriculum/class-15)
 1. [Project Week - Part 1](../curriculum/class-16)
 1. [Project Week - Part 2](../curriculum/class-17)
 1. [Project Week - Part 3](../curriculum/class-18)
@@ -102,36 +101,6 @@ Using the concepts and class structure summarized above, you will be ready to pr
 
 ---
 
-<a id="weeklyoverviews"></a>
-
-## Weekly Overviews
-
-### Module 1: The Front End (Classes 1-5)
-
-***The focus of the first five classes is to introduce students to ES6 features and advance their client-side CSS skills. Students will also expand their JavaScript skills through the use of the jQuery library.***
-
-This module will begin in class 1 with an introduction to ES6 topics including `let`, `const`, arrow functions, state, and a deeper dive into scope and prototypcal inheritance. Class 2 focuses on SMACSS, float-based layout, jQuery selectors and events. Class 3 focuses on Flexbox, templating with the [mustache.js library](https://github.com/janl/mustache.js), and a continued discussion of jQuery events. Class 4 focuses on responsive web design, icon fonts, grid-based layout, and regular expressions. Students will build a personal portfolio page as the lab 4 assignment, which they will deploy on Heroku in workshop style during lecture 5. Students will be provided a basic `server.js` file, so this is an opportunity for a high-level discussion of servers and their role in the Heroku deployment process. This will also give students some topics to think about as they prepare to transition into working in the back end in the next module. The portfolio page will be revisited in class 10 when students make a proxied request to the GitHub API and return their personal repositories to be displayed on their portfolio page.
-
-### Module 2: The Back End (Classes 6-10)
-
-***The focus of these next five classes is on teaching students how to write a back end through the use of Node.js, how to request data from third-party APIs through the use of Superagent, and how to persist data in a database through the use of SQL and PostgreSQL.***
-
-This module will begin with a discussion about the back end, including Node.js, Express, npm, Superagent, and Postman. Data will then be persisted in a relational database. Students will also learn about the web request-response cycle (WRRC), as discussed throughout the week. Class 6 focuses on how to write a `server.js` file and how to format a request to a third-party API using Postman. As the week progresses, students will request data from additional APIs in classes 7 through 9, aggregating the responses into a single object to pass back to a static front end. Students will have access to the code base for this front end and will be able to identify the data which the front end is expecting. This will allow students to separate the front end from the back end, while creating the necessary connections between the two. Classes 8 and 9 focus on persistence in a database. Class 10 will bring the personal portfolio projects full circle. Students will be asked to request data from the GitHub API and will send data about their repositories to the front end code that was written in lab 4 and deployed in class 5. Throughout this module, students will also learn about functional programming methods including `.filter()`, `.map()`, and `.reduce()`.
-
-### Module 3: Full-Stack Applications (Classes 11-15)
-
-***The focus of these final five classes is the creation of a full-stack application using [EJS](http://ejs.co/) for server-side templating. Students will create a book collection, which will eventually include the ability for a user to search for a book by title or author and receive search results from the Google Books API. Students will be able to read and create resources, with exposure to updating and deleting resources in class 14. The module will conclude with a kickoff to final projects.***
-
-Throughout this module, students will work with a partner to build a full-stack book application. Class 11 will focus on a GET request for all resources from a student-seeded database. These resources will be displayed to the user through the use of sever-side templating. Class 12 will focus on selecting a single resource from the list and viewing the details in a new view. Class 13 will focus on building an HTML5 form with method and action attributes so users can manually enter a new resource, which will be added to the database. Class 14 will focus on adding the ability to search by title or author and initiate a request to the Google Books API. The first ten results will be displayed to the user and, through the use of a hidden form, the user can select a single book to be added to the database. Class 15 is for review and the transition into Final Projects.
-
-### Module 4: Final Projects (Classes 16-20)
-
-In teams, students create a full-stack web application that demonstrates command of all of the primary concepts discussed in this course. Overall, the application should make API calls, have dynamic functionality, and display a well-factored full-stack architecture. You act as a guide and support system for students as many project groups hit the occasional roadblocks and need assistance throughout the week. Otherwise, groups should be generally be self-managing. They will need to have proper Agile processes in place in order to keep their project in scope and delivered on time. See the [../curriculum/class-15/project-guidelines.md](project guidelines) for more details.
-
-[-top-](#top)
-
----
-
 <a id="materials"></a>
 
 ## Course Materials in this Repository
@@ -152,7 +121,7 @@ There is also a subdirectory within each daily directory that contains code demo
 
 ### Lab Code
 
-The feature tasks for each day's lab assignments are in the `labs/` directory of this repository. Each day is its own repository, so you will need to add any starter code or other lab contents to the course repo (see below), and then publish them each day of class.
+The feature tasks for each day's lab assignments are in the `labs/` directory of this repository. Some days may include starter code, or instructions to begin by cloning from a template repo.
 
 [-top-](#top)
 
@@ -213,7 +182,7 @@ You should have a class repo (often referred to as the "course lecture repo") th
 
 ### Quizzes
 
-- Course quizzes are administered through Canvas. There is a total of six quizzes throughout the course, two per module. It is recommended that you review the quizzes so that you know exactly what the students will be seeing.
+- Course quizzes are administered through Canvas. There is a total of three quizzes throughout the course, one per module. It is recommended that you review the quizzes so that you know exactly what the students will be seeing.
 
 ### One On Ones
 
@@ -225,31 +194,9 @@ You should have a class repo (often referred to as the "course lecture repo") th
 
 - The site youcanbookme.com is a handy way of scheduling one-on-one meetings. Aim for 15-minute time slots.
 
-### Whiteboarding (optional)
-
-- This can be spread out across one or several days, usually time-boxed to 15-30 minutes (example spreadsheet for student sign-ups [here](https://docs.google.com/spreadsheets/d/119p29UJhGulpSpwJYRdTSAvtfXMvZom5VWiiq4VxVGg/edit?usp=sharing) with different slots being assigned to different instructors / TAs).
-
-- A good starting guide for content can start with this problem domain:
-
-- "We are tasked with modeling out buildings. We want to keep track of buildings in Seattle and are asked to pick up on just three initial properties that matter the most to us":
-
-  1. The year that the building was constructed
-
-  2. The number of floors that the building has
-
-  3. The address the building is located
-
-- With this information, help us build a constructor to model our buildings
-
-Once they have a constructor, ask them to instantiate a new Building with the constructor, then have them write the output of what that new object would look like (including its properties and values).
-
-- Next, propose a situation where the team has an **array** of these Building objects. For the sake of this example it can be an array of 3 buildings. We now want to target specific information about each building, and our job is to now retrieve **just the year** from each Building, and transform that into a **new array**.
-
-- Guide the students to use `Array.map()` method to accomplish this goal, keeping in mind that in order to access this new array, they will need to save the result into a new variable.
-
 ### Reading Assignments
 
-- Reading is one of the primary language-learning processes that students will utilize to develop their skills. Each day, one or more reading assignment is due before the start of lecture. Students are expected to make at least one observation and ask a question to promote curiosity and class discussion. Their submission is completed by them and graded within your Canvas course. The reading submissions in Canvas are by default set up to be graded with either a ‘complete’ or ‘incomplete’ mark, and as a result, the late submission policy is not in effect for reading assignments.
+- Reading may be one of the primary language-learning processes that students will utilize to develop their skills. Each day, one or more reading assignment is due before the start of lecture. Students are expected to read actively to promote curiosity and class discussion. Their submission is completed by them and graded within your Canvas course. The reading submissions in Canvas are by default set up to be graded with either a ‘complete’ or ‘incomplete’ mark, and as a result, the late submission policy is not in effect for reading assignments.
 
 ### Late Submission Policy
 
@@ -258,13 +205,3 @@ Once they have a constructor, ask them to instantiate a new Building with the co
 [-top-](#top)
 
 ---
-
-<a id="studentsetup"></a>
-
-## Student Setup & Lab Workflow
-
-For the day 0 labs, students should fork & clone the course repo and make PRs within their own forks (no PRs back to the course repo necessary).
-
-For subsequent labs, directory structure and individual/pair programming nature of the lab are detailed in each LAB.md file.
-
-[-top-](#top)
