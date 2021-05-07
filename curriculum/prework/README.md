@@ -12,21 +12,21 @@ Note that the tasks below have a corresponding assignment to submit in your Canv
 
 ### Please Complete
 
-- [Professional Etiquette](/common_curriculum/career_coaching/301/professional-etiquette)
-- [Behavioral Interview Questions](/common_curriculum/career_coaching/301/behavioral-questions)
-- [Status Report](/common_curriculum/career_coaching/301/status-report)
-- [Professional Pitch](/common_curriculum/career_coaching/301/professional-pitch-draft)
-- [Update Your Resume](/common_curriculum/career_coaching/301/update-your-resume)
-- [Chocolate Pizza](chocolate_pizza)
-- [CSS Diner](css_diner.md)
-- [Portfolio Prep](portfolio_prep)
+- [Dive into React](react)
+- [Setup Your Laptop Instructions](set-up)
 - [ES6 Arrow Functions in JavaScript](arrow-functions)
 - [ES6 Classes in JavaScript](classes)
-- [Dive into React](react)
+- [Read 01 - Introduction to React and Components](https://codefellows.github.io/code-301-guide/curriculum/class-01/DISCUSSION)
+- [CSS Diner](css_diner.md)
+- [Chocolate Pizza](chocolate_pizza)
+- [Portfolio Prep](portfolio_prep)
 - [Setup Your Accounts](/common_curriculum/prep_work/Setup_Your_Accounts)
 - [Setup Your Reading Notes Repo](/common_curriculum/prep_work/Setup_Readings)
-- [Setup Your Laptop Instructions](set-up)
-- [Read 01 - Introduction to React and Components](https://codefellows.github.io/code-301-guide/curriculum/class-01/DISCUSSION)
+- [Status Report](/common_curriculum/career_coaching/301/status-report)
+- [Professional Etiquette](/common_curriculum/career_coaching/301/professional-etiquette)
+- [Behavioral Interview Questions](/common_curriculum/career_coaching/301/behavioral-questions)
+- [Professional Pitch](/common_curriculum/career_coaching/301/professional-pitch-draft)
+- [Update Your Resume](/common_curriculum/career_coaching/301/update-your-resume)
 
 ### Please Read
 - [Familiarize yourself with the Career Coaching program](/common_curriculum/career_coaching), and review the [Code 301 Career Coaching Syllabus](/common_curriculum/career_coaching/Code_301/301_Career_Coaching_Syllabus).
