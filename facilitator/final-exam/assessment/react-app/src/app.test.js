@@ -15,11 +15,8 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 import faker from 'faker';
-import { config } from 'dotenv';
 
-import App from './app';
-
-config('../.env');
+import App from './App';
 
 // ----- MOCK SERVER ------- //
 

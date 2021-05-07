@@ -1,6 +1,6 @@
 # Code 301 Final Assessment
 
-This assessment comes in 2 parts (applications), a **client** and a **server** that together, will allow a user to create a list of things.
+This assessment comes in 2 parts (applications), a **client** and a **server** that together, will allow a user to create a list of items.
 
 Each application is intended to be operated and tested independently, while also working together.
 
@@ -12,7 +12,7 @@ Each application is intended to be operated and tested independently, while also
 - Fix the bug in the client
 - Add **DELETE** functionality on both the server and client
   - The client app has a "Delete Button" that is there but is not wired up. Wire it up.
-- Change the styling of the items list.
+- Change the styling of the items list
 
 ### The API Server
 
@@ -30,17 +30,19 @@ How will you know that you've found them all? The tests will all pass!
 
 #### Server: Getting Started
 
-- create an empty private repo on GitHub
+- Create an empty private repo on GitHub
 - Invite your instructor to the repo
-- Connect it to your server:
+- Connect it to your server directory:
   - run `git init`
+  - run `git branch -M main`
   - run `git remote add origin <url-of-the-repo-you-just-created>`
+  - A/C/P
 
 - Install your dependencies
 - Run the tests
   - with the server turned off run the command: `npm test`
-- There is one bug. Find the bug and fix it - 20 POINTS
-- You will know you have found the bug when the tests pass
+- A "bug" is defect or missing feature. Find the bugs and fix them - 20 POINTS
+  - You will know you have found the bugs when the tests all pass
 - Deploy to Heroku - 5 POINTS
 
 #### Server: Notes
@@ -58,11 +60,13 @@ The React application will allow a user to:
 
 #### React App: Getting Started
 
-- create an empty private repo on GitHub
+- Create an empty private repo on GitHub
 - Invite your instructor to the repo
-- connect it to your React app:
+- connect it to your React app directory:
   - run `git init`
+  - run `git branch -M main`
   - run `git remote add origin <url-of-the-repo-you-just-created>`
+  - A/C/P
 
 - Install your dependencies
 - Run the tests
@@ -73,7 +77,7 @@ The React application will allow a user to:
 
 #### React App: Change Styling - 25 POINTS
 
-- Using React Bootstrap, change the list from a `Table` to an `Accordion` for showing the items in the list
+- Using React Bootstrap, change the list from a `Table` to an `Accordion` for showing the items in the list.
 
 #### React App Notes
 
@@ -82,12 +86,12 @@ The React application will allow a user to:
 - When you are running the application and manually testing in the browser, it'll use your server and will not operate unless it is running
 - However, it's not sufficiently set up at first to reach the API.
   - You'll need to properly configure the app in order to reach the server.
-- When you are running the tests with `npm test` the application will simulate having a server, so it's not necessary to have it running while doing your pure testing/bug-fixing work
+- When you are running the tests with `npm test` the application will simulate having a server, so it's not necessary to have it running while running the tests
 
 ## Rubric
 
-- 20 Points: Fix the Express API Server (all tests passing)
-- 20 Points: Fix the React App (all tests passing)
+- 20 Points: Fix the Express API Server (all tests other than DELETE passing)
+- 20 Points: Fix the React App (all tests other than DELETE passing)
 - 25 Points: Add DELETE functionality to both server and client
 - 25 Points: Style the application with Bootstrap
 - 10 Points: Deployed and Tested in the cloud
