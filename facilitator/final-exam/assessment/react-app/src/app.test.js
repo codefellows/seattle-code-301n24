@@ -15,11 +15,8 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 import faker from 'faker';
-import {config} from 'dotenv';
 
-import App from './app';
-
-config('../.env');
+import App from './App';
 
 // ----- MOCK SERVER ------- //
 
@@ -41,13 +38,13 @@ const server = setupServer(
   rest.put(`*/items/:id`, (req, res, ctx) => {
     const item = req.body;
     const id = parseFloat(req.params.id);
-    items = items.map( i => i._id === id ? item : i);
+    items = items.map(i => i._id === id ? item : i);
     return res(ctx.json(item));
   }),
 
   rest.delete(`*/items/:id`, (req, res, ctx) => {
     const id = parseFloat(req.params.id);
-    items = items.filter( item => item._id !== id );
+    items = items.filter(item => item._id !== id);
     return res(null);
   })
 )
@@ -67,11 +64,11 @@ test('adds an item', async () => {
   const testName = faker.datatype.number();
   const testDescription = faker.company.catchPhrase();
 
-  fireEvent.change(name, { target: { value: testName}});
-  fireEvent.change(description, { target: { value: testDescription}});
+  fireEvent.change(name, { target: { value: testName } });
+  fireEvent.change(description, { target: { value: testDescription } });
   fireEvent.submit(form);
 
-  await waitFor( () => {
+  await waitFor(() => {
     const itemsAdded = screen.getAllByText(testName);
     expect(itemsAdded.length).toBeGreaterThan(0);
   });
@@ -94,7 +91,7 @@ test('deletes an item', async () => {
   fireEvent.change(description, { target: { value: testDescription } });
   fireEvent.submit(form);
 
-  await waitFor( async () => {
+  await waitFor(async () => {
     const itemsAdded = screen.getAllByText(testName);
     expect(itemsAdded.length).toBeGreaterThan(0);
 
@@ -107,32 +104,4 @@ test('deletes an item', async () => {
 
   });
 
-});
-
-// For now, commenting this one out ...
-xtest('updates an item', async () => {
-  render(<App />);
-
-  const form = screen.getByTestId("add-form");
-  const name = screen.getByTestId("add-form-name");
-  const description = screen.getByTestId("add-form-description");
-
-  const testName = faker.datatype.number();
-  const newName = faker.datatype.number();
-  const testDescription = faker.company.catchPhrase();
-
-  fireEvent.change(name, { target: { value: testName } });
-  fireEvent.change(description, { target: { value: testDescription } });
-  fireEvent.submit(form);
-
-  await waitFor( async () => {
-    const updateForm = screen.queryByTestId(`update-form-${testName}`);
-    const updateField = screen.getByTestId(`update-field-${testName}`)
-    fireEvent.change(updateField, { target: { value: newName } });
-    fireEvent.submit(updateForm);
-
-    await waitFor( async () => {
-      expect(screen.getByText(newName)).toBeInTheDocument();
-    })
-  });
 });

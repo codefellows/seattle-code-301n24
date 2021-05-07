@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Accordion, Card, Button } from 'react-bootstrap';
+import { Accordion, Button, Card } from 'react-bootstrap';
 
 class Items extends React.Component {
 
@@ -34,7 +34,8 @@ class Items extends React.Component {
 
         </Accordion>
 
-      </section >
+
+      </section>
     );
   }
 }

@@ -3,8 +3,8 @@ import React from 'react';
 import axios from 'axios';
 
 import { Navbar, Container, Row, Col } from 'react-bootstrap';
-import Form from './components/add-item.js';
-import Items from './components/items.js';
+import Form from './components/AddItem.js';
+import Items from './components/Items.js';
 
 const API_SERVER = process.env.REACT_APP_API;
 
@@ -18,7 +18,7 @@ class App extends React.Component {
   }
 
   addItem = async (item) => {
-    await axios.post(`${API_SERVER}/items`, item);
+    await post(`${API_SERVER}/items`, item);
     this.getItems();
   }
 

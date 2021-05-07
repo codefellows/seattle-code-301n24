@@ -1,5 +1,9 @@
 'use strict';
 
+// this is the testing file
+// look at what is being tested
+// don't make any changes to this file
+
 const supergoose = require('@code-fellows/supergoose');
 const app = require('../server.js');
 
@@ -43,20 +47,17 @@ describe('The Server', () => {
     expect(response.body.description).toEqual(record.description);
   });
 
-  it('can update a record', async () => {
+  it('can get all records', async () => {
 
-    const record = await createRecord();
-    const id = record._id;
+    for (let i = 1; i <= 5; i++) {
+      await createRecord();
+    }
 
-    const newValues = {
-      name: 'newName',
-    };
+    const response = await client.get(`/items`);
+    const items = response.body;
 
-    const response = await client.put(`/items/${id}`).send(newValues);
     expect(response.status).toEqual(200);
-    expect(response.body._id).toEqual(id);
-    expect(response.body.name).toEqual(newValues.name);
-    expect(response.body.description).toEqual(record.description);
+    expect(items.length).toBeGreaterThan(1);
   });
 
   it('can delete a record', async () => {
@@ -69,19 +70,6 @@ describe('The Server', () => {
 
     const getResponse = await client.get(`/items/${id}`);
     expect(getResponse.body._id).toBeUndefined();
-  });
-
-  it('can get all records', async () => {
-
-    for (let i = 1; i <= 5; i++) {
-      await createRecord();
-    }
-
-    const response = await client.get(`/items`);
-    const items = response.body;
-
-    expect(response.status).toEqual(200);
-    expect(items.length).toBeGreaterThan(1);
   });
 
   it('properly sends a 404 on an unknown route', async () => {

@@ -47,18 +47,6 @@ describe('The Server', () => {
     expect(response.body.description).toEqual(record.description);
   });
 
-  it('can delete a record', async () => {
-
-    const record = await createRecord();
-    const id = record._id;
-
-    const response = await client.delete(`/items/${id}`);
-    expect(response.status).toEqual(200);
-
-    const getResponse = await client.get(`/items/${id}`);
-    expect(getResponse.body._id).toBeUndefined();
-  });
-
   it('can get all records', async () => {
 
     for (let i = 1; i <= 5; i++) {
@@ -70,6 +58,18 @@ describe('The Server', () => {
 
     expect(response.status).toEqual(200);
     expect(items.length).toBeGreaterThan(1);
+  });
+
+  it('can delete a record', async () => {
+
+    const record = await createRecord();
+    const id = record._id;
+
+    const response = await client.delete(`/items/${id}`);
+    expect(response.status).toEqual(200);
+
+    const getResponse = await client.get(`/items/${id}`);
+    expect(getResponse.body._id).toBeUndefined();
   });
 
   it('properly sends a 404 on an unknown route', async () => {
