@@ -3,7 +3,7 @@ import React from 'react';
 import axios from 'axios';
 
 import { Navbar, Container, Row, Col } from 'react-bootstrap';
-import Form from './components/Add-item.js';
+import Form from './components/AddItem.js';
 import Items from './components/Items.js';
 
 const API_SERVER = process.env.REACT_APP_API;
@@ -52,7 +52,7 @@ class App extends React.Component {
               <Form handleAddItem={this.addItem} />
             </Col>
             <Col>
-              <Items itemsList={this.state.items} deleteItem={this.deleteItem} />
+              <Items itemsList={this.state.items} handleDelete={this.deleteItem} />
             </Col>
           </Row>
         </Container>
