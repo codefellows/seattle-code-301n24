@@ -1,5 +1,5 @@
 ```javascript
-// array.map demo
+// array.filter demo
 
 const people = [
   { name: 'John', role: 'Dad' },
