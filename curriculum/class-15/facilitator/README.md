@@ -2,7 +2,7 @@
 
 ## Overview
 
-Project Week Kickoff
+Exam and Project Week Kickoff
 
 ## Learning Objectives
 
@@ -18,23 +18,19 @@ Review the detailed objectives in today's [student-facing readme](../README.md).
 
 One possible way to present this material is documented in the [example lecture](./LECTURE-EXAMPLE.md) notes.
 
-### Diversity and Inclusion (1 Hour)
-
-> Discussion to be led by the campus director
-
 ### Course Wrap-Up
 
-> Remind them ... they are now "Full Stack Web Developers"
+Congratulate the students on making it this far! 
 
-- **Why** (5 min)
-  - Remind students of all they have learned
-  - Remind students of how much they can execute
-- **What** (10 min)
-  - HTML, CSS, Float, Flexbox, Grid, jQuery, Mustache, Templating, Express, EJS, Server Side Rendering, SPA, REST, API, SQL, Databases...
-- **How** (30 min)
-  - Lead a student driven discussion of all that they know and can execute. Write on the whiteboard as they call things out.
-  - Ask questions afterwards about what types of applications can they recognize or have used in the past that use these technologies
-  - Ask for ideas on things that they could now build with their new set of tools.
+Remind them ... they are now "Full Stack MERN Developers"!
+
+### Exam Prep
+
+Students spend the lecture time of Class 15 taking the exam.
+
+Follow the [Facilitator instructions in the exam folder](/facilitator/final-exam/FACILITATOR.md) to administer the exam.
+
+After the time window for taking the exam is over, re-convene the class for project kickoff as described below. 
 
 ### Project Preparation
 
@@ -57,6 +53,6 @@ One possible way to present this material is documented in the [example lecture]
 
 ## General Comments and Notes
 
-Today wraps up the book app and starts the transition into project week. Spend time filling in any gaps from this project so students feel prepared to complete any remaining feature tasks before final projects kick off.
+Today wraps up the Can of Books app and starts the transition into project week. Spend time filling in any gaps from this project so students feel prepared to complete any remaining feature tasks before final projects kick off.
 
 There are several assignments prior to the official start of final projects: finishing and submitting the book app, the small db normalization lab, and completing the week 3 survey. There are no resubmits allowed during final projects and any student whose grade is not at 90% after final projects will need special permission to resubmit additional assignments afterwards. Depending on the timeline for enrollment in 401, the timeline for these exceptions are important and the Admissions team should be included in the conversation.
