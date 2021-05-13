@@ -1,4 +1,4 @@
-# Lecture Notes: Axios and Bootstrap
+# Lecture Notes: Passing Functions as Props
 
 ## Warm-Up 
 
