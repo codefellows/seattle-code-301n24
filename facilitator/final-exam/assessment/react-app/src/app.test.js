@@ -7,8 +7,6 @@
   3. The add item form name field must have this prop: data-testid="add-form-name"
   4. The add item form description field must have this prop: data-testid="add-form-description"
   5. The add item form must have this prop: data-testid="add-form"
-  6. The update item form must have this prop: data-testid={`update-form-${item.name}`}
-  7. The update item notes must have this prop: data-testid={`update-field-${item.name}`}
 */
 
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
@@ -95,7 +93,7 @@ test('deletes an item', async () => {
     const itemsAdded = screen.getAllByText(testName);
     expect(itemsAdded.length).toBeGreaterThan(0);
 
-    const deleteButton = await screen.findByTestId(`delete-button-${testName}`);
+    const deleteButton = await screen.getByTestId(`delete-button-${testName}`);
     fireEvent.click(deleteButton);
 
     await waitFor(() => {
