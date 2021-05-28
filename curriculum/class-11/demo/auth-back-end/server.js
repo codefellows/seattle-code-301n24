@@ -7,7 +7,7 @@ const cors = require('cors');
 const jwt = require('jsonwebtoken');
 const jwksClient = require('jwks-rsa');
 
-// this function comes directly from the jasonwebtoken docs
+// this function comes directly from the jsonwebtoken docs
 const client = jwksClient({
   // this url comes from your app on the auth0 dashboard 
   jwksUri: 'https://dev-4rwdhvtd.us.auth0.com/.well-known/jwks.json'
@@ -17,7 +17,7 @@ app.use(cors());
 
 const PORT = process.env.PORT || 3001;
 
-// this function comes directly from the jasonwebtoken docs
+// this function comes directly from the jsonwebtoken docs
 function getKey(header, callback){
   client.getSigningKey(header.kid, function(err, key) {
     const signingKey = key.publicKey || key.rsaPublicKey;
