@@ -2,7 +2,7 @@
 
 Below you will find a short video about React. Watch the video then answer the questions below.
 
-[A High Level Overview Of React](https://www.youtube.com/watch?v=FRjlF74_EZk)
+[A High Level Overview Of React](https://www.youtube.com/watch?v=FRjlF74_EZk){:target="_blank"}
 
 1. What is React?
 
