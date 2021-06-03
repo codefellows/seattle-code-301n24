@@ -2,11 +2,11 @@
 
 At beginning of the class session, spend 30 minutes to prepare students for the assessment.
 
-## Introducing Assessment
+## Review the Assessment
 
 Thoroughly review [ASSESSMENT README](./assessment/README.md){:target="_blank"}
 
-## Ground Rules
+## Communicate the Ground Rules
 
 Communicate the following to students.
 
@@ -16,14 +16,14 @@ Communicate the following to students.
 - Go over the grading rubric.
   - Encourage students to prioritize tasks according to each task's points.
 
-## Timeframe
+### Timeframe
 
 - Students will have 4 hours to complete assessment.
 - At the end of the designated time, all code must be committed to the repositories.
   - Since the assessment prep may end at various times you can also just set a specific time, say 1:30, as the end time.
 - This schedule should work for N/WE students as well, as long as assessment given on Saturday.
 
-## Permissible Questions to Instructional Team
+### Permissible Questions to Instructional Team
 
 While students are taking the exam, they may reach out to the instructor with questions. These are the allowable questions that instructors should answer:
 
@@ -39,6 +39,12 @@ Instructional team will **NOT** debug with students nor provide problem solving 
 When in doubt, students should ask the question to the instructor (not TAs), then the instructor can let them know if the question is out of bounds.
 
 Emphasize that the intention is not to be be blocked by procedural issues.
+
+## Distribute the Assessment
+
+1. Create a `.zip` file from the contents of the [assessment](./assessment) folder found adjacent to this document.
+   - `zip -rp assessment.zip assessment`
+1. Send the zipped assessment to your students.
 
 ## Notes from previous assessments
 
