@@ -1,6 +1,6 @@
 # Lecture Notes: Passing Functions as Props
 
-## Warm-Up 
+## Warm-Up
 
 - **Student Analysis** (5 min)
   - Show or print the [warm-up code](../warm-up/warm-up.md)
@@ -8,7 +8,7 @@
   - Refer to the [Warmup Notes](../warm-up/NOTES.md)
   - Optionally demo the running code at Repl.it
 
-## Shred Talk 
+## Shred Talk
 
 - **Why**
   - Daily "Shred Talks" introduce the student to a new javascript coding concept, setting them up to complete the daily "Code Challenge" series
@@ -19,7 +19,7 @@
 - **Note**
   - If you are short on time, this can be omitted from class lecture. There are official videos that students can watch in lieu of you leading this portion of class.
 
-## Code Review 
+## Code Review
 
 - Students will have attempted their first code challenge following Class 02. Use your code review time to not only review a few of the challenges, but to re-implant the TDD workflow with the class.
   - Every day a new branch
@@ -28,7 +28,7 @@
   - Submit a PR for grading
   - Do not merge your code!
 
-## Mapping over data 
+## Mapping over data
 
 - **Why** (5 min)
   - React is an excellent templating framework that allows us to take large datasets and map over them to display them
@@ -43,7 +43,7 @@
   - You might want to spend some time giving students a chance to practice accessing nested properties in an object since this can be an especially challenging concept.
 - **Experimentation and Discovery Ideas**
   
-## Passing Functions as Props 
+## Passing Functions as Props
 
 - **Why** (5 min)
   - at times the child component needs to interact with information in the parent component
@@ -55,13 +55,14 @@
     - Questions to cover:
       - Who is making the request? Who is making the response? What is the request? What is the response?
   - Demonstrate this concept via the demo: passing-functions
-  - Start with the drawing on the whiteboard that you did yesterday. Pose the question: since we know that a child component can't send state upward, what would we do if a child component needs to update the state in a parent comonent? 
-    - Give them time to think about this. The answer, of course, is to send a function to the child component that will allow it to update the state of the parent component. 
+  - Start with the drawing on the whiteboard that you did yesterday. Pose the question: since we know that a child component can't send state upward, what would we do if a child component needs to update the state in a parent comonent?
+    - Give them time to think about this. The answer, of course, is to send a function to the child component that will allow it to update the state of the parent component.
     - Be prepared with some real life examples of when this would be used.
   - Be aware that this concept is really challenging for students to wrap their heads around so spend lots of time following the flow of information from the parent component to the child component and back up to the parent component. Use a lot of whiteboard drawings.
   - This is also a good time to remind them how stacked learning works, and that it is alright if they don't understand this concept completely right now. They will very soon.
 
-**Experimentation and Discovery Ideas**
-  - Once you have completed the demo, play around with passing other functions through props. Get ideas from the students. What are other things that the child component might want from the parent component? 
+## Experimentation and Discovery Ideas
 
-  - If you have time, introduce ternary statements, and demonstrate how to use conditional rendering in JSX using a ternary statement. If you don't have time for this, make sure you cover this concept during code review tomorrow
+- Once you have completed the demo, play around with passing other functions through props. Get ideas from the students. What are other things that the child component might want from the parent component?
+
+- If you have time, introduce ternary statements, and demonstrate how to use conditional rendering in JSX using a ternary statement. If you don't have time for this, make sure you cover this concept during code review tomorrow
