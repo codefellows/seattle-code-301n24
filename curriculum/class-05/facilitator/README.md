@@ -55,23 +55,28 @@ One possible way to present this material is documented in the [example lecture]
     - Build the React scaffolding of City Explorer, pulling in some sample data and rendering to the page
   - Use conditional logic to wait to display to the results until after the user has entered a city
 
-## Browser Router
+## Explore an established code base - Browser Router
 
 - **Why** (5 min)
-  - Routing (switching between pages) is a common feature of every application and website
-  - It is implemented using component composition
+  - There is a LOT going on in the code. How do we start to explore what is going on?
+  - Routing (switching between pages) is a common feature of every application and website.
+  - It is implemented using component composition.
     - But don't talk about that just yet...
 - **What** (10 min)
   - What is Routing?
-    - A link that switches content
-    - When clicked, a link will render a component in a spot on the page
-    - Can change out a single component within a page
-    - Or, it can can switch out a full page of content
+    - A link that switches content.
+    - When clicked, a link will render a component in a spot on the page.
+    - Can change out a single component within a page.
+    - Or, it can can switch out a full page of content.
 - **How** (30 min)
-  - Open up the starter-code for lab-05 and have students break down what is happening in the index.
-  - Talk about Browser Router and what it is doing
-  - Ask how they might use that in their applications
-  - Find the `<Link>` tags to demonstrate how they are used later in the code to navigate between pages.
+  - Run the starter-code for lab-05, to show what it looks like, click around to show it working.
+  - Let's see how it works under the hood.
+    - Open up the starter-code and have students break down what is happening, starting with the index.
+      - Talk about Browser Router and what it is doing.
+      - Ask how they might use that in their applications.
+      - Find the `<Link>` tags to demonstrate how they are used later in the code to navigate between pages.
+  - Explore through some pages, connect rendered components to the code in the editor.
+  - Demonstrate how to remove a component, or even a page.
 
 ## Lab Notes
 
