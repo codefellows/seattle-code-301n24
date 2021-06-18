@@ -1,10 +1,10 @@
 # Final Assessment Acceptance Tests
 
-This foller contains tests for application features to be completed by students in the 301 final assessment.
+This folder contains tests for application features to be completed by students in the 301 final assessment.
 
 ## Gradiator
 
-The `Gradiator` folder contains folders and files required to run end to end tests for deployed or locally installed Final Assessment Application.
+The `gradiator` folder contains folders and files required to run end to end tests for a fully deployed or locally installed Final Assessment Application.
 
 ### Usage
 
