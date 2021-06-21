@@ -1,6 +1,7 @@
-## Overview of today's warm-up challenge
+# Overview of today's warm-up challenge
 
-Problems with this code: 
+Problems with this code:
+
 - all libraries are missing 'require'
 - missing require('dotenv').config();
 - should be app.use(cors());
@@ -9,5 +10,4 @@ Problems with this code:
 - missing 'url'
 - missing .catch()
 - incorrect status
-- should send results.body
 - missing app.listen()
