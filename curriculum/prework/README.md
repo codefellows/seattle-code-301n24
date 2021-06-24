@@ -29,4 +29,4 @@ Note that the tasks below have a corresponding assignment to submit in your Canv
 - [Update Your Resume](/common_curriculum/career_coaching/301/update-your-resume)
 
 ### Please Read
-- [Familiarize yourself with the Career Coaching program](/common_curriculum/career_coaching), and review the [Code 301 Career Coaching Syllabus](/common_curriculum/career_coaching/Code_301/301_Career_Coaching_Syllabus).
+- [Familiarize yourself with the Career Coaching program](/common_curriculum/career_coaching), and review the [Code 301 Career Coaching Syllabus](/common_curriculum/career_coaching/301/301-career-coaching-syllabus).
