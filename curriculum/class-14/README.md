@@ -2,7 +2,7 @@
 
 ## Overview
 
-Today is the final buildout of the book collection app. Our final step is to normalize our database and remove duplicates while persisting the books we have already saved.
+Today is the final buildout of the book collection app. Our final step is to implement the ability to update records that exist in our database.
 
 Also, the Code 301 final exam will become available today and is due at the end of lab time. This exam also serves as the Code 401 entrance exam. However, it is a pass/fail graded portion of this course, regardless of your intent to advance to a Code 401 course.
 
