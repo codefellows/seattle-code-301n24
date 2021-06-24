@@ -2,7 +2,7 @@
 
 ## Overview
 
-Get ready to take a look at a full-featured code base! [The starter code](https://github.com/codefellows/code-301-react-portfolio-template){:target="_blank"} contains a React + Bootstrap site with a number of example pages, complete with icons, styles, and themed layouts. Your job is to customize this code and make the site your own.
+Get ready to take a look at a full-featured code base! You have just started a new job and the employer wants you to demonstrate your skills by building a portfolio using React.  This should highlight your knowledge of the React library and your ability to explore a new codebase.  [The starter code](https://github.com/codefellows/code-301-react-portfolio-template){:target="_blank"} for today contains a React + Bootstrap site with a number of example pages, complete with icons, styles, and themed layouts. Your job is to customize this code by following the specifications in the Trello board.
 
 You will be deploying your React portfolio to [Netlify](https://www.netlify.com/){:target="_blank"}.
 
