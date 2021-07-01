@@ -10,8 +10,7 @@ Today we will use our express server to request information from third party API
 - Review code challenges
 - Introduction of today's code challenge topic
 - Code review of lab assignment
-- Relational vs. non-relational databases
-- Data modeling and schemas
+- Requesting data from 3rd party APIs via the server
 - Code Demo
 - Lab Preview
 
