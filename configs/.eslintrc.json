@@ -1,17 +1,11 @@
 {
-  "globals": {
-    "Mustache": true,
-    "$": true
-  },
   "extends": "eslint:recommended",
   "parserOptions": {
-    "ecmaVersion": 6
+    "ecmaVersion": 8
   },
   "env": {
-    "browser": true,
     "es6": true,
     "jest": true,
-    "jquery": true,
     "node": true
   },
   "rules": {
