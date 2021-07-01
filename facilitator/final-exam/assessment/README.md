@@ -49,6 +49,8 @@ How will you know that you've found them all? The tests will all pass!
 
 - You may inspect the tests, but do not change them.
 - Once you have this working, keep it running. The React app will be using it to save and retrieve data
+- If you are using an Apple device with the M1 chip and you get an error message about the Mongo Memory Server, you may need to run the following command in your terminal shell before attempting to run the final exam server:
+`export MONGOMS_DOWNLOAD_URL=https://fastdl.mongodb.org/osx/mongodb-osx-ssl-x86_64-4.0.25.tgz`
 
 ### The React App
 
