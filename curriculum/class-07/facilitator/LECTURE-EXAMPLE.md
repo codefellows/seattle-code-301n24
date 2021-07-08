@@ -133,4 +133,4 @@
   - Heroku is a cloud platform service where we can deploy our server applications.
 
 - **How** (10 min)
-  - Using the demo code, show students how to deploy an application using Heroku. Point out the [cheatsheet](../cheatsheets/heroku.md) as a resource available to them in case they need something to refer back to later.
+  - Using the demo code, show students how to deploy an application using Heroku.
