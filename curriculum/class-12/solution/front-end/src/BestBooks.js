@@ -6,35 +6,43 @@ import { Carousel } from 'react-bootstrap';
 
 
 class BestBooks extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state={
+    this.state = {
       books: []
     }
   }
 
-  componentDidMount = () => {
-    // get the jwt and send in the headers
-    this.props.auth0.getIdTokenClaims()
-      .then(async res => {
-        const jwt = res.__raw;
-        // make a call to the backend to get the the books and display them
-        const config = {
-          params: {email: this.props.auth0.user.email},
-          headers: {"Authorization" : `Bearer ${jwt}`},
-          method: 'get',
-          baseURL: process.env.REACT_APP_SERVER,
-          url: '/books'
-        }
-        const books = await axios(config);
+  componentDidMount = async () => {
 
-        this.setState({ books: books.data });
-      })
-      .catch(err => console.error(err));
+    try {
+      
+      const claims = await this.props.auth0.getIdTokenClaims();
+      
+      const jwt = claims.__raw;
+      
+      const config = {
+        params: { email: this.props.auth0.user.email },
+        headers: { "Authorization": `Bearer ${jwt}` },
+        method: 'get',
+        baseURL: process.env.REACT_APP_SERVER,
+        url: '/books'
+      };
+
+
+      const response = await axios(config);
+
+      this.setState({ books: response.data });
+
+    } catch (err) {
+      console.error(err);
+    }
+
   }
 
+
   render() {
-    return(
+    return (
       <>
         <h2>My Essential Lifelong Learning &amp; Formation Shelf</h2>
 
@@ -42,10 +50,10 @@ class BestBooks extends React.Component {
           {this.state.books.length && this.state.books.map((book, idx) => (
             <Carousel.Item key={idx}>
               <img
-                className="d-block w-100"
-                src={book.img}
+                className="d-block w-100 h-50"
+                src="/book.jpg"
                 alt={book.name}
-                />
+              />
               <Carousel.Caption>
                 <h3>{book.name}</h3>
                 <p>{book.description}</p>
