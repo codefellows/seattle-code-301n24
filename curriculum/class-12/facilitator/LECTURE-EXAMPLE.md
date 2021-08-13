@@ -1,6 +1,6 @@
 # Lecture Notes: Mongo and Read
 
-### Warm-Up
+## Warm-Up
 
 - **Student Analysis** (5 min)
   - Show or print the [warm-up code](../warm-up/warm-up.md)
@@ -8,7 +8,7 @@
   - Refer to the [Warmup Notes](../warm-up/NOTES.md)
   - Optionally demo the running code at Repl.it
 
-### Shred Talk
+## Shred Talk
 
 - **Why**
   - Daily "Shred Talks" introduce the student to a new javascript coding concept, setting them up to complete the daily "Code Challenge" series
@@ -19,7 +19,7 @@
 - **Note**
   - If you are short on time, this can be omitted from class lecture. There are official videos that students can watch in lieu of you leading this portion of class.
 
-### Code Review
+## Code Review
 
 ### CRUD Workflow and the WRRC
 
@@ -33,10 +33,10 @@
   - How does the browser transfer data from the user to the server?
   - WRRC now includes a dynamic response
 - **How** (30 min)
-  - Interactive Drawing of WRRCs: 
-    - Our WRRC is starting to look like a WEB! 
-    - Front-end requests information from the back-end/ back-end requests information from the API / back-end gets a response from the API / back-end adds the data to Mongo / back-end sends response to front-end. 
-    - Have students help you place the libraries on your drawing: `cors`, `axios`, `superagent`, `mongoose`, `express`
+  - Interactive Drawing of WRRCs:
+    - Our WRRC is starting to look like a WEB!
+    - Front-end requests information from the back-end/ back-end requests information from the API / back-end gets a response from the API / back-end adds the data to Mongo / back-end sends response to front-end.
+    - Have students help you place the libraries on your drawing: `cors`, `axios`,`mongoose`, `express`
 - **Experimentation and Discovery Ideas**
 
 ### NoSQL Databases and Mongo
