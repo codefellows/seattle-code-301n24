@@ -1,17 +1,22 @@
-const express = require('express');
-const app = express();
+
 const mongoose = require('mongoose');
 
 require('dotenv').config();
 
-const cors = require('cors');
-app.use(cors());
 
 // hey mongoose, connect to the database running somewhere
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // I'm intentionally requiring this model AFTER I run mongoose.connect
 const Cat = require('./models/cat');
+
+seedCats();
+// clearCats();
+
+async function clearCats() {
+  await Cat.deleteMany({});
+  mongoose.disconnect();
+}
 
 function seedCats() {
   // seed the database with some cats, so I can retrieve them
@@ -25,29 +30,10 @@ function seedCats() {
     ]
   });
   myCat.save(function (err) {
-    if (err) console.err(err);
+    if (err) console.error(err);
     else console.log('saved the cat');
+
+    mongoose.disconnect();
   });
 }
 
-app.get('/', (req, res) => {
-  res.send('hello, cool cat!');
-});
-
-app.get('/cats', (req, res) => {
-  // get all the cats from the database
-  Cat.find((err, databaseResults) => {
-    // send them in my response
-    res.send(databaseResults);
-  });
-});
-
-// route to get just one cat
-app.get('/cat', (req, res) => {
-  Cat.find({ name: req.query.name }, (err, databaseResults) => {
-    // send them in my response
-    res.send(databaseResults);
-  });
-});
-
-app.listen(3001, () => console.log('app listening on 3001'));

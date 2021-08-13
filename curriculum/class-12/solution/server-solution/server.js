@@ -12,8 +12,8 @@ const client = jwksClient({
   jwksUri: 'https://dev-4rwdhvtd.us.auth0.com/.well-known/jwks.json'
 });
 
-function getKey(header, callback){
-  client.getSigningKey(header.kid, function(err, key) {
+function getKey(header, callback) {
+  client.getSigningKey(header.kid, function (err, key) {
     const signingKey = key.publicKey || key.rsaPublicKey;
     callback(null, signingKey);
   });
@@ -23,7 +23,7 @@ const app = express();
 app.use(cors());
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/favoriteBooks', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb://localhost:27017/favoriteBooks', { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', _ => {
@@ -31,30 +31,26 @@ db.once('open', _ => {
 });
 
 // step 1 and 2: create a schema and a model
-const User = require('./models/User.js');
-// User.remove();
-
-// step 3. add new entries to your model
-const lena = new User({email: 'applena@gmail.com', books: [
-  { name: 'The Silent Patient', description: 'a women may or may not have killed her husband and a theapist is determind to make her talk to discover her secrets.', status: 'LIFE-CHANGING', img: 'https://m.media-amazon.com/images/I/91lslnZ-btL._AC_UY436_FMwebp_QL65_.jpg' },
-  { name: 'The Hitchhickers Guide To The Gallaxy.', description: 'earth is destroyed and folks try to determine the ultimate question to the universe and everything', status: 'RECOMMENDED TO ME', img: 'https://m.media-amazon.com/images/I/61uKflIpsdL._AC_UY436_QL65_.jpg'}
-]});
-
-const codefellows = new User({email: 'lena@codefellows.com', books: [
-  { name: 'The Growth Mindset', description: 'Dweck coined the terms fixed mindset and growth mindset to describe the underlying beliefs people have about learning and intelligence. When students believe they can get smarter, they understand that effort makes them stronger. Therefore they put in extra time and effort, and that leads to higher achievement.', status: 'FAVORITE FIVE', img: 'https://m.media-amazon.com/images/I/61bDwfLudLL._AC_UL640_QL65_.jpg' },
-  { name: 'What Great Trainers Do', description: 'What Great Trainers Do: The Ultimate Guide to Delivering Engaging and Effective Learning', status: 'RECOMMENDED TO ME', img: 'https://m.media-amazon.com/images/I/81MjWfhYAEL._AC_UY436_FMwebp_QL65_.jpg'}
-]})
-
-const brook = new User({email: 'brook@codefellows.com', books: [
-  { name: 'The Growth Mindset', description: 'Dweck coined the terms fixed mindset and growth mindset to describe the underlying beliefs people have about learning and intelligence. When students believe they can get smarter, they understand that effort makes them stronger. Therefore they put in extra time and effort, and that leads to higher achievement.', status: 'FAVORITE FIVE', img: 'https://m.media-amazon.com/images/I/61bDwfLudLL._AC_UL640_QL65_.jpg' },
-  { name: 'The Momnt of Lift', description: 'Melinda Gates shares her how her exposure to the poor around the world has established the objectives of her foundation.', status: 'RECOMMENDED TO ME', img: 'https://m.media-amazon.com/images/I/71LESEKiazL._AC_UY436_QL65_.jpg'}
-]})
+const Book = require('./models/book.js');
+// Book.remove();
 
 
-// step 4: save the entries into the database
-lena.save();
-codefellows.save();
-brook.save();
+app.get('/seed', seedBooks);
+
+function seedBooks(request, response) {
+  // step 3. add new entries to your model
+  const silentPatient = new Book({ name: 'The Silent Patient', email: 'lena@codefellows.com', description: 'a women may or may not have killed her husband and a theapist is determind to make her talk to discover her secrets.', status: 'LIFE-CHANGING' });
+  const growthMindset = new Book({ name: 'The Growth Mindset', email: 'brook@codefellows.com', description: 'Dweck coined the terms fixed mindset and growth mindset to describe the underlying beliefs people have about learning and intelligence. When students believe they can get smarter, they understand that effort makes them stronger. Therefore they put in extra time and effort, and that leads to higher achievement.', status: 'FAVORITE FIVE' });
+  const blindAssassin = new Book({ name: 'The Blind Assassin', email: 'jb@codefellows.com', description: 'Margaret Atwood takes the art of storytelling to new heights in a dazzling novel that unfolds layer by astonishing layer and concludes in a brilliant and wonderfully satisfying twist. Told in a style that magnificently captures the colloquialisms and clichés of the 1930s and 1940s, The Blind Assassin is a richly layered and uniquely rewarding experience.', status: 'FAVORITE FIVE' });
+  const fireNextTime = new Book({ name: 'The Fire Next Time', email: 'jb@codefellows.com', description: 'Described by The New York Times Book Review as “sermon, ultimatum, confession, deposition, testament, and chronicle…all presented in searing, brilliant prose,” The Fire Next Time stands as a classic of our literature.', status: 'LIFE-CHANGING' });
+
+  // step 4. save the books
+  silentPatient.save();
+  growthMindset.save();
+  blindAssassin.save();
+  fireNextTime.save();
+
+}
 
 const PORT = process.env.PORT || 3001;
 
@@ -63,18 +59,20 @@ app.get('/books', getBooks);
 function getBooks(request, response) {
   const token = request.headers.authorization.split(' ')[1];
   // verify that the jwt is valid
-  jwt.verify(token, getKey, {}, function(err, user) {
-    if (err){
+  jwt.verify(token, getKey, {}, function (err, user) {
+    if (err) {
       response.send('invalid token');
     } else {
       const email = request.query.email;
       // get the books from mongo 
-      User.find({ email }, (err, user) => {
+      Book.find({ email }, (err, books) => {
         if (err) return console.error(err);
-        response.send(user[0].books);
+        response.send(books);
       })
     }
   });
 }
+
+
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
