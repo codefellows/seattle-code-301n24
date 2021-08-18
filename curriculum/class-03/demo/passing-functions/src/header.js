@@ -6,7 +6,11 @@ class Header extends React.Component {
   render() {
     return (
       <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="#home">{this.props.title}</Navbar.Brand>
+        <Navbar.Brand href="#home">
+          <h1>
+            {this.props.title}
+          </h1>
+        </Navbar.Brand>
       </Navbar>
     )
   }

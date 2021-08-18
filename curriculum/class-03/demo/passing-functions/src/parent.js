@@ -16,10 +16,16 @@ class Parent extends React.Component {
   }
 
   giveMoneyToBilly = (dollars) => {
+    const parentBalance = this.state.money - dollars;
     this.setState({
       billysMoney: this.state.billysMoney + dollars,
-      money: this.state.money - dollars
+      money: parentBalance
     })
+
+    if (parentBalance < 0) {
+      this.props.onOverdraft();
+    }
+
   }
 
   render() {
