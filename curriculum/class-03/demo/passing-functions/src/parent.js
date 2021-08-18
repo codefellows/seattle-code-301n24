@@ -20,7 +20,7 @@ class Parent extends React.Component {
     this.setState({
       billysMoney: this.state.billysMoney + dollars,
       money: parentBalance
-    })
+    });
 
     if (parentBalance < 0) {
       this.props.onOverdraft();
