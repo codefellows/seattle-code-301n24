@@ -1,71 +1,64 @@
 import React from 'react';
 import axios from 'axios';
-import Gifts from './Gifts';
-import Form from './Form';
-import AddAGift from './AddAGift';
+import Cats from './Cats';
+import CatForm from './CatForm';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container';
+
+const SERVER = process.env.REACT_APP_SERVER;
 
 class App extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      displayAddAGift: false,
-      gifts: [],
-      birthdayPersonEmail: '',
-      giftName: '',
-      giftDescription: ''
+      cats: [],
     }
   }
 
-  getMyGifts = async (e) => {
-    e.preventDefault();
-    const SERVER = 'http://localhost:3001';
+  async fetchCats() {
     try {
-      const gifts = await axios.get(`${SERVER}/gift`, {params: { email: this.state.birthdayPersonEmail }});
-      this.setState({ gifts: gifts.data });
-
-    } catch(error){
+      const response = await axios.get(`${SERVER}/cats`);
+      this.setState({ cats: response.data });
+    } catch (error) {
       console.log(error);
     }
   }
 
-  addGiftName = (giftName) => this.setState({ giftName });
-  addGiftDescription = (giftDescription) => this.setState({ giftDescription });
-
-  createGift = async (e) => {
-    e.preventDefault();
-    const API = 'http://localhost:3001';
-    const gifts = await axios.post(`${API}/gift`, {newGift: {name: this.state.giftName, description: this.state.giftDescription}, email: this.state.birthdayPersonEmail});
-    const allGiftsArray = gifts.data;
-    this.setState({ gifts: allGiftsArray, displayAddAGift: false });
+  componentDidMount() {
+    this.fetchCats();
   }
 
-  updateEmail = (email) => this.setState({ birthdayPersonEmail: email });
+  handleCreate = async catInfo => {
+    try {
+      const response = await axios.post(`${SERVER}/cats`, catInfo);
+      const newCat = response.data;
+      this.setState({
+        cats: [...this.state.cats, newCat]
+      })
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
-  removeAGift = (arrayOfGifts) => this.setState({ gifts: arrayOfGifts });
+  handleDelete = async id => {
+    try {
+      await axios.delete(`${SERVER}/cats/${id}`);
+      const remainingCats = this.state.cats.filter(cat => cat._id !== id);
+      this.setState({
+        cats: remainingCats
+      })
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
   render() {
-    return(
-      <>
-        <Gifts 
-          gifts={this.state.gifts} 
-          email={this.state.birthdayPersonEmail}
-          removeAGift={this.removeAGift}
-        />
-        <Form 
-          updateEmail={this.updateEmail} 
-          getMyGifts={this.getMyGifts}
-        />
-
-        <button onClick={() => this.setState({ displayAddAGift: true })}>Add a Gift</button>
-
-        {this.state.displayAddAGift && 
-          <AddAGift
-            addGiftName={this.addGiftName}
-            addGiftDescription={this.addGiftDescription}
-            createGift={this.createGift}
-          />
-        }
-      </>
+    return (
+      <Container>
+        <h1>World of Cats</h1>
+        <CatForm onCreate={this.handleCreate} />
+        <Cats cats={this.state.cats} onDelete={this.handleDelete} />
+      </Container>
     )
   }
 }

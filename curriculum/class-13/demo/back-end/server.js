@@ -1,28 +1,52 @@
-'use strict';
-
-require('dotenv').config();
 const express = require('express');
 const app = express();
-const cors = require('cors');
-app.use(cors());
-app.use(express.json()); 
-
-const Gift = require('./modules/Gift');
-
-const PORT = 3001;
-
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/gifts', {useNewUrlParser: true, useUnifiedTopology: true});
+require('dotenv').config();
 
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
-  console.log('Mongoose is connected')
+const cors = require('cors');
+
+app.use(cors());
+app.use(express.json()); // needed to parse request body
+
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true });
+
+const Cat = require('./models/cat');
+
+// all cats
+app.get('/cats', async (req, res) => {
+
+  const cats = await Cat.find({});
+
+  res.send(cats);
 });
 
-app.get('/gift', Gift.getAllGifts);
-app.post('/gift', Gift.addAGift);
-app.delete('/gift/:index', Gift.deleteAGift);
+// one cat, by id
+// NOTE: not using this on front end at the moment,
+// but it's common to have in a complete API
+app.get('/cats/:id', async (req, res) => {
 
-app.listen(PORT, () => console.log(`listening on ${PORT}`));
+  const cat = await Cat.findById(req.params.id);
+
+  res.send(cat);
+});
+
+// create a cat
+app.post('/cats', async (req, res) => {
+
+  const { name, color, hasClaws } = req.body;
+
+  const newCat = await Cat.create({ name, color, hasClaws });
+
+  res.send(newCat);
+});
+
+// delete a cat
+app.delete('/cats/:id', async (req, res) => {
+
+  await Cat.findByIdAndDelete(req.params.id);
+
+  res.send('success!');
+});
+
+app.listen(3001, () => console.log('app listening on 3001'));
