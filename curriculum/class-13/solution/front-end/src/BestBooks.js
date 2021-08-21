@@ -6,9 +6,9 @@ import AddABookButton from './AddABookButton';
 import { withAuth0 } from '@auth0/auth0-react';
 
 class BestBooks extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state={
+    this.state = {
       books: []
     }
   }
@@ -21,8 +21,8 @@ class BestBooks extends React.Component {
         // make a call to the backend to get the the books and display them
 
         const config = {
-          params: {email: this.props.auth0.user.email},
-          headers: {"Authorization" : `Bearer ${jwt}`},
+          params: { email: this.props.auth0.user.email },
+          headers: { "Authorization": `Bearer ${jwt}` },
           method: 'get',
           baseURL: process.env.REACT_APP_SERVER,
           url: '/books'
@@ -34,20 +34,23 @@ class BestBooks extends React.Component {
       .catch(err => console.error(err));
   }
 
-  updateBookArray = (books) => this.setState({books});
+  updateBookArray = (book) => {
+    const updatedBooks = [...this.state.books, book];
+    this.setState({ books: updatedBooks })
+  };
 
-  removeBook = (idx) => {
+  removeBook = (book) => {
     this.props.auth0.getIdTokenClaims()
       .then(async res => {
         const jwt = res.__raw;
-        const id = this.state.books[idx]._id;
+        const id = book._id;
         let newBooks = this.state.books;
-        newBooks = newBooks.filter((book, i) => i !== idx);
+        newBooks = this.state.books.filter(b => b._id !== id);
         this.setState({ books: newBooks });
 
         const config = {
-          params: {email: this.props.auth0.user.email},
-          headers: {"Authorization" : `Bearer ${jwt}`},
+          params: { email: this.props.auth0.user.email },
+          headers: { "Authorization": `Bearer ${jwt}` },
           method: 'delete',
           baseURL: process.env.REACT_APP_SERVER,
           url: `/books/${id}`
@@ -58,7 +61,7 @@ class BestBooks extends React.Component {
   }
 
   render() {
-    return(
+    return (
       <>
         <h2>My favorite books</h2>
         <AddABookButton updateBookArray={this.updateBookArray} />
@@ -66,16 +69,16 @@ class BestBooks extends React.Component {
           {this.state.books.length && this.state.books.map((book, idx) => (
             <Carousel.Item key={idx}>
               <img
-                className="d-block w-100"
-                src={book.img}
+                className="d-block w-100 h-50"
+                src="/book.jpg"
                 alt={book.name}
-                />
+              />
               <Carousel.Caption>
                 <h3>{book.name}</h3>
                 <p>{book.description}</p>
                 <p>{book.status}</p>
+                <Button onClick={() => this.removeBook(book)}>Delete</Button>
               </Carousel.Caption>
-              <Button onClick={() => this.removeBook(idx)}>Delete</Button>
             </Carousel.Item>
           ))}
         </Carousel>
