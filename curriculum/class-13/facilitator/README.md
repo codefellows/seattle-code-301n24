@@ -58,8 +58,8 @@ One possible way to present this material is documented in the [example lecture]
 - **How** (60 min)
   - The server wants to use REST verbs (GET/POST/DELETE and tomorrow we will cover PUT)
   - Draw the WRRC using the RESTful verbs
-  - DEMO build: Gift Registry
-    - This is a huge demo. You might want to begin with some of the demo pre-built to save time so you can focus on just the new concepts of CREATING a resource and DELETING a resource on both the front-end and the back-end. 
+  - DEMO build: World of Cats
+    - This demo has a lot of moving parts. You might want to begin with some of the demo pre-built to save time so you can focus on just the new concepts of CREATING a resource and DELETING a resource on both the front-end and the back-end.
 
 ## Lab Notes
 
