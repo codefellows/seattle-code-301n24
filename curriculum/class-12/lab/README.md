@@ -1,12 +1,12 @@
-# MongoDB
+# Resource Create and Delete
 
 ## Overview
 
-For today's assignment, you will be connecting your front end to an Express server. This Express server will connect to a Mongo database. You will need to make a "schema" to model how you want your data to look. You will then populate this database with some of your favorite books so that when the front end makes a request to your server, your server will query the database and respond with all of the results in the database. Your front end will display these results.
+Today you will add the functionality for the user to add a book or delete a book. A book will be created with a form in React, and sent to the server where it will be saved into the database, and then returned to the front end to be displayed in the list of favorite books. You will then be able to delete that book with a click of a button, to have it instantly removed from the front end, and a request sent to back end for removal.
 
 ## Feature Tasks
 
-See the [Trello board](https://trello.com/b/qgaCsVVa) for your feature tasks for today's lab.
+See the [Trello board](https://trello.com/b/qgaCsVVa/module-3-best-books){:target="_blank"} for your feature tasks for today's lab.
 
 ## Documentation
 

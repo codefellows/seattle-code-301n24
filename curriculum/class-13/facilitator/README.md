@@ -1,13 +1,8 @@
-
-# Facilitators Guide: Creating and Deleting Resources
+# Facilitators Guide: Updating a Resource
 
 ## Overview
 
-Today, we dive into the C and D of CRUD: CREATE and DELETE. 
-
-Last class, we covered READ, so it makes sense that the next step would be to CREATE a resource. That will allow us to remove the hard-coded data in the server and let the users dynamically add a resources whenever they want. You will need to cover the request.body as well as `app.use(express.json())`. 
-
-DELETING a resource is next. We will send an index in the params and use that index to locate the resource and delete it. 
+Today you will finish up your CRUD discussion with the UPDATE route. This day is purposely kept short to accommodate an hour Diversity and Inclusion Lecture as well. Point out that while you are NOT going to be demonstrating how to deploy a MongoDB to Heroku, they will be expected to do this during project week. The README.md for today has step-by-step instructions for how to do this, but the goal is for them to teach themselves how to do something hard.
 
 ## Learning Objectives
 
@@ -15,8 +10,7 @@ Review the detailed objectives in today's [student-facing readme](../README.md).
 
 ## Preparation
 
-- Remind students that they will work with the same partner.
-- Practice [the demo](../demo/)
+- Practice today's [Demo](../demo)
 
 ## Lecture Outline
 
@@ -30,7 +24,7 @@ One possible way to present this material is documented in the [example lecture]
   - Refer to the [Warmup Notes](../warm-up/NOTES.md)
   - Optionally demo the running code at Repl.it
 
-### Shred Talk
+### Shred Talk**
 
 - **Why**
   - Daily "Shred Talks" introduce the student to a new javascript coding concept, setting them up to complete the daily "Code Challenge" series
@@ -41,36 +35,38 @@ One possible way to present this material is documented in the [example lecture]
 - **Note**
   - If you are short on time, this can be omitted from class lecture. There are official videos that students can watch in lieu of you leading this portion of class.
 
+### Diversity and Inclusion Lecture
+
 ### Code Review
 
-### Create and Delete
+### CRUD - UPDATE
 
 - **Why** (5 min)
-  - Just like users want to be able to READ data, they also want to be able to CREATE new data (ie. leaving a review on a site, making a blog post, adding contacts online).
-  - With CREATING and READING data, users want to be able to DELETE data
-  - This gets us to the CR_D of a CRUD application
+  - Everything changes and applications need to be able to adjust their data to accommodate those changes. 
+  - `UPDATE` is an essiential part of a CRUD application
+
 - **What** (10 min)
-  - With REST, the WRRC is, in it's essence, an ACTION and a THING: a VERB is happening to a NOUN... Today: new verbs!
-  - Identify the resource you want to work with
-  - Usually by ID
-  - Communicate your intent to the server
-    - ID, Action to take, and possibly any changed data
-- **How** (60 min)
-  - The server wants to use REST verbs (GET/POST/DELETE and tomorrow we will cover PUT)
-  - Draw the WRRC using the RESTful verbs
-  - DEMO build: World of Cats
-    - This demo has a lot of moving parts. You might want to begin with some of the demo pre-built to save time so you can focus on just the new concepts of CREATING a resource and DELETING a resource on both the front-end and the back-end.
+  - The ability for a user to update a record in an application. In Our Best Books Application, we will be writing an update route to update the information on the books. 
+
+- **How** (30 min)
+  - Draw out the WRRC. By now, this should be familiar to the students. Introduce the concept of a PUT route. 
+  - Go through the [DEMO](../demo)
 
 ## Lab Notes
 
-- This is the last big lab that students will have. They will likely be feeling stressed as they prepare for the upcoming test.
+The lab instructions are intentionally left vague and short to encourage students to find their own solution to the problem domain. It might be worth talking different ways of solving problems during code review and lecture time to encourage this thinking.
+
+We are purposely not teaching the students how to deploy Mongo to Heroku. This is a challenge for them to figure out during project week. We are, however, pointing them in the right direction. In the README.md for today, there is a step-by-step guide for setting up a Mongo-Atlas account that you can use to deploy to Heroku. Point this out to them. Make sure they understand that most of what they do when they graduate will be to learn on their own and figure things out so this is a nudge in that direction. Our intention is not to abandon them but to provide them with an opportunity to practice this skill in an environment where we can support them.
 
 ## What changed from the previous class
 
-- The user can now add or delete a single book.
+We are adding a PUT route to the application.
 
 ## What might students struggle with today
+
+Students will most likely be stressed about their final tomorrow. Plan to spend some time answering questions about the test.
 
 ## Past bugs, issues or surprises
 
 ## General Comments and Notes
+

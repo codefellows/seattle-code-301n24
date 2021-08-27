@@ -1,4 +1,4 @@
-# Lecture Notes: Mongo and Read
+# Lecture Guide: Creating and Deleting Resources
 
 ## Warm-Up
 
@@ -21,61 +21,38 @@
 
 ## Code Review
 
-### CRUD Workflow and the WRRC
+## Create and Delete
 
 - **Why** (5 min)
-  - Adds dynamism to a website
-  - Users expect personalization and functionality
-  - This is the way **everything** in computing works, on some level
+  - Just like users want to be able to READ data, they also want to be able to CREATE new data (ie. leaving a review on a site, making a blog post, adding contacts online).
+  - With CREATING and READING data, users want to be able to DELETE data
+  - This gets us to the CR_D of a CRUD application
 - **What** (10 min)
-  - CRUD Workflow
-  - Review CRUD methodology and REST verbs
-  - How does the browser transfer data from the user to the server?
-  - WRRC now includes a dynamic response
-- **How** (30 min)
-  - Interactive Drawing of WRRCs:
-    - Our WRRC is starting to look like a WEB!
-    - Front-end requests information from the back-end/ back-end requests information from the API / back-end gets a response from the API / back-end adds the data to Mongo / back-end sends response to front-end.
-    - Have students help you place the libraries on your drawing: `cors`, `axios`,`mongoose`, `express`
+  - With REST, the WRRC is, in it's essence, an ACTION and a THING: a VERB is happening to a NOUN... Today: new verbs!
+  - Identify the resource you want to work with
+  - Usually by ID
+  - Communicate your intent to the server
+    - ID, Action to take, and possibly any changed data
+- **How** (60 min)
+  - The server wants to use REST verbs (GET/POST/DELETE and tomorrow we will cover PUT)
+  - Draw the WRRC using the RESTful verbs
+  - DEMO build: World of Cats
+    - This demo has a lot of moving parts. You might want to begin with some of the demo pre-built to save time so you can focus on just the new concepts of CREATING a resource and DELETING a resource on both the front-end and the back-end.
+    - So far, we have covered sending data as a query in the url. In order to CREATE and DELETE a resource, we will need to send data in two more ways: in the body and in the params.
+      - Draw an envelope on the whiteboard
+        - Both the query and the param go on the outside of the envelope since they are sent in the URL and anyone can see them
+        - The body is sent inside of the envelope so it is more hidden
+      - Write out an example URL with a queries and params. Ask students to identify the differences.
+        - queries come after the question mark and params come before
+        - queries are key=value while params are just one word or number
+      - Demonstrate how write the route on the server to identify params
+      - Practice sending params from the front-end to the back-end
+      - Next, lets send some data in the body of the request object.
+        - Build a simple form and try to send the results of that form information from the front-end to the back-end.
+          - The body will be empty because we need a line of code to parse the body.
+          - Spend some time talking about this line of code and what it does:
+          `app.use(express.json());`
+      - It might be helpful to make a chart of the three different ways that we know of to send information (query, params, body), what the syntax is to do that in axios, and what we need to get that information on the back-end.
+        - Helping students to organize their thoughts in this manner is cruical at this stage of learning.
+    - Continue with the demo. Hook up the POST route and the DELETE route.
 - **Experimentation and Discovery Ideas**
-
-### NoSQL Databases and Mongo
-
-- **Why** (5 min)
-  - JSON is the standard - every languages can read and write
-  - It can deeply describe a complex object unlike a Relational DB
-- **What** (10 min)
-  - NoSQL Databases Store data in a "Document", not a "Record"
-    - Resembles JSON
-    - Fast (Key+Value) storage
-  - There are tradeoffs
-    - Big (but complete) data objects
-    - No Relationships
-- **How** (15 min)
-  - Lead the students in a differences and pros/cons discussion between SQL and NoSQL
-    - Highlighting things like relations, documents, complex models, scale (horizontal vs vertical), etc
-  - Mongo is one of many NoSQL systems
-  - Open and use the `mongo` CLI and demonstrate some basic commands, navigating a db, collections, records, etc
-
-### ORMs and Mongoose (Code!)
-
-- **Why** (5 min)
-  - Databases have differing APIs, making them hard to move between
-    - SQL and NoSQL are vastly different
-  - Developers prefer a common API or set of commands to work with
-    - `.save()`, `.get()`, etc.
-- **What** (10 min)
-  - ORM = "Object Relational Mapping"
-  - Provide for a simple and common API for accessing data
-  - Mongoose is an ORM for Mongo that allows you to
-    - Create a schema that defines our collection's shape
-    - Easily implements CRUD operations
-    - Create middleware/lifecycle functions to let us add business logic during CRUD operations
-- **How** (40 min)
-  - During your demo, be sure to use the Mongoose CLI as well as the Mongo Compass GUI to show the data in the database in real time
-    - It's important that students get in touch with their tools
-  - This demo is written to build off of the Mongoose docs. 
-  - Begin by guiding students on how to read though the docs to understand this new tool.
-  - Use the documentation examples as a starting point to begin building your demo.
-    - Once you have hard-coded some cats into your database, make a front-end and connect it to your back-end.
-    - Do a GET request so you can READ what is in your database and render it.

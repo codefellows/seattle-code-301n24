@@ -1,8 +1,11 @@
-# Facilitators Guide: Updating a Resource
+# Facilitators Guide: 
 
 ## Overview
 
-Today you will finish up your CRUD discussion with the UPDATE route. This day is purposely kept short to accommodate an hour Diversity and Inclusion Lecture as well. Point out that while you are NOT going to be demonstrating how to deploy a MongoDB to Heroku, they will be expected to do this during project week. The README.md for today has step-by-step instructions for how to do this, but the goal is for them to teach themselves how to do something hard.
+Today is the first day of the book application, a project that spans over labs 11 through 14. At some point during today's lecture, demonstrate the full solution code and point out the day-to-day features. This will give students an idea of where they are heading with their applications.
+
+Students will work with the same partner for all four labs, so be mindful of which students are partnered together. During final projects, each team typically contains a balance of strong students and weaker students, so the book app is an opportunity to pair two strong students together and see how much they are able to accomplish.
+
 
 ## Learning Objectives
 
@@ -10,11 +13,17 @@ Review the detailed objectives in today's [student-facing readme](../README.md).
 
 ## Preparation
 
-- Practice today's [Demo](../demo)
+- Sign up for an account with Auth0
+- Be familiar with the Auth0 docs - especially this [page](https://auth0.com/docs/libraries/auth0-react)
 
 ## Lecture Outline
 
 One possible way to present this material is documented in the [example lecture](./LECTURE-EXAMPLE.md) notes.
+
+### Career Review 
+
+- Get a show of hands to see how many students reached out to PPH speaker
+- Lead a discussion on networking and meet-ups
 
 ### Warm-Up
 
@@ -24,7 +33,7 @@ One possible way to present this material is documented in the [example lecture]
   - Refer to the [Warmup Notes](../warm-up/NOTES.md)
   - Optionally demo the running code at Repl.it
 
-### Shred Talk**
+### Shred Talk
 
 - **Why**
   - Daily "Shred Talks" introduce the student to a new javascript coding concept, setting them up to complete the daily "Code Challenge" series
@@ -35,38 +44,46 @@ One possible way to present this material is documented in the [example lecture]
 - **Note**
   - If you are short on time, this can be omitted from class lecture. There are official videos that students can watch in lieu of you leading this portion of class.
 
-### Diversity and Inclusion Lecture
-
 ### Code Review
+- Today should be a smaller day for code review if you do any at all. 
+- Get students to talk about their process for debugging the starter code
+- Pull up the code from a student who is still struggling with the starter code and have the class work through the bugs with them.
 
-### CRUD - UPDATE
+### Authentication
 
 - **Why** (5 min)
-  - Everything changes and applications need to be able to adjust their data to accommodate those changes. 
-  - `UPDATE` is an essiential part of a CRUD application
-
+  - We authenticate so that we know the user is who they say they are
+  - So that we can persist preferences and access based on credentials
 - **What** (10 min)
-  - The ability for a user to update a record in an application. In Our Best Books Application, we will be writing an update route to update the information on the books. 
-
+  - Auth0 is a third party library that uses 0Auth to authenticate a user. It does all the work for us behind the scenes, so the big win here is being able to read through the documentation and put it into place in our code base.
 - **How** (30 min)
-  - Draw out the WRRC. By now, this should be familiar to the students. Introduce the concept of a PUT route. 
-  - Go through the [DEMO](../demo)
+  - Auth0 uses functional components in their documentation rather than class components. This is a great opportunity to discuss the history of React and why we are starting with class components (it will be used in a lot of legacy code while most new code will be written in functional components). This is also a great opportunity to point out that even though students haven't learned functional components, they can still understand what is happening and thus, use the library. 
+  - Using the documentation on this [page](https://auth0.com/docs/libraries/auth0-react), walk students through setting up Auth0.
+  - Their lab will be to incorporate Auth0 into an existing code base that includes Browser Router (remember that from lab 05). 
+- **Experimentation and Discovery Ideas**
+  - The documentation demonstrates how to write the `Profile` component as a class component. You can play around with writing the other components as class components as well. 
+
 
 ## Lab Notes
 
-The lab instructions are intentionally left vague and short to encourage students to find their own solution to the problem domain. It might be worth talking different ways of solving problems during code review and lecture time to encourage this thinking.
+## What changed from the previous class?
 
-We are purposely not teaching the students how to deploy Mongo to Heroku. This is a challenge for them to figure out during project week. We are, however, pointing them in the right direction. In the README.md for today, there is a step-by-step guide for setting up a Mongo-Atlas account that you can use to deploy to Heroku. Point this out to them. Make sure they understand that most of what they do when they graduate will be to learn on their own and figure things out so this is a nudge in that direction. Our intention is not to abandon them but to provide them with an opportunity to practice this skill in an environment where we can support them.
+- New topic, starting to build a new app.
 
-## What changed from the previous class
+## What might students struggle with today?
 
-We are adding a PUT route to the application.
+ - Working with a new partner for an entire week can be challenging. Encourage them to spend time working on the conflict agreement ahead of time and review pair programing practices in order to head off some of these difficulties. Also be sure to talk about WHY it is important to pair program and what they can expect in the industry. 
 
-## What might students struggle with today
-
-Students will most likely be stressed about their final tomorrow. Plan to spend some time answering questions about the test.
-
-## Past bugs, issues or surprises
+## Past bugs, issues or surprises...
 
 ## General Comments and Notes
 
+## Resources
+
+### Book App user flow
+
+![Auth0 Documentation](https://auth0.com/docs/libraries/auth0-react)
+
+### REST for Dummies
+
+![REST for Dummies](whiteboard-diagrams/rest-for-dummies.png)

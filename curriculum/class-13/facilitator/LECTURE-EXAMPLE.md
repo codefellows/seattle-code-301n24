@@ -1,6 +1,6 @@
-# Lecture Guide: Creating and Deleting Resources
+# Lecture Guide: Update a Resource
 
-## Warm-Up
+### Warm-Up
 
 - **Student Analysis** (5 min)
   - Show or print the [warm-up code](../warm-up/warm-up.md)
@@ -8,7 +8,7 @@
   - Refer to the [Warmup Notes](../warm-up/NOTES.md)
   - Optionally demo the running code at Repl.it
 
-## Shred Talk
+### Shred Talk**
 
 - **Why**
   - Daily "Shred Talks" introduce the student to a new javascript coding concept, setting them up to complete the daily "Code Challenge" series
@@ -19,40 +19,41 @@
 - **Note**
   - If you are short on time, this can be omitted from class lecture. There are official videos that students can watch in lieu of you leading this portion of class.
 
-## Code Review
+### Diversity and Inclusion Lecture
 
-## Create and Delete
+### Code Review
+
+### CRUD - UPDATE
 
 - **Why** (5 min)
-  - Just like users want to be able to READ data, they also want to be able to CREATE new data (ie. leaving a review on a site, making a blog post, adding contacts online).
-  - With CREATING and READING data, users want to be able to DELETE data
-  - This gets us to the CR_D of a CRUD application
+  - Everything changes and applications need to be able to adjust their data to accommodate those changes. 
+  - `UPDATE` is an essiential part of a CRUD application
+
 - **What** (10 min)
-  - With REST, the WRRC is, in it's essence, an ACTION and a THING: a VERB is happening to a NOUN... Today: new verbs!
-  - Identify the resource you want to work with
-  - Usually by ID
-  - Communicate your intent to the server
-    - ID, Action to take, and possibly any changed data
-- **How** (60 min)
-  - The server wants to use REST verbs (GET/POST/DELETE and tomorrow we will cover PUT)
-  - Draw the WRRC using the RESTful verbs
-  - DEMO build: World of Cats
-    - This demo has a lot of moving parts. You might want to begin with some of the demo pre-built to save time so you can focus on just the new concepts of CREATING a resource and DELETING a resource on both the front-end and the back-end.
-    - So far, we have covered sending data as a query in the url. In order to CREATE and DELETE a resource, we will need to send data in two more ways: in the body and in the params.
-      - Draw an envelope on the whiteboard
-        - Both the query and the param go on the outside of the envelope since they are sent in the URL and anyone can see them
-        - The body is sent inside of the envelope so it is more hidden
-      - Write out an example URL with a queries and params. Ask students to identify the differences.
-        - queries come after the question mark and params come before
-        - queries are key=value while params are just one word or number
-      - Demonstrate how write the route on the server to identify params
-      - Practice sending params from the front-end to the back-end
-      - Next, lets send some data in the body of the request object.
-        - Build a simple form and try to send the results of that form information from the front-end to the back-end.
-          - The body will be empty because we need a line of code to parse the body.
-          - Spend some time talking about this line of code and what it does:
-          `app.use(express.json());`
-      - It might be helpful to make a chart of the three different ways that we know of to send information (query, params, body), what the syntax is to do that in axios, and what we need to get that information on the back-end.
-        - Helping students to organize their thoughts in this manner is cruical at this stage of learning.
-    - Continue with the demo. Hook up the POST route and the DELETE route.
-- **Experimentation and Discovery Ideas**
+  - The ability for a user to update a record in an application. In Our Best Books Application, we will be writing an update route to update the information on the books. 
+
+- **How** (30 min)
+  - Draw out the WRRC. By now, this should be very familiar to the students. Introduce the concept of a PUT route to the diagram.
+  - Go through the [DEMO](../demo)
+  - Pose the question to the students: if you want to update a resource, what information do you need? 
+    - you will need a way of identifying the resource (this can be the id of the resource or an index - although it is worth discussing the issues that can arrise from using an index) and the updated information. 
+  - If you can time, you can rebuild the demo from scratch, but if not, you can use yesterday's demo and add to it. 
+    - Make an `update` button next to the `delete` button
+    - When the user clicks it, a form should appear with that resources' information already filled in. 
+    - The user edits the info as they see fit and the updated info gets send to the server along with a way of identifying which resource is being updated.
+  - On the server side, we need to make a PUT route to accept the updated information. 
+    - We will get information from the params as well as the body.
+    - Update the information in the database and then as a class decide if you want to send the updated resource or the entire array of resources back to the user.
+
+## Test Review
+
+- Save some time at the end of lecture to go over the test. 
+- What to expect: 
+  - Students will be given starter code that will have minor bugs in it. They will need to fix the bugs and then add some features onto the code. There will be tests that they can run so they will know if they have completed the tasks correctly. They will need to deploy both their front-end and back-end.
+- How long do they have?
+  - 3 hours
+- What resources can they use?
+  - Anything expect other people
+- What if they fail? 
+  - There will be an option for one retake
+  

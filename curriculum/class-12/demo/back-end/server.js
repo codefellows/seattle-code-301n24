@@ -5,49 +5,48 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 const cors = require('cors');
-app.use(cors());
 
-// hey mongoose, connect to the database running somewhere
+app.use(cors());
+app.use(express.json()); // needed to parse request body
+
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 
-// I'm intentionally requiring this model AFTER I run mongoose.connect
 const Cat = require('./models/cat');
 
-function seedCats() {
-  // seed the database with some cats, so I can retrieve them
-  const myCat = new Cat({
-    name: 'Genevieve',
-    color: 'orange',
-    hasClaws: false,
-    favoriteActivities: [
-      { activityName: 'playing with a ball of yarn' },
-      { activityName: 'sleeping' }, { activityName: 'zoomies' }
-    ]
-  });
-  myCat.save(function (err) {
-    if (err) console.err(err);
-    else console.log('saved the cat');
-  });
-}
+// all cats
+app.get('/cats', async (req, res) => {
 
-app.get('/', (req, res) => {
-  res.send('hello, cool cat!');
+  const cats = await Cat.find({});
+
+  res.send(cats);
 });
 
-app.get('/cats', (req, res) => {
-  // get all the cats from the database
-  Cat.find((err, databaseResults) => {
-    // send them in my response
-    res.send(databaseResults);
-  });
+// one cat, by id
+// NOTE: not using this on front end at the moment,
+// but it's common to have in a complete API
+app.get('/cats/:id', async (req, res) => {
+
+  const cat = await Cat.findById(req.params.id);
+
+  res.send(cat);
 });
 
-// route to get just one cat
-app.get('/cat', (req, res) => {
-  Cat.find({ name: req.query.name }, (err, databaseResults) => {
-    // send them in my response
-    res.send(databaseResults);
-  });
+// create a cat
+app.post('/cats', async (req, res) => {
+
+  const { name, color, hasClaws } = req.body;
+
+  const newCat = await Cat.create({ name, color, hasClaws });
+
+  res.send(newCat);
+});
+
+// delete a cat
+app.delete('/cats/:id', async (req, res) => {
+
+  await Cat.findByIdAndDelete(req.params.id);
+
+  res.send('success!');
 });
 
 app.listen(3001, () => console.log('app listening on 3001'));

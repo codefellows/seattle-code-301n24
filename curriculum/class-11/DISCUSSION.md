@@ -1,4 +1,4 @@
-# Readings: Authentication
+# Readings: Mongo and Mongoose
 
 Below you will find some reading material, code samples, and some additional resources that support today's topic and the upcoming lecture.
 
@@ -6,33 +6,46 @@ Review the Submission Instructions for guidance on completing and submitting thi
 
 ## Reading
 
-- [What is OAuth](https://www.csoonline.com/article/3216404/what-is-oauth-how-the-open-authorization-framework-works.html){:target="_blank"}
+- [nosql vs sql](https://www.thegeekstuff.com/2014/01/sql-vs-nosql-db/?utm_source=tuicool){:target="_blank"}
 
-1. What is OAuth?
-1. Give an example of what using OAuth would look like.
-1. How does OAuth work? What are the steps that it takes to authenticate the user?
-1. What is OpenID?
+1. Fill in the chart below with five differences between SQL and NoSQL databases:
 
-- [Authorization and Authentication flows](https://auth0.com/docs/flows){:target="_blank"}
 
-1. What is the difference between authorization and authentication?
-1. What is Authorization Code Flow?
-1. What is Authorization Code Flow with Proof Key for Code Exchange (PKCE)?
-1. What is Implicit Flow with Form Post?
-1. What is Client Credentials Flow?
-1. What is Device Authorization Flow?
-1. What is Resource Owner Password Flow?
+| SQL    | NoSQL |
+| ----------- | ----------- |
+|             |             |
+|             |             |
+|             |             |
+|             |             |
 
-## Additional Resources
+1. What kind of data is a good fit for an SQL database?
+1. Give a real world example.
+1. What kind of data is a good fit a NoSQL database?
+1. Give a real world example.
+1. Which type of database is best for hierarchical data storage?
+1. Which type of database is best for scalability?
 
+## Bookmark
+
+- [mongoose api](https://mongoosejs.com/docs/api.html#Model){:target="_blank"}
+  
+<!-- ## Additional Resources
+
+PLACEHOLDER -->
 
 ### Videos
 
-<!-- PLACEHOLDER -->
+- [sql vs nosql](https://www.youtube.com/watch?v=ZS_kXvOeQ5Y){:target="_blank"} (Video)
 
-### Bookmark/Skim
-
-- [Auth0 for single page apps](https://auth0.com/docs/libraries/auth0-react){:target="_blank"}
+1. What does SQL stand for?
+1. What is a realational database?
+1. What type of structure does a relational database work with?
+1. What is a 'schema'?
+1. What is a NoSQL database?
+1. Howo does it work?
+1. What is inside of a Mongo database?
+1. Which is more flexible - SQL or MongoDB? and why.
+1. What is the disadvantage of a NoSQL database?
 
 
 # Assignment Instructions
