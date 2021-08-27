@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header';
-import BestBooks from './BestBooks';
+import BestBooks from './BestBooks.js';
 import Footer from './Footer';
 import IsLoadingAndError from './IsLoadingAndError';
 import Login from './Login';
@@ -15,6 +15,7 @@ import {
 class App extends React.Component {
 
   render() {
+    console.log('app', this.props)
     return(
       <>
         <Router>

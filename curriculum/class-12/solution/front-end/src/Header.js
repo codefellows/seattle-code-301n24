@@ -1,7 +1,7 @@
 import React from 'react';
 import Logout from './LogoutButton';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, NavItem } from 'react-bootstrap';
+import { Navbar, NavItem }  from 'react-bootstrap';
 import LoginButton from './LoginButton';
 import { withAuth0 } from '@auth0/auth0-react';
 import { Link } from "react-router-dom";

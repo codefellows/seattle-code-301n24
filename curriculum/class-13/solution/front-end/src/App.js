@@ -15,17 +15,17 @@ import {
 class App extends React.Component {
 
   render() {
-    return (
+    return(
       <>
         <Router>
           <IsLoadingAndError>
             <Header />
-            <Switch>
-              <Route exact path="/">
-                {this.props.auth0.isAuthenticated ? <BestBooks /> : <Login />}
-              </Route>
-              <Route path="/profile" component={Profile} />
-            </Switch>
+              <Switch>
+                <Route exact path="/">
+                  {this.props.auth0.isAuthenticated ? <BestBooks /> : <Login /> }
+                </Route>
+                <Route path="/profile" component={Profile}/>
+              </Switch>
             <Footer />
           </IsLoadingAndError>
         </Router>

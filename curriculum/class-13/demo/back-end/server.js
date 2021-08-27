@@ -9,7 +9,7 @@ const cors = require('cors');
 app.use(cors());
 app.use(express.json()); // needed to parse request body
 
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 
 const Cat = require('./models/cat');
 
@@ -47,6 +47,13 @@ app.delete('/cats/:id', async (req, res) => {
   await Cat.findByIdAndDelete(req.params.id);
 
   res.send('success!');
+});
+
+// update a cat
+app.put('/cats/:id', async (req, res) => {
+  const { name, color, hasClaws } = req.body;
+  const updatedCat = await Cat.findByIdAndUpdate(req.params.id, { name, color, hasClaws }, { new: true, overwrite: true });
+  res.send(updatedCat);
 });
 
 app.listen(3001, () => console.log('app listening on 3001'));

@@ -20,7 +20,7 @@ class App extends React.Component {
       const response = await axios.get(`${SERVER}/cats`);
       this.setState({ cats: response.data });
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   }
 
@@ -35,6 +35,28 @@ class App extends React.Component {
       this.setState({
         cats: [...this.state.cats, newCat]
       })
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  handleUpdate = async catToUpdate => {
+    try {
+
+      const updatedCats = this.state.cats.map(existingCat => {
+        if (existingCat._id === catToUpdate._id) {
+          return catToUpdate;
+        } else {
+          return existingCat;
+        }
+      });
+
+      this.setState({
+        cats: updatedCats
+      })
+
+      await axios.put(`${SERVER}/cats/${catToUpdate._id}`, catToUpdate);
+
     } catch (error) {
       console.error(error);
     }
@@ -57,7 +79,7 @@ class App extends React.Component {
       <Container>
         <h1>World of Cats</h1>
         <CatForm onCreate={this.handleCreate} />
-        <Cats cats={this.state.cats} onDelete={this.handleDelete} />
+        <Cats cats={this.state.cats} onDelete={this.handleDelete} onUpdate={this.handleUpdate} />
       </Container>
     )
   }

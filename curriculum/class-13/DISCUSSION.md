@@ -1,42 +1,35 @@
-# Readings: CRUD
+# Diversity & Inclusion in the Tech Industry
 
-Below you will find some reading material, code samples, and some additional resources that support today's topic and the upcoming lecture.
+Below you will find some reading material that supports today's topic and the upcoming lecture.
 
 Review the Submission Instructions for guidance on completing and submitting this assignment.
 
 ## Reading
 
-- [Status Codes Based On REST Methods](https://www.moesif.com/blog/technical/api-design/Which-HTTP-Status-Code-To-Use-For-Every-CRUD-App/)
+- Consider the history: [That Time When Women Stopped Coding](https://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding){:target="_blank"}
 
-1. In your own words, describe what each group of status code represents:
-- 100's = 
-- 200's =
-- 300's = 
-- 400's =
-- 500's = 
+1. What occured during the same time as the beginning of the decline of women in computer sciene?
+1. Why does it matter that males had been playing on computers growing up?
 
-1. What is a status code 202?
-1. What is a status code 308?
-1. What code would you use if an update didn't return data to a client?
-1. What code would you use if a resource used to exist but no longer does?
-1. What is the 'Forbidden' status code?
+- Review the data: [Employee breakdown of key technology companies](https://informationisbeautiful.net/visualizations/diversity-in-tech/){:target="_blank"}
 
-## Additional Resources
+1. What three take-a-ways do you have looking at this data?
+
+- Ask the question: [Why diversity matters to your tech company](https://www.usatoday.com/story/tech/columnist/2015/07/21/why-diversity-matters-your-tech-company/30419871/){:target="_blank"}
+
+1. When are diversity efforts most successful?
+1. Why do diverse companies perform better?
+1. Give an example of how a diverse company can serve a diverse user base or vise-versa.
+
+<!-- ## Additional Resources
+
+PLACEHOLDER
 
 ### Videos
 
-- [Build A REST API With Node.js, Express, & MongoDB - Quick](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) - First 20 minutes
- 
-1. Why do we need to pull our MongoDB database string out of our server and put it into our .env?
-1. What is middleware?
-1. What does `app.use(express.json())` do?
-1. What does the `/:id` mean in a route?
-1. What is the difference beween `PUT` and `PATCH`?
-1. How do you make a defalut value in a schema?
-1. What does a `500` error status code mean?
-1. What is the difference between a status `200` and a status `201`?
+PLACEHOLDER
 
-<!-- ### Bookmark/Skim
+### Bookmark/Skim
 
 PLACEHOLDER -->
 
