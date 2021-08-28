@@ -1,23 +1,24 @@
-import React from "react";
-import { useAuth0 } from "@auth0/auth0-react";
+import { Component } from "react";
+import { Redirect } from "react-router-dom";
 
+class Profile extends Component {
 
-const Profile = () => {
-  const { user, isAuthenticated, isLoading } = useAuth0();
+  render() {
 
-  if (isLoading) {
-    return <div>Loading ...</div>;
+    if (this.props.user) {
+
+      return (
+        <div>
+          <h2>{this.props.user.username}</h2>
+          <p>{this.props.user.email}</p>
+        </div>
+      );
+
+    } else {
+
+      return <Redirect to="/" />
+    }
   }
-
-  return (
-    isAuthenticated && (
-      <div>
-        <img src={user.picture} alt={user.name} />
-        <h2>{user.name}</h2>
-        <p>{user.email}</p>
-      </div>
-    )
-  );
 };
 
 export default Profile;
