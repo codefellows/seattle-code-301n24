@@ -18,7 +18,7 @@ Today is all about persistence. We will introduce Mongodb and Mongoose. We will 
 
 As a result of completing lecture 13 of Code 301, students will:
 
-- Describe and Define 
+- Describe and Define
   - CRUD
   - MONGO
   - Mongoose
@@ -30,32 +30,24 @@ As a result of completing lecture 13 of Code 301, students will:
 
 ## Notes
 
-1. What does the R stand for in CRUD? 
-
-
+1. What does the R stand for in CRUD?
 
 1. What is an ORM?
 
-
-
 1. How are Mongo and Mongoose related?
 
+1. Why do we need to use Mongoose at all?
 
+1. Where does Mongo live?
 
-1. Why do we need to use Mongoose at all? 
+1. Mongoose:
 
+- step 1: Bring in Mongoose
 
-
-1. Where does Mongo live? 
-
-
-
-1. Mongoose: 
-  - step 1: Bring in Mongoose
   ```javaScript
   const mongoose = require('mongoose');
-  // making a database called cats
-  mongoose.connect('mongodb://localhost:27017/cats', {useNewUrlParser: true, useUnifiedTopology: true});
+  // making a database called cats-database
+  mongoose.connect('mongodb://localhost:27017/cats-database', {useNewUrlParser: true, useUnifiedTopology: true});
 
   const db = mongoose.connection;
   db.on('error', console.error.bind(console, 'connection error:'));
@@ -65,40 +57,42 @@ As a result of completing lecture 13 of Code 301, students will:
   ```
 
 - step 2: Make a schema
+
 ```javaScript
 const catSchema = new mongoose.Schema({
   name: {type: String}
 });
 
-const kittySchema = new mongoose.Schema({
-  name: {type: String, required: true},
-  cats: [catSchema]
-});
 ```
+
 - step 3: Make a model from the schema
+
 ```javaScript
-const CatParent = mongoose.model('kittyCats', kittySchema);
+const CatModel = mongoose.model('cat-collection', catSchema);
 ```
 
 - step 4: Create and save a record
+
 ```javaScript
-const bob = new CatParent({ name: 'bob', cats: [{name:'fluffy'}, {name:'joe'}]});
-bob.save();
+const fluffy = new CatModel({name:'fluffy'});
+fluffy.save();
 ```
 
 - step 5: Gets all the records from the database
+
 ```javaScript
-  CatParent.find((err, person) => {
+  CatModel.find((err, cat) => {
     if(err) return console.error(err);
-    console.log({person})
+    console.log({cat})
   });
 ```
 
-- Gets the record where the name is 'bob'
+- Gets the record where the name is 'fluffy'
+
 ```javaScript
-  CatParent.find({name:'bob'}, (err, person) => {
+  CatModel.find({name:'fluffy'}, (err, cat) => {
     if(err) return console.error(err);
-    console.log({person})
+    console.log({cat})
   });
 ```
 
