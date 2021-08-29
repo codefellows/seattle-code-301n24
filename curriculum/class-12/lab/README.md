@@ -2,11 +2,11 @@
 
 ## Overview
 
-Today you will add the functionality for the user to add a book or delete a book. A book will be created with a form in React, and sent to the server where it will be saved into the database, and then returned to the front end to be displayed in the list of favorite books. You will then be able to delete that book with a click of a button, to have it instantly removed from the front end, and a request sent to back end for removal.
+Today you will add the functionality for the user to create a book resource in the database or delete one. A book will be created from a form in React, and sent to the server where it will be saved into the database, and then returned to the front end to be displayed in the list of favorite books. You will then be able to delete that book with a click of a button, to have it instantly removed from the front end, with a request sent to back end for removal.
 
-## Feature Tasks
+## Feature Tasks - CREATE and DELETE of CRUD
 
-See the [Trello board](https://trello.com/b/qgaCsVVa/module-3-best-books){:target="_blank"} for your feature tasks for today's lab.
+See your team's Trello board for this lab's feature tasks.
 
 ## Documentation
 

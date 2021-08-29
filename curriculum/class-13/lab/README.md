@@ -2,11 +2,11 @@
 
 ## Overview
 
-Today you will complete your full stack CRUD application by adding an UPDATE route. You will add a button to each book that, when clicked, will display a form where the user can update information about that book. That information will be sent to the server where it will be updated in the database.
+Today you will complete your full stack CRUD application by adding an UPDATE route. You will add a button to each book that, when clicked, will display a form where the user can change information about that book. That information will be sent to the server where it will replace what's already in the database for that record.
 
-## Feature Tasks
+## Feature Tasks — UPDATE of CRUD
 
-See the [Trello board](https://trello.com/b/qgaCsVVa) for your feature tasks for today's lab.
+See your team's Trello board for this lab's feature tasks.
 
 ## Documentation
 
