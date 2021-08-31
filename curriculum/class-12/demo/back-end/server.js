@@ -11,7 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json()); // new
 
-mongoose.connect(process.env.DATABASE_URL);
+mongoose.connect(process.env.MONGODB_URI);
 
 // new
 const db = mongoose.connection;
@@ -43,8 +43,14 @@ app.post('/cats', async (request, response) => {
 // new
 app.delete('/cats/:id', async (request, response) => {
   const id = request.params.id;
-  await Cat.findByIdAndDelete(id);
-  response.send('success');
+
+  try {
+    await Cat.findByIdAndDelete(id);
+    response.send('success');
+  } catch (error) {
+    console.error(error);
+    response.status(404).send(`No cat found with id ${id}`)
+  }
 });
 
 app.listen(PORT, () => console.log('Listening on PORT', PORT));
