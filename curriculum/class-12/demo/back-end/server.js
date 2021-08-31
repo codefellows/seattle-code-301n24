@@ -33,23 +33,34 @@ app.get('/cats', async (request, response) => {
   response.send(cats);
 });
 
-// new
 app.post('/cats', async (request, response) => {
-  const { name, color, hasClaws, location } = request.body;
-  const newCat = await Cat.create({ name, color, hasClaws, location });
-  response.send(newCat);
+
+  try {
+
+    // if request.body has everything you need in the right shape
+    // then you can pass it straight to Model
+    // But often you'll need to massage the data a bit
+
+    const newCat = await Cat.create(request.body);
+    response.send(newCat);
+
+  } catch (error) {
+
+    console.error(error);
+    response.status(500).send('Error creating cat');
+  }
+
 });
 
-// new
 app.delete('/cats/:id', async (request, response) => {
   const id = request.params.id;
 
   try {
     await Cat.findByIdAndDelete(id);
-    response.send('success');
+    response.status(204).send('success');
   } catch (error) {
     console.error(error);
-    response.status(404).send(`No cat found with id ${id}`)
+    response.status(404).send(`Unable to delete cat with id ${id}`)
   }
 });
 
