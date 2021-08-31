@@ -61,10 +61,16 @@ class App extends React.Component {
   }
 
   handleDelete = async (catToDelete) => {
-    const response = await axios.delete(`${API_URL}/${catToDelete._id}`);
-    console.log(response.data);
-    const filteredCats = this.state.cats.filter(cat => cat._id !== catToDelete._id);
-    this.setState({ cats: filteredCats });
+    const url = `${API_URL}/${catToDelete._id}`;
+
+    try {
+      const response = await axios.delete(url);
+      console.log(response.data);
+      const filteredCats = this.state.cats.filter(cat => cat._id !== catToDelete._id);
+      this.setState({ cats: filteredCats });
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   render() {

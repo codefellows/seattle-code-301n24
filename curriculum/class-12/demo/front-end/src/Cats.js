@@ -18,7 +18,7 @@ class Cats extends Component {
 class Cat extends Component {
 
   delete = () => {
-    this.props.onDelete(this.props.info._id);
+    this.props.onDelete(this.props.info);
   }
 
   render() {
