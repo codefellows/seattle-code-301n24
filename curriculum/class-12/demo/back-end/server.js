@@ -1,52 +1,69 @@
 const express = require('express');
-const app = express();
 const mongoose = require('mongoose');
-
-require('dotenv').config();
-
 const cors = require('cors');
-
-app.use(cors());
-app.use(express.json()); // needed to parse request body
-
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true });
-
+require('dotenv').config();
 const Cat = require('./models/cat');
 
-// all cats
-app.get('/cats', async (req, res) => {
+const PORT = process.env.PORT;
 
-  const cats = await Cat.find({});
+const app = express();
 
-  res.send(cats);
+app.use(cors());
+app.use(express.json()); // new
+
+mongoose.connect(process.env.MONGODB_URI);
+
+// new
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', _ => {
+  console.log('We\'re connected!');
 });
 
-// one cat, by id
-// NOTE: not using this on front end at the moment,
-// but it's common to have in a complete API
-app.get('/cats/:id', async (req, res) => {
+app.get('/cats', async (request, response) => {
 
-  const cat = await Cat.findById(req.params.id);
+  const filterQuery = {};
 
-  res.send(cat);
+  if (request.query.location) {
+    filterQuery.location = request.query.location;
+  }
+
+  const cats = await Cat.find(filterQuery);
+
+  response.send(cats);
 });
 
-// create a cat
-app.post('/cats', async (req, res) => {
+app.post('/cats', async (request, response) => {
 
-  const { name, color, hasClaws } = req.body;
+  try {
 
-  const newCat = await Cat.create({ name, color, hasClaws });
+    // if request.body has everything you need in the right shape
+    // then you can pass it straight to Model
+    // But often you'll need to massage the data a bit
 
-  res.send(newCat);
+    const newCat = await Cat.create(request.body);
+    response.send(newCat);
+
+  } catch (error) {
+
+    console.error(error);
+    response.status(500).send('Error creating cat');
+  }
+
 });
 
-// delete a cat
-app.delete('/cats/:id', async (req, res) => {
+app.delete('/cats/:id', async (request, response) => {
+  const id = request.params.id;
 
-  await Cat.findByIdAndDelete(req.params.id);
-
-  res.send('success!');
+  try {
+    await Cat.findByIdAndDelete(id);
+    response.status(204).send('success');
+  } catch (error) {
+    console.error(error);
+    response.status(404).send(`Unable to delete cat with id ${id}`)
+  }
 });
 
-app.listen(3001, () => console.log('app listening on 3001'));
+app.listen(PORT, () => console.log('Listening on PORT', PORT));
+
+

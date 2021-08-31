@@ -1,7 +1,7 @@
-import React from 'react';
+import { Component } from 'react';
 import ListGroup from 'react-bootstrap/ListGroup'
 
-class Cats extends React.Component {
+class Cats extends Component {
   render() {
     return (
       <ListGroup>
@@ -15,15 +15,15 @@ class Cats extends React.Component {
   }
 }
 
-class Cat extends React.Component {
+class Cat extends Component {
 
   delete = () => {
-    this.props.onDelete(this.props.info._id);
+    this.props.onDelete(this.props.info);
   }
 
   render() {
     return (
-      <h3>{this.props.info.name} : <span onClick={this.delete}>[X]</span></h3>
+      <h3>{this.props.info.name} ({this.props.info.location}) <span onClick={this.delete}>[X]</span></h3>
 
     );
   }
