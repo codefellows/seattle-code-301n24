@@ -1,53 +1,30 @@
 const express = require('express');
-const app = express();
 const mongoose = require('mongoose');
-
-require('dotenv').config();
-
 const cors = require('cors');
-app.use(cors());
-
-// hey mongoose, connect to the database running somewhere
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true });
-
-// I'm intentionally requiring this model AFTER I run mongoose.connect
+require('dotenv').config();
 const Cat = require('./models/cat');
 
-function seedCats() {
-  // seed the database with some cats, so I can retrieve them
-  const myCat = new Cat({
-    name: 'Genevieve',
-    color: 'orange',
-    hasClaws: false,
-    favoriteActivities: [
-      { activityName: 'playing with a ball of yarn' },
-      { activityName: 'sleeping' }, { activityName: 'zoomies' }
-    ]
-  });
-  myCat.save(function (err) {
-    if (err) console.err(err);
-    else console.log('saved the cat');
-  });
-}
+const PORT = process.env.PORT;
 
-app.get('/', (req, res) => {
-  res.send('hello, cool cat!');
+const app = express();
+
+app.use(cors());
+
+mongoose.connect(process.env.DATABASE_URL);
+
+app.get('/cats', async (request, response) => {
+
+  const filterQuery = {};
+
+  if (request.query.location) {
+    filterQuery.location = request.query.location;
+  }
+
+  const cats = await Cat.find(filterQuery);
+
+  response.send(cats);
 });
 
-app.get('/cats', (req, res) => {
-  // get all the cats from the database
-  Cat.find((err, databaseResults) => {
-    // send them in my response
-    res.send(databaseResults);
-  });
-});
+app.listen(PORT, () => console.log('Listening on PORT', PORT));
 
-// route to get just one cat
-app.get('/cat', (req, res) => {
-  Cat.find({ name: req.query.name }, (err, databaseResults) => {
-    // send them in my response
-    res.send(databaseResults);
-  });
-});
 
-app.listen(3001, () => console.log('app listening on 3001'));
