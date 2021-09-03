@@ -1,8 +1,9 @@
-import React from 'react';
+import { Component } from 'react';
 
-import { Table, Button } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
+import Table from 'react-bootstrap/Table';
 
-class Items extends React.Component {
+class Items extends Component {
 
   render() {
 
@@ -21,13 +22,7 @@ class Items extends React.Component {
           <tbody>
             {
               this.props.itemsList.map((item, idx) =>
-                <tr key={idx}>
-                  <td>{item.name}</td>
-                  <td>{item.description}</td>
-                  <td>
-                    <Button data-testid={`delete-button-${item.name}`}>Delete Item</Button>
-                  </td>
-                </tr>
+                <Item key={item._id} itemData={item} />
               )
             }
           </tbody>
@@ -35,6 +30,24 @@ class Items extends React.Component {
 
 
       </section>
+    );
+  }
+}
+
+class Item extends Component {
+
+  render() {
+
+    const itemData = this.props.itemData;
+
+    return (
+      <tr>
+        <td>{itemData.name}</td>
+        <td>{itemData.description}</td>
+        <td>
+          <Button data-testid={`delete-button-${itemData.name}`}>Delete Item</Button>
+        </td>
+      </tr>
     );
   }
 }
