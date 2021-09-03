@@ -22,7 +22,7 @@ class Items extends Component {
           <tbody>
             {
               this.props.itemsList.map((item, idx) =>
-                <Item key={item._id} info={item} />
+                <Item key={item._id} itemData={item} />
               )
             }
           </tbody>
@@ -38,14 +38,14 @@ class Item extends Component {
 
   render() {
 
-    const info = this.props.info;
+    const itemData = this.props.itemData;
 
     return (
       <tr>
-        <td>{info.name}</td>
-        <td>{info.description}</td>
+        <td>{itemData.name}</td>
+        <td>{itemData.description}</td>
         <td>
-          <Button data-testid={`delete-button-${info.name}`}>Delete Item</Button>
+          <Button data-testid={`delete-button-${itemData.name}`}>Delete Item</Button>
         </td>
       </tr>
     );
