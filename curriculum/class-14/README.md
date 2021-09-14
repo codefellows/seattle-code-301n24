@@ -2,7 +2,7 @@
 
 ## Overview
 
-Today is the first day of our new project, a mobile-only book collection. You will be gradually working towards a full-scale application, complete with an express server, persistence in a Mongo database, authentication, and the ability to view, add, update and delete books from your React front end.
+It's time to add authentication to our app, so we know, with some level of confidence, who our users are. 
 
 ## Daily Plan
 
