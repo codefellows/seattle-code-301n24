@@ -341,8 +341,11 @@ Technical merit is graded based on the following criteria:
 
 ### Front-End
 - Good and proper use of React
+  - Installed and configured using create-react-app
   - Clear, readable, and efficient structure
-  - Correctly passes props to children components
+  - Proper use of ES6 Class Based Components, extending from `React.Component`
+  - Managing component state using this.state and this.setState.
+  - Correctly passes props, identifying both shared state and behaviors (methods) to child components
   - Organized into nested components for DRY code
 
 - Good and proper use of React-Bootstrap
@@ -369,7 +372,7 @@ Technical merit is graded based on the following criteria:
   - Routes should follow standard REST conventions
 
 - Data is persisted in a Mongo database
-  - Mongo database provisioned on the Heroku instance
+  - Mongo database provisioned in the cloud
   - Logical schemas with appropriate data types
   - Data model that maps to the problem domain
   - Ability to read records from the database
