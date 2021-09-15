@@ -6,14 +6,14 @@ import './login.css';
 
 class Login extends React.Component {
   render() {
-    return (
+    return(
       <Card style={{ width: '18rem' }}>
         <Card.Body>
           <Card.Title>Log In</Card.Title>
           <Card.Text>
             Click Below to Log In
           </Card.Text>
-          <LoginButton onLogin={this.props.onLogin} />
+          <LoginButton />
         </Card.Body>
       </Card>
     )
