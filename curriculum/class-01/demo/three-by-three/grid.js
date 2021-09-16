@@ -1,5 +1,6 @@
 import { Component } from "react"
 import Row from './row'
+import './grid.css'
 
 class Grid extends Component {
   render() {
