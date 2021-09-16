@@ -11,4 +11,3 @@ db.once('open', async _ => {
   await Book.deleteMany({});
   db.close();
 });
-
