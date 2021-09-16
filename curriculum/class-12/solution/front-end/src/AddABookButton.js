@@ -4,10 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import BookFormModal from './BookFormModal';
 
 class AddABookButton extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state={
-      show:false,
+    this.state = {
+      show: false,
     }
   }
 
@@ -21,10 +21,11 @@ class AddABookButton extends React.Component {
   }
 
   render() {
-    return(
+    return (
       <>
         <Button onClick={this.addABook}>Add a Book</Button>
         <BookFormModal
+          user={this.props.user}
           close={this.handleClose}
           updateBookArray={this.props.updateBookArray}
           show={this.state.show}

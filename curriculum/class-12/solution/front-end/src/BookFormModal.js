@@ -4,7 +4,6 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
-import { withAuth0 } from '@auth0/auth0-react';
 
 class BookFormModal extends React.Component {
   constructor(props) {
@@ -20,30 +19,26 @@ class BookFormModal extends React.Component {
     this.props.close();
   }
 
-  createBook = () => {
-    this.props.auth0.getIdTokenClaims()
-      .then(async res => {
-        const jwt = res.__raw;
+  createBook = async () => {
 
-        const config = {
-          headers: { "Authorization": `Bearer ${jwt}` },
-          method: 'post',
-          baseURL: process.env.REACT_APP_SERVER,
-          url: '/books/',
-          data: {
-            email: this.props.auth0.user.email,
-            name: this.state.name,
-            description: this.state.description,
-            status: this.state.status,
-          }
-        }
+    const config = {
+      method: 'post',
+      baseURL: process.env.REACT_APP_SERVER,
+      url: '/books/',
+      data: {
+        email: this.props.user.email,
+        name: this.state.name,
+        description: this.state.description,
+        status: this.state.status,
+      }
+    }
 
-        const bookResults = await axios(config);
-        this.props.close();
-        this.props.updateBookArray(bookResults.data);
-      })
-      .catch(err => console.error(err));
-  }
+    const bookResults = await axios(config);
+    this.props.close();
+    this.props.updateBookArray(bookResults.data);
+
+  };
+
 
   render() {
     return (
@@ -84,4 +79,4 @@ class BookFormModal extends React.Component {
   }
 }
 
-export default withAuth0(BookFormModal);
+export default BookFormModal;

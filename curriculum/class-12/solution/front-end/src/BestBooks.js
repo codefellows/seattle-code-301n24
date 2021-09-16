@@ -1,7 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Carousel } from 'react-bootstrap';
+import Carousel from 'react-bootstrap/Carousel';
+import Button from 'react-bootstrap/Button';
+import AddABookButton from './AddABookButton';
 
 
 class BestBooks extends React.Component {
@@ -34,13 +36,33 @@ class BestBooks extends React.Component {
 
   }
 
+  updateBookArray = (book) => {
+    const updatedBooks = [...this.state.books, book];
+    this.setState({ books: updatedBooks })
+  };
+
+  removeBook = (book) => {
+    const id = book._id;
+    let newBooks = this.state.books;
+    newBooks = this.state.books.filter(b => b._id !== id);
+    this.setState({ books: newBooks });
+
+    const config = {
+      params: { email: this.props.user.email },
+      method: 'delete',
+      baseURL: process.env.REACT_APP_SERVER,
+      url: `/books/${id}`
+    }
+    axios(config);
+  }
+
 
   render() {
     return (
       <>
         <h2>My Essential Lifelong Learning &amp; Formation Shelf</h2>
 
-        <AddABookButton updateBookArray={this.updateBookArray} />
+        <AddABookButton user={this.props.user} updateBookArray={this.updateBookArray} />
 
         {this.state.books.length ? (
           <Carousel>
