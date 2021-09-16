@@ -24,7 +24,7 @@ class BookFormModal extends Component {
     this.props.close();
   }
 
-  createBook = async () => {
+  saveBook = async () => {
 
     const config = {
       method: this.state.method,
@@ -44,9 +44,10 @@ class BookFormModal extends Component {
 
     const bookResults = await axios(config);
     this.props.close();
-    this.props.updateBookArray(bookResults.data);
+    this.props.onSave(bookResults.data);
 
   };
+
 
 
   render() {
@@ -79,7 +80,7 @@ class BookFormModal extends Component {
           <Button variant="secondary" onClick={this.handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={this.createBook}>
+          <Button variant="primary" onClick={this.saveBook}>
             Save Changes
           </Button>
         </Modal.Footer>
