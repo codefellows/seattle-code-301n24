@@ -7,7 +7,6 @@ const cors = require('cors');
 const PORT = process.env.PORT || 3001;
 const app = express();
 app.use(cors());
-app.use(express.json()); // needed for labs 12 and 13
 
 // Mongoose
 const mongoose = require('mongoose');
@@ -21,15 +20,10 @@ const Book = require('./models/book.js');
 
 
 // routes
-app.get('/books', getBooks); // lab 11
-app.post('/books', createBook); // lab 12
-app.delete('/books/:id', deleteBook); // lab 12
-app.put('/books/:id', updateBook); // lab 13
+app.get('/books', getBooks);
 
 
 // route handlers
-
-// lab 11
 async function getBooks(request, response) {
 
   try {
@@ -38,73 +32,6 @@ async function getBooks(request, response) {
   } catch (error) {
     console.error(error);
     response.status(400).send('Could not find books');
-  }
-}
-
-// lab 12
-async function createBook(request, response) {
-  try {
-    const book = await Book.create(request.body)
-    response.send(book);
-  } catch (error) {
-    console.error(error);
-    response.status(400).send('unable to create book');
-  }
-}
-
-// lab 12
-async function deleteBook(request, response) {
-  try {
-    const email = request.query.email;
-    const id = request.params.id;
-
-    const book = await Book.findOne({ _id: id, email });
-
-    if (!book) {
-      response.status(400).send('unable to delete book');
-      return;
-    }
-
-    if (book.email !== email) {
-      response.status(400).send('unable to delete book');
-      return;
-    }
-
-    await Book.findByIdAndDelete(id);
-    response.send('success');
-
-  } catch (error) {
-    console.error(error);
-    response.status(400).send('unable to delete book');
-  }
-}
-
-// lab 13
-async function updateBook(request, response) {
-
-  const id = request.params.id;
-  const email = request.query.email;
-
-  try {
-    const bookToUpdate = await Book.findOne({ _id: id, email });
-
-    if (!bookToUpdate) {
-      response.status(400).send('unable to update book');
-      return;
-    }
-
-    if (bookToUpdate.email !== email) {
-      response.status(400).send('unable to update book');
-      return;
-    }
-
-    const updatedBook = await Book.findByIdAndUpdate(id, request.body, { new: true });
-
-    response.send(updatedBook);
-
-  } catch (error) {
-    console.error(error);
-    response.status(400).send('unable to update book');
   }
 }
 
