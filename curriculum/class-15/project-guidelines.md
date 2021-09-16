@@ -386,7 +386,7 @@ Technical merit is graded based on the following criteria:
   - See the [documentation guidelines](#documentation) provided above
 
 - Generally useful and functional
-  - The project must utilize a custom top-level domain name
+  - The project must utilize a professional Netlify domain name
   - Works as expected with no bugs
   - Has at least three distinct pages with clear navigation, one of which must be an "About Us" page
   - Has at least two pages that accept and process user input
