@@ -286,12 +286,12 @@ _Why:_
 <a id="deployment"></a>
 ## Deployment
 
-Deploy your front-end on Netlify and be prepared to present from the deployed version of your site. Associate your Netlify instance with your GitHub repository. Enable automatic deploys from your main branch. Also connect your production deployment to a custom domain name (don't use a `.app` TLD unless you are prepared to pay for SSL on your Netlify instance). 
+Deploy your front-end on Netlify and be prepared to present from the deployed version of your site. Associate your Netlify instance with your GitHub repository. Enable automatic deploys from your main branch. Ensure your public url is resume-ready: simple, professional, and contains NO REFERENCES to course codes or anything school related.  
 
-Deploy your server on Heroku and be prepared to present from the deployed version of your site. Associate your Heroku instance with your GitHub repository. Enable automatic deploys from your main branch. Also connect your production deployment to a custom domain name (don't use a `.app` TLD unless you are prepared to pay for SSL on your Heroku instance). 
+Deploy your server on Heroku configure your deployed front end to connect to your deployed back end. Associate your Heroku instance with server's GitHub repository. Enable automatic deploys from your main branch.
 
 _Why:_
-> Deployed sites provide a unique URL that can be shared with anyone. You will also want to include this URL in your portfolio. Registering a custom domain name is a great way to think through how the internet works! 
+> Deployed sites provide a unique URL that can be shared with anyone. You will also want to include this URL in your portfolio. 
 
 Deploy your site on the first day.
 
