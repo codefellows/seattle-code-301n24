@@ -3,12 +3,12 @@
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
-Write a function named replaceZeros that, given a string, uses Regex to replace all '0' with the word 'zero'. 
+Write a function named replaceZeros that, given a string, uses Regex to replace all '0' with the word 'zero'.
 ------------------------------------------------------------------------------------------------ */
 
 const replaceZeros = (string) => {
   // Solution code here...
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -182,6 +182,7 @@ describe('Testing challenge 5', () => {
     expect(validateEmail('.@noname.com')).toBeFalsy();
     expect(validateEmail('nolastname.@sadness.net')).toBeFalsy();
     expect(validateEmail('canadaisnotreal@canada.ca')).toBeFalsy();
+    expect(validateEmail('needadot@inthesecondpart')).toBeFalsy();
     expect(validateEmail('missing.atsymbol.net')).toBeFalsy();
     expect(validateEmail('looksgood@sofar.comohnowaitthisisbad')).toBeFalsy();
     expect(validateEmail('no.middle.names@foryou.com')).toBeFalsy();

@@ -5,13 +5,13 @@ CHALLENGE 1 - Review
 
 Write a function named transformToLis that, given an object, returns an array of the key value pairs as html list items.
 
-For example: 
+For example:
 {
   name: 'bob',
   age: 32
 }
 
-Becomes: 
+Becomes:
 [
 <li>name: bob</li>,
 <li>age: 32</li>
@@ -23,8 +23,8 @@ function transformToLis(obj){
   return Object.keys(obj).map(key => {
     return(
       `<li>${key}: ${obj[key]}</li>`
-    )
-  })
+    );
+  });
   //</solution>
 }
 
@@ -90,7 +90,7 @@ const divisibleByFiveTwoToThePower = (input) => {
 };
 
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 5 
+CHALLENGE 5
 
 Write a function named findMaleAndFemale that, given the Star Wars data, below,
 returns the names of the characters whose gender is either male or female.
@@ -158,7 +158,7 @@ let findMaleAndFemale = (data) => {
 };
 
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 6 
+CHALLENGE 6
 
 Write a function named findShortest that, given the Star Wars data from Challenge 6, uses any combination of filter, map and reduce to return the name of the character who is the shortest in height.
 ------------------------------------------------------------------------------------------------ */
