@@ -344,8 +344,8 @@ Technical merit is graded based on the following criteria:
   - Installed and configured using create-react-app
   - Clear, readable, and efficient structure
   - Proper use of ES6 Class Based Components, extending from `React.Component`
-  - Managing component state using this.state and this.setState
-  - Allow for user login via Auth 0
+  - Managing component state using `this.state` and `this.setState`
+  - Allow for user authentication via Auth0
   - Correctly passes props, identifying both shared state and behaviors (methods) to child components
   - Organized into nested components for DRY code
 
@@ -371,7 +371,7 @@ Technical merit is graded based on the following criteria:
   - Use Node and Express, and other NPM packages as appropriate
   - Utilize a Mongo database as described in detail below
   - Routes should follow standard REST conventions
-  - Implement authentication via Auth 0
+  - Implement authentication via Auth0
 
 - Data is persisted in a Mongo database
   - Mongo database provisioned in the cloud
