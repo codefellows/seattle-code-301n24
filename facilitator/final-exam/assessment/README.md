@@ -32,11 +32,10 @@ How will you know that you've found them all? The tests will all pass!
 
 #### Server: Getting Started
 
-- Create an empty private repo on GitHub.
+- Create an empty **private** repo on GitHub.
 - Invite your instructor to the repo.
 - Connect it to your server directory:
-  - run `git init`
-  - run `git branch -M main`
+  - run `git init -b main`
   - run `git remote add origin <url-of-the-repo-you-just-created>`
   - A/C/P
 
@@ -58,17 +57,16 @@ How will you know that you've found them all? The tests will all pass!
 
 The React application will allow a user to:
 
+- Display current items.
 - Add a new item.
 - Delete an item from the list.
-- Display current items.
 
 #### React App: Getting Started
 
-- Create an empty private repo on GitHub.
+- Create an empty **private** repo on GitHub.
 - Invite your instructor to the repo.
-- connect it to your React app directory:
-  - run `git init`
-  - run `git branch -M main`
+- Connect it to your React app directory:
+  - run `git init -b main`
   - run `git remote add origin <url-of-the-repo-you-just-created>`
   - A/C/P
 
