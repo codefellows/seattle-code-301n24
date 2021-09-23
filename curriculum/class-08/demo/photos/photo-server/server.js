@@ -11,25 +11,25 @@ app.use(cors());
 
 const PORT = process.env.PORT;
 
-app.get('/photo', getPhotos);
+app.get('/photos', getPhotos);
 
-async function getPhotos (request, response){
-  const searchQuery = request.query.query;
+async function getPhotos(request, response) {
+  const searchQuery = request.query.searchQuery;
 
-  const url = `https://api.unsplash.com/photos/?client_id=${process.env.UNSPLASH_PRIVATE_KEY}&query=${searchQuery}`;
+  const url = `https://api.unsplash.com/search/photos/?client_id=${process.env.UNSPLASH_PRIVATE_KEY}&query=${searchQuery}`;
 
-  try{
-    const results = await axios.get(url);
-    const photoArray = results.data.map(photo => new Photo(photo));
+  try {
+    const photosResponse = await axios.get(url);
+    const photoArray = photosResponse.data.results.map(photo => new Photo(photo));
     response.status(200).send(photoArray);
-  } catch(err) {
+  } catch (err) {
     console.error('error from superagent', err);
     response.status(500).send('server error');
   }
 };
 
-class Photo{
-  constructor(obj){
+class Photo {
+  constructor(obj) {
     this.img_url = obj.urls.regular;
     this.original_image = obj.links.self;
     this.photographer = obj.user.name;
