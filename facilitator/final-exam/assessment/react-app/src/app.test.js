@@ -96,10 +96,10 @@ test('deletes an item', async () => {
     const deleteButton = await screen.getByTestId(`delete-button-${testName}`);
     fireEvent.click(deleteButton);
 
-    await waitFor(() => {
-      expect(screen.queryByText(testName)).not.toBeInTheDocument();
-    });
+  });
 
+  await waitFor(() => {
+    expect(screen.queryByText(testName)).not.toBeInTheDocument();
   });
 
 });
