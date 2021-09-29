@@ -24,7 +24,7 @@
 - **What**
   - A way to interact with a user and collect information
 - **How**
-- See the associated [warmup](../demo/forms-warmup) and [demo](../demo/forms-demo).
+- See the associated [warmup](../demo/form-warmup) and [demo](../demo/form-demo).
   - To run these, start with the warmup markdown file. Have students work in small groups to read the HTML and write the JS code.
   - After the students have mostly finished, review the solution together inside of the HTML and JS files.
   - Next, build up a demo of integrating the same exact event handlers into a React application. Show the differences in how we update state to render information.
