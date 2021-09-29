@@ -6,18 +6,19 @@ It's time to add authentication to our app, so we know, with some level of confi
 
 ## Daily Plan
 
-- Warm-up exercise
-- Review code challenges
+- Discussion on diversity, inclusion, equity, and belonging in the tech industry
+- Code review
 - Introduction of today's code challenge topic
 - Authentication
-- Code Demo
-- Lab Preview
+- Code demo
+- Lab preview
 
 ## Learning Objectives
 
-As a result of completing lecture 11 of Code 301, students will:
+As a result of completing lecture 14 of Code 301, students will:
 
 - Describe and Define 
+  - Diversity and Inclusion
   - Authentication
   - Authorization
   - Auth0
@@ -28,25 +29,10 @@ As a result of completing lecture 11 of Code 301, students will:
 ## Notes
 
 1. The difference between Authentication and Authorization is...
-
-
-
 1. There are different types of authentication. Give an example of being authenticated using OAuth.
-
-
-
 1. What is the difference between OAuth and Auth0? 
-
-
-
 1. What is Auth0? What are the requirements to use Auth0?
-
-
-
 1. How does Auth0 make sure you are who you say you are?
-
-
-
 1. LoginButton component: 
 
 ```javaScript

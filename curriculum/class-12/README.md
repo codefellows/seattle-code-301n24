@@ -16,7 +16,7 @@ Today we will focus on the `C` and the `D` of the `CRUD`:`CREATE` and `DELETE`. 
 
 ## Learning Objectives
 
-As a result of completing lecture 13 of Code 301, students will:
+As a result of completing lecture 12 of Code 301, students will:
 
 - Describe and Define 
   - POST

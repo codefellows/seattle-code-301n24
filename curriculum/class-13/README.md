@@ -21,26 +21,19 @@ The exam is open book, open Google, open Stack Overflow, whatever resources you 
 
 ## Learning Objectives
 
-As a result of completing lecture 14 of Code 301, students will:
+As a result of completing lecture 13 of Code 301, students will:
 
 - Describe and Define 
   - UPDATE
   - PUT
-  - Diversity and Inclusion
 - Be able to update a resources in a mongo database
 - Be able to update a resource instantly in a React application and have that resource state persist on reload
 
 ## Notes
 
 1. Why do we need to talk about Diversity and Inclusion?
-
-
 1. What does the U stand for in CRUD?
-
-
 1. How do we find a record by id and update it in Mongoose?
-
-
 1. Sending an axios request to update a record:
   ```javaScript
   const SERVER = 'http://localhost:3001';
@@ -138,4 +131,3 @@ While you can run Mongo on your own machines, it's quite common to run an instan
 ![Connect](assets/atlas-connect-options.png)
 
 ![Heroku Setup](assets/heroku-mongo.png)
-

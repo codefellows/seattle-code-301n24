@@ -5,16 +5,10 @@
 
 ### All about 301 (30 min)
 
-- The new schedule
-  - **WHY?**
-    - Mimics the life of a dev with an offshore team
-    - Forces you to re-acclimate with the material the next day
-    - Time Management
-    - Organization
 - In-Class schedule and assignments
   - Career Coaching
   - Readings
-    - Done in a reading notes repo
+    - Done in a reading-notes repo
   - Warmups
     - Every language!
   - Code Challenges (and shred talks)
@@ -29,12 +23,12 @@
 ### Shred Talk (15 min)
 
 - **Why**
-  - Daily "Shred Talks" introduce the student to a new javascript coding concept, setting them up to complete the daily "Code Challenge" series
+  - Daily "Shred Talks" introduce the student to a new javascript coding concept, setting them up to complete the daily "Code Challenge" series.
 - **What**
-  - Refer to the [challenge documentation](../challenges/README.md)
+  - Refer to the [challenge documentation](../challenges/README.md).
 - **How** (10 min)
-  - Follow the [Demo Code](../challenges/DEMO.md) to teach the material
-  - Since this is the first day of the course, students also need a complete demonstration of the Code Challenge Workflow. 
+  - Follow the [Demo Code](../challenges/DEMO.md) to teach the material.
+  - Since this is the first day of the course, students also need a complete demonstration of the Code Challenge Workflow, described in [the assignment](../challenges/ASSIGNMENT.md). 
   - It might be helpful to do the first challenge with the students. Walk them though how to solve the problem and run the test. 
   - This will be the first time most of them will have seen tests in action, so take the time to point out what the test is doing. Show them how to read the test and run the tests in their terminal. Don't spend too much time on what `npm` is at this point, but mention that we will circle back to it next week.
   - Refer to the [Demo Guide](DEMO.md) for guidance
@@ -63,14 +57,14 @@
 - **How** (10 min)
   - Review the arrow-functions lab with the students
 
-### React and Component Based UI (40 min)
+### React and Component-Based UI (40 min)
 
 - **Why** (5 min)
   - React is a growing trend in the industry for front end development.
   - Allows us to break things down into individual components that can easily be resued and tested.
   - Can update state without reloading the entire page.
 - **What** (10 min)
-  - React (and Angular and Vue) are "Component Based Libraries"
+  - React (and Angular and Vue) are "Component-based libraries"
   - They take care of binding data (state) to The DOM
     - React uses a Virtual DOM to do so, re-rendering things when data changes
   - As a developer, we get many advantages
