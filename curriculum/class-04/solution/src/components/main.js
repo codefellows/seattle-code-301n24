@@ -3,20 +3,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import CardColumns from 'react-bootstrap/CardColumns';
 import Form from 'react-bootstrap/Form';
 import HornedBeast from './hornedBeast';
-import rawData from './data.json';
 
 class Main extends React.Component {
   filter = (e) => {
     const numHorns = parseInt(e.target.value);
-    let gallery = rawData;
+    let gallery = this.props.rawData;
     if (numHorns) {
-      gallery = rawData.filter((creature) => creature.horns === numHorns);
+      gallery = this.props.rawData.filter((creature) => creature.horns === numHorns);
     }
     this.props.displayFilteredImages(gallery);
   };
 
   render() {
-    return(
+    return (
       <div id="beast-container">
         <Form>
           <Form.Group controlId="exampleForm.ControlSelect1">
@@ -32,16 +31,16 @@ class Main extends React.Component {
         </Form>
 
         <CardColumns>
-        {this.props.allBeasts.map((beast, idx) => (
-          <HornedBeast 
-            key={idx}
-            index={idx}
-            src={beast.image_url}
-            title={beast.title}
-            description={beast.description}
-            displayAsModal={this.props.displayAsModal}
-          />
-        ))}
+          {this.props.allBeasts.map((beast, idx) => (
+            <HornedBeast
+              key={idx}
+              index={idx}
+              src={beast.image_url}
+              title={beast.title}
+              description={beast.description}
+              displayAsModal={this.props.displayAsModal}
+            />
+          ))}
         </CardColumns>
 
       </div>

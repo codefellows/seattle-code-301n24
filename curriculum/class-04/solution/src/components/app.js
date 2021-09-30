@@ -6,9 +6,9 @@ import rawData from './data.json';
 import SelectedBeast from './selectedBeast.js';
 
 class App extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state={
+    this.state = {
       allBeasts: rawData,
       displayModal: false,
       selectedBeast: {},
@@ -32,12 +32,13 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
-        <Main  
-          allBeasts={this.state.allBeasts} 
+        <Main
+          allBeasts={this.state.allBeasts}
           displayAsModal={this.displayAsModal}
           displayFilteredImages={this.updateAllBeasts}
+          rawData={rawData}
         />
-        <SelectedBeast 
+        <SelectedBeast
           selectedBeast={this.state.selectedBeast}
           show={this.state.displayModal}
           handleClose={this.handleClose}
