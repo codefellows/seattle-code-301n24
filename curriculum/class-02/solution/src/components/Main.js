@@ -1,5 +1,5 @@
 import React from 'react';
-import HornedBeast from './hornedBeast.js';
+import HornedBeast from './HornedBeast.js';
 import rawData from './data.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CardColumns from 'react-bootstrap/CardColumns';

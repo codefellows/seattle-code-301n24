@@ -18,7 +18,7 @@ To start, we will introduce Mongodb and Mongoose. We will create data models and
 
 ## Learning Objectives
 
-As a result of completing lecture 13 of Code 301, students will:
+As a result of completing lecture 11 of Code 301, students will:
 
 - Describe and Define
   - CRUD

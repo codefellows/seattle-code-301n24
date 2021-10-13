@@ -20,9 +20,9 @@ _Your repository must include the following config files:_
 
 First, create a React application using `create-react-app` as demonstrated in class. Connect this application to a GitHub repo by doing the following steps:
 
-1. create a new repo on GitHub
-1. in the root of your React application, run the following command: `git remote add origin <url-to-your-gitHub-repo>`
-1. A-C-P
+1. Create a new repo on GitHub.
+1. In the root of your React application, run the following command: `git remote add origin <url-to-your-gitHub-repo>`.
+1. A-C-P!
 1. Create a branch and begin your work.
 
 - Your `App` component should render a `Header`, `Footer` and `Main` component, each of which is defined in their own files.
@@ -37,7 +37,7 @@ First, create a React application using `create-react-app` as demonstrated in cl
 
 - The `HornedBeast` component needs to contain an `<h2>` that displays the title of the animal, an `<img>` element with `src`, `alt` and `title` attributes, and a `<p>` that displays the description.
 
-**NOTE: Rendering an image in React is tricky. Try to figure out how to do this on your own and we will go over it tomorrow**
+**NOTE: Rendering an image in React is a little tricky. Try to figure out how to do this on your own and we will go over it in the next code review**
 
 ## Stretch Goal
 
@@ -55,7 +55,7 @@ First, create a React application using `create-react-app` as demonstrated in cl
   {
     "image_url": "https://images.unsplash.com/photo-1512636618879-bbe79107e9e3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd9460ee6d1ddbb6b1ca7be86dfc4590&auto=format&fit=crop&w=1825&q=80",
     "title": "Rhino Family",
-    "description": "Mother (or father) rhino with two babies",
+    "description": "Parent rhino with two babies",
     "keyword": "rhino",
     "horns": 2
   },
@@ -63,7 +63,7 @@ First, create a React application using `create-react-app` as demonstrated in cl
   {
     "image_url": "https://www.dhresource.com/0x0s/f2-albu-g5-M00-1A-11-rBVaI1hsIIiALxKzAAIHjSU3VkE490.jpg/wholesale-halloween-costume-prop-unicorn.jpg",
     "title": "Unicorn Head",
-    "description": "Someone wearing a creepy unicorn head mask",
+    "description": "Someone wearing a very silly unicorn head mask",
     "keyword": "unicorn", 
     "horns": 1
 }]
@@ -71,6 +71,6 @@ First, create a React application using `create-react-app` as demonstrated in cl
 
 ## Submission Instructions
 
-- Complete your Feature Tasks for the day
-- Create a Pull Request (PR) back to the `main` branch of your repository
-- On Canvas, submit a link to your PR
+- Complete your Feature Tasks for the day.
+- Create a Pull Request (PR) back to the `main` branch of your repository.
+- Submit your assignment as a link to your PR, and a comment describing how much time you spent on the lab. 

@@ -1,4 +1,4 @@
-# Facilitators Guide: React and Component Based Architecture
+# Facilitators Guide: React and Component-Based Architecture
 
 ## Overview
 
@@ -47,16 +47,16 @@ One possible way to present this material is documented in the [example lecture]
   - Minimum requirements
   - Take care of your TAs by following instructions
 
-### Shred Talk 
+### Shred Talk - Code Challenge Intro
 
 - **Why**
-  - Daily "Shred Talks" introduce the student to a new javascript coding concept, setting them up to complete the daily "Code Challenge" series
+  - Daily "Shred Talks" introduce the student to a new javascript coding concept, setting them up to complete the daily "Code Challenge" series.
 - **What**
-  - Refer to the [challenge documentation](../challenges/README.md)
+  - Refer to the [challenge documentation](../challenges/README.md).
 - **How** (10 min)
-  - Follow the [Demo Code](../challenges/DEMO.md) to teach the material
-  - Since this is the first day of the course, students also need a complete demonstration of the Code Challenge Workflow. 
-  - Refer to the [Demo Guide](DEMO.md) for guidance
+  - Follow the [Demo Code](../challenges/DEMO.md) to teach the material.
+  - Since this is the first day of the course, students also need a complete demonstration of the Code Challenge Workflow, described in [the assignment](../challenges/ASSIGNMENT.md). 
+
 
 ### Prework Review
 
@@ -72,13 +72,13 @@ One possible way to present this material is documented in the [example lecture]
 - **How**
   - Review the prework labs with the students. Answer questions as they come up.
 
-### React and Component Based UI
+### React and Component-Based UI
 - **Why** (5 min)
   - React is a growing trend in the industry for front end development.
   - Allows us to break things down into individual components that can easily be resued and tested.
   - Can update state without reloading the entire page.
 - **What** (10 min)
-  - React (and Angular and Vue) are "Component Based Libraries"
+  - React (and Angular and Vue) are "Component-based libraries"
   - They take care of binding data (state) to The DOM
     - React uses a Virtual DOM to do so, re-rendering things when data changes
   - As a developer, we get many advantages
