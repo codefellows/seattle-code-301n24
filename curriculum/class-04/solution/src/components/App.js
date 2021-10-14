@@ -1,43 +1,38 @@
 import React from 'react';
-import Header from './header.js';
-import Main from './main.js';
-import Footer from './footer.js';
-import rawData from './data.json';
-import SelectedBeast from './selectedBeast.js';
+import Header from './Header.js';
+import Main from './Main.js';
+import Footer from './Footer.js';
+import SelectedBeast from './SelectedBeast.js';
 
 class App extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state={
-      allBeasts: rawData,
+    this.state = {
       displayModal: false,
       selectedBeast: {},
     }
   }
 
-  displayAsModal = (name) => {
-    const selectedBeast = rawData.find(beast => beast.title === name);
-    this.setState({ selectedBeast, displayModal: true });
+  displayAsModal = (beast) => {
+    this.setState({ selectedBeast: beast, displayModal: true });
   }
 
   handleClose = () => {
     this.setState({ displayModal: false });
   }
 
-  updateAllBeasts = (allBeasts) => {
-    this.setState({ allBeasts });
-  }
+
 
   render() {
     return (
       <div className="App">
         <Header />
-        <Main  
-          allBeasts={this.state.allBeasts} 
+        <Main
+          allBeasts={this.state.allBeasts}
           displayAsModal={this.displayAsModal}
           displayFilteredImages={this.updateAllBeasts}
         />
-        <SelectedBeast 
+        <SelectedBeast
           selectedBeast={this.state.selectedBeast}
           show={this.state.displayModal}
           handleClose={this.handleClose}
