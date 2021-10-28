@@ -7,4 +7,5 @@ The demo folder contain only React components.
    * `react-bootstrap`
 
 1) Build each component from the `components` folder in front of the students, showcasing individual component state values, and deligated component props.
+1) Note any **ternary** statements used for conditionally rendering, or evaluating state values.
 1) Import each component into `App.js` and render each in the return statement.
