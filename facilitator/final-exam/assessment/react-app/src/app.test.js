@@ -66,10 +66,7 @@ test('adds an item', async () => {
   fireEvent.change(description, { target: { value: testDescription } });
   fireEvent.submit(form);
 
-  await waitFor(() => {
-    const itemsAdded = screen.getAllByText(testName);
-    expect(itemsAdded.length).toBeGreaterThan(0);
-  });
+  await screen.findByText(testName);
 });
 
 
@@ -89,17 +86,13 @@ test('deletes an item', async () => {
   fireEvent.change(description, { target: { value: testDescription } });
   fireEvent.submit(form);
 
-  await waitFor(async () => {
-    const itemsAdded = screen.getAllByText(testName);
-    expect(itemsAdded.length).toBeGreaterThan(0);
+  await screen.findByText(testName);
 
-    const deleteButton = await screen.getByTestId(`delete-button-${testName}`);
-    fireEvent.click(deleteButton);
+  const deleteButton = await screen.findByTestId(`delete-button-${testName}`);
+  fireEvent.click(deleteButton);
 
-    await waitFor(() => {
-      expect(screen.queryByText(testName)).not.toBeInTheDocument();
-    });
-
+  await waitFor(() => {
+    expect(screen.queryByText(testName)).not.toBeInTheDocument();
   });
 
 });
