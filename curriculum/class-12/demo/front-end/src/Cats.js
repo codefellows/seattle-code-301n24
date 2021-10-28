@@ -1,17 +1,31 @@
-import React from 'react';
+import { Component } from 'react';
+import ListGroup from 'react-bootstrap/ListGroup'
 
-class Cats extends React.Component {
+class Cats extends Component {
   render() {
     return (
-      <>
-        <h2>World of Cats</h2>
-        {this.props.cats.length && this.props.cats.map((cat, idx) => (
-          <div key={idx}>
-            {cat.name}
-          </div>
+      <ListGroup>
+        {this.props.cats.length && this.props.cats.map(cat => (
+          <ListGroup.Item key={cat._id} >
+            <Cat info={cat} onDelete={this.props.onDelete} />
+          </ListGroup.Item>
         ))}
-      </>
+      </ListGroup>
     )
+  }
+}
+
+class Cat extends Component {
+
+  delete = () => {
+    this.props.onDelete(this.props.info);
+  }
+
+  render() {
+    return (
+      <h3>{this.props.info.name} ({this.props.info.location}) <span onClick={this.delete}>[X]</span></h3>
+
+    );
   }
 }
 

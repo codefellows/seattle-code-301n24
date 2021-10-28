@@ -1,12 +1,12 @@
-# Resource Create and Delete
+# Update a Resource
 
 ## Overview
 
-Today you will add the functionality for the user to add a book or delete a book. A book will be created with a form in React, and sent to the server where it will be saved into the database, and then returned to the front end to be displayed in the list of favorite books. You will then be able to delete that book with a click of a button, to have it instantly removed from the front end, and a request sent to back end for removal.
+Today you will complete your full stack CRUD application by adding an UPDATE route. You will add a button to each book that, when clicked, will display a form where the user can change information about that book. That information will be sent to the server where it will replace what's already in the database for that record.
 
-## Feature Tasks
+## Feature Tasks — UPDATE of CRUD
 
-See the [Trello board](https://trello.com/b/qgaCsVVa/module-3-best-books){:target="_blank"} for your feature tasks for today's lab.
+See your team's Trello board for this lab's feature tasks.
 
 ## Documentation
 
@@ -61,7 +61,8 @@ Add this information to your README.
 1. Complete your Feature Tasks for the lab, according to the Trello cards.
 1. Create a PR back to the `main` branch of your repository, showing ALL your work, and merge it cleanly.
 1. On Canvas, submit a link to your PR. Add a comment in your Canvas assignment which includes the following:
-    - A link to the deployed version of your latest code.
+    - A link to the deployed version of your latest front-end code.
+    - A pull request to the your server code.
     - A link to your public Trello board.
     - A question within the context of today's lab assignment.
     - An observation about the lab assignment, or related 'Ah-hah!' moment.

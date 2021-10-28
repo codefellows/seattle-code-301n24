@@ -1,37 +1,38 @@
-# Diversity & Inclusion in the Tech Industry
+# Readings: Authentication
 
-Below you will find some reading material that supports today's topic and the upcoming lecture.
+Below you will find some reading material, code samples, and some additional resources that support today's topic and the upcoming lecture.
 
 Review the Submission Instructions for guidance on completing and submitting this assignment.
 
 ## Reading
 
-- Consider the history: [That Time When Women Stopped Coding](https://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding){:target="_blank"}
+- [What is OAuth](https://www.csoonline.com/article/3216404/what-is-oauth-how-the-open-authorization-framework-works.html){:target="_blank"}
 
-1. What occured during the same time as the beginning of the decline of women in computer sciene?
-1. Why does it matter that males had been playing on computers growing up?
+1. What is OAuth?
+1. Give an example of what using OAuth would look like.
+1. How does OAuth work? What are the steps that it takes to authenticate the user?
+1. What is OpenID?
 
-- Review the data: [Employee breakdown of key technology companies](https://informationisbeautiful.net/visualizations/diversity-in-tech/){:target="_blank"}
+- [Authorization and Authentication flows](https://auth0.com/docs/flows){:target="_blank"}
 
-1. What three take-a-ways do you have looking at this data?
+1. What is the difference between authorization and authentication?
+1. What is Authorization Code Flow?
+1. What is Authorization Code Flow with Proof Key for Code Exchange (PKCE)?
+1. What is Implicit Flow with Form Post?
+1. What is Client Credentials Flow?
+1. What is Device Authorization Flow?
+1. What is Resource Owner Password Flow?
 
-- Ask the question: [Why diversity matters to your tech company](https://www.usatoday.com/story/tech/columnist/2015/07/21/why-diversity-matters-your-tech-company/30419871/){:target="_blank"}
+## Additional Resources
 
-1. When are diversity efforts most successful?
-1. Why do diverse companies perform better?
-1. Give an example of how a diverse company can serve a diverse user base or vise-versa.
-
-<!-- ## Additional Resources
-
-PLACEHOLDER
 
 ### Videos
 
-PLACEHOLDER
+<!-- PLACEHOLDER -->
 
 ### Bookmark/Skim
 
-PLACEHOLDER -->
+- [Auth0 for single page apps](https://auth0.com/docs/libraries/auth0-react){:target="_blank"}
 
 
 # Assignment Instructions

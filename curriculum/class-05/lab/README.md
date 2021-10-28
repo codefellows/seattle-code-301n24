@@ -2,7 +2,7 @@
 
 ## Overview
 
-Get ready to take a look at a full-featured code base! You have just started a new job and the employer wants you to demonstrate your skills by building a portfolio using React.  This should highlight your knowledge of the React library and your ability to explore a new codebase.  [The starter code](https://github.com/codefellows/code-301-react-portfolio-template){:target="_blank"} for today contains a React + Bootstrap site with a number of example pages, complete with icons, styles, and themed layouts. Your job is to customize this code by following the specifications in the Trello board.
+Get ready to take a look at a full-featured code base! You have just started a new job and the employer wants you to demonstrate your skills by building a portfolio using React.  This should highlight your knowledge of the React library and your ability to explore a new codebase.  [The starter template](https://www.npmjs.com/package/cra-template-react-portfolio){:target="_blank"} for today contains a complete React + Bootstrap site with example pages, icons, styles, and a themed layouts. Your job is to customize this code by following the specifications in the Trello board.
 
 You will be deploying your React portfolio to [Netlify](https://www.netlify.com/){:target="_blank"}.
 
@@ -10,7 +10,7 @@ You will be deploying your React portfolio to [Netlify](https://www.netlify.com/
 
 - We will be using the [Trello](https://trello.com/home){:target="_blank"} project management tool for this lab.
 - To maximize your experience with Trello, you should create a free Trello account by clicking on the `Sign Up` button.
-- After creating an account, go to the [Portfolio](https://trello.com/b/BgFVrZ6W/portfolio){:target="_blank"}, open the "... Show Menu" link, click the "... More" link, and then click "Copy Board". Before you create it, be sure to "Change" from Private to "Public" (and click "Yes, Make Board Public") so your instructional team can see your work. Now, click "Create" to add a copy to your personal account.
+- After creating an account, open the [React Portfolio Board](https://trello.com/b/BEvm5LDn/react-portfolio){:target="_blank"}, open the "... Show Menu" link, click the "... More" link, and then click "Copy Board". Before you create it, be sure to "Change" from Private to "Public" (and click "Yes, Make Board Public") so your instructional team can see your work. Now, click "Create" to add a copy to your personal account.
 - This Trello board contains all of the features required to complete this lab assignment.
 - Review the user stories and analyze the feature requests and requirements in the lab.
 - Within each story, note the the checklist of feature tasks. Be careful to execute tasks in order as they are often dependencies of one another.

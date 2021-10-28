@@ -1,4 +1,4 @@
-# Lecture Guide: Update a Resource
+# Lecture Notes: Authentication with Auth0
 
 ### Warm-Up
 
@@ -8,7 +8,7 @@
   - Refer to the [Warmup Notes](../warm-up/NOTES.md)
   - Optionally demo the running code at Repl.it
 
-### Shred Talk**
+### Shred Talk
 
 - **Why**
   - Daily "Shred Talks" introduce the student to a new javascript coding concept, setting them up to complete the daily "Code Challenge" series
@@ -19,41 +19,24 @@
 - **Note**
   - If you are short on time, this can be omitted from class lecture. There are official videos that students can watch in lieu of you leading this portion of class.
 
-### Diversity and Inclusion Lecture
-
 ### Code Review
+- Today should be a smaller day for code review if you do any at all. 
+- Get students to talk about their process for debugging the starter code
+- Pull up the code from a student who is still struggling with the starter code and have the class work through the bugs with them.
 
-### CRUD - UPDATE
+### Authentication
 
 - **Why** (5 min)
-  - Everything changes and applications need to be able to adjust their data to accommodate those changes. 
-  - `UPDATE` is an essiential part of a CRUD application
-
+  - We authenticate so that we know the user is who they say they are
+  - So that we can persist preferences and access based on credentials
 - **What** (10 min)
-  - The ability for a user to update a record in an application. In Our Best Books Application, we will be writing an update route to update the information on the books. 
-
+  - Auth0 is a third party library that uses 0Auth to authenticate a user. It does all the work for us behind the scenes, so the big win here is being able to read through the documentation and put it into place in our code base.
 - **How** (30 min)
-  - Draw out the WRRC. By now, this should be very familiar to the students. Introduce the concept of a PUT route to the diagram.
-  - Go through the [DEMO](../demo)
-  - Pose the question to the students: if you want to update a resource, what information do you need? 
-    - you will need a way of identifying the resource (this can be the id of the resource or an index - although it is worth discussing the issues that can arrise from using an index) and the updated information. 
-  - If you can time, you can rebuild the demo from scratch, but if not, you can use yesterday's demo and add to it. 
-    - Make an `update` button next to the `delete` button
-    - When the user clicks it, a form should appear with that resources' information already filled in. 
-    - The user edits the info as they see fit and the updated info gets send to the server along with a way of identifying which resource is being updated.
-  - On the server side, we need to make a PUT route to accept the updated information. 
-    - We will get information from the params as well as the body.
-    - Update the information in the database and then as a class decide if you want to send the updated resource or the entire array of resources back to the user.
-
-## Test Review
-
-- Save some time at the end of lecture to go over the test. 
-- What to expect: 
-  - Students will be given starter code that will have minor bugs in it. They will need to fix the bugs and then add some features onto the code. There will be tests that they can run so they will know if they have completed the tasks correctly. They will need to deploy both their front-end and back-end.
-- How long do they have?
-  - 3 hours
-- What resources can they use?
-  - Anything expect other people
-- What if they fail? 
-  - There will be an option for one retake
-  
+  - Auth0 uses functional components in their documentation rather than class components. This is a great opportunity to discuss the history of React and why we are starting with class components (it will be used in a lot of legacy code while most new code will be written in functional components). This is also a great opportunity to point out that even though students haven't learned functional components, they can still understand what is happening and thus, use the library. 
+  - Using the documentation on this [page](https://auth0.com/docs/libraries/auth0-react), walk students through setting up Auth0.
+    - Using the documentation as your guide, build an application that will log a user in and log them out. 
+    - Be sure to focus on how you read documentation. At this point, students should be getting better at reading documentation, but it is still new to them. Knowing how you read and understand documentation is super helpful.
+    - Play around with the starter code that Auth0 provides. They give you starter code in funcitonal components which students haven't seen before, but point out that by playing around with them and reading through them, they can understand what they are doing.
+  - Their lab will be to incorporate Auth0 into an existing code base that includes Browser Router (remember that from lab 05). 
+- **Experimentation and Discovery Ideas**
+  - The documentation demonstrates how to write the `Profile` component as a class component. You can play around with writing the other components as class components as well. 

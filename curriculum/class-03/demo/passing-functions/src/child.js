@@ -1,6 +1,5 @@
 import React from 'react';
 import teen from './assets/teen.jpg';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
@@ -21,7 +20,7 @@ class Square extends React.Component {
         <Card.Body>
           <Card.Title>Billy</Card.Title>
           <Card.Text>
-            I am the Billy. I have {this.props.billysMoney} dollars. 
+            I am the Billy. I have {this.props.billysMoney} dollars.
           </Card.Text>
           <Button onClick={this.askParentFor10Dollars} variant="primary">Ask parent for 10 dollars</Button>
           <Button onClick={this.askParentFor20Dollars} variant="primary">Ask parent for 20 dollars</Button>

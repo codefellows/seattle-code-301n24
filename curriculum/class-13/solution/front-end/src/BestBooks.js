@@ -1,87 +1,106 @@
 import React from 'react';
 import axios from 'axios';
-import { Carousel, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import AddABookButton from './AddABookButton';
-import { withAuth0 } from '@auth0/auth0-react';
+import Carousel from 'react-bootstrap/Carousel';
+import Button from 'react-bootstrap/Button';
+import BookButton from './BookButton';
+
 
 class BestBooks extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state={
+    this.state = {
       books: []
     }
   }
 
-  componentDidMount = () => {
-    // get the jwt and send in the headers
-    this.props.auth0.getIdTokenClaims()
-      .then(async res => {
-        const jwt = res.__raw;
-        // make a call to the backend to get the the books and display them
+  componentDidMount = async () => {
 
-        const config = {
-          params: {email: this.props.auth0.user.email},
-          headers: {"Authorization" : `Bearer ${jwt}`},
-          method: 'get',
-          baseURL: process.env.REACT_APP_SERVER,
-          url: '/books'
-        }
-        const books = await axios(config);
+    try {
 
-        this.setState({ books: books.data });
-      })
-      .catch(err => console.error(err));
+      const config = {
+        params: { email: this.props.user.email },
+        method: 'get',
+        baseURL: process.env.REACT_APP_SERVER,
+        url: '/books'
+      };
+
+
+      const response = await axios(config);
+
+      this.setState({ books: response.data });
+
+    } catch (err) {
+      console.error(err);
+    }
+
   }
 
-  updateBookArray = (books) => this.setState({books});
+  updateBookArray = (book) => {
+    const updatedBooks = [...this.state.books, book];
+    this.setState({ books: updatedBooks })
+  };
 
-  removeBook = (idx) => {
-    this.props.auth0.getIdTokenClaims()
-      .then(async res => {
-        const jwt = res.__raw;
-        const id = this.state.books[idx]._id;
-        let newBooks = this.state.books;
-        newBooks = newBooks.filter((book, i) => i !== idx);
-        this.setState({ books: newBooks });
+  handleBookUpdate = (bookToUpdate) => {
+    const updatedBooks = this.state.books.map(book => {
+      if (book._id === bookToUpdate._id) {
+        return bookToUpdate;
+      } else {
+        return book;
+      }
+    });
 
-        const config = {
-          params: {email: this.props.auth0.user.email},
-          headers: {"Authorization" : `Bearer ${jwt}`},
-          method: 'delete',
-          baseURL: process.env.REACT_APP_SERVER,
-          url: `/books/${id}`
-        }
-        axios(config);
-      })
-      .catch(err => console.error(err));
+    this.setState({ books: updatedBooks });
   }
+
+  removeBook = (book) => {
+    const id = book._id;
+    let newBooks = this.state.books;
+    newBooks = this.state.books.filter(b => b._id !== id);
+    this.setState({ books: newBooks });
+
+    const config = {
+      params: { email: this.props.user.email },
+      method: 'delete',
+      baseURL: process.env.REACT_APP_SERVER,
+      url: `/books/${id}`
+    }
+    axios(config);
+  }
+
 
   render() {
-    return(
+    return (
       <>
-        <h2>My favorite books</h2>
-        <AddABookButton updateBookArray={this.updateBookArray} />
-        <Carousel>
-          {this.state.books.length && this.state.books.map((book, idx) => (
-            <Carousel.Item key={idx}>
-              <img
-                className="d-block w-100"
-                src={book.img}
-                alt={book.name}
+        <h2>My Essential Lifelong Learning &amp; Formation Shelf</h2>
+
+        <BookButton label="Add a Book" user={this.props.user} onSave={this.updateBookArray} />
+
+        {this.state.books.length ? (
+          <Carousel>
+            {this.state.books.map((book, idx) => (
+              <Carousel.Item key={idx}>
+                <img
+                  className="d-block w-100 h-50"
+                  src="/book.jpg"
+                  alt={book.name}
                 />
-              <Carousel.Caption>
-                <h3>{book.name}</h3>
-                <p>{book.description}</p>
-                <p>{book.status}</p>
-              </Carousel.Caption>
-              <Button onClick={() => this.removeBook(idx)}>Delete</Button>
-            </Carousel.Item>
-          ))}
-        </Carousel>
+                <Carousel.Caption>
+                  <h3>{book.name}</h3>
+                  <p>{book.description}</p>
+                  <p>{book.status}</p>
+                  <Button onClick={() => this.removeBook(book)}>Delete</Button>
+                  <BookButton label="Update" user={this.props.user} onSave={this.handleBookUpdate} book={book} />
+                </Carousel.Caption>
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        ) : (
+          <h3>No Books Found :(</h3>
+        )}
       </>
     )
   }
 }
 
-export default withAuth0(BestBooks);
+export default BestBooks;

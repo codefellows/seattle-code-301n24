@@ -1,11 +1,8 @@
-# Facilitators Guide: 
+# Facilitators Guide: MongoDB and READ (from CRUD)
 
 ## Overview
 
-Today is the first day of the book application, a project that spans over labs 11 through 14. At some point during today's lecture, demonstrate the full solution code and point out the day-to-day features. This will give students an idea of where they are heading with their applications.
-
-Students will work with the same partner for all four labs, so be mindful of which students are partnered together. During final projects, each team typically contains a balance of strong students and weaker students, so the book app is an opportunity to pair two strong students together and see how much they are able to accomplish.
-
+Today we introduce data modeling and persistence with MongoDB and Mongoose. We will be hard-coding data into the database that our front-end will be able to request and display. This adds a new layer to our WRRC and some big concepts as we dive into CRUD and persistence. 
 
 ## Learning Objectives
 
@@ -13,17 +10,16 @@ Review the detailed objectives in today's [student-facing readme](../README.md).
 
 ## Preparation
 
-- Sign up for an account with Auth0
-- Be familiar with the Auth0 docs - especially this [page](https://auth0.com/docs/libraries/auth0-react)
+- Review the [demo](../demo) and be ready to answer a lot questions about what MongoDB is, where it lives, how it works, and how it is related to Mongoose.
+
+## Resources
+
+- [mongodb commands](https://docs.mongodb.com/manual/reference/mongo-shell/)
+- [mongoose documentation](https://mongoosejs.com/docs/)
 
 ## Lecture Outline
 
 One possible way to present this material is documented in the [example lecture](./LECTURE-EXAMPLE.md) notes.
-
-### Career Review 
-
-- Get a show of hands to see how many students reached out to PPH speaker
-- Lead a discussion on networking and meet-ups
 
 ### Warm-Up
 
@@ -45,45 +41,75 @@ One possible way to present this material is documented in the [example lecture]
   - If you are short on time, this can be omitted from class lecture. There are official videos that students can watch in lieu of you leading this portion of class.
 
 ### Code Review
-- Today should be a smaller day for code review if you do any at all. 
-- Get students to talk about their process for debugging the starter code
-- Pull up the code from a student who is still struggling with the starter code and have the class work through the bugs with them.
 
-### Authentication
+### CRUD Workflow and the WRRC
 
 - **Why** (5 min)
-  - We authenticate so that we know the user is who they say they are
-  - So that we can persist preferences and access based on credentials
+  - Adds dynamism to a website
+  - Users expect personalization and functionality
+  - This is the way **everything** in computing works, on some level
 - **What** (10 min)
-  - Auth0 is a third party library that uses 0Auth to authenticate a user. It does all the work for us behind the scenes, so the big win here is being able to read through the documentation and put it into place in our code base.
+  - CRUD Workflow
+  - Review CRUD methodology and REST verbs
+  - How does the browser transfer data from the user to the server?
+  - WRRC now includes a dynamic response
 - **How** (30 min)
-  - Auth0 uses functional components in their documentation rather than class components. This is a great opportunity to discuss the history of React and why we are starting with class components (it will be used in a lot of legacy code while most new code will be written in functional components). This is also a great opportunity to point out that even though students haven't learned functional components, they can still understand what is happening and thus, use the library. 
-  - Using the documentation on this [page](https://auth0.com/docs/libraries/auth0-react), walk students through setting up Auth0.
-  - Their lab will be to incorporate Auth0 into an existing code base that includes Browser Router (remember that from lab 05). 
+  - Interactive Drawing of WRRCs: 
 - **Experimentation and Discovery Ideas**
-  - The documentation demonstrates how to write the `Profile` component as a class component. You can play around with writing the other components as class components as well. 
 
+### NoSQL Databases and Mongo
+
+- **Why** (5 min)
+  - JSON is the standard - every languages can read and write
+  - It can deeply describe a complex object unlike a Relational DB
+- **What** (10 min)
+  - NoSQL Databases Store data in a "Document", not a "Record"
+    - Resembles JSON
+    - Fast (Key+Value) storage
+  - There are tradeoffs
+    - Big (but complete) data objects
+    - No Relationships
+- **How** (15 min)
+  - Lead the students in a differences and pros/cons discussion between SQL and NoSQL
+    - Highlighting things like relations, documents, complex models, scale (horizontal vs vertical), etc
+  - Mongo is one of many NoSQL systems
+  - Open and use the `mongo` CLI and demonstrate some basic commands, navigating a db, collections, records, etc
+
+### ORMs and Mongoose (Code!)
+
+- **Why** (5 min)
+  - Databases have differing APIs, making them hard to move between
+    - SQL and NoSQL are vastly different
+  - Developers prefer a common API or set of commands to work with
+    - `.save()`, `.get()`, etc.
+- **What** (10 min)
+  - ORM = "Object Relational Mapping"
+  - Provide for a simple and common API for accessing data
+  - Mongoose is an ORM for Mongo that allows you to
+    - Create a schema that defines our collection's shape
+    - Easily implements CRUD operations
+    - Create middleware/lifecycle functions to let us add business logic during CRUD operations
+- **How** (40 min)
+  - During your demo, be sure to use the Mongoose CLI as well as the Mongo Compass GUI to show the data in the database in real time
+    - It's important that students get in touch with their tools
+  - This demo is written to build off of the Mongoose docs. So, begin by guiding students how to read though the docs to understand this new tool. Then, use the documentation examples as a starting point to begin building out your demo.
+    - Focus on hard-coding data into the database and connecting a front-end route that can READ that data.
 
 ## Lab Notes
 
+
 ## What changed from the previous class?
 
-- New topic, starting to build a new app.
+- Books are now stored in a database. The web server is now client to the database server.
+- Students will make a call from their front-end to the back-end to collect books that they hard code into their Mongodb.
 
 ## What might students struggle with today?
 
- - Working with a new partner for an entire week can be challenging. Encourage them to spend time working on the conflict agreement ahead of time and review pair programing practices in order to head off some of these difficulties. Also be sure to talk about WHY it is important to pair program and what they can expect in the industry. 
+- Understanding where Mongodb lives and how it is used
+- Sending both headers AND queries in axios. We are not going over this lecture so make sure you prep the TAs with how to do this and/or show a few groups of students and instruct them to teach others.
 
 ## Past bugs, issues or surprises...
 
 ## General Comments and Notes
 
-## Resources
 
-### Book App user flow
-
-![Auth0 Documentation](https://auth0.com/docs/libraries/auth0-react)
-
-### REST for Dummies
-
-![REST for Dummies](whiteboard-diagrams/rest-for-dummies.png)

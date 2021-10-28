@@ -1,11 +1,10 @@
 import React from 'react';
 import Header from './Header';
-import BestBooks from './BestBooks';
+import BestBooks from './BestBooks.js';
 import Footer from './Footer';
-import IsLoadingAndError from './IsLoadingAndError';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './Login';
 import Profile from './Profile';
-import { withAuth0 } from '@auth0/auth0-react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,25 +13,43 @@ import {
 
 class App extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      user: null,
+    }
+  }
+
+  loginHandler = (user) => {
+    this.setState({
+      user,
+    })
+  }
+
+  logoutHandler = () => {
+    this.setState({
+      user: null,
+    })
+  }
+
   render() {
-    console.log('app', this.props)
-    return(
+    return (
       <>
         <Router>
-          <IsLoadingAndError>
-            <Header />
-              <Switch>
-                <Route exact path="/">
-                  {this.props.auth0.isAuthenticated ? <BestBooks /> : <Login /> }
-                </Route>
-                <Route path="/profile" component={Profile}/>
-              </Switch>
-            <Footer />
-          </IsLoadingAndError>
+          <Header user={this.state.user} onLogout={this.logoutHandler} />
+          <Switch>
+            <Route exact path="/">
+              {this.state.user ? <BestBooks user={this.state.user} /> : <Login onLogin={this.loginHandler} />}
+            </Route>
+            <Route path="/profile" >
+              <Profile user={this.state.user} />
+            </Route>
+          </Switch>
+          <Footer />
         </Router>
       </>
     )
   }
 }
 
-export default withAuth0(App);
+export default App;

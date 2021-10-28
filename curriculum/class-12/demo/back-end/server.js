@@ -1,53 +1,69 @@
 const express = require('express');
-const app = express();
 const mongoose = require('mongoose');
-
-require('dotenv').config();
-
 const cors = require('cors');
-app.use(cors());
-
-// hey mongoose, connect to the database running somewhere
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true });
-
-// I'm intentionally requiring this model AFTER I run mongoose.connect
+require('dotenv').config();
 const Cat = require('./models/cat');
 
-function seedCats() {
-  // seed the database with some cats, so I can retrieve them
-  const myCat = new Cat({
-    name: 'Genevieve',
-    color: 'orange',
-    hasClaws: false,
-    favoriteActivities: [
-      { activityName: 'playing with a ball of yarn' },
-      { activityName: 'sleeping' }, { activityName: 'zoomies' }
-    ]
-  });
-  myCat.save(function (err) {
-    if (err) console.err(err);
-    else console.log('saved the cat');
-  });
-}
+const PORT = process.env.PORT;
 
-app.get('/', (req, res) => {
-  res.send('hello, cool cat!');
+const app = express();
+
+app.use(cors());
+app.use(express.json()); // new
+
+mongoose.connect(process.env.MONGODB_URI);
+
+// new
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', _ => {
+  console.log('We\'re connected!');
 });
 
-app.get('/cats', (req, res) => {
-  // get all the cats from the database
-  Cat.find((err, databaseResults) => {
-    // send them in my response
-    res.send(databaseResults);
-  });
+app.get('/cats', async (request, response) => {
+
+  const filterQuery = {};
+
+  if (request.query.location) {
+    filterQuery.location = request.query.location;
+  }
+
+  const cats = await Cat.find(filterQuery);
+
+  response.send(cats);
 });
 
-// route to get just one cat
-app.get('/cat', (req, res) => {
-  Cat.find({ name: req.query.name }, (err, databaseResults) => {
-    // send them in my response
-    res.send(databaseResults);
-  });
+app.post('/cats', async (request, response) => {
+
+  try {
+
+    // if request.body has everything you need in the right shape
+    // then you can pass it straight to Model
+    // But often you'll need to massage the data a bit
+
+    const newCat = await Cat.create(request.body);
+    response.send(newCat);
+
+  } catch (error) {
+
+    console.error(error);
+    response.status(500).send('Error creating cat');
+  }
+
 });
 
-app.listen(3001, () => console.log('app listening on 3001'));
+app.delete('/cats/:id', async (request, response) => {
+  const id = request.params.id;
+
+  try {
+    await Cat.findByIdAndDelete(id);
+    response.status(204).send('success');
+  } catch (error) {
+    console.error(error);
+    response.status(404).send(`Unable to delete cat with id ${id}`)
+  }
+});
+
+app.listen(PORT, () => console.log('Listening on PORT', PORT));
+
+

@@ -1,4 +1,4 @@
-# Readings: Mongo and Mongoose
+# Readings: CRUD
 
 Below you will find some reading material, code samples, and some additional resources that support today's topic and the upcoming lecture.
 
@@ -6,46 +6,39 @@ Review the Submission Instructions for guidance on completing and submitting thi
 
 ## Reading
 
-- [nosql vs sql](https://www.thegeekstuff.com/2014/01/sql-vs-nosql-db/?utm_source=tuicool){:target="_blank"}
+- [Status Codes Based On REST Methods](https://www.moesif.com/blog/technical/api-design/Which-HTTP-Status-Code-To-Use-For-Every-CRUD-App/)
 
-1. Fill in the chart below with five differences between SQL and NoSQL databases:
+1. In your own words, describe what each group of status code represents:
+- 100's = 
+- 200's =
+- 300's = 
+- 400's =
+- 500's = 
 
+1. What is a status code 202?
+1. What is a status code 308?
+1. What code would you use if an update didn't return data to a client?
+1. What code would you use if a resource used to exist but no longer does?
+1. What is the 'Forbidden' status code?
 
-| SQL    | NoSQL |
-| ----------- | ----------- |
-|             |             |
-|             |             |
-|             |             |
-|             |             |
-
-1. What kind of data is a good fit for an SQL database?
-1. Give a real world example.
-1. What kind of data is a good fit a NoSQL database?
-1. Give a real world example.
-1. Which type of database is best for hierarchical data storage?
-1. Which type of database is best for scalability?
-
-## Bookmark
-
-- [mongoose api](https://mongoosejs.com/docs/api.html#Model){:target="_blank"}
-  
-<!-- ## Additional Resources
-
-PLACEHOLDER -->
+## Additional Resources
 
 ### Videos
 
-- [sql vs nosql](https://www.youtube.com/watch?v=ZS_kXvOeQ5Y){:target="_blank"} (Video)
+- [Build A REST API With Node.js, Express, & MongoDB - Quick](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) - First 20 minutes
+ 
+1. Why do we need to pull our MongoDB database string out of our server and put it into our .env?
+1. What is middleware?
+1. What does `app.use(express.json())` do?
+1. What does the `/:id` mean in a route?
+1. What is the difference beween `PUT` and `PATCH`?
+1. How do you make a defalut value in a schema?
+1. What does a `500` error status code mean?
+1. What is the difference between a status `200` and a status `201`?
 
-1. What does SQL stand for?
-1. What is a realational database?
-1. What type of structure does a relational database work with?
-1. What is a 'schema'?
-1. What is a NoSQL database?
-1. Howo does it work?
-1. What is inside of a Mongo database?
-1. Which is more flexible - SQL or MongoDB? and why.
-1. What is the disadvantage of a NoSQL database?
+<!-- ### Bookmark/Skim
+
+PLACEHOLDER -->
 
 
 # Assignment Instructions

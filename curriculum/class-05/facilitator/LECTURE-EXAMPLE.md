@@ -3,10 +3,10 @@
 ## Warm-Up
 
 - **Student Analysis** (5 min)
-  - Show or print the [warm-up code](../warm-up/warm-up.md)
+  - Show or print the [warmup code](../warm-up/warm-up.md).
 - **Debrief** (5-10 min)
-  - Refer to the [Warmup Notes](../warm-up/NOTES.md)
-  - Optionally demo the running code at Repl.it
+  - Refer to the [Warmup Notes](../warm-up/NOTES.md).
+  - Optionally demo the running code at Repl.it.
 
 ## Shred Talk
 
@@ -21,7 +21,7 @@
 
 ## Code Review
 
-  - Be sure you are giving students lots of opportunity to talk about code during code reivew. One of the best ways to do this is to go line by line around the room asking students what is happening. This helps students get more comfortable speaking about code.
+- Be sure you are giving students lots of opportunity to talk about code during code reivew. One of the best ways to do this is to go line by line around the room asking students what is happening. This helps students get more comfortable speaking about code.
 
 ## City Explorer Build
 
@@ -29,38 +29,38 @@
   - This simple app is a great opportunity to revisit React and dynamic data to cap off the week.
   - We provide them a more complex version of this same app during the next lesson block. This provides the students some context on that application when they see it again.
 - **What** (5 min)
-  - City Explorer accepts a city name, draws a map, and then lists out some interesting data about the city, pulled from a remote data source (client + server!)
-  - Draw/Demonstrate the actual running City Explorer App
+  - City Explorer accepts a city name, draws a map, and then lists out some interesting data about the city, pulled from a remote data source (client + server!).
+  - Draw/Demonstrate the actual running City Explorer App.
 - **How** (30 min)
-  - Begin with a drawing and discussion of the WRRC
-  - Then, map out on the whiteboard what you wnat the app to do
+  - Begin with a drawing and discussion of the WRRC.
+  - Then, map out on the whiteboard what you wnat the app to do.
   - Using a live-coded demo ...
-    - Build the React scaffolding of City Explorer, pulling in some sample data and rendering to the page
-  - Use conditional logic to wait to display to the results until after the user has entered a city
+    - Build the React scaffolding of City Explorer, pulling in some sample data and rendering to the page.
+  - Use conditional logic to wait to display to the results until after the user has entered a city.
 - **Experimentation and Discovery Ideas**
-  - Get some suggestions from the students as how this app can be better
-    - Multiple Cities
-    - Movies, Nights Out, Trails, etc
+  - Get some suggestions from the students as how this app can be better.
+    - Multiple Cities?
+    - Movies, Nights Out, Trails, etc?
     - What else can they think of?
 
 ## Browser Router
 
 - **Why** (5 min)
-  - Routing (switching between pages) is a common feature of every application and website
-  - It is implemented using component composition
+  - Routing (switching between pages) is a common feature of every application and website.
+  - It is implemented using component composition.
     - But don't talk about that just yet...
 - **What** (10 min)
   - What is Routing?
-    - A link that switches content
-    - When clicked, a link will render a component in a spot on the page
-    - Can change out a single component within a page
-    - Or, it can can switch out a full page of content
+    - A link that switches content.
+    - When clicked, a link will render a component in a spot on the page.
+    - Can change out a single component within a page.
+    - Or, it can can switch out a full page of content.
 - **How** (30 min)
-  - Open up the starter-code for lab-05 and have students break down what is happening in the index.
-  - Talk about Browser Router and what it is doing
-  - Ask how they might use that in their applications
+  - Open up the source code on GitHub for the provided Portfolio Template for lab-05 and have students break down what is happening in the index.
+  - Talk about Browser Router and what it is doing.
+  - Ask how they might use that in their applications.
   - Find the `<Link>` tags to demonstrate how they are used later in the code to navigate between pages.
   - Demonstrate how to make a change to the page and use your developer tools to find a specific component.
 - **Experimentation and Discovery Ideas**
-  - What is happening in the url when we change pages? 
-  - What does Memory Router do that is different than Browser Router?
+  - What is happening in the url when we change pages?
+  - What do we see in the Chrome Network Inspector panel when we click links? How does that compare to a standard web page?
