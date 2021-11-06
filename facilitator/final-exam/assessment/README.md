@@ -42,9 +42,9 @@ How will you know that you've found them all? The tests will all pass!
 - Install your dependencies.
 - Run the tests.
   - with the server turned off run the command: `npm test`
-- A "bug" is a defect or missing feature. Find the bugs and fix them - 20 POINTS
-  - You will know you have found the bugs when the tests all pass
-- Deploy to Heroku - 5 POINTS
+- A "bug" is a defect or missing feature. Find the bugs and fix them.
+  - You will know you have found the bugs when the tests all pass.
+- Deploy to Heroku.
 
 #### Server: Notes
 
@@ -73,13 +73,15 @@ The React application will allow a user to:
 - Install your dependencies.
 - Run the tests.
   - with the React App turned off run `npm test`
-- A "bug" is defect or missing feature. Find the bugs and fix them - 20 POINTS
+- A "bug" is defect or missing feature. Find the bugs and fix them
   - You will know you have found the bugs when the tests all pass
-- Deploy to Netlify - 5 POINTS
+- Deploy to Netlify
 
-#### React App: Change Styling - 25 POINTS
+#### React App: Change Styling
 
-- Using React Bootstrap, change the list from a `Table` to an `Accordion` for showing the items in the list.
+- Using React Bootstrap, use `Accordion` for showing the items in the list instead of `Table`.
+  - Use `Accordion` in expected fashion.
+  - Remove `Table` related code.
 
 #### React App Notes
 
@@ -92,14 +94,29 @@ The React application will allow a user to:
 
 ## Rubric
 
-- 20 Points: Fix the Express API Server (all tests other than DELETE passing)
-- 20 Points: Fix the React App (all tests other than DELETE passing)
-- 25 Points: Add DELETE functionality to both server and client
-- 25 Points: Style the application with Bootstrap
-- 10 Points: Deployed and Tested in the cloud
-  - Server running at Heroku
-  - React App running at Netlify, configured to talk to the deployed server
-  - Tests for both running in the green at GitHub
+- 100 points total.
+- 80 required to pass.
+
+### Back End - 35 Points
+
+- 05 points: server tests other than delete passing.
+- 25 points: delete test passing.
+- 05 points: deployed to Heroku.
+
+### Front End - 35 Points
+
+- 05 points: tests other than delete passing.
+- 25 points: delete test passing.
+- 05 points: deploy to Netlify.
+
+### Integration - 5 Points
+
+- 05 points: deployed Applications are properly configured to interoperate fully.
+
+### Styling - 25 Points
+
+- 15 points: functional use of Accordion component.
+- 10 points: removal of all Table related elements.
 
 ## STRETCH GOALS
 
