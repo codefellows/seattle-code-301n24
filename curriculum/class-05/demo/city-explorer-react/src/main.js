@@ -9,7 +9,7 @@ class Main extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      displayResutls: false,
+      displayResults: false,
       locationObj: location,
       restaurants: restaurants
     }
@@ -17,7 +17,7 @@ class Main extends React.Component {
 
   handleLocationSearch = (e) => {
     e.preventDefault();
-    this.setState({ displayResutls: true });
+    this.setState({ displayResults: true });
   }
 
   render(){
@@ -29,14 +29,14 @@ class Main extends React.Component {
           <button type="submit">Explore!</button>
         </form>
 
-        {this.state.displayResutls && 
+        {this.state.displayResults &&
           <div>
-            <Map 
+            <Map
               location={this.state.locationObj}
               map={map}
             />
-            <Restaurants 
-              restaurants={this.state.restaurants} 
+            <Restaurants
+              restaurants={this.state.restaurants}
               location={this.state.locationObj}
             />
           </div>
