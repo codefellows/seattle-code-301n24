@@ -27,6 +27,7 @@ As a result of completing Lecture 2 of Code 301, students will:
 - Understand and define the concepts of `props` and `state` as they relate to React Components
 - Be able to pass both static and dynamic information from a parent component into a child component using `props`
 - Be able to hold information as `state` in different components
+- Create responsive web pages suitable for desktop or mobile web browsers
 - Be able to utilize Bootstrap to style applications
 - Deploy to Netlify
 
