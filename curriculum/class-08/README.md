@@ -52,4 +52,4 @@ As a result of completing Lecture 8 of Code 301, students will be able to:
   const axiosResults = await axios
     .get(url)
   ```
-  - axios returns a giant object. The data we care about is usually in the .data of that object.
+  - axios returns a giant object. The data we care about will be found in the `data` property of that object.
