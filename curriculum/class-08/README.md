@@ -49,7 +49,8 @@ As a result of completing Lecture 8 of Code 301, students will be able to:
   const url = `http://urlToAPI/?key=${process.env.MY_API_KEY}&city=seattle`;
 
   // notice the 'await'. This is asynchronous code. The function will need to be 'async'
-  const axiosResults = await axios
-    .get(url)
+  const axiosResults = await axios.get(url);
+  console.log(axiosResults.data);
   ```
-  - axios returns a giant object. The data we care about will be found in the `data` property of that object.
+  
+  - NOTE: `axios` returns a giant object. The data we care about will be found in the `data` property of that object.
