@@ -19,7 +19,6 @@
 - **Note**
   - If you are short on time, this can be omitted from class lecture. There are official videos that students can watch in lieu of you leading this portion of class.
 
-### Diversity and Inclusion Lecture
 
 ### Code Review
 
@@ -47,11 +46,11 @@
 
 ## Test Review
 
-- Save some time at the end of lecture to go over the test. 
+- Save some time at the end of lecture to go over the test. There will also be time to review prior to the exam on day 14.
 - What to expect: 
   - Students will be given starter code that will have minor bugs in it. They will need to fix the bugs and then add some features onto the code. There will be tests that they can run so they will know if they have completed the tasks correctly. They will need to deploy both their front-end and back-end.
 - How long do they have?
-  - 3 hours
+  - 4 hours
 - What resources can they use?
   - Anything expect other people
 - What if they fail? 

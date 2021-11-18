@@ -2,7 +2,7 @@
 
 ## Overview
 
-Today you will finish up your CRUD discussion with the UPDATE route. This day is purposely kept short to accommodate an hour Diversity and Inclusion Lecture as well. Point out that while you are NOT going to be demonstrating how to deploy a MongoDB to Heroku, they will be expected to do this during project week. The README.md for today has step-by-step instructions for how to do this, but the goal is for them to teach themselves how to do something hard.
+Today you will finish up your CRUD discussion with the UPDATE route. Point out that while you are NOT going to be demonstrating how to deploy a MongoDB to Heroku, they will be expected to do this during project week. The README.md for today has step-by-step instructions for how to do this, but the goal is for them to teach themselves how to do something hard.
 
 ## Learning Objectives
 
@@ -34,8 +34,6 @@ One possible way to present this material is documented in the [example lecture]
   - Follow the [Demo Code](../challenges/DEMO.md)
 - **Note**
   - If you are short on time, this can be omitted from class lecture. There are official videos that students can watch in lieu of you leading this portion of class.
-
-### Diversity and Inclusion Lecture
 
 ### Code Review
 

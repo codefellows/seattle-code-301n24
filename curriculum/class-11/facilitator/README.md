@@ -2,6 +2,10 @@
 
 ## Overview
 
+Today is the first day of the book application, a project that spans over labs 11 through 14. At some point during today's lecture, demonstrate the full solution code and point out the day-to-day features. This will give students an idea of where they are heading with their applications.
+
+Students will work with the same partner for all four labs, so be mindful of which students are partnered together. During final projects, each team typically contains a balance of strong students and weaker students, so the book app is an opportunity to pair two strong students together and see how much they are able to accomplish.
+
 Today we introduce data modeling and persistence with MongoDB and Mongoose. We will be hard-coding data into the database that our front-end will be able to request and display. This adds a new layer to our WRRC and some big concepts as we dive into CRUD and persistence. 
 
 ## Learning Objectives
