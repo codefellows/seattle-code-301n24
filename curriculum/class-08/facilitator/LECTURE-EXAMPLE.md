@@ -44,10 +44,8 @@ To do this, we'll need to do a bit of refactoring of our server code, specifical
       - You will need a key and some queries
       - Test these in Postman to take a look at the shape of the data that you get back.
   - Integrate into your server application
-  - SUPERAGENT:
-    - In order to get the data, we are going to need to bring in a library to help us out. We could use Axios like we did on the front-end, but to avoid confusion, we are going to introduce `superagent`. 
-      - examine the differences between `superagent` and `axios` and add them to your WRRC drawings
-      - add `superagent` to your demo application to collect data from unsplash
+  - AXIOS:
+    - In order to get the data, we are going to need to bring in a library to help us out. Show them how axios works the same way on front and back-end applications to make an http request.
   - Once everything is all hooked up on the back-end, connect your back-end to your front-end and display the data!
 
 - ReST and APIs

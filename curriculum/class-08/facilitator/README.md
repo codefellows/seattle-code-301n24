@@ -68,7 +68,7 @@ Refer to the final [City Explorer Solution Code](../../city-explorer-app) as the
 
 ## What changed from the previous class?
 
-- We will be refactoring our data fetchers from simply `require()` on a static .json file into pulling data from a live API with superagent, and having to wade through a promise to do so.
+- We will be refactoring our data fetchers from simply `require()` on a static .json file into pulling data from a live API with axios, and having to wade through a promise to do so.
 - We will truly be feeding the city explorer front end live data
   - This is an ongoing requirement for the week
 - Not a lot of code movement (really a single change to the fetching functions), but a lot of cognitive changes for the students today as they wrestle with Promises both syntactically and conceptually
