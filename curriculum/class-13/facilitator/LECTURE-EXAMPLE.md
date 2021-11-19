@@ -44,7 +44,7 @@
     - We will get information from the params as well as the body.
     - Update the information in the database and then as a class decide if you want to send the updated resource or the entire array of resources back to the user.
 
-## Test Review
+## Exam Preview
 
 - Save some time at the end of lecture to go over the test. There will also be time to review prior to the exam on day 14.
 - What to expect: 

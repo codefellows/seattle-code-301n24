@@ -25,7 +25,7 @@
 - Today should be a smaller day for code review if you do any at all. 
 - Review any confusion on implementing UPDATE/PUT from the previous day
 
-### Test Review
+### Exam Preview
 
 - Save some time at the end of lecture to go over the test.
 - What to expect: 
@@ -38,7 +38,7 @@
 - What if they fail? 
   - There will be an option for one retake
 
-### Test Administration
+### Exam Administration
 
 - Review the rubric with the students. They should be mostly able to determine if they have passed the exam or not based off of the rubric.
 - It may be helpful to have them unzip their assesments as a group with you present so that if they have issues you are able to help them.
