@@ -39,7 +39,7 @@ One possible way to present this material is documented in the [example lecture]
 
 Congratulate the students on making it this far! 
 
-Remind them ... they are now "Full Stack MERN Developers"!
+Remind them ... they are now "MERN Stack Developers"!
 
 
 ### Project Preparation
