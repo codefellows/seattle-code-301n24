@@ -16,7 +16,7 @@ Today's class will focus on passing information as `props` from a parent compone
 
 ## Learning Objectives
 
-As a result of completing Lecture 2 of Code 301, students will:
+As a result of completing Lecture 2 of Code 301, students will be able to:
 
 - Describe and Define:
   - State
@@ -24,12 +24,13 @@ As a result of completing Lecture 2 of Code 301, students will:
   - React-Bootstrap
   - Netlify
   - setState
-- Understand and define the concepts of `props` and `state` as they relate to React Components
-- Be able to pass both static and dynamic information from a parent component into a child component using `props`
-- Be able to hold information as `state` in different components
-- Create responsive web pages suitable for desktop or mobile web browsers
-- Be able to utilize Bootstrap to style applications
-- Deploy to Netlify
+- Execute
+  - Understand and define the concepts of `props` and `state` as they relate to React Components
+  - Pass both static and dynamic information from a parent component into a child component using `props`
+  - Hold information as `state` in different components
+  - Create responsive web pages suitable for desktop or mobile web browsers
+  - Integrate a 3rd party component library into a React application
+  - Deploy to Netlify
 
 ## Notes
 
