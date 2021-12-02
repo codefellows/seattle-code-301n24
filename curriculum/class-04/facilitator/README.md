@@ -37,7 +37,7 @@ One possible way to present this material is documented in the [example lecture]
 
 - **Why**
   - Forms are one of the best ways for users to interact with an application
-  - They allow us to collect all sorts of information from authentiating a user to writing a blog post
+  - They allow us to collect all sorts of information from authenticating a user to writing a blog post
 - **What**
   - A way to interact with a user and collect information
 - **How**
