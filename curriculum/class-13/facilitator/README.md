@@ -2,7 +2,7 @@
 
 ## Overview
 
-Today you will finish up your CRUD discussion with the UPDATE route. Point out that while you are NOT going to be demonstrating how to deploy a MongoDB to Heroku, they will be expected to do this during project week. The README.md for today has step-by-step instructions for how to do this, but the goal is for them to teach themselves how to do something hard.
+Today you will finish up your CRUD discussion with the UPDATE route. Point out that while you are NOT going to be demonstrating how to connect a cloud-based MongoDB instance to Heroku, they will be expected to do this during project week. The README.md for today has step-by-step instructions for how to do this, but the goal is for them to teach themselves how to do something hard.
 
 ## Learning Objectives
 
@@ -49,6 +49,8 @@ One possible way to present this material is documented in the [example lecture]
 - **How** (30 min)
   - Draw out the WRRC. By now, this should be familiar to the students. Introduce the concept of a PUT route. 
   - Go through the [DEMO](../demo)
+  - Given time, demonstrate connecting cloud based MongoDB (Atlas) to Heroku
+    - When configuring your Atlas cluster, you'll need to whitelist Heroku or ensure that the cluster is completely "open" (*) to allow access.
 
 ## Lab Notes
 
