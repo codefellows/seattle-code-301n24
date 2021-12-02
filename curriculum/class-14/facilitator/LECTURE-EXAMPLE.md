@@ -1,4 +1,6 @@
-# Lecture Notes: Authentication with Auth0
+# Lecture Notes: DEI and 301 Final Exam
+
+### Diversity, Equity, and Inclusion Workshop
 
 ### Warm-Up
 
@@ -21,22 +23,23 @@
 
 ### Code Review
 - Today should be a smaller day for code review if you do any at all. 
-- Get students to talk about their process for debugging the starter code
-- Pull up the code from a student who is still struggling with the starter code and have the class work through the bugs with them.
+- Review any confusion on implementing UPDATE/PUT from the previous day
 
-### Authentication
+### Exam Preview
 
-- **Why** (5 min)
-  - We authenticate so that we know the user is who they say they are
-  - So that we can persist preferences and access based on credentials
-- **What** (10 min)
-  - Auth0 is a third party library that uses 0Auth to authenticate a user. It does all the work for us behind the scenes, so the big win here is being able to read through the documentation and put it into place in our code base.
-- **How** (30 min)
-  - Auth0 uses functional components in their documentation rather than class components. This is a great opportunity to discuss the history of React and why we are starting with class components (it will be used in a lot of legacy code while most new code will be written in functional components). This is also a great opportunity to point out that even though students haven't learned functional components, they can still understand what is happening and thus, use the library. 
-  - Using the documentation on this [page](https://auth0.com/docs/libraries/auth0-react), walk students through setting up Auth0.
-    - Using the documentation as your guide, build an application that will log a user in and log them out. 
-    - Be sure to focus on how you read documentation. At this point, students should be getting better at reading documentation, but it is still new to them. Knowing how you read and understand documentation is super helpful.
-    - Play around with the starter code that Auth0 provides. They give you starter code in funcitonal components which students haven't seen before, but point out that by playing around with them and reading through them, they can understand what they are doing.
-  - Their lab will be to incorporate Auth0 into an existing code base that includes Browser Router (remember that from lab 05). 
-- **Experimentation and Discovery Ideas**
-  - The documentation demonstrates how to write the `Profile` component as a class component. You can play around with writing the other components as class components as well. 
+- Save some time at the end of lecture to go over the test.
+- What to expect: 
+  - Students will be given starter code that will have minor bugs in it. They will need to fix the bugs and then add some features onto the code. There will be tests that they can run so they will know if they have completed the tasks correctly. They will need to deploy both their front-end and back-end.
+  - Demonstrate how to unzip the assessment and run tests in the terminal. Do not show any code from the assesment.
+- How long do they have?
+  - 4 hours
+- What resources can they use?
+  - Anything expect other people, remind them of our policy on plagerism.
+- What if they fail? 
+  - There will be an option for one retake
+
+### Exam Administration
+
+- Review the rubric with the students. They should be mostly able to determine if they have passed the exam or not based off of the rubric.
+- It may be helpful to have them unzip their assesments as a group with you present so that if they have issues you are able to help them.
+- Make sure they understand that when the assesment starts they will only be able to recieve help with issues related to git or running the assesment on their machine.
