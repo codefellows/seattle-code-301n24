@@ -66,4 +66,4 @@ li {
 - Ask for TA help if you get stuck!
 
 
-### As always, if you have any questions or concern, please hit me up on Slack.
+### As always, if you have any questions or concerns, please hit me up on Slack.
