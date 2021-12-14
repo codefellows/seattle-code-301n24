@@ -1,4 +1,5 @@
 # Lecture Notes from Monday 12/13/2021
+All times listed below are for Pacific Standard Time zone.
 
 ## Warm Up 6:30-6:45pm
 - Let's look at some HTML and CSS and predict what we think will happen. 
