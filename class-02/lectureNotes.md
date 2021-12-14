@@ -40,7 +40,7 @@ li {
   - You can also use an image's source URL and assign it to the `src` attribute on your img element.
   - Both ways are valid, but most jobs will have a style guide to follow that will determine which method they prefer.
 
-## Remo Lab until 7:15pm-8:15pm
+## Remo Lab 7:15pm-8:15pm
 - Take this time to finish up your lab from class-01.
 - Apply any lessons learned from Code Review to your lab.
 - Grab a TA if you are stuck.
@@ -56,7 +56,7 @@ li {
   - You always get back a new array.
   - Remember, `.forEach` does NOT give us back an array. It returns `undefined` and that is why we have to push the results of each function call into a new, local array.
 
-## Remo Lab until 8:30pm-9:30pm
+## Remo Lab 8:30pm-9:30pm
 - Don't forget to work on a new branch!
   - `git checkout -b map`
 - Don't forget to pull down the new challenges!
