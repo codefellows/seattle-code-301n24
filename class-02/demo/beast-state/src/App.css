@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+  border: 8px solid red;
+}
+
+.header {
+  border: 8px solid orange;
+}
+
+.main {
+  border: 8px solid yellow;
+}
+
+.footer {
+  border: 8px solid green;
+}
