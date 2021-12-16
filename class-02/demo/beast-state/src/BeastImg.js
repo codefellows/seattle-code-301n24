@@ -4,7 +4,7 @@ import Image from 'react-bootstrap/Image';
 class BeastImage extends React.Component {
 
   constructor(props) {
-    super(constructor);
+    super(props);
     this.state = {
       "status": "Yay"
     }
