@@ -1,4 +1,4 @@
-# Lecture Notes from Monday 12/14/2021
+# Lecture Notes from Tuesday 12/14/2021
 All times listed below are for Pacific Standard Time zone.
 
 ## Lecture & Lab Demo 6:30-8:30pm

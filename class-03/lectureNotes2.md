@@ -1,4 +1,4 @@
-# Lecture Notes from Thursday 12/16/2021
+# Lecture Notes from Monday 12/16/2021
 All times listed below are for Pacific Standard Time zone.
 
 ## Warm Up 6:30-6:45pm

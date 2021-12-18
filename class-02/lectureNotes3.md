@@ -1,4 +1,4 @@
-# Lecture Notes from Monday 12/15/2021
+# Lecture Notes from Wednesday 12/15/2021
 All times listed below are for Pacific Standard Time zone.
 
 ## Q&A 6:30-7:00pm
