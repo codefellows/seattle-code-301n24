@@ -33,7 +33,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Form>
-          <Form.Title>Numeral Filter</Form.Title>
+          <Form.Label>Numeral Filter</Form.Label>
           <br/>
           <Form.Select onChange={this.handleChange}>
             <option value="none">Unfiltered Numbers</option>
