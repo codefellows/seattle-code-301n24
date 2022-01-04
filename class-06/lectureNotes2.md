@@ -14,7 +14,7 @@ Today and Thursday will be our lab days this week. We will resume our normal lab
   - Remember, "env" is just short for "enviroment". These are your enviroment variables.
 - If you haven't already gotten all your API keys for City Explorer, check out the reading for class-07. 
   - You will need a WeatherBit API key for lab 07!
-- <img src={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATION_KEY}&center=${this.state.locationObject.lat},${this.state.locationObject.lon}&zoom=12`} alt={this.state.locationObject.display_name}/>
+- ```<img src={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATION_KEY}&center=${this.state.locationObject.lat},${this.state.locationObject.lon}&zoom=12`} alt={this.state.locationObject.display_name}/>```
 
 
 ## Remo Lab 7:00pm-9:30pm
