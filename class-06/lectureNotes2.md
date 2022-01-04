@@ -25,4 +25,8 @@ Today and Thursday will be our lab days this week. We will resume our normal lab
 - Ask for TA help if you get stuck!
 
 
+## Career Assignment
+- Career: Networking Opportunities due this Friday!
+- Partner Power Hour - ?
+
 ### As always, if you have any questions or concerns, please hit me up on Slack.
