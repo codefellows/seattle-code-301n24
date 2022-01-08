@@ -25,6 +25,7 @@ All times listed below are for Pacific Standard Time zone.
 
 
 ## Code Review 9:15-10:00am
+- Anyone want to review Code Challenges 07? Which ones?
 - Complete Build-out of Lab 07
 
 
