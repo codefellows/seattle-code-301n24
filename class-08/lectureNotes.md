@@ -46,6 +46,10 @@ All times listed below are for Pacific Standard Time zone.
   - In order for your APIs to be RESTful, you have to follow a set of constraints when you write them. 
   - The REST set of constraints will make your APIs easier to use and also easier to discover.
   - Resource: https://medium.com/extend/what-is-rest-a-simple-explanation-for-beginners-part-1-introduction-b4a072f8740f
+- Nodemon
+  - Runs your server and restarts it for you when you make changes
+  - Install it: `npm install --save-dev nodemon`
+  - Start your server: `npx nodemon server.js`
 - Thunder Client
   - Docs: https://github.com/rangav/thunder-client-support#usage
   - Similar to Postman or Insomnia
