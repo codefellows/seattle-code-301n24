@@ -83,3 +83,74 @@ def search(source: list, key: int) -> int:
 
 
 ### As always, if you have any questions or concerns, please hit me up on Slack.
+
+## Class 09 - DEMO: Promises / Refactoring our Code
+
+### What is a Promise?
+
+- Response from an API.
+- Produces a single value from some time in the future.
+- It an object.
+- It's for handling asynchronous code????
+  - code that waits for a response.
+
+```js
+
+// most current versions of js have this built in.
+new Promise();
+
+```
+
+Tiara - Are there common bugs that pop up when using promises?
+  - yeah there are, lots of syntax bugs from the period of doom (misplaced closing brackets, especially withou fat arrow functions).
+Marni - Does chaining always use a period?
+ - yes. Chained function are always connected with a period.
+Jacob - Is there a limit on how much time you can set for the run when function?
+Serget - Reading on Promises?
+
+## Refactoring
+
+What is it? Why do we refactor?
+
+Taking code that already works, and making changes to the operations within without modifying the over all behaviors. The goal is to make our code "better".
+
+```javascript
+
+function getCharacter() {
+
+}
+
+getCharacters({name: 'Jacob'}); // ['J', 'a', 'c', 'o', 'b];
+
+```
+
+- What makes some code better than others?
+  - Is my code easy to read?
+    - How many things are your functions doing?
+  - Is my code DRY (Do not repeat yourself?
+    - If you repeat your code, it becomes hard to maintain
+  - Is my code inefficient?
+    - a loop that runs within another loop.
+
+
+```js
+
+const colors = [colors1, color2, color2, color4];
+const char; // your character to check for
+
+switch(char) {
+  case 5:
+    colors.push(color5);
+  case 4:
+    colors.push(color4);
+  case 3:
+    colors.push(color3);
+  case 2:
+    colors.push(color2);
+  case 1:
+    colors.push(color1);
+  default:
+    return throw new Error();
+```
+
+
