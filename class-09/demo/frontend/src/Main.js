@@ -1,3 +1,6 @@
+// Main.js
+// I am a module!
+
 import React from 'react';
 import axios from 'axios';
 
@@ -9,10 +12,10 @@ class Main extends React.Component {
     this.state = {
       jobs: []
     }
-  } 
+  }
 
   componentDidMount = async () => {
-    const API_URL = 'http://localhost:3001';
+    const API_URL = 'http://localhost:3002';
     const response = await axios.get(`${API_URL}/jobs`);
     console.log(response.data);
     this.setState({ jobs: response.data });
