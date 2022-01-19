@@ -11,6 +11,8 @@ All times listed below are for Pacific Standard Time zone.
   - Create = POST
   - Update = PUT
   - Delete = DELETE
+- https://www.mongodb.com/nosql-explained/nosql-vs-sql
+- https://mongoosejs.com/docs/guide.html
 
 ### Hosted Mongo Databases: Atlas
 
