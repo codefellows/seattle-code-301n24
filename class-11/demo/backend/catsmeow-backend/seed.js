@@ -2,20 +2,21 @@
 
 const mongoose = require('mongoose');
 require('dotenv').config();
+const Cat = require('./models/catModel');
 
 mongoose.connect(process.env.DB_URI);
 
-const Cat = require('./models/catModel');
-
+// seed the database with some cats, so I can retrieve them
+// a function that connects to the db, adds some cats and then disconnects from the db
 async function seed() {
-  // seed the database with some cats, so I can retrieve them
+  // option 1
   const myCat = new Cat({
     name: 'Jimmy John',
     color: 'orange',
     hasClaws: false,
     location: 'Seattle',
   });
-  myCat.save(function (err) {
+  await myCat.save(function (err) {
     if (err) console.error(err);
     else console.log('saved Jimmy John');
   });
@@ -34,3 +35,9 @@ async function seed() {
 }
 
 seed();
+
+// to seed the db:
+// make sure your server is not running
+// in terminal go to project root
+// type `node seed.js` in your terminal
+// go to mongo atlas, view collections and look for your new cats
