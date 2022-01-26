@@ -22,6 +22,20 @@ All times listed below are for Pacific Standard Time zone.
   - We will get information from the params as well as the body.
   - Update the information in the database 
     - Do we want to send the updated resource or the entire array of resources back to the user?
+  - Object Destructuring 
+    - The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into new variables.
+    ```
+    const user = {
+        id: 42,
+        isVerified: true
+    };
+
+    const {id, isVerified} = user;
+
+    console.log(id); // 42
+    console.log(isVerified); // true
+
+    ```
 
 ## Project Requirements & Ideas 8:00pm-8:15pm
 
