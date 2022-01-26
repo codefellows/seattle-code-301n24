@@ -39,6 +39,19 @@ All times listed below are for Pacific Standard Time zone.
 
 ## Project Requirements & Ideas 8:00pm-8:15pm
 
+## Ideas
+- Cat Adoption Agency
+- Dog Adoption Agency
+- Coffee Roast Collection
+- Recipe Storage
+- 2D Dino Game in Chrome Browser
+- Travel Website / Vacation Explorer
+- Website for Hobbie classes
+- Yelp Clone / Review Site for stores/products
+- S.C.P. Database - see Jacob for more details
+- Suggested Movies Site
+- Meetup Clone
+
 ### Front-End
 - Good and proper use of React
 - Good and proper use of React-Bootstrap
