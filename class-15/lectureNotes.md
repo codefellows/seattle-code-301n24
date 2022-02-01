@@ -1,7 +1,26 @@
 # Lecture Notes from Monday 01/31/2022
 All times listed below are for Pacific Standard Time zone.
 
-## Shred Talk 6:30-7:00pm
+## Warm Up 6:30-6:45
+This code sample is written in JavaScript ES6. Read through the code and determine the output for the function.
+
+```
+async function fetchThings(url) {
+
+		const result = await fetch(url);
+    
+		const things = await result.json();
+		
+		const names = things.map(thing => thing.name);
+		
+		return names;
+}
+
+fetchThings('https://things-api.org/things')
+  .then(console.log);
+```
+
+## Shred Talk 6:45-7:00pm
 - Code Challenge #15 - Review
 - You can expect to see the following code challenge topics covered, however you may use other techniques to solve these challenges if you choose...
   - parseInt()
