@@ -1,4 +1,5 @@
 # How to Solve a Coding Challenge:
+Keep Calm -> Ask Questions -> Verbalize -> Visualize -> Break it Down -> List the Steps -> Code it Out -> Circle Back where needed -> Mind the Rubric -> Mind the Clock -> Solid Process Wins
 
 1. Research that week's method or concept.
     * What method or concept are we learning about this week?
